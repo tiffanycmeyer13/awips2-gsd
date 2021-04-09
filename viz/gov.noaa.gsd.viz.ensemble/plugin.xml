@@ -92,7 +92,7 @@
             commandId="gov.noaa.gsd.viz.ensemble.matrix.navigation.controls"
             contextId="gov.noaa.gsd.viz.ensemble.matrix.navigator.context"
             schemeId="com.raytheon.viz.ui.cave.scheme"
-            sequence="ALT+ARROW_UP">
+            sequence="ARROW_UP">
          <parameter
                id="operation"
                value="UP_MODEL_SOURCE">
@@ -102,7 +102,7 @@
             commandId="gov.noaa.gsd.viz.ensemble.matrix.navigation.controls"
             contextId="gov.noaa.gsd.viz.ensemble.matrix.navigator.context"
             schemeId="com.raytheon.viz.ui.cave.scheme"
-            sequence="ALT+ARROW_DOWN">
+            sequence="ARROW_DOWN">
          <parameter
                id="operation"
                value="DOWN_MODEL_SOURCE">
