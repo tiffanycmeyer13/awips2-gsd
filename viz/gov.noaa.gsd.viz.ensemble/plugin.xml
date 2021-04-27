@@ -2,7 +2,6 @@
 <?eclipse version="3.4"?>
 <plugin>
 
-
    <extension
          point="org.eclipse.ui.commands">
       <command
@@ -92,7 +91,7 @@
             commandId="gov.noaa.gsd.viz.ensemble.matrix.navigation.controls"
             contextId="gov.noaa.gsd.viz.ensemble.matrix.navigator.context"
             schemeId="com.raytheon.viz.ui.cave.scheme"
-            sequence="ARROW_UP">
+            sequence="ALT+ARROW_UP">
          <parameter
                id="operation"
                value="UP_MODEL_SOURCE">
@@ -102,7 +101,7 @@
             commandId="gov.noaa.gsd.viz.ensemble.matrix.navigation.controls"
             contextId="gov.noaa.gsd.viz.ensemble.matrix.navigator.context"
             schemeId="com.raytheon.viz.ui.cave.scheme"
-            sequence="ARROW_DOWN">
+            sequence="ALT+ARROW_DOWN">
          <parameter
                id="operation"
                value="DOWN_MODEL_SOURCE">
