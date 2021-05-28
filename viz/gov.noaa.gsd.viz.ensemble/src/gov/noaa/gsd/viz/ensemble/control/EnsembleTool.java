@@ -80,14 +80,14 @@ import gov.noaa.gsd.viz.ensemble.util.ViewerWindowState;
  * menu, or choosing a menu item of the same name in the Tools menu. Depending
  * upon how this tool is initially configured in CAVE there may be only one of
  * those starting buttons available.
- * 
+ *
  * This class is the controlling manager class for the D/2D Ensemble Tool. When
  * the user opens the Ensemble Tool, a navigator view is opened and an
  * EnsembleToolLayer instance, given the name "Ensemble Tool", gets associated
  * with the currently active AbstractEditor, and also gets set to "editable". It
  * is this active and editable instance of tool layer which allows the user to
  * activate or deactivate the Ensemble Tool for the associated active editor.
- * 
+ *
  * When the Ensemble Tool is opened and editable ("powered on"), any resources
  * subsequently loaded will be virtually associated with the currently active
  * editor and tool layer pair. In addition, these resources will be stored in
@@ -96,25 +96,25 @@ import gov.noaa.gsd.viz.ensemble.util.ViewerWindowState;
  * legend in the active editor, these resources are displayed in the Ensemble
  * Tool's navigator view, which is a <code>ViewPart</code> called the
  * <code>EnsembleToolViewer</code>.
- * 
+ *
  * This manager class is therefore responsible for associating and maintaining
  * all instances of EnsembleToolLayers and their associated AbstractEditor
  * instances, and adding an additional layer of control for displaying those
  * resources, and representing those resources in the EnsembleToolViewer.
- * 
+ *
  * When the tool is active, it can be in one of the tool modes: legend browser
  * mode or matrix navigation mode. Legend browser mode is used to store legends
  * in the viewer instead of in the active editor. Matrix navigator mode is used
  * to allow users to compare one-to-many model sources on a field/plane pair
  * basis.
- * 
+ *
  * @author polster
  * @author jing
- * 
+ *
  *         <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date         Ticket#    Engineer    Description
  * ------------ ---------- ----------- --------------------------
  * Nov 16, 2014    5056    polster     Initial creation
@@ -125,9 +125,10 @@ import gov.noaa.gsd.viz.ensemble.util.ViewerWindowState;
  * Mar 17  2017   19325    jing        Resource group behavior added
  * Dec 01, 2017   41520    polster     Now supports matrix editor
  * Jan 10, 2018   20524    polster     isCompatibleResource method fixed
- * 
+ * May 28, 2021   92357    srussell    Updated the calculate() methods
+ *
  *         </pre>
- * 
+ *
  * @version 1.0
  */
 
@@ -192,7 +193,7 @@ public class EnsembleTool extends AbstractTool
     /**
      * The EnsembleTool adheres to a singleton pattern. This constructor is
      * therefore private.
-     * 
+     *
      * The entire tool is controlled by the isToolRunning static flag. Certain
      * eternally living class instances (IRenderableDisplayCustomizer) should
      * not interact with this tool when it is not isRunning.
@@ -263,7 +264,7 @@ public class EnsembleTool extends AbstractTool
                  */
                 IServiceLocator serviceLocator = PlatformUI.getWorkbench();
 
-                ICommandService commandService = (ICommandService) serviceLocator
+                ICommandService commandService = serviceLocator
                         .getService(ICommandService.class);
 
                 Command command = commandService.getCommand(
@@ -348,9 +349,10 @@ public class EnsembleTool extends AbstractTool
                     && PlatformUI.getWorkbench()
                             .getActiveWorkbenchWindow() != null
                     && PlatformUI.getWorkbench().getActiveWorkbenchWindow()
-                            .getActivePage() != null)
+                            .getActivePage() != null) {
                 PlatformUI.getWorkbench().getActiveWorkbenchWindow()
                         .getActivePage().removePartListener(theEditorsListener);
+            }
             theEditorsListener = null;
         }
 
@@ -380,17 +382,17 @@ public class EnsembleTool extends AbstractTool
      * list has the same resources of a newly created map editor and no more.
      * This would be any resource that is not a system resource and also not a
      * map resource.
-     * 
+     *
      * The caller must make sure the argument is a display container of a Map
      * editor, otherwise the method throws an unchecked illegal argument
      * exception.
-     * 
+     *
      * This method will check to see if any other resources exist in the
      * resource list other than the default on-load resources.
-     * 
+     *
      * TODO: This needs to be revisited as it should not be up to this class to
      * define what it means to be an "empty" map editor.
-     * 
+     *
      * @param rscList
      * @return true if the map editor is empty
      */
@@ -425,11 +427,11 @@ public class EnsembleTool extends AbstractTool
      * requires those classes to have a default constructor, and this class is a
      * singleton. So the EnsembleToolAction class is the pass-thru to this
      * parent's AbstractTool whose execute method calls this execute method.
-     * 
+     *
      * When the Ensemble Tool is initially opened (i.e. menu item is clicked)
      * then the super.editor data member will be null so set up the ensemble
      * tool if the main editor is the map editor.
-     * 
+     *
      */
     @Override
     public Object execute(ExecutionEvent arg0) throws ExecutionException {
@@ -516,7 +518,7 @@ public class EnsembleTool extends AbstractTool
 
     /**
      * Get the tool mode from the tool layer.
-     * 
+     *
      * @return returns the tool mode of matrix, legends_plan_view, or
      *         legends_time_series
      */
@@ -530,16 +532,16 @@ public class EnsembleTool extends AbstractTool
 
     /**
      * This method is called when the ensemble tool layer is being disposed.
-     * 
+     *
      * Remove any association of the tool layer with the resource manager and
      * initially clean up the ensemble view by clearing by the tool layer's
      * mode, disabling the viewer widget, and minimizing the viewer.
-     * 
+     *
      * If there was another tool layer previously used in another editor then
      * assign the current editor to be that previously used editor.
-     * 
+     *
      * If this is the last tool layer then dispose of the entire Ensemble Tool.
-     * 
+     *
      * @param toolLayer
      *            The tool layer that was just closed.
      */
@@ -648,7 +650,7 @@ public class EnsembleTool extends AbstractTool
 
     /**
      * Activate the given editor.
-     * 
+     *
      * @param anotherEditor
      */
     public void showEditor(IDisplayPaneContainer anotherEditor) {
@@ -682,7 +684,7 @@ public class EnsembleTool extends AbstractTool
             if (etl != null) {
                 descr.getResourceList().add(etl);
                 etl.setEditable(true);
-                etl.registerListener((IToolLayerChanged) this);
+                etl.registerListener(this);
                 etl.issueRefresh();
                 editor.refresh();
             }
@@ -721,7 +723,7 @@ public class EnsembleTool extends AbstractTool
     /**
      * Given a viz resource, return the associated resource pair found in the
      * active ensemble tool layer.
-     * 
+     *
      * @param rsc
      * @return resource pair which contains the resource argument
      */
@@ -798,6 +800,7 @@ public class EnsembleTool extends AbstractTool
      * Reflect the change in editor. If the editor has a tool layer then upate
      * the tool mode. Keep track of the last used editor. Set by calling parent.
      */
+    @Override
     public void setEditor(IDisplayPaneContainer editorPane) {
         if (EnsembleTool.hasToolLayer(editorPane)) {
             super.setEditor(editorPane);
@@ -900,7 +903,7 @@ public class EnsembleTool extends AbstractTool
     /**
      * TODO: This method is currently only in support of the requirement that we
      * need to be able to close the Matrix editor programmatically.
-     * 
+     *
      * TODO: This method only defines a CLOSE capability but remains as more
      * generic method if future needs also require other states to be handled
      * (i.e. minimized, restored, etc)
@@ -1045,8 +1048,18 @@ public class EnsembleTool extends AbstractTool
      * layer.
      */
     public void calculate(Calculation algorithm) {
+
         EnsembleToolLayer etl = getToolLayer();
         if (etl != null) {
+            // If the algorithm is a calculation and not a
+            // HistogramGridResourceHolder
+            if (algorithm != Calculation.HISTOGRAM_SAMPLING
+                    && algorithm != Calculation.HISTOGRAM_GRAPHICS
+                    && algorithm != Calculation.VALUE_SAMPLING) {
+                // Turn off all HistogramGridResourceHolders so the calculation
+                // will not fail.
+                etl.getResourceList().turnOffAllHistograms();
+            }
             etl.calculate(algorithm);
         }
     }
@@ -1056,8 +1069,18 @@ public class EnsembleTool extends AbstractTool
      * resources of a given tool layer.
      */
     public void calculate(Calculation algorithm, Range range) {
+
         EnsembleToolLayer etl = getToolLayer();
+        // If the algorithm is a calculation and not a
+        // HistogramGridResourceHolder
         if (etl != null) {
+            if (algorithm != Calculation.HISTOGRAM_SAMPLING
+                    && algorithm != Calculation.HISTOGRAM_GRAPHICS
+                    && algorithm != Calculation.VALUE_SAMPLING) {
+                // Turn off all HistogramGridResourceHolders so the calculation
+                // will not fail.
+                etl.getResourceList().turnOffAllHistograms();
+            }
             etl.calculate(algorithm, range);
         }
     }
@@ -1099,7 +1122,7 @@ public class EnsembleTool extends AbstractTool
     /**
      * Refresh the tool/viewer based on the existence of a tool layer in the
      * current editor.
-     * 
+     *
      * NOTE: Make sure the super.editor member is set before calling this
      * method.
      */
@@ -1158,7 +1181,7 @@ public class EnsembleTool extends AbstractTool
     }
 
     /**
-     * 
+     *
      * The sole purpose of this method is to minimize or restore the ensemble
      * tool viewer (ViewPart) when its editability is turned off or on,
      * respectively (if it is not already done).
@@ -1306,7 +1329,7 @@ public class EnsembleTool extends AbstractTool
         if (etl != null) {
             expandedElems = etl.getExpandedElements();
         } else {
-            expandedElems = new ArrayList<EnsembleMembersHolder>();
+            expandedElems = new ArrayList<>();
 
         }
         return expandedElems;
@@ -1316,7 +1339,7 @@ public class EnsembleTool extends AbstractTool
      * The navigation operation is one of: UP_ARROW, DOWN_ARROW, RIGHT_ARROW, or
      * LEFT_ARROW. It is generated by the ensemble tool plugin extensions.
      * Delegation method for the ensemble tool viewer.
-     * 
+     *
      * @param operationmode
      */
     public void matrixNavigationRequest(
@@ -1340,7 +1363,7 @@ public class EnsembleTool extends AbstractTool
 
     /**
      * Get the number of extant ensemble tool layers.
-     * 
+     *
      * @return the number of extant ensemble tool layers.
      */
     private int getToolLayerCount() {
@@ -1416,7 +1439,7 @@ public class EnsembleTool extends AbstractTool
 
     /**
      * Is the given editor pane a Time Series editor?
-     * 
+     *
      * @param editorPane
      * @return
      */
@@ -1432,7 +1455,7 @@ public class EnsembleTool extends AbstractTool
 
     /**
      * Is the given editor pane a Matrix editor?
-     * 
+     *
      * @param editorPane
      * @return
      */
@@ -1448,10 +1471,10 @@ public class EnsembleTool extends AbstractTool
 
     /**
      * Is the given editor pane a Map editor?
-     * 
+     *
      * This boolean method must work when there is no tool layers already
      * associated with the given editor.
-     * 
+     *
      * @param editorPane
      * @return
      */
@@ -1534,11 +1557,11 @@ public class EnsembleTool extends AbstractTool
      * Called when the user closes the ensemble tool viewer by using the close
      * 'x' button on the view tab. Check with the user that they are okay
      * closing the active tool layer.
-     * 
+     *
      * This method returns an ISaveablePart2.CANCEL if the editable state of the
      * viewer is set to 'not-editable' or there is no tool layer in the current
      * editor.
-     * 
+     *
      * If the user chooses to close the active tool layer then return
      * ISaveablePart2.NO. Otherwise return ISaveablePart2.CANCEL.
      */
