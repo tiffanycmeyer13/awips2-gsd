@@ -45,22 +45,23 @@ import gov.noaa.gsd.viz.ensemble.util.Utilities;
  * only one ensemble tool layer per editor. It is assumed this list is used to
  * allow the user to see what resources are loaded, into the ensemble tool, in
  * the ensemble viewer.
- * 
+ *
  * Offers accessor methods to get different flavors (generated, ensemble,
  * individual, tool, etc) of resources.
- * 
+ *
  * <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date         Ticket#    Engineer    Description
  * ------------ ---------- ----------- --------------------------
  * May 17  2017   19443     polster     Initial creation
  * Jun 27  2017   19325     jing        Added contour capability.
  * Dec 01, 2017   41520     polster     Added find resource method
- * 
+ * May 28, 2021   92357     srussell    Added turnOffAllHistograms()
+ *
  * </pre>
- * 
+ *
  * @author jing
  * @author polster
  * @version 1.0
@@ -156,7 +157,7 @@ public class NavigatorResourceList extends ResourceList {
 
         /*
          * Turns off other same mode histogram tools.
-         * 
+         *
          * Keeps only one tool working at same time.
          */
         if (rscHolder instanceof HistogramGridResourceHolder) {
@@ -315,7 +316,7 @@ public class NavigatorResourceList extends ResourceList {
 
         // Set color
         if (rh.getRsc().hasCapability(ColorableCapability.class)) {
-            ColorableCapability colorable = (ColorableCapability) rh.getRsc()
+            ColorableCapability colorable = rh.getRsc()
                     .getCapability(ColorableCapability.class);
             RGB color = Utilities.getRandomNiceContrastColor();
             colorable.setColor(color);
@@ -355,8 +356,8 @@ public class NavigatorResourceList extends ResourceList {
             // But it may be unmatched with current display. Fix it later
             if (rh.getRsc().getCapability(DensityCapability.class) != null
                     && !rh.isGenerated()) {
-                DensityCapability densityCapability = (DensityCapability) rh
-                        .getRsc().getCapability(DensityCapability.class);
+                DensityCapability densityCapability = rh.getRsc()
+                        .getCapability(DensityCapability.class);
                 densityCapability.setDensity(DEFAULT_DENSITY);
             }
         }
@@ -408,7 +409,7 @@ public class NavigatorResourceList extends ResourceList {
 
     /**
      * All resources for an editor that were not generated.
-     * 
+     *
      * @return
      */
     public List<AbstractResourceHolder> getUserLoadedRscs() {
@@ -426,7 +427,7 @@ public class NavigatorResourceList extends ResourceList {
 
     /**
      * All loaded resources for ensemble.
-     * 
+     *
      * @param descriptor
      *            : the descriptor of the resource
      * @param selected
@@ -456,7 +457,7 @@ public class NavigatorResourceList extends ResourceList {
 
     /**
      * All loaded resources for ensemble.
-     * 
+     *
      * @param descriptor
      *            :the descriptor of the resource
      * @param selected
@@ -494,8 +495,9 @@ public class NavigatorResourceList extends ResourceList {
 
                     // Model name is the first string
                     if (emr.getRsc().getName() == null
-                            || emr.getRsc().getName().equals(""))
+                            || emr.getRsc().getName().equals("")) {
                         continue;
+                    }
                     String model = emr.getModel();
                     addResourceToMap(rscMap, model, emr);
                 }
@@ -507,7 +509,7 @@ public class NavigatorResourceList extends ResourceList {
 
     /**
      * All loaded resources for ensemble.
-     * 
+     *
      * @param descriptor
      *            :the descriptor of the resource
      * @param selected
@@ -531,8 +533,9 @@ public class NavigatorResourceList extends ResourceList {
                     && emr.getRsc().getDescriptor().getClass() == descriptor) {
 
                 if (emr.getRsc().getName() == null
-                        || emr.getRsc().getName().equals(""))
+                        || emr.getRsc().getName().equals("")) {
                     continue;
+                }
                 String model = emr.getModel();
                 addResourceToMap(rscMap, model, emr);
             }
@@ -543,7 +546,7 @@ public class NavigatorResourceList extends ResourceList {
 
     /**
      * All generated resources by ensemble display
-     * 
+     *
      * @return
      */
     public List<AbstractResourceHolder> getUserGeneratedRscs() {
@@ -560,7 +563,7 @@ public class NavigatorResourceList extends ResourceList {
     }
 
     /**
-     * 
+     *
      * @param rscMap
      * @param model
      * @param gr
@@ -577,6 +580,7 @@ public class NavigatorResourceList extends ResourceList {
         }
     }
 
+    @Override
     public boolean isEmpty() {
         return ensembleToolResources.isEmpty();
     }
@@ -602,6 +606,7 @@ public class NavigatorResourceList extends ResourceList {
         return s.toString();
     }
 
+    @Override
     public void instantiateResources(IDescriptor descriptor,
             boolean fireListeners) {
     }
@@ -609,10 +614,10 @@ public class NavigatorResourceList extends ResourceList {
     /**
      * Turn off all other same mode histogram tools, when a histogram tool is
      * turn on or loading.
-     * 
+     *
      * TODO: Need do more post processes histograms. Should do similar process
      * other loaded tools too.
-     * 
+     *
      * @param hgr
      *            -the histogram tool is turn on or loading
      */
@@ -645,9 +650,31 @@ public class NavigatorResourceList extends ResourceList {
     }
 
     /**
+     * Turn off all HistogramGridResources
+     */
+    public void turnOffAllHistograms() {
+        if (ensembleToolResources == null || ensembleToolResources.isEmpty()) {
+            return;
+        }
+
+        for (AbstractResourceHolder gr : getUserLoadedRscs()) {
+            // Not a HistogramGridResourceHolder like "Sampling", "Distribution
+            // Viewer" or "Histogram Text" -- skip
+            if (gr instanceof EnsembleMembersHolder
+                    || !(gr instanceof HistogramGridResourceHolder)) {
+                continue;
+            }
+
+            gr.getRsc().getProperties().setVisible(false);
+            gr.getRsc().issueRefresh();
+
+        }
+    }
+
+    /**
      * Update related generated resource(s) display when a resource changed.
      * Only process the Distribution Viewer in this release.
-     * 
+     *
      * @param rh
      *            -The changed resource holder which can be a loaded or
      *            generated resource holder
@@ -665,7 +692,7 @@ public class NavigatorResourceList extends ResourceList {
             /*
              * Update Generated products. Currently just clear the distribution
              * viewer display area.
-             * 
+             *
              * TODO: This needs further evaluation in the next delivery.
              */
             if (rh instanceof HistogramGridResourceHolder
@@ -734,7 +761,7 @@ public class NavigatorResourceList extends ResourceList {
      * Given any abstract resource holder that is a generated grid or time
      * series resource holder, and remove any already exisiting resource having
      * the same calculation, unit, and level.
-     * 
+     *
      * @param rsc
      *            a generated resource used to see if another similar resource
      *            is already in the resource list
@@ -757,7 +784,7 @@ public class NavigatorResourceList extends ResourceList {
     /**
      * Given a generated resource, remove any already exisiting generated
      * resource having the same calculation, unit, and level.
-     * 
+     *
      * @param rsc
      *            a generated resource used to see if another similar resource
      *            is already in the resource list
@@ -786,7 +813,7 @@ public class NavigatorResourceList extends ResourceList {
     /**
      * Given a generated resource, remove any already exisiting generated
      * resource having the same calculation, unit, and level.
-     * 
+     *
      * @param rsc
      *            a generated resource used to see if another similar resource
      *            is already in the resource list
