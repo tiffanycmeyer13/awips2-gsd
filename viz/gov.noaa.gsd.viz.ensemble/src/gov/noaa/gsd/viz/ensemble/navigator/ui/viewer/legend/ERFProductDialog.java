@@ -28,21 +28,23 @@ import gov.noaa.gsd.viz.ensemble.util.SWTResourceManager;
 /**
  * A dialog which allows the user to choose create an ensemble relative
  * frequency product from different probability ranges.
- * 
+ *
  * @author polster
  * @author jing
- * 
+ *
  *         <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date         Ticket#    Engineer    Description
  * ------------ ---------- ----------- --------------------------
  * Jun 4, 2015   6863      polster     Initial creation
  * Feb 17,2017   19325     jing        Added ERF image capability
- * 
+ * May 25,2021   92357     srussell    Made changes to make sure validation in
+ *                                     all input fields happens upon pressing
+ *                                     the "Ok" button *
  *         </pre>
- * 
+ *
  * @version 1.0
  */
 
@@ -100,7 +102,7 @@ public class ERFProductDialog extends CaveJFACEDialog {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see org.eclipse.jface.dialogs.Dialog#isResizable()
      */
     @Override
@@ -110,7 +112,7 @@ public class ERFProductDialog extends CaveJFACEDialog {
 
     /**
      * Create contents of the dialog.
-     * 
+     *
      * @param parent
      */
     @Override
@@ -736,9 +738,47 @@ public class ERFProductDialog extends CaveJFACEDialog {
         }
     }
 
+    private boolean inputsProvided() {
+        boolean inputsProvided = false;
+        switch (probabilityRange) {
+        case ABOVE:
+            String above = probabilityOfXAboveRangeEntryTxt.getText();
+            if (above != null && above.length() != 0) {
+                inputsProvided = true;
+            }
+            break;
+        case BELOW:
+            String below = probabilityOfXBelowRangeEntryTxt.getText();
+            if (below != null && below.length() != 0) {
+                inputsProvided = true;
+            }
+            break;
+        case INNER_RANGE:
+            String leftI = probabilityOfXInsideRangeLeftEntryTxt.getText();
+            String rightI = probabilityOfXInsideRangeRightEntryTxt.getText();
+            if (leftI != null && leftI.length() != 0 && rightI != null
+                    && rightI.length() != 0) {
+                inputsProvided = true;
+            }
+            break;
+        case OUTER_RANGE:
+            String leftO = probabilityOfXOutsideRangeLeftEntryTxt.getText();
+            String rightO = probabilityOfXOutsideRangeRightEntryTxt.getText();
+            if (leftO != null && leftO.length() != 0 && rightO != null
+                    && rightO.length() != 0) {
+                inputsProvided = true;
+            }
+            break;
+
+        }
+
+        return inputsProvided;
+
+    }
+
     /**
      * Create contents of the button bar.
-     * 
+     *
      * @param parent
      */
 
@@ -747,14 +787,6 @@ public class ERFProductDialog extends CaveJFACEDialog {
 
         Button computeButton = createButton(parent, IDialogConstants.OK_ID,
                 "Compute ERF", true);
-
-        computeButton.addSelectionListener(new SelectionAdapter() {
-
-            public void widgetSelected(SelectionEvent e) {
-                computeERF();
-            }
-
-        });
 
         createButton(parent, IDialogConstants.CANCEL_ID,
                 IDialogConstants.CANCEL_LABEL, false);
@@ -771,6 +803,41 @@ public class ERFProductDialog extends CaveJFACEDialog {
         Control contents = super.createContents(parent);
         enableDefaultERFTabWidgetState();
         return contents;
+    }
+
+    private boolean isRangeValid() {
+        boolean isRangeValid = false;
+
+        // If a Range is selected and all values are provided
+        if (chooserRangeRdo_1.getSelection()
+                || chooserRangeRdo_2.getSelection()) {
+            // Validate the range values
+            if (this.setProbabilityLowerValue < this.setProbabilityUpperValue) {
+                isRangeValid = true;
+            } else {
+                isRangeValid = false;
+            }
+        } else {// no range is selected
+            isRangeValid = true;
+        }
+        return isRangeValid;
+    }
+
+    @Override
+    protected void okPressed() {
+        if (!inputsProvided()) {
+            MessageDialog.openError(getParentShell().getShell(),
+                    "Invalid Number(s)", "Required Input(s) Missing.");
+
+        } else if (!isRangeValid()) {
+            MessageDialog.openError(getParentShell().getShell(),
+                    "Invalid Number",
+                    "Low value must be less than high value.");
+        } else {
+            computeERF();
+            super.okPressed();
+        }
+
     }
 
 }
