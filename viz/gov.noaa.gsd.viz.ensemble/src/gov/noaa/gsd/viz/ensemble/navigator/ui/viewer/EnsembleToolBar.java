@@ -14,8 +14,10 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.ToolItem;
@@ -39,18 +41,18 @@ import gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.matrix.MatrixNavigatorCompo
 import gov.noaa.gsd.viz.ensemble.util.EnsembleToolImageStore;
 
 /***
- * 
+ *
  * This class is a Composite which contains only a ToolBar. It is tightly
  * coupled with the EnsembleToolViewer (ETV) and is intended to be stored only
  * inside the ETV's top-level CTabFolder.
- * 
+ *
  * It contains tool bar items ("buttons") which change behavior depending upon
  * which state the Ensemble Tool is in: Legend browser or Matrix navigator mode.
- * 
+ *
  * <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date          Ticket#    Engineer      Description
  * ------------ ---------- ----------- --------------------------
  * Oct 15, 2015   12565      polster     Initial creation
@@ -60,9 +62,12 @@ import gov.noaa.gsd.viz.ensemble.util.EnsembleToolImageStore;
  * Mar 01, 2017   19443      polster     Fixed toggle editability problem
  * Jun 01, 2017   19443      polster     Switched to using Eclipse contribution/actions
  * Dec 01, 2017   41520      polster     Added test for isDisposed
- * 
+ * Apr 06, 2021   90326      srussell    Added EnsembleToolBar.ToolRelevantDropDownAction.runWithEvent()
+ *                                       to display a dropdown menu when any part of the Actions dropdown
+ *                                       is pressed.
+ *
  * </pre>
- * 
+ *
  * @author polster
  * @author jing
  * @version 1.0
@@ -142,6 +147,7 @@ public class EnsembleToolBar extends Composite
         }
     }
 
+    @Override
     public void setEnabled(boolean isEnabled) {
         actionsDropdownToolItem.setEnabled(isEnabled);
     }
@@ -357,6 +363,7 @@ public class EnsembleToolBar extends Composite
 
     class LegendsBrowserCalculationSelectionAdapter extends SelectionAdapter {
 
+        @Override
         public void widgetSelected(SelectionEvent event) {
             MenuItem selected = (MenuItem) event.widget;
 
@@ -381,6 +388,7 @@ public class EnsembleToolBar extends Composite
 
         }
 
+        @Override
         public void run() {
             String clearResourcesPrompt = null;
             /* only act on clearing resources if the active tool layer exists */
@@ -419,6 +427,7 @@ public class EnsembleToolBar extends Composite
             }
         }
 
+        @Override
         public void dispose() {
         }
 
@@ -433,12 +442,14 @@ public class EnsembleToolBar extends Composite
             super("Tool Actions", Action.AS_DROP_DOWN_MENU);
             setId(ID);
             setToolTipText("Actions");
+            // Get an image of gears
             ImageDescriptor imgDscr = ImageDescriptor
                     .createFromImage(EnsembleToolImageStore.OPEN_TOOLS_IMG);
             setImageDescriptor(imgDscr);
             setMenuCreator(this);
         }
 
+        @Override
         public void run() {
             if (toolRelevantMenu == null || toolRelevantMenu.isDisposed()
                     || toolRelevantMenu.getItemCount() <= 0) {
@@ -446,6 +457,36 @@ public class EnsembleToolBar extends Composite
             }
         }
 
+        /**
+         * Run the action resulting from the specified event. This would not
+         * need overriding were it not for the fact that without it, the user
+         * can only click on the down-arrow on the menu button displayed for
+         * this action. This implementation ensures that the user can click
+         * anywhere on the button to drop down the menu.
+         *
+         * @param event
+         *            Event that triggered this invocation.
+         */
+
+        @Override
+        public final void runWithEvent(Event event) {
+
+            if (toolRelevantMenu == null || toolRelevantMenu.isDisposed()
+                    || toolRelevantMenu.getItemCount() <= 0) {
+                setToolMode(EnsembleTool.getInstance().getToolMode());
+            }
+
+            ToolItem item = (ToolItem) event.widget;
+            Menu menu = getMenu(item.getParent());
+            if (menu != null) {
+                Point point = item.getParent().toDisplay(
+                        new Point(item.getBounds().x, item.getBounds().height));
+                menu.setLocation(point.x, point.y);
+                menu.setVisible(true);
+            }
+        }
+
+        @Override
         public void dispose() {
         }
 
@@ -474,13 +515,14 @@ public class EnsembleToolBar extends Composite
             setImageDescriptor(imgDscr);
         }
 
+        @Override
         public void run() {
             EnsembleToolMode mode = EnsembleTool.getInstance().getToolMode();
             if (mode == EnsembleToolMode.LEGENDS_PLAN_VIEW
                     || mode == EnsembleToolMode.LEGENDS_TIME_SERIES) {
 
                 IServiceLocator serviceLocator = PlatformUI.getWorkbench();
-                ICommandService commandService = (ICommandService) serviceLocator
+                ICommandService commandService = serviceLocator
                         .getService(ICommandService.class);
 
                 Command command = commandService.getCommand(
@@ -506,6 +548,7 @@ public class EnsembleToolBar extends Composite
             }
         }
 
+        @Override
         public void dispose() {
         }
 
@@ -529,12 +572,14 @@ public class EnsembleToolBar extends Composite
             setImageDescriptor(imgDscr);
         }
 
+        @Override
         public void run() {
             /* In association with VLab AWIPS2_GSD Issue #29762 */
             EnsembleTool.getInstance()
                     .setEditable(!EnsembleTool.getInstance().isToolEditable());
         }
 
+        @Override
         public void dispose() {
         }
 
