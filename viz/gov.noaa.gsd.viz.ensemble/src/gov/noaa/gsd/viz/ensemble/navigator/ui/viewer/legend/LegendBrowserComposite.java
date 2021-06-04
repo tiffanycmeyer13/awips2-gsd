@@ -89,15 +89,15 @@ import gov.noaa.gsd.viz.ensemble.util.SWTResourceManager;
 import gov.noaa.gsd.viz.ensemble.util.Utilities;
 
 /***
- * 
+ *
  * This class is a Composite which contains the widget/contents of the Legend
  * browser. It is soley coupled to and a sub-component of the Ensemble Tool main
  * ViewPart (<code>EnsembleToolViewer</code>).
- * 
+ *
  * <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date          Ticket#    Engineer      Description
  * ------------ ---------- ----------- --------------------------
  * Oct 15, 2015   12565      polster     Initial creation
@@ -109,9 +109,12 @@ import gov.noaa.gsd.viz.ensemble.util.Utilities;
  * Mar 31, 2017   19598      jing        Contour control feature
  * Jan 10, 2018   20524      polster     Fixed time series get legend name
  * Nov 12, 2018   7604       bsteffen    Expand tree on first left click.
- * 
+ * Jun 04, 2021   92772      srussell    Updated updateColorsOnEnsembleResource()
+ *                                       to account for case when testing
+ *                                       ensemble resource names.
+ *
  * </pre>
- * 
+ *
  * @author polster
  * @version 1.0
  */
@@ -146,7 +149,7 @@ public class LegendBrowserComposite extends Composite {
 
     protected TreeItem[] directDescendants = null;
 
-    private ArrayList<ColumnLabelProvider> columnLabelProviders = new ArrayList<ColumnLabelProvider>();
+    private ArrayList<ColumnLabelProvider> columnLabelProviders = new ArrayList<>();
 
     private LegendNameTreeColumnLabelProvider columnNameLabelProvider = null;
 
@@ -372,7 +375,7 @@ public class LegendBrowserComposite extends Composite {
 
         TreeItem parentItem = findTreeItemByLabelName(productName, true);
 
-        List<TreeItem> descendants = new ArrayList<TreeItem>();
+        List<TreeItem> descendants = new ArrayList<>();
         getAllDescendants(parentItem, descendants);
 
         /*
@@ -407,7 +410,7 @@ public class LegendBrowserComposite extends Composite {
      * This method wraps the method of the same name which is either called from
      * the main (GUI) thread or not. See method matchParentToChildrenVisibility
      * below this method for a description of what these methods do.
-     * 
+     *
      */
     protected void matchParentToChildrenVisibility(TreeItem ci,
             boolean useMainThread) {
@@ -431,12 +434,12 @@ public class LegendBrowserComposite extends Composite {
      * The tree items in the tree are grouped by a top level ensemble name whose
      * children are all ensemble members (viz-resources). Visibility defines
      * whether the resource is visible on the main CAVE map, or not.
-     * 
+     *
      * If any child tree item (viz resource) is visible then the parent tree
      * item (ensemble name) must also be NOT-grayed-out. Likewise, if all
      * children resources of a given parent are invisible then the parent tree
      * item should be grayed out.
-     * 
+     *
      * This call must be called from a method which is running on the main
      * thread.
      */
@@ -454,7 +457,7 @@ public class LegendBrowserComposite extends Composite {
         final Object d = parentItem.getData();
         if (d instanceof EnsembleMembersHolder) {
 
-            List<TreeItem> descendants = new ArrayList<TreeItem>();
+            List<TreeItem> descendants = new ArrayList<>();
             getAllDescendants(parentItem, descendants);
 
             boolean ai = true;
@@ -501,7 +504,7 @@ public class LegendBrowserComposite extends Composite {
      * This method wraps the method of the same name which is either called from
      * the main (GUI) thread or not. See method findTreeItemByLabelName below
      * this method for a description of what these methods do.
-     * 
+     *
      */
     private TreeItem findTreeItemByLabelName(final String name,
             final boolean useMainThread) {
@@ -533,7 +536,7 @@ public class LegendBrowserComposite extends Composite {
     /*
      * This searches only root level items to see if a root item of a given name
      * has any children (ensemble members) and, if so, returns that tree item.
-     * 
+     *
      * This call must be called from a method which is running on the main
      * thread.
      */
@@ -574,8 +577,9 @@ public class LegendBrowserComposite extends Composite {
         TreeItem[] allRoots = legendsTree.getItems();
 
         for (TreeItem ti : allRoots) {
-            if (foundItem != null)
+            if (foundItem != null) {
                 break;
+            }
             Object tio = ti.getData();
             if (tio != null) {
                 continue;
@@ -607,6 +611,7 @@ public class LegendBrowserComposite extends Composite {
 
     public void prepareForNewToolInput() {
         VizApp.runAsync(new Runnable() {
+            @Override
             public void run() {
                 if (isWidgetReady()) {
                     legendsTreeViewer.setInput(
@@ -695,7 +700,7 @@ public class LegendBrowserComposite extends Composite {
                 || !(rhs.get(0).getRsc() instanceof AbstractGridResource)) {
             return;
         }
-        List<AbstractGridResource<?>> rscList = new ArrayList<AbstractGridResource<?>>();
+        List<AbstractGridResource<?>> rscList = new ArrayList<>();
         for (AbstractResourceHolder rh : rhs) {
             rscList.add((AbstractGridResource<?>) rh.getRsc());
         }
@@ -711,18 +716,18 @@ public class LegendBrowserComposite extends Composite {
          * assign a new object to the grid resources related to the
          * "Contour Control". See the code in the
          * EnsembleResourceManager::registerResource() and registerGenerated().
-         * 
+         *
          * It requires adding two methods in ufcore:
-         * 
+         *
          * AbstractGridResource.java, public AbstractStylePreferences
          * getStylePreferences() { return stylePreferences; } public void
          * setStylePreferences(AbstractStylePreferences stylePreferences) {
          * this.stylePreferences = stylePreferences; }
-         * 
+         *
          * For long term, AWIPS2 team should fix the baseline bug which may
          * impact the contour and other display. Need to keep this code at this
          * location for ET until the bug in base line is fixed.
-         * 
+         *
          * for (AbstractResourceHolder rh : rhs){ AbstractGridResource rsc =
          * (AbstractGridResource) (rh.getRsc()); LabelingPreferences
          * labelingPreferences = null; AbstractStylePreferences stylePreferences
@@ -742,6 +747,7 @@ public class LegendBrowserComposite extends Composite {
     public void refreshInput(final List<AbstractResourceHolder> rscList) {
 
         VizApp.runSync(new Runnable() {
+            @Override
             public void run() {
 
                 if (!isWidgetReady()) {
@@ -792,8 +798,9 @@ public class LegendBrowserComposite extends Composite {
                         && (selectedItems[0] != null)) {
                     if (grh != null) {
                         TreeItem ti = findTreeItemByResource(grh);
-                        if (ti != null)
+                        if (ti != null) {
                             legendsTree.select(ti);
+                        }
                     }
                 }
                 legendsTreeViewer.refresh(false);
@@ -868,7 +875,7 @@ public class LegendBrowserComposite extends Composite {
      * This method wraps the method of the same name which is either called from
      * the main (GUI) thread or not. See method toggleItemVisible below this
      * method for a description of what these methods do.
-     * 
+     *
      */
     private void toggleItemVisible(final TreeItem item,
             final boolean useMainThread) {
@@ -889,7 +896,7 @@ public class LegendBrowserComposite extends Composite {
     /*
      * Given a tree item, find the item in the tree and toggle it's visibility
      * state.
-     * 
+     *
      * This call must be called from a method which is running on the main
      * thread.
      */
@@ -1023,10 +1030,10 @@ public class LegendBrowserComposite extends Composite {
 
         TreeItem parentItem = findTreeItemByLabelName(ensembleName, true);
 
-        List<TreeItem> descendants = new ArrayList<TreeItem>();
+        List<TreeItem> descendants = new ArrayList<>();
         getAllDescendants(parentItem, descendants);
 
-        List<AbstractResourceHolder> childResources = new ArrayList<AbstractResourceHolder>();
+        List<AbstractResourceHolder> childResources = new ArrayList<>();
 
         if (descendants.size() > 0) {
             for (TreeItem ti : descendants) {
@@ -1058,7 +1065,7 @@ public class LegendBrowserComposite extends Composite {
      * This method will update color on a given ensemble resource. Underlying
      * methods know how to colorize the contained perturbation members (eg. for
      * SREF, breaks colors into three categories for NMM, NMB and EM).
-     * 
+     *
      * We need a better way of determining what type of resource we have.
      */
     protected void updateColorsOnEnsembleResource(final String ensembleName) {
@@ -1072,10 +1079,11 @@ public class LegendBrowserComposite extends Composite {
         });
 
         // TODO: poor-man's way of knowing what type of flavor this ensemble is
-        if ((ensembleName.indexOf("GEFS") >= 0)
-                || (ensembleName.indexOf("GFS Ensemble") >= 0)) {
+        String ensembleNameUpperCase = ensembleName.toUpperCase();
+        if ((ensembleNameUpperCase.indexOf("GEFS") >= 0)
+                || (ensembleNameUpperCase.indexOf("GFS Ensemble") >= 0)) {
             updateGEFSEnsembleColors(ensembleName, getPerturbationMembers());
-        } else if (ensembleName.indexOf("SREF") >= 0) {
+        } else if (ensembleNameUpperCase.indexOf("SREF") >= 0) {
             updateSREFColors(ensembleName, getPerturbationMembers());
         }
     }
@@ -1122,6 +1130,7 @@ public class LegendBrowserComposite extends Composite {
     public void frameChanged(FramesInfo framesInfo) {
 
         VizApp.runAsync(new Runnable() {
+            @Override
             public void run() {
                 if (isWidgetReady()) {
                     legendsTreeViewer.refresh(true);
@@ -1206,6 +1215,7 @@ public class LegendBrowserComposite extends Composite {
                     addERFLayerMenuItem.addListener(SWT.Selection,
                             new Listener() {
 
+                                @Override
                                 public void handleEvent(Event event) {
 
                                     startAddERFLayer(ensMemberName, false);
@@ -1227,6 +1237,7 @@ public class LegendBrowserComposite extends Composite {
 
                     contourMenuItem.addListener(SWT.Selection, new Listener() {
 
+                        @Override
                         public void handleEvent(Event event) {
 
                             try {
@@ -1260,6 +1271,7 @@ public class LegendBrowserComposite extends Composite {
                     addERFImageLayerMenuItem.addListener(SWT.Selection,
                             new Listener() {
 
+                                @Override
                                 public void handleEvent(Event event) {
 
                                     startAddERFLayer(ensMemberName, true);
@@ -1276,6 +1288,7 @@ public class LegendBrowserComposite extends Composite {
 
                     ensembleColorizeMenuItem.addListener(SWT.Selection,
                             new Listener() {
+                                @Override
                                 public void handleEvent(Event event) {
 
                                     /*
@@ -1305,6 +1318,7 @@ public class LegendBrowserComposite extends Composite {
                     unloadRscMenuItem.setText("Unload Members");
                     unloadRscMenuItem.addListener(SWT.Selection,
                             new Listener() {
+                                @Override
                                 public void handleEvent(Event event) {
 
                                     boolean proceed = MessageDialog.openConfirm(
@@ -1335,6 +1349,7 @@ public class LegendBrowserComposite extends Composite {
                     toggleVisibilityMenuItem.addListener(SWT.Selection,
                             new Listener() {
 
+                                @Override
                                 public void handleEvent(Event event) {
 
                                     ToggleProductVisiblityJob ccj = new ToggleProductVisiblityJob(
@@ -1364,6 +1379,7 @@ public class LegendBrowserComposite extends Composite {
                     /* The popup menu is generated by the ContextMenuManager */
                     menuMgr.addMenuListener(new IMenuListener() {
 
+                        @Override
                         public void menuAboutToShow(IMenuManager manager) {
                             EnsembleToolLayer toolLayer = EnsembleTool
                                     .getToolLayer(gr.getRsc());
@@ -1415,11 +1431,11 @@ public class LegendBrowserComposite extends Composite {
                      * returns the correct number of child items when the
                      * TreeItem is expanded and always the wrong number of child
                      * items (usually 1) when the TreeItem is collapsed.
-                     * 
+                     *
                      * Therefore, always expand a collpased tree item before
                      * asking for starting a job that will attempt to get its
                      * child items.
-                     * 
+                     *
                      * TODO: Fix this in the future so we don't force the root
                      * item to be expanded just to toggle the child items
                      * visibility. This place to make this change will not be
@@ -1605,11 +1621,11 @@ public class LegendBrowserComposite extends Composite {
      * This key listener class is used to set the mouse pointer to either the
      * HAND cursor, when the Ctrl key is depressed, or to the default ARROW
      * cursor, when the Ctrl key is released.
-     * 
+     *
      * When the user presses CTRL-MB1 (e.g. Ctrl LEFT-CLICK) over a resource in
      * the navigator, the cursor will first change to the HAND cursor, and the
      * item will be selected (e.g. the contour highlighted).
-     * 
+     *
      * When the user does not have the Ctrl key depressed, the mouse pointer
      * remains an ARROW cursor. When the user presses MB1 over (e.g. LEFT-CLICK)
      * a resource in the navigator that resource will have its visibility
@@ -1642,6 +1658,7 @@ public class LegendBrowserComposite extends Composite {
      */
     private class LegendTreeSorter extends ViewerSorter {
 
+        @Override
         public int compare(Viewer v, Object av1, Object av2) {
 
             int compareResult = 0;
@@ -1932,15 +1949,18 @@ public class LegendBrowserComposite extends Composite {
     private class LegendTimeTreeColumnLabelProvider
             extends ColumnLabelProvider {
 
+        @Override
         public Font getFont(Object element) {
             return legendTimeFont;
         }
 
+        @Override
         public Image getImage(Object element) {
             Image image = null;
             return image;
         }
 
+        @Override
         public String getText(Object element) {
 
             String nodeLabel = null;
@@ -1975,10 +1995,12 @@ public class LegendBrowserComposite extends Composite {
     private class LegendNameTreeColumnLabelProvider
             extends ColumnLabelProvider {
 
+        @Override
         public Font getFont(Object element) {
             return legendNameFont;
         }
 
+        @Override
         public Image getImage(Object element) {
             Image image = null;
 
@@ -2129,6 +2151,7 @@ public class LegendBrowserComposite extends Composite {
             return image;
         }
 
+        @Override
         public String getText(Object element) {
 
             String nodeLabel = null;
@@ -2312,7 +2335,7 @@ public class LegendBrowserComposite extends Composite {
         if (isWidgetReady()) {
             /*
              * In association with VLab AWIPS2_GSD Issue #29204
-             * 
+             *
              * Cosmetic clear for performance perception.
              */
             legendsTreeViewer.setInput(
