@@ -36,7 +36,6 @@ import gov.noaa.gsd.viz.ensemble.control.EnsembleTool.EnsembleToolMode;
 import gov.noaa.gsd.viz.ensemble.control.IToolModeChangedListener;
 import gov.noaa.gsd.viz.ensemble.display.calculate.Calculation;
 import gov.noaa.gsd.viz.ensemble.navigator.ui.layer.EnsembleToolLayer;
-import gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.common.PreferencesDialog;
 import gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.matrix.MatrixNavigatorComposite;
 import gov.noaa.gsd.viz.ensemble.util.EnsembleToolImageStore;
 
@@ -65,6 +64,9 @@ import gov.noaa.gsd.viz.ensemble.util.EnsembleToolImageStore;
  * Apr 06, 2021   90326      srussell    Added EnsembleToolBar.ToolRelevantDropDownAction.runWithEvent()
  *                                       to display a dropdown menu when any part of the Actions dropdown
  *                                       is pressed.
+ * Jun 08, 2021   92772      srussell    Updated ToolRelevantDropDownAction.getMenu()
+ *                                       to fix the down arrow portion of the
+ *                                       dropdown menu from "sticking" upon starting up.
  *
  * </pre>
  *
@@ -92,8 +94,6 @@ public class EnsembleToolBar extends Composite
     private Menu toolRelevantMenu = null;
 
     private ToolItem actionsDropdownToolItem = null;
-
-    private PreferencesDialog prefsDialog = null;
 
     private IToolBarManager toolbarMgr = null;
 
@@ -265,29 +265,6 @@ public class EnsembleToolBar extends Composite
         add(Calculation.HISTOGRAM_GRAPHICS.getTitle(),
                 "Turn on distribution viewer sampling", isEnabled,
                 legendsCalculationListener);
-
-        /*
-         * TODO: Preferences have been disabled for the 17.3.1 release. Will put
-         * back in the next release.
-         */
-
-        // new MenuItem(toolRelevantMenu, SWT.SEPARATOR);
-        //
-        // MenuItem mi = new MenuItem(toolRelevantMenu, SWT.NONE);
-        // mi.setText(GlobalPreferencesComposite.PREFERENCES_NAME);
-        // mi.setEnabled(true);
-        // mi.addSelectionListener(new SelectionAdapter() {
-        // @Override
-        // public void widgetSelected(SelectionEvent e) {
-        // prefsDialog = new PreferencesDialog(getParent().getShell());
-        // if (prefsDialog.open() == Window.OK) {
-        // prefsDialog.close();
-        // prefsDialog = null;
-        // }
-        //
-        // }
-        // });
-
     }
 
     private void addLegendsTimeSeriesItems() {
@@ -313,29 +290,6 @@ public class EnsembleToolBar extends Composite
         add(Calculation.RANGE.getTitle(),
                 "Calculate range on visible resources", isEnabled,
                 legendsCalculationListener);
-
-        /*
-         * TODO: Preferences have been disabled for the 17.3.1 release. Will put
-         * back in the next release.
-         */
-
-        // new MenuItem(toolRelevantMenu, SWT.SEPARATOR);
-        //
-        // MenuItem mi = new MenuItem(toolRelevantMenu, SWT.NONE);
-        // mi.setText(GlobalPreferencesComposite.PREFERENCES_NAME);
-        // mi.setEnabled(true);
-        // mi.addSelectionListener(new SelectionAdapter() {
-        // @Override
-        // public void widgetSelected(SelectionEvent e) {
-        // prefsDialog = new PreferencesDialog(getParent().getShell());
-        // if (prefsDialog.open() == Window.OK) {
-        // prefsDialog.close();
-        // prefsDialog = null;
-        // }
-        //
-        // }
-        // });
-
     }
 
     /**
@@ -440,21 +394,12 @@ public class EnsembleToolBar extends Composite
 
         public ToolRelevantDropDownAction() {
             super("Tool Actions", Action.AS_DROP_DOWN_MENU);
-            setId(ID);
             setToolTipText("Actions");
-            // Get an image of gears
+            // Get an image of gears, a gear icon
             ImageDescriptor imgDscr = ImageDescriptor
                     .createFromImage(EnsembleToolImageStore.OPEN_TOOLS_IMG);
             setImageDescriptor(imgDscr);
             setMenuCreator(this);
-        }
-
-        @Override
-        public void run() {
-            if (toolRelevantMenu == null || toolRelevantMenu.isDisposed()
-                    || toolRelevantMenu.getItemCount() <= 0) {
-                setToolMode(EnsembleTool.getInstance().getToolMode());
-            }
         }
 
         /**
@@ -492,11 +437,19 @@ public class EnsembleToolBar extends Composite
 
         @Override
         public Menu getMenu(Control parent) {
+            if (toolRelevantMenu == null || toolRelevantMenu.isDisposed()
+                    || toolRelevantMenu.getItemCount() <= 0) {
+                setToolMode(EnsembleTool.getInstance().getToolMode());
+            }
             return toolRelevantMenu;
         }
 
         @Override
         public Menu getMenu(Menu parent) {
+            if (toolRelevantMenu == null || toolRelevantMenu.isDisposed()
+                    || toolRelevantMenu.getItemCount() <= 0) {
+                setToolMode(EnsembleTool.getInstance().getToolMode());
+            }
             return toolRelevantMenu;
         }
 
