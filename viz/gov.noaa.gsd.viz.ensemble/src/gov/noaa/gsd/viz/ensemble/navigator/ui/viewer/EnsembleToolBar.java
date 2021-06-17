@@ -28,14 +28,12 @@ import org.eclipse.ui.services.IServiceLocator;
 
 import com.raytheon.uf.common.status.IUFStatusHandler;
 import com.raytheon.uf.common.status.UFStatus;
-import com.raytheon.uf.viz.core.IDisplayPaneContainer;
 import com.raytheon.uf.viz.core.VizApp;
 
 import gov.noaa.gsd.viz.ensemble.control.EnsembleTool;
 import gov.noaa.gsd.viz.ensemble.control.EnsembleTool.EnsembleToolMode;
 import gov.noaa.gsd.viz.ensemble.control.IToolModeChangedListener;
 import gov.noaa.gsd.viz.ensemble.display.calculate.Calculation;
-import gov.noaa.gsd.viz.ensemble.navigator.ui.layer.EnsembleToolLayer;
 import gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.matrix.MatrixNavigatorComposite;
 import gov.noaa.gsd.viz.ensemble.util.EnsembleToolImageStore;
 
@@ -67,6 +65,11 @@ import gov.noaa.gsd.viz.ensemble.util.EnsembleToolImageStore;
  * Jun 08, 2021   92772      srussell    Updated ToolRelevantDropDownAction.getMenu()
  *                                       to fix the down arrow portion of the
  *                                       dropdown menu from "sticking" upon starting up.
+ * Jun 17, 2021   93248      srussell    Updated   addLegendsPlanViewItems()
+ *                                       and addLegendsTimeSeriesItems() to
+ *                                       enable menu items when loaded resources
+ *                                       are greater than zero. Removed
+ *                                       isToolEnabled()
  *
  * </pre>
  *
@@ -188,25 +191,6 @@ public class EnsembleToolBar extends Composite
 
     }
 
-    private boolean isToolEnabled() {
-        boolean isToolEnabled = false;
-        EnsembleTool et = EnsembleTool.getInstance();
-        if (et != null) {
-            IDisplayPaneContainer editor = et.getActiveEditor();
-            if (editor != null) {
-                EnsembleToolLayer toolLayer = EnsembleTool.getToolLayer(editor);
-                if (toolLayer != null) {
-                    if (toolLayer.isEmpty()) {
-                        isToolEnabled = false;
-                    } else {
-                        isToolEnabled = true;
-                    }
-                }
-            }
-        }
-        return isToolEnabled;
-    }
-
     protected void addLegendsPlanViewItems() {
 
         toolRelevantAction.setEnabled(true);
@@ -214,7 +198,13 @@ public class EnsembleToolBar extends Composite
 
         new MenuItem(toolRelevantMenu, SWT.SEPARATOR);
 
-        boolean isEnabled = isToolEnabled();
+        boolean isEnabled = false;
+
+        int rsclistSize = EnsembleTool.getInstance().getResourceList().size();
+
+        if (rsclistSize > 0) {
+            isEnabled = true;
+        }
 
         add(Calculation.MEAN.getTitle(), "Calculate mean of visible resources",
                 isEnabled, legendsCalculationListener);
@@ -274,7 +264,13 @@ public class EnsembleToolBar extends Composite
 
         new MenuItem(toolRelevantMenu, SWT.SEPARATOR);
 
-        boolean isEnabled = isToolEnabled();
+        boolean isEnabled = false;
+
+        int rsclistSize = EnsembleTool.getInstance().getResourceList().size();
+
+        if (rsclistSize > 0) {
+            isEnabled = true;
+        }
 
         add(Calculation.MEAN.getTitle(), "Calculate mean of visible resources",
                 true, legendsCalculationListener);
@@ -437,19 +433,13 @@ public class EnsembleToolBar extends Composite
 
         @Override
         public Menu getMenu(Control parent) {
-            if (toolRelevantMenu == null || toolRelevantMenu.isDisposed()
-                    || toolRelevantMenu.getItemCount() <= 0) {
-                setToolMode(EnsembleTool.getInstance().getToolMode());
-            }
+            setToolMode(EnsembleTool.getInstance().getToolMode());
             return toolRelevantMenu;
         }
 
         @Override
         public Menu getMenu(Menu parent) {
-            if (toolRelevantMenu == null || toolRelevantMenu.isDisposed()
-                    || toolRelevantMenu.getItemCount() <= 0) {
-                setToolMode(EnsembleTool.getInstance().getToolMode());
-            }
+            setToolMode(EnsembleTool.getInstance().getToolMode());
             return toolRelevantMenu;
         }
 
