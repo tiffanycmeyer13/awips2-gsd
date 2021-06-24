@@ -3,23 +3,29 @@ package gov.noaa.gsd.viz.ensemble.util;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.RGB;
 
+import gov.noaa.gsd.viz.ensemble.control.EnsembleTool;
+
 /**
  * This class is used to map unique colors to given GFS ensemble perturbation
  * members, which are identified by their hard-coded perturbation memeber names
  * (ctl1, ctl2, n1, n2 ... p4, p5). It has been created in support of
  * simplifying the process of allowing the user to color an entire ensemble set
  * of members using a color gradient.
- * 
+ *
  * <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date         Ticket#    Engineer    Description
  * ------------ ---------- ----------- --------------------------
  * Oct 8, 2014    5056     polster     Initial creation
- * 
+ * Jun 19,2021    93248    srussell    Updated getGradientByEnsembleId() to
+ *                                     set totalSteps to the number of rscs
+ *                                     instead of the hardcoded workaround of
+ *                                     20. Added getResourceCount().
+ *
  * </pre>
- * 
+ *
  * @author polster
  * @version 1.0
  */
@@ -54,21 +60,37 @@ public class ChosenGEFSColors {
     public Color getGradientByEnsembleId(String name) {
 
         Color c = null;
-        final int totalSteps = 20;
-
+        int totalSteps = this.getResourceCount();
         int pertNumber = getPerturbationIndex(name);
         c = getGradientColor(color, totalSteps, pertNumber);
         return c;
 
     }
+    /*-
+     *
+     * Create a color gradient by taking the user chosen color, getting the
+     * HSB ( hue, saturation, brightness ) values, setting saturation to
+     * the number of the current resource divided by the total number of
+     * resources. Then use the HSB values to make a different gradient of
+     * color based off the user's choice of color.
+     *
+     *
+     * Color c    - the user chosen color.
+     *
+     * int totalSteps - the number of resources in the Legend Tab, numbered top
+     *                  down, starting with 1.
+     *
+     * int currStep -  the number of the currently selected resource in the
+     *                 Legend tab.  If it is 3rd from the top currStep is 3.
+     */
 
     private Color getGradientColor(Color c, int totalSteps, int currStep) {
-
         RGB rgb = c.getRGB();
         float[] hsb = rgb.getHSB();
-        hsb[1] = (float) currStep / (float) totalSteps;
+        hsb[1] = currStep / (float) totalSteps;
         RGB nrgb = new RGB(hsb[0], hsb[1], hsb[2]);
         return SWTResourceManager.getColor(nrgb);
+
     }
 
     public String getSrefPerturbationPrefix(String member) {
@@ -126,4 +148,10 @@ public class ChosenGEFSColors {
         return pert;
     }
 
+    public int getResourceCount() {
+        int rscCnt = 0;
+        rscCnt = EnsembleTool.getInstance().getToolLayer().getResourceHolders()
+                .size();
+        return rscCnt;
+    }
 }
