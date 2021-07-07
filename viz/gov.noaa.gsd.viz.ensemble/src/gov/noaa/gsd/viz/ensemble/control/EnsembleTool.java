@@ -126,7 +126,11 @@ import gov.noaa.gsd.viz.ensemble.util.ViewerWindowState;
  * Dec 01, 2017   41520    polster     Now supports matrix editor
  * Jan 10, 2018   20524    polster     isCompatibleResource method fixed
  * May 28, 2021   92357    srussell    Updated the calculate() methods
- *
+ * Jul 07, 2021   93870    srussell    Updted setHideLegendsMode() to use the
+ *                                     D2D Legend mode LEGEND_OVERRIDE.
+ *                                     Updated constructToolLayer() to set
+ *                                     the ResourceType of the EnsembleToolLayer.java
+ *                                     to LEGEND_OVERRIDE.
  *         </pre>
  *
  * @version 1.0
@@ -510,7 +514,7 @@ public class EnsembleTool extends AbstractTool
                     .getResourcesByTypeAsType(D2DLegendResource.class);
             if (rscList != null && !rscList.isEmpty()) {
                 lgdRsc = rscList.get(0);
-                lgdRsc.setLegendMode(LegendMode.HIDE);
+                lgdRsc.setLegendMode(LegendMode.LEGEND_OVERRIDE);
             }
 
         }
@@ -710,6 +714,7 @@ public class EnsembleTool extends AbstractTool
             props.setLoadWithoutData(true);
         } else {
             props = new LoadProperties();
+            props.setResourceType(ResourceType.LEGEND_OVERRIDE);
         }
 
         EnsembleToolLayer tool = etld.construct(props, desc);
