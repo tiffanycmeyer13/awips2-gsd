@@ -59,6 +59,9 @@ import gov.noaa.gsd.viz.ensemble.util.Utilities;
  * Jun 27  2017   19325     jing        Added contour capability.
  * Dec 01, 2017   41520     polster     Added find resource method
  * May 28, 2021   92357     srussell    Added turnOffAllHistograms()
+ * Jul 12  2021   92923     srussell    Added turnOnAllHistograms()
+ * Jul 19  2021   93923     srussell    Updated turnOffAllHistograms() to return
+ *                                      a value. Removed turnOnAllHistograms()
  *
  * </pre>
  *
@@ -652,23 +655,31 @@ public class NavigatorResourceList extends ResourceList {
     /**
      * Turn off all HistogramGridResources
      */
-    public void turnOffAllHistograms() {
+    public HistogramGridResourceHolder turnOffAllHistograms() {
+        HistogramGridResourceHolder hgrh = null;
+
         if (ensembleToolResources == null || ensembleToolResources.isEmpty()) {
-            return;
+            return hgrh;
         }
 
-        for (AbstractResourceHolder gr : getUserLoadedRscs()) {
+        for (AbstractResourceHolder arh : getUserLoadedRscs()) {
             // Not a HistogramGridResourceHolder like "Sampling", "Distribution
             // Viewer" or "Histogram Text" -- skip
-            if (gr instanceof EnsembleMembersHolder
-                    || !(gr instanceof HistogramGridResourceHolder)) {
+            if (arh instanceof EnsembleMembersHolder
+                    || !(arh instanceof HistogramGridResourceHolder)) {
                 continue;
             }
 
-            gr.getRsc().getProperties().setVisible(false);
-            gr.getRsc().issueRefresh();
+            if (arh.getRsc().getProperties().isVisible() && hgrh == null) {
+                hgrh = (HistogramGridResourceHolder) arh;
+
+            }
+
+            arh.getRsc().getProperties().setVisible(false);
+            arh.getRsc().issueRefresh();
 
         }
+        return hgrh;
     }
 
     /**

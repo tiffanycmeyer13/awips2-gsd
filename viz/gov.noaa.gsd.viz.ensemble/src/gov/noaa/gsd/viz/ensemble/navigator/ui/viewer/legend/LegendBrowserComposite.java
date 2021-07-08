@@ -112,7 +112,8 @@ import gov.noaa.gsd.viz.ensemble.util.Utilities;
  * Jun 04, 2021   92772      srussell    Updated updateColorsOnEnsembleResource()
  *                                       to account for case when testing
  *                                       ensemble resource names.
- *
+ * Jul 08, 2021   93923       srussell   Updated LegendTreeMouseListener.mouseDown()
+ *                                       Updated getEnsembleMemberGenericResources()
  * </pre>
  *
  * @author polster
@@ -1028,16 +1029,18 @@ public class LegendBrowserComposite extends Composite {
     protected List<AbstractResourceHolder> getEnsembleMemberGenericResources(
             String ensembleName) {
 
+        List<AbstractResourceHolder> childResources = new ArrayList<>();
+        Object[] children = null;
+
+        ITreeContentProvider itcp = (ITreeContentProvider) legendsTreeViewer
+                .getContentProvider();
+
         TreeItem parentItem = findTreeItemByLabelName(ensembleName, true);
 
-        List<TreeItem> descendants = new ArrayList<>();
-        getAllDescendants(parentItem, descendants);
+        children = itcp.getChildren(parentItem.getData());
 
-        List<AbstractResourceHolder> childResources = new ArrayList<>();
-
-        if (descendants.size() > 0) {
-            for (TreeItem ti : descendants) {
-                Object data = ti.getData();
+        if (children != null && children.length >= 1) {
+            for (Object data : children) {
                 if (data == null) {
                     continue;
                 }
@@ -1047,6 +1050,7 @@ public class LegendBrowserComposite extends Composite {
                 }
             }
         }
+
         return childResources;
     }
 
@@ -1095,16 +1099,13 @@ public class LegendBrowserComposite extends Composite {
                 rootComposite.getShell());
         cd.setBlockOnOpen(true);
         if (cd.open() == Window.OK) {
-
             cd.close();
-
             SREFMembersColorChangeJob ccj = new SREFMembersColorChangeJob(
                     "Changing SREF Ensemble Members Colors");
             ccj.setPriority(Job.INTERACTIVE);
             ccj.schedule();
 
         }
-
     }
 
     private void updateGEFSEnsembleColors(String ensembleName,
@@ -1115,13 +1116,11 @@ public class LegendBrowserComposite extends Composite {
         cd.setBlockOnOpen(true);
         if (cd.open() == Window.OK) {
             cd.close();
-
             GEFSMembersColorChangeJob ccj = new GEFSMembersColorChangeJob(
                     "Changing GEFS Ensemble Members Colors");
             ccj.setPriority(Job.INTERACTIVE);
             ccj.schedule();
         }
-
     }
 
     /*
@@ -1290,22 +1289,8 @@ public class LegendBrowserComposite extends Composite {
                             new Listener() {
                                 @Override
                                 public void handleEvent(Event event) {
-
-                                    /*
-                                     * TODO: SWT bug prevents getting children
-                                     * on a collapsed tree item. Must expand
-                                     * first for color gradient change method to
-                                     * "see" children.
-                                     */
-                                    boolean isExpanded = userClickedTreeItem
-                                            .getExpanded();
-                                    if (!isExpanded) {
-                                        userClickedTreeItem.setExpanded(true);
-                                    }
-
                                     updateColorsOnEnsembleResource(
                                             ensMemberName);
-
                                 }
                             });
 
