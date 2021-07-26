@@ -126,11 +126,12 @@ import gov.noaa.gsd.viz.ensemble.util.ViewerWindowState;
  * Dec 01, 2017   41520    polster     Now supports matrix editor
  * Jan 10, 2018   20524    polster     isCompatibleResource method fixed
  * May 28, 2021   92357    srussell    Updated the calculate() methods
- * Jul 07, 2021   93870    srussell    Updted setHideLegendsMode() to use the
+ * Jul 07, 2021   93870    srussell    Updated setHideLegendsMode() to use the
  *                                     D2D Legend mode LEGEND_OVERRIDE.
  *                                     Updated constructToolLayer() to set
  *                                     the ResourceType of the EnsembleToolLayer.java
  *                                     to LEGEND_OVERRIDE.
+ * Jul 19, 2021   93923    srussell    Updated the calculate() methods.
  *         </pre>
  *
  * @version 1.0
@@ -1056,15 +1057,6 @@ public class EnsembleTool extends AbstractTool
 
         EnsembleToolLayer etl = getToolLayer();
         if (etl != null) {
-            // If the algorithm is a calculation and not a
-            // HistogramGridResourceHolder
-            if (algorithm != Calculation.HISTOGRAM_SAMPLING
-                    && algorithm != Calculation.HISTOGRAM_GRAPHICS
-                    && algorithm != Calculation.VALUE_SAMPLING) {
-                // Turn off all HistogramGridResourceHolders so the calculation
-                // will not fail.
-                etl.getResourceList().turnOffAllHistograms();
-            }
             etl.calculate(algorithm);
         }
     }
@@ -1076,16 +1068,7 @@ public class EnsembleTool extends AbstractTool
     public void calculate(Calculation algorithm, Range range) {
 
         EnsembleToolLayer etl = getToolLayer();
-        // If the algorithm is a calculation and not a
-        // HistogramGridResourceHolder
         if (etl != null) {
-            if (algorithm != Calculation.HISTOGRAM_SAMPLING
-                    && algorithm != Calculation.HISTOGRAM_GRAPHICS
-                    && algorithm != Calculation.VALUE_SAMPLING) {
-                // Turn off all HistogramGridResourceHolders so the calculation
-                // will not fail.
-                etl.getResourceList().turnOffAllHistograms();
-            }
             etl.calculate(algorithm, range);
         }
     }
