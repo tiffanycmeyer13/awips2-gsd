@@ -27,6 +27,7 @@ import gov.noaa.gsd.viz.ensemble.control.EnsembleTool;
 import gov.noaa.gsd.viz.ensemble.display.calculate.Calculation;
 import gov.noaa.gsd.viz.ensemble.display.calculate.EnsembleCalculator;
 import gov.noaa.gsd.viz.ensemble.display.common.AbstractResourceHolder;
+import gov.noaa.gsd.viz.ensemble.display.common.HistogramGridResourceHolder;
 import gov.noaa.gsd.viz.ensemble.display.common.TimeSeriesResourceHolder;
 import gov.noaa.gsd.viz.ensemble.display.rsc.GeneratedEnsembleGridResourceData;
 import gov.noaa.gsd.viz.ensemble.display.rsc.histogram.HistogramResource;
@@ -38,22 +39,23 @@ import gov.noaa.gsd.viz.ensemble.navigator.ui.layer.EnsembleToolLayer;
  * Loads the generated ensemble resource(s) into active or specified display
  * editor and panel. The resource type is dependent upon the display type. The
  * resource(s) will be registered in the Resource manager;
- * 
+ *
  * @author jing
  * @author polster
  * @version 1.0
- * 
+ *
  *          <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date         Ticket#    Engineer    Description
  * ------------ ---------- ----------- --------------------------
- * Jan 2014        5056      jing    Initial creation
- * Jan 15 2016     12301     jing    Added distribution feature
- * Dec 29 2016     19325     jing    Deal with Image when loading
- * Mar 17 2017     19325     jing    Resource group behavior added
- * 
+ * Jan 2014        5056      jing       Initial creation
+ * Jan 15 2016     12301     jing       Added distribution feature
+ * Dec 29 2016     19325     jing       Deal with Image when loading
+ * Mar 17 2017     19325     jing       Resource group behavior added
+ * Jul 19 2021     93923     srussell   Updated loadOverlay()
+ *                                      Updated LoadGeneratedResourceToMapEditorJob.run()
  *          </pre>
  */
 
@@ -77,14 +79,14 @@ public class GeneratedDataLoader {
 
     public GeneratedDataLoader(EnsembleToolLayer tl, GeneratedloadMode glm) {
         generatedloadMode = glm;
-        levels = new ArrayList<String>();
-        units = new ArrayList<String>();
+        levels = new ArrayList<>();
+        units = new ArrayList<>();
         toolLayer = tl;
     }
 
     /**
      * Load into current active editor and panel of Plan-View
-     * 
+     *
      * @param calculator
      *            - the calculator of the loading overlay.
      */
@@ -115,7 +117,7 @@ public class GeneratedDataLoader {
                          * Should search if there is any resource for the level
                          * and unit then load a calculator resource, otherwise
                          * maybe a problem
-                         * 
+                         *
                          **/
                         // Same level and unit case
                         Map<String, List<AbstractResourceHolder>> dataHolders = new ConcurrentHashMap<>();
@@ -138,19 +140,21 @@ public class GeneratedDataLoader {
 
     /**
      * Load into current active editor and panel of Time Series
-     * 
+     *
      * @param calculator
      *            - the calculator of the loading overlay.
      */
     public void loadToTimeSeriesEditor(final EnsembleCalculator calculator) {
 
-        if (!(toolLayer.getDescriptor() instanceof TimeSeriesDescriptor))
+        if (!(toolLayer.getDescriptor() instanceof TimeSeriesDescriptor)) {
             return;
+        }
 
         searchLoadedResourcesTimeSeriesEditor();
 
-        if (units.isEmpty())
+        if (units.isEmpty()) {
             return;
+        }
 
         if (generatedloadMode == GeneratedloadMode.SAME_UNIT_AND_LEVEL
                 && !levels.isEmpty()) {
@@ -180,7 +184,7 @@ public class GeneratedDataLoader {
 
     /**
      * Load into editor
-     * 
+     *
      * @param calculator
      */
     public void load(final EnsembleCalculator calculator) {
@@ -192,8 +196,8 @@ public class GeneratedDataLoader {
     }
 
     /**
-     * Load a overlay, such the histogram,,fire weather...
-     * 
+     * Load a overlay, such as the histogram,fire weather...
+     *
      * @param overlay
      */
     public void loadOverlay(final Calculation overlay) {
@@ -221,13 +225,17 @@ public class GeneratedDataLoader {
                          * Should search if there is any resource for the level
                          * and unit then load a calculator resource, otherwise
                          * maybe a problem
-                         * 
+                         *
                          **/
                         // Same level and unit case
                         Map<String, List<AbstractResourceHolder>> dataHolders = new ConcurrentHashMap<>();
                         dataHolders = toolLayer.getResourceList()
                                 .getUserLoadedRscs(MapDescriptor.class, true,
                                         level, unit);
+                        // There should only be 1 visible Histogram resource
+                        // at a time. "Turn off" any that may already be on.
+                        toolLayer.getResourceList().turnOffAllHistograms();
+
                         if (!dataHolders.isEmpty()) {
                             LoadOverlayJob ccj = new LoadOverlayJob(
                                     "Load Overlay Resource", overlay, level,
@@ -245,7 +253,7 @@ public class GeneratedDataLoader {
 
     /**
      * Load into current active panel of all editors in the main window
-     * 
+     *
      * @param calculator
      */
     public void loadToMultipleEditors(EnsembleCalculator calculator) {
@@ -266,7 +274,7 @@ public class GeneratedDataLoader {
 
     /**
      * Get the load mode of the generated resource.
-     * 
+     *
      * @return
      */
     public GeneratedloadMode getGeneratedloadMode() {
@@ -275,7 +283,7 @@ public class GeneratedDataLoader {
 
     /**
      * Set the load mode of the generated resource.
-     * 
+     *
      * @param generatedloadMode
      *            - load mode
      */
@@ -285,7 +293,7 @@ public class GeneratedDataLoader {
 
     /**
      * Get all levels of the resources.
-     * 
+     *
      * @return- levels string list
      */
     public List<String> getLevels() {
@@ -294,7 +302,7 @@ public class GeneratedDataLoader {
 
     /**
      * set levels of the resources.
-     * 
+     *
      * @param levels
      */
     public void setLevel(List<String> levels) {
@@ -303,7 +311,7 @@ public class GeneratedDataLoader {
 
     /**
      * Get units of the resources.
-     * 
+     *
      * @return
      */
     public List<String> getUnits() {
@@ -312,7 +320,7 @@ public class GeneratedDataLoader {
 
     /**
      * Set units of the resources.
-     * 
+     *
      * @param units
      */
     public void setUnits(List<String> units) {
@@ -342,8 +350,10 @@ public class GeneratedDataLoader {
                 continue;
             }
             // TODO: How about resource with other descriptors?
-            if (gr.getSpecificName() == null || gr.getSpecificName().equals(""))
+            if (gr.getSpecificName() == null
+                    || gr.getSpecificName().equals("")) {
                 continue;
+            }
 
             // levels.add(..)
             String level = gr.getLevel();
@@ -382,8 +392,9 @@ public class GeneratedDataLoader {
 
             if (gr instanceof TimeSeriesResourceHolder) {
 
-                if (gr.getRsc().getName() == null || gr.getRsc().equals(""))
+                if (gr.getRsc().getName() == null || gr.getRsc().equals("")) {
                     continue;
+                }
 
                 // levels.add(..)
                 String level = gr.getLevel();
@@ -393,8 +404,9 @@ public class GeneratedDataLoader {
 
                 // units.add(...)
                 String unit = gr.getUnits();
-                if (!units.contains(unit))
+                if (!units.contains(unit)) {
                     units.add(unit);
+                }
 
             }
         }
@@ -509,7 +521,13 @@ public class GeneratedDataLoader {
         }
 
         @Override
-        protected IStatus run(IProgressMonitor monitor) {
+        public IStatus run(IProgressMonitor monitor) {
+
+            // "Turn Off" all visible histogram resources/overlays.
+            // Save a reference to the one that was enabled.
+            HistogramGridResourceHolder hgrh = toolLayer.getResourceList()
+                    .turnOffAllHistograms();
+
             IStatus status = Status.CANCEL_STATUS;
 
             AbstractEditor theEditor = (AbstractEditor) VizWorkbenchManager
@@ -526,11 +544,10 @@ public class GeneratedDataLoader {
                     GeneratedEnsembleGridResourceData grd = (GeneratedEnsembleGridResourceData) pair
                             .getResourceData();
 
-                    /*
-                     * If there is already a generated resource having the same
-                     * calculation, level and unit then unload the existing
-                     * resource.
-                     */
+                    // If there is already a generated resource having the same
+                    // calculation, level and unit then unload the existing
+                    // resource.
+
                     if (grd.getLevel().equals(level)
                             && grd.getUnit().equals(unit)) {
                         if (grd.getCalculator().getCalculation() == calculator
@@ -560,10 +577,17 @@ public class GeneratedDataLoader {
                         e);
             }
 
+            // "Turn on", reenable the histogram resource/overlay that was
+            // shut off at the start of this processing.
+            if (hgrh != null) {
+                hgrh.getRsc().getProperties().setVisible(true);
+            }
+
             theEditor.refresh();
 
             return status;
         }
+
     }
 
     /*
