@@ -37,7 +37,6 @@ import com.raytheon.viz.grid.rsc.general.GridResource;
 import com.raytheon.viz.grid.xml.FieldDisplayTypesFactory;
 
 import gov.noaa.gsd.viz.ensemble.display.calculate.Calculation;
-import gov.noaa.gsd.viz.ensemble.display.calculate.ERFCalculator;
 import gov.noaa.gsd.viz.ensemble.display.calculate.EnsembleCalculator;
 
 /**
@@ -47,22 +46,23 @@ import gov.noaa.gsd.viz.ensemble.display.calculate.EnsembleCalculator;
  * Auto-updating and other. Issue:Since extend the GridResource, how to black
  * request data from EDEX? Current solution is to override and minor change
  * related
- * 
+ *
  * @author jing
  * @version 1.0
- * 
+ *
  *          <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date         Ticket#    Engineer    Description
  * ------------ ---------- ----------- --------------------------
  * Jan 10, 2014    5056     jing       Initial creation
  * Dec 26, 2016    19325    jing       Display and sample image
  * Feb 17, 2017    19325    jing       Added ERF image capability
- * 
+ * Jul 26  2021    93923    srussell   Updated setParameter()
+ *
  *          </pre>
- * 
+ *
  * @param <T>
  */
 @SuppressWarnings("rawtypes")
@@ -97,7 +97,7 @@ public class GeneratedEnsembleGridResource
 
     /**
      * Constructor
-     * 
+     *
      * @param resourceData
      *            - resource data to construct the generated grid resource.
      * @param loadProperties
@@ -123,12 +123,13 @@ public class GeneratedEnsembleGridResource
 
     /**
      * Constructor
-     * 
+     *
      * @param resourceData
      *            - resource data to construct the generated grid resource.
      * @param loadProperties
      */
     public GeneratedEnsembleGridResource(
+
             GeneratedEnsembleGridResourceData resourceData,
             LoadProperties loadProperties, EnsembleCalculator c) {
 
@@ -140,7 +141,7 @@ public class GeneratedEnsembleGridResource
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * com.raytheon.viz.grid.rsc.general.AbstractGridResource#initInternal(com
      * .raytheon.uf.viz.core.IGraphicsTarget)
@@ -151,11 +152,9 @@ public class GeneratedEnsembleGridResource
         // Set DisplayTypeCapability with CONTOUR IMAGE
         if (parameter != null) {
             String paramAbbrev = parameter.getAbbreviation();
-            ((DisplayTypeCapability) this
-                    .getCapability(DisplayTypeCapability.class))
-                            .setAlternativeDisplayTypes(
-                                    FieldDisplayTypesFactory.getInstance()
-                                            .getDisplayTypes(paramAbbrev));
+            this.getCapability(DisplayTypeCapability.class)
+                    .setAlternativeDisplayTypes(FieldDisplayTypesFactory
+                            .getInstance().getDisplayTypes(paramAbbrev));
         }
 
         super.initInternal(target);
@@ -164,7 +163,7 @@ public class GeneratedEnsembleGridResource
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see com.raytheon.viz.grid.rsc.GridNameGenerator.IGridNameResource#
      * getLegendParameters()
      */
@@ -176,7 +175,7 @@ public class GeneratedEnsembleGridResource
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see com.raytheon.viz.grid.rsc.general.GridResource#getName()
      */
     @Override
@@ -212,10 +211,10 @@ public class GeneratedEnsembleGridResource
     /**
      * Update a calculation display if the data is changed The real update will
      * be implemented later.
-     * 
+     *
      * @param dataMap
      *            -The loaded member data
-     * 
+     *
      *            TODO
      */
     public void updateData(Map<DataTime, List<GeneralGridData>> dataMap) {
@@ -269,8 +268,9 @@ public class GeneratedEnsembleGridResource
      * Set parameter of any grid resource
      */
     public void setParameter(GridResource rcs) {
-        if (parameter != null)
+        if (parameter != null) {
             return;
+        }
 
         GridRecord randomRec = rcs.getAnyGridRecord();
 
@@ -280,20 +280,11 @@ public class GeneratedEnsembleGridResource
             parameter = randomRec.getParameter();
             this.randomRec = randomRec;
         }
-
-        /**
-         * Reset the parameter for ERF
-         */
-        if (calculator instanceof ERFCalculator) {
-            parameter.setAbbreviation("ERF");
-            parameter.setName("ERF");
-            parameter.setUnitString("%");
-        }
     }
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see com.raytheon.viz.grid.rsc.general.GridResource#getMatchCriteria()
      */
     @Override
@@ -303,7 +294,7 @@ public class GeneratedEnsembleGridResource
 
     /**
      * Match criteria for generated grid displaying.
-     * 
+     *
      * @param record
      *            - any grid record for get the parameters
      */
