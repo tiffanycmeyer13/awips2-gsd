@@ -37,6 +37,7 @@ import com.raytheon.uf.viz.core.rsc.capabilities.DensityCapability;
  * Jun 27, 2017  19325    jing      Upgrade to 17.3.1
  * Jun 03, 2019  64512    ksunil    changes to absorb new labelingPreferences
  * Jul 01, 2021  93753    tjensen   Fix error in ValueLabelPreferences change
+ * Sep 07, 2021  95492    srussell  Updated initCountourLabeling()
  *
  * </pre>
  *
@@ -106,7 +107,7 @@ public class ContourControl {
             }
             for (IncrementLabelingPreferences labelPrefs : labelingPreferences
                     .getIncrement()) {
-                incrementOrig = ArrayUtils.addAll(valuesOrig,
+                incrementOrig = ArrayUtils.addAll(incrementOrig,
                         labelPrefs.getValues());
             }
 
