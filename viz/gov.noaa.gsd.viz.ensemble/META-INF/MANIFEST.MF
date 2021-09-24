@@ -2,7 +2,7 @@ Manifest-Version: 1.2
 Bundle-ManifestVersion: 2
 Bundle-Name: Ensemble-Tool
 Bundle-SymbolicName: gov.noaa.gsd.viz.ensemble; singleton:=true
-Bundle-Version: 4.17.4
+Bundle-Version: 4.17.4.qualifier
 Bundle-Vendor: NOAA-ESL-GSD
 Eclipse-RegisterBuddy: com.raytheon.uf.viz.core.rsc
 Require-Bundle: org.eclipse.ui,
