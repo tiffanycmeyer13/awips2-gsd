@@ -1,3 +1,4 @@
+
 package gov.noaa.gsd.viz.ensemble.display.control.contour;
 
 import java.util.Arrays;
@@ -38,6 +39,7 @@ import com.raytheon.uf.viz.core.rsc.capabilities.DensityCapability;
  * Jun 03, 2019  64512    ksunil    changes to absorb new labelingPreferences
  * Jul 01, 2021  93753    tjensen   Fix error in ValueLabelPreferences change
  * Sep 07, 2021  95492    srussell  Updated initCountourLabeling()
+ * Oct 28, 2021  97771    srussell  Updated changeContourValues(),getIncrementOrig()
  *
  * </pre>
  *
@@ -142,35 +144,53 @@ public class ContourControl {
      *            The contour value
      */
     public void changeContourValues(float increment, float contourValue) {
+        changeContourValues(increment, contourValue, true);
+    }
 
-        /*
-         * Converts the contourValue into a float array
-         */
+    /**
+     * Change contour with user specified increment and value. The contours will
+     * be as default if the value is "NaN", that only use the increment.
+     *
+     * @param increment
+     *            The contour increment
+     * @param contourValue
+     *            The contour value
+     */
+    public void changeContourValues(float increment, float contourValue,
+            boolean includeIncrementedContours) {
+
+        // Display only the contours labeled with the Contour value chosen by
+        // the user in the ContourControlDialog.
+        float filterOutIncrementedContours = 0.0F;
+
+        // Converts the contourValue into a float array
         float[] values = null;
         if (!Float.isNaN(contourValue)) {
             values = new float[1];
             values[0] = contourValue;
         }
 
-        /*
-         * Sets contour label increment and values.
-         */
+        // Sets contour label increment for the ContourLabelingPreferences obj
         IncrementLabelingPreferences incr = new IncrementLabelingPreferences();
-        incr.setValues(new float[] { increment });
+        if (includeIncrementedContours) {
+            incr.setValues(new float[] { increment, 0.0f });
+        } else {
+            incr.setValues(
+                    new float[] { filterOutIncrementedContours, increment });
+        }
         labelingPreferences.setIncrement(Arrays.asList(incr));
 
+        // Sets contour label value for the ContourLabelingPreferences obj
         if (values != null) {
             ValuesLabelingPreferences val = new ValuesLabelingPreferences();
             val.setValues(values);
             labelingPreferences.setValues(Arrays.asList(val));
         }
-        contourPreferences.setContourLabeling(labelingPreferences);
 
+        contourPreferences.setContourLabeling(labelingPreferences);
         rsc.setStylePreferences(contourPreferences);
 
-        /*
-         * Force redrawing the contour.
-         */
+        // Force redrawing the contours.
         redrawContours(rsc);
     }
 
@@ -268,11 +288,12 @@ public class ContourControl {
     }
 
     public float getIncrementOrig() {
+        float origInc = 0.0f;
         if (incrementOrig == null || incrementOrig.length == 0) {
             return 0;
-        } else {
-            return incrementOrig[0];
         }
+        origInc = (incrementOrig[0] != 0) ? incrementOrig[0] : incrementOrig[1];
+        return origInc;
     }
 
 }
