@@ -2,6 +2,7 @@ package gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.legend;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -114,6 +115,8 @@ import gov.noaa.gsd.viz.ensemble.util.Utilities;
  *                                       ensemble resource names.
  * Jul 08, 2021   93923       srussell   Updated LegendTreeMouseListener.mouseDown()
  *                                       Updated getEnsembleMemberGenericResources()
+ * Nov 15, 2021   97771       srussell   Updated GEFSMembersColorChangeJob.run()
+ *                                       Added LegendTreeSorter.comparePerturbations()
  * </pre>
  *
  * @author polster
@@ -1066,6 +1069,8 @@ public class LegendBrowserComposite extends Composite {
     }
 
     /*
+     *
+     *
      * This method will update color on a given ensemble resource. Underlying
      * methods know how to colorize the contained perturbation members (eg. for
      * SREF, breaks colors into three categories for NMM, NMB and EM).
@@ -1733,10 +1738,12 @@ public class LegendBrowserComposite extends Composite {
                                 && (av1_group != null && av1_group.length() > 0)
                                 && (av2_group != null
                                         && av2_group.length() > 0)) {
+                            /*-
                             String av1_pertNumStr = null;
                             String av2_pertNumStr = null;
                             Integer av1_pertNum = null;
                             Integer av2_pertNum = null;
+                            */
 
                             if (grh1.getGroupName()
                                     .equals(grh2.getGroupName())) {
@@ -1746,38 +1753,20 @@ public class LegendBrowserComposite extends Composite {
                                  * members are sorted in ascending order (.i.e.
                                  * p1, p2, p3, ... p20, p21)
                                  */
-                                if (grh1.getGroupName().startsWith("GEFS ")) {
-                                    if (av1_pert.startsWith("p")
-                                            && av2_pert.startsWith("p")) {
-                                        av1_pertNumStr = av1_pert.substring(1,
-                                                av1_pert.length());
-                                        av2_pertNumStr = av2_pert.substring(1,
-                                                av2_pert.length());
+                                if (grh1.getGroupName().toUpperCase()
+                                        .startsWith("GEFS ")) {
 
-                                        try {
-                                            av1_pertNum = new Integer(
-                                                    av1_pertNumStr);
-                                            av2_pertNum = new Integer(
-                                                    av2_pertNumStr);
-
-                                            compareResult = av1_pertNum
-                                                    .compareTo(av2_pertNum);
-
-                                        } catch (NumberFormatException nfe) {
-
-                                            compareResult = av1_pertNumStr
-                                                    .compareTo(av2_pertNumStr);
-
-                                        }
-
-                                    }
+                                    compareResult = comparePerturbations(
+                                            av1_pert, av2_pert);
                                 }
+
                                 /*
                                  * Otherwise, this will be an ensemble
                                  * perturbation member that is not part of the
                                  * GEFS. Just sort by resource name.
                                  */
                                 else {
+
                                     String fullName_1 = vr1.getName();
                                     String fullName_2 = vr2.getName();
 
@@ -1921,7 +1910,48 @@ public class LegendBrowserComposite extends Composite {
             return compareResult;
         }
 
-    }
+        private int comparePerturbations(String perturbation1,
+                String perturbation2) {
+            int result = 0;
+
+            // get the Ensemble ID, example p21
+            String id1 = perturbation1;
+            String id2 = perturbation2;
+
+            // Split the ID into a prefix of alphabetic characters and
+            // a suffix of digits
+            // Example: p21 becomes p 21
+            String[] tokens1 = id1.split("((?=\\d)|(?<=\\d))", 2);
+            String[] tokens2 = id2.split("((?=\\d)|(?<=\\d))", 2);
+            String prefixARH1 = tokens1[0];
+            String prefixARH2 = tokens2[0];
+            String suffixARH1 = tokens1[1];
+            String suffixARH2 = tokens2[1];
+            int suffix1 = Integer.parseInt(suffixARH1);
+            int suffix2 = Integer.parseInt(suffixARH2);
+
+            int prefixesCompared = prefixARH1.compareToIgnoreCase(prefixARH2);
+
+            // The 2 alphabetic prefixes are not the same, return the
+            // comparison result
+            if (prefixesCompared != 0) {
+                return prefixesCompared;
+            }
+
+            // Compare the integers of the suffix on the IDs
+            if (suffix1 == suffix2) {
+                result = 0;
+            } else if (suffix1 > suffix2) {
+                result = 1;
+            } else {
+                // if(suffix1 < suffix2 )
+                result = -1;
+            }
+
+            return result;
+        }
+
+    }// End class LegendTreeSorter
 
     public void setToolMode(EnsembleTool.EnsembleToolMode mode) {
         if (mode == EnsembleTool.EnsembleToolMode.LEGENDS_PLAN_VIEW) {
@@ -2248,21 +2278,23 @@ public class LegendBrowserComposite extends Composite {
         @Override
         protected IStatus run(IProgressMonitor monitor) {
             IStatus status = null;
-
             Color currColor = null;
+            List<AbstractResourceHolder> p = getPerturbationMembers();
 
-            for (AbstractResourceHolder gRsc : getPerturbationMembers()) {
-                if ((gRsc instanceof GridResourceHolder)
-                        || (gRsc instanceof TimeSeriesResourceHolder)) {
-                    AbstractVizResource<?, ?> rsc = gRsc.getRsc();
-                    String ensId = gRsc.getEnsembleIdRaw();
-                    if ((ensId != null) && (ensId.length() > 1)) {
-                        currColor = ChosenGEFSColors.getInstance()
-                                .getGradientByEnsembleId(ensId);
-                        rsc.getCapability(ColorableCapability.class)
-                                .setColor(currColor.getRGB());
-                        rsc.getCapability(OutlineCapability.class);
-                    }
+            Collections.sort(p, AbstractResourceHolder.EnsIDComparator);
+            // "perturbation" == a child resource
+            int numPerturbations = p.size();
+            int i = 0;
+
+            for (AbstractResourceHolder gRsc : p) {
+                AbstractVizResource<?, ?> rsc = gRsc.getRsc();
+                String ensId = gRsc.getEnsembleIdRaw();
+                if ((ensId != null) && (ensId.length() > 1)) {
+                    currColor = ChosenGEFSColors.getInstance()
+                            .getGradientColor(numPerturbations, ++i);
+                    rsc.getCapability(ColorableCapability.class)
+                            .setColor(currColor.getRGB());
+                    rsc.getCapability(OutlineCapability.class);
                 }
             }
 

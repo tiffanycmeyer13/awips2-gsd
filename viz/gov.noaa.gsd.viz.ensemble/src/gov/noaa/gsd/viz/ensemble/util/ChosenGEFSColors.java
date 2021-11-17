@@ -3,8 +3,6 @@ package gov.noaa.gsd.viz.ensemble.util;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.RGB;
 
-import gov.noaa.gsd.viz.ensemble.control.EnsembleTool;
-
 /**
  * This class is used to map unique colors to given GFS ensemble perturbation
  * members, which are identified by their hard-coded perturbation memeber names
@@ -23,6 +21,7 @@ import gov.noaa.gsd.viz.ensemble.control.EnsembleTool;
  *                                     set totalSteps to the number of rscs
  *                                     instead of the hardcoded workaround of
  *                                     20. Added getResourceCount().
+ * Nov 15, 2021   97771    srussell    Updated getGradientColor()
  *
  * </pre>
  *
@@ -57,101 +56,45 @@ public class ChosenGEFSColors {
         color = c;
     }
 
-    public Color getGradientByEnsembleId(String name) {
-
-        Color c = null;
-        int totalSteps = this.getResourceCount();
-        int pertNumber = getPerturbationIndex(name);
-        c = getGradientColor(color, totalSteps, pertNumber);
-        return c;
-
-    }
     /*-
      *
      * Create a color gradient by taking the user chosen color, getting the
      * HSB ( hue, saturation, brightness ) values, setting saturation to
      * the number of the current resource divided by the total number of
-     * resources. Then use the HSB values to make a different gradient of
-     * color based off the user's choice of color.
+     * resources. Then use the fractioned saturation values to make a gradient
+     * of shades of the user chosen color.
+     *
+     * int totalPerturbations - Total number of perturbations/ child resources
+     *
+     * int indexCurrPerturbation
      *
      *
-     * Color c    - the user chosen color.
-     *
-     * int totalSteps - the number of resources in the Legend Tab, numbered top
-     *                  down, starting with 1.
-     *
-     * int currStep -  the number of the currently selected resource in the
-     *                 Legend tab.  If it is 3rd from the top currStep is 3.
      */
 
-    private Color getGradientColor(Color c, int totalSteps, int currStep) {
-        RGB rgb = c.getRGB();
+    public Color getGradientColor(int totalPerturbations,
+            int indexCurrPerturbation) {
+
+        float saturationFloor = 0.200f;
+        float leftOverSatRange = 0.80f;
+        float saturationIncrement = leftOverSatRange / (totalPerturbations - 1);
+
+        RGB rgb = color.getRGB();
         float[] hsb = rgb.getHSB();
-        hsb[1] = currStep / (float) totalSteps;
+
+        if (indexCurrPerturbation > 1
+                && indexCurrPerturbation < totalPerturbations) {
+            hsb[1] = (--indexCurrPerturbation * saturationIncrement)
+                    + saturationFloor;
+        } else if (indexCurrPerturbation == totalPerturbations) {
+            hsb[1] = 1.0f;
+        } else {
+            hsb[1] = saturationFloor;
+        }
+
         RGB nrgb = new RGB(hsb[0], hsb[1], hsb[2]);
+
         return SWTResourceManager.getColor(nrgb);
 
     }
 
-    public String getSrefPerturbationPrefix(String member) {
-        return member.replaceAll("[0-9]", "");
-    }
-
-    /*
-     * TODO: this is a poor man's solution working against hard-coded names.
-     */
-    public int getPerturbationIndex(String member) {
-
-        int pert = 0;
-        if (member.startsWith("ctll0")) {
-            pert = 1;
-        } else if (member.startsWith("p1")) {
-            pert = 2;
-        } else if (member.startsWith("p2")) {
-            pert = 3;
-        } else if (member.startsWith("p3")) {
-            pert = 4;
-        } else if (member.startsWith("p4")) {
-            pert = 5;
-        } else if (member.startsWith("p5")) {
-            pert = 6;
-        } else if (member.startsWith("p6")) {
-            pert = 7;
-        } else if (member.startsWith("p7")) {
-            pert = 8;
-        } else if (member.startsWith("p8")) {
-            pert = 9;
-        } else if (member.startsWith("p9")) {
-            pert = 10;
-        } else if (member.startsWith("p10")) {
-            pert = 11;
-        } else if (member.startsWith("p11")) {
-            pert = 12;
-        } else if (member.startsWith("p12")) {
-            pert = 13;
-        } else if (member.startsWith("p13")) {
-            pert = 14;
-        } else if (member.startsWith("p14")) {
-            pert = 15;
-        } else if (member.startsWith("p15")) {
-            pert = 16;
-        } else if (member.startsWith("p16")) {
-            pert = 17;
-        } else if (member.startsWith("p17")) {
-            pert = 18;
-        } else if (member.startsWith("p18")) {
-            pert = 19;
-        } else if (member.startsWith("p19")) {
-            pert = 20;
-        }
-
-        return pert;
-    }
-
-    public int getResourceCount() {
-        int rscCnt = 0;
-        rscCnt = EnsembleTool.getInstance().getToolLayer().getResourceHolders()
-                .size();
-        return rscCnt;
-    }
 }
