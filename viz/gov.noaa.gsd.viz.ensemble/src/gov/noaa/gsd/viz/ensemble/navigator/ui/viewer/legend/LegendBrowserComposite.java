@@ -117,6 +117,8 @@ import gov.noaa.gsd.viz.ensemble.util.Utilities;
  *                                       Updated getEnsembleMemberGenericResources()
  * Nov 15, 2021   97771       srussell   Updated GEFSMembersColorChangeJob.run()
  *                                       Added LegendTreeSorter.comparePerturbations()
+ * Jan 25, 2022   99597       achalla    Modified updateColorsOnEnsembleResource() to recognize other data types,
+ *                                       Updated GEFSMembersColorChangeJob() not to sort other data types
  * </pre>
  *
  * @author polster
@@ -1089,11 +1091,22 @@ public class LegendBrowserComposite extends Composite {
 
         // TODO: poor-man's way of knowing what type of flavor this ensemble is
         String ensembleNameUpperCase = ensembleName.toUpperCase();
-        if ((ensembleNameUpperCase.indexOf("GEFS") >= 0)
-                || (ensembleNameUpperCase.indexOf("GFS Ensemble") >= 0)) {
+        if ((ensembleNameUpperCase.indexOf("GEFS") >= 0) // GEFS CMC GEFS_tmp
+                || (ensembleNameUpperCase.indexOf("GFS Ensemble") >= 0)) { // GFSensemble
             updateGEFSEnsembleColors(ensembleName, getPerturbationMembers());
         } else if (ensembleNameUpperCase.indexOf("SREF") >= 0) {
             updateSREFColors(ensembleName, getPerturbationMembers());
+        } else if (ensembleNameUpperCase.contains("GFSENSEMBLE")) {
+            updateGEFSEnsembleColors(ensembleName, getPerturbationMembers());
+        } else if (ensembleNameUpperCase.contains("GEFS_TEMP")) {
+            updateGEFSEnsembleColors(ensembleName, getPerturbationMembers());
+            // Check for other data types ex: CMC or unrecognized types with
+            // patterns GribModel:xx:x:xx
+        } else if (ensembleNameUpperCase
+                .substring(0, ensembleNameUpperCase.indexOf(" "))
+                .matches("[a-zA-Z]+:([0-9]+(:[0-9]+)+)")) {
+            updateGEFSEnsembleColors(ensembleName, getPerturbationMembers());
+
         }
     }
 
@@ -1188,7 +1201,7 @@ public class LegendBrowserComposite extends Composite {
                  * pop-up menu ...
                  */
                 final Object mousedItem = userClickedTreeItem.getData();
-
+       
                 if (mousedItem instanceof EnsembleMembersHolder) {
 
                     EnsembleMembersHolder emh = (EnsembleMembersHolder) mousedItem;
@@ -1210,6 +1223,7 @@ public class LegendBrowserComposite extends Composite {
                     /* only enable the ERF menu item if we are in plan view */
                     EnsembleToolMode mode = EnsembleTool.getInstance()
                             .getToolMode();
+                 
                     if (mode == EnsembleToolMode.LEGENDS_TIME_SERIES) {
                         addERFLayerMenuItem.setEnabled(false);
                     } else if (mode == EnsembleToolMode.LEGENDS_PLAN_VIEW) {
@@ -1232,7 +1246,7 @@ public class LegendBrowserComposite extends Composite {
                      */
                     contourMenuItem = new MenuItem(legendMenu, SWT.PUSH);
                     contourMenuItem.setText("Contour Control");
-
+                   
                     if (mode == EnsembleToolMode.LEGENDS_TIME_SERIES) {
                         contourMenuItem.setEnabled(false);
                     } else if (mode == EnsembleToolMode.LEGENDS_PLAN_VIEW) {
@@ -2281,7 +2295,16 @@ public class LegendBrowserComposite extends Composite {
             Color currColor = null;
             List<AbstractResourceHolder> p = getPerturbationMembers();
 
-            Collections.sort(p, AbstractResourceHolder.EnsIDComparator);
+            /*
+             * For Input data types like(CMCE GribModel:54:0:71) with an
+             * ensambleID = 4.4 wont be compared properly in EnsIDComparator
+             */
+            if (p != null && !(p.get(0).getGeneralName()
+                    .substring(0, p.get(0).getGeneralName().indexOf(" "))
+                    .matches("[a-zA-Z]+:([0-9]+(:[0-9]+)+)"))) {
+                Collections.sort(p, AbstractResourceHolder.EnsIDComparator);
+            }
+
             // "perturbation" == a child resource
             int numPerturbations = p.size();
             int i = 0;
