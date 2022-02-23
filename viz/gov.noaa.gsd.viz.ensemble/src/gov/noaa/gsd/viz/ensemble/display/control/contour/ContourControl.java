@@ -2,6 +2,7 @@
 package gov.noaa.gsd.viz.ensemble.display.control.contour;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.commons.lang.ArrayUtils;
@@ -40,6 +41,7 @@ import com.raytheon.uf.viz.core.rsc.capabilities.DensityCapability;
  * Jul 01, 2021  93753    tjensen   Fix error in ValueLabelPreferences change
  * Sep 07, 2021  95492    srussell  Updated initCountourLabeling()
  * Oct 28, 2021  97771    srussell  Updated changeContourValues(),getIncrementOrig()
+ * Feb 18, 2022  99858    srussell  Updated changeContourValues()
  *
  * </pre>
  *
@@ -143,25 +145,7 @@ public class ContourControl {
      * @param contourValue
      *            The contour value
      */
-    public void changeContourValues(float increment, float contourValue) {
-        changeContourValues(increment, contourValue, true);
-    }
-
-    /**
-     * Change contour with user specified increment and value. The contours will
-     * be as default if the value is "NaN", that only use the increment.
-     *
-     * @param increment
-     *            The contour increment
-     * @param contourValue
-     *            The contour value
-     */
-    public void changeContourValues(float increment, float contourValue,
-            boolean includeIncrementedContours) {
-
-        // Display only the contours labeled with the Contour value chosen by
-        // the user in the ContourControlDialog.
-        float filterOutIncrementedContours = 0.0F;
+    public void changeContourValues(float contourValue) {
 
         // Converts the contourValue into a float array
         float[] values = null;
@@ -170,15 +154,10 @@ public class ContourControl {
             values[0] = contourValue;
         }
 
-        // Sets contour label increment for the ContourLabelingPreferences obj
-        IncrementLabelingPreferences incr = new IncrementLabelingPreferences();
-        if (includeIncrementedContours) {
-            incr.setValues(new float[] { increment, 0.0f });
-        } else {
-            incr.setValues(
-                    new float[] { filterOutIncrementedContours, increment });
-        }
-        labelingPreferences.setIncrement(Arrays.asList(incr));
+        // Empty out old values so that only the contours the user chooses
+        // is displayed in CAVE. Those contours should be ContourValue +
+        // increment value, only.
+        labelingPreferences.setIncrement(Collections.emptyList());
 
         // Sets contour label value for the ContourLabelingPreferences obj
         if (values != null) {
