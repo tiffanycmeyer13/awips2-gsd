@@ -14,7 +14,6 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.ColorDialog;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
 import com.raytheon.viz.ui.dialogs.CaveJFACEDialog;
@@ -29,13 +28,14 @@ import com.raytheon.viz.ui.dialogs.CaveJFACEDialog;
  * SOFTWARE HISTORY
  * 
  * Date         Ticket#    Engineer    Description
- * ------------ ---------- ----------- --------------------------
- * Oct 8, 2014    5056      polster     Initial creation
+ * ------------ ---------- ----------- -------------------------------------
+ * Oct  8, 2014   5056      polster     Initial creation
+ * Apr 18, 2022   103658    smanoj      Remove data source name in the Color
+ *                                      Gradient “Choose Color Range” dialog
  * 
  * </pre>
  * 
  * @author polster
- * @version 1.0
  */
 public class EnsembleGEFSColorChooser extends CaveJFACEDialog {
 
@@ -61,25 +61,12 @@ public class EnsembleGEFSColorChooser extends CaveJFACEDialog {
         gridLayout.numColumns = 5;
         gridLayout.makeColumnsEqualWidth = false;
 
-        Label label_modelName_GEFS = new Label(container, SWT.BORDER
-                | SWT.CENTER);
-        label_modelName_GEFS.setAlignment(SWT.CENTER);
-        GridData gd_label_modelName_GEFS = new GridData(SWT.CENTER, SWT.CENTER,
-                false, false, 1, 1);
-        gd_label_modelName_GEFS.heightHint = 20;
-        gd_label_modelName_GEFS.widthHint = 40;
-        label_modelName_GEFS.setLayoutData(gd_label_modelName_GEFS);
-        label_modelName_GEFS.setText("GEFS");
-
-        Label label_colon_GEFS = new Label(container, SWT.NONE);
-        label_colon_GEFS.setText(":");
-
         final Composite label_color_GEFS = new Composite(container, SWT.BORDER);
-        label_color_GEFS.setForeground(ChosenGEFSColors.getInstance()
-                .getColor());
+        label_color_GEFS
+                .setForeground(ChosenGEFSColors.getInstance().getColor());
         label_color_GEFS.setBackground(GlobalColor.get(GlobalColor.WHITE));
-        GridData gd_label_color_GEFS = new GridData(SWT.LEFT, SWT.CENTER,
-                false, false, 3, 1);
+        GridData gd_label_color_GEFS = new GridData(SWT.LEFT, SWT.CENTER, false,
+                false, 3, 1);
         gd_label_color_GEFS.heightHint = 24;
         gd_label_color_GEFS.widthHint = 116;
         gd_label_color_GEFS.minimumWidth = 116;
@@ -109,8 +96,6 @@ public class EnsembleGEFSColorChooser extends CaveJFACEDialog {
 
     }
 
-    // private static Image oldImage = null;
-
     public static void applyGradientBG(Composite c) {
 
         Rectangle rect = c.getClientArea();
@@ -123,10 +108,6 @@ public class EnsembleGEFSColorChooser extends CaveJFACEDialog {
         gc.dispose();
         image.dispose();
 
-        // // if (oldImage != null) {
-        // // oldImage.dispose();
-        // // oldImage = newImage;
-        // }
     }
 
     /**
