@@ -22,35 +22,37 @@ import com.raytheon.viz.ui.dialogs.CaveJFACEDialog;
  * This class is a Dialog which allows users to change the colors of the GFS
  * ensemble perturbation members. It is used as a convenience feature to make it
  * easy to create a gradient of colors given a base color.
- * 
+ *
  * <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
- * Date         Ticket#    Engineer    Description
- * ------------ ---------- ----------- -------------------------------------
- * Oct  8, 2014   5056      polster     Initial creation
- * Apr 18, 2022   103658    smanoj      Remove data source name in the Color
- *                                      Gradient “Choose Color Range” dialog
- * 
+ *
+ * Date          Ticket#  Engineer  Description
+ * ------------- -------- --------- --------------------------------------------
+ * Oct 08, 2014  5056     polster   Initial creation
+ * Apr 18, 2022  103658   smanoj    Remove data source name in the Color
+ *                                  Gradient “Choose Color Range” dialog
+ * May 03, 2022  103658   tjensen   Make EnsembleGFESColorChooser generic for
+ *                                  any Ensemble models
+ *
  * </pre>
- * 
+ *
  * @author polster
  */
-public class EnsembleGEFSColorChooser extends CaveJFACEDialog {
+public class EnsembleColorChooser extends CaveJFACEDialog {
 
     /**
      * Create the dialog.
-     * 
+     *
      * @param parentShell
      */
-    public EnsembleGEFSColorChooser(Shell parentShell) {
+    public EnsembleColorChooser(Shell parentShell) {
         super(parentShell);
     }
 
     /**
      * Create contents of the dialog.
-     * 
+     *
      * @param parent
      */
     @Override
@@ -61,32 +63,31 @@ public class EnsembleGEFSColorChooser extends CaveJFACEDialog {
         gridLayout.numColumns = 5;
         gridLayout.makeColumnsEqualWidth = false;
 
-        final Composite label_color_GEFS = new Composite(container, SWT.BORDER);
-        label_color_GEFS
-                .setForeground(ChosenGEFSColors.getInstance().getColor());
-        label_color_GEFS.setBackground(GlobalColor.get(GlobalColor.WHITE));
-        GridData gd_label_color_GEFS = new GridData(SWT.LEFT, SWT.CENTER, false,
+        final Composite label_color = new Composite(container, SWT.BORDER);
+        label_color.setForeground(ChosenColors.getInstance().getColor());
+        label_color.setBackground(GlobalColor.get(GlobalColor.WHITE));
+        GridData gd_label_color = new GridData(SWT.LEFT, SWT.CENTER, false,
                 false, 3, 1);
-        gd_label_color_GEFS.heightHint = 24;
-        gd_label_color_GEFS.widthHint = 116;
-        gd_label_color_GEFS.minimumWidth = 116;
-        gd_label_color_GEFS.minimumHeight = 24;
-        label_color_GEFS.setLayoutData(gd_label_color_GEFS);
-        label_color_GEFS.setSize(116, 24);
-        applyGradientBG(label_color_GEFS);
-        label_color_GEFS.addMouseListener(new MouseAdapter() {
+        gd_label_color.heightHint = 24;
+        gd_label_color.widthHint = 116;
+        gd_label_color.minimumWidth = 116;
+        gd_label_color.minimumHeight = 24;
+        label_color.setLayoutData(gd_label_color);
+        label_color.setSize(116, 24);
+        applyGradientBG(label_color);
+        label_color.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseDown(MouseEvent e) {
 
                 ColorDialog cd = new ColorDialog(getShell());
-                cd.setRGB(ChosenGEFSColors.getInstance().getColor().getRGB());
-                cd.setText("Choose GEFS lower color");
+                cd.setRGB(ChosenColors.getInstance().getColor().getRGB());
+                cd.setText("Choose lower color");
                 RGB result = cd.open();
                 if (result != null) {
                     Color nc = SWTResourceManager.getColor(result);
-                    ChosenGEFSColors.getInstance().setColor(nc);
-                    label_color_GEFS.setForeground(nc);
-                    applyGradientBG(label_color_GEFS);
+                    ChosenColors.getInstance().setColor(nc);
+                    label_color.setForeground(nc);
+                    applyGradientBG(label_color);
                 }
             }
         });
@@ -107,12 +108,11 @@ public class EnsembleGEFSColorChooser extends CaveJFACEDialog {
         c.setBackgroundImage(image);
         gc.dispose();
         image.dispose();
-
     }
 
     /**
      * Create contents of the button bar.
-     * 
+     *
      * @param parent
      */
     @Override
