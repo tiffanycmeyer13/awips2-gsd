@@ -4,7 +4,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.RGB;
 
 /**
- * This class is used to map unique colors to given GFS ensemble perturbation
+ * This class is used to map unique colors to given ensemble perturbation
  * members, which are identified by their hard-coded perturbation memeber names
  * (ctl1, ctl2, n1, n2 ... p4, p5). It has been created in support of
  * simplifying the process of allowing the user to color an entire ensemble set
@@ -14,32 +14,33 @@ import org.eclipse.swt.graphics.RGB;
  *
  * SOFTWARE HISTORY
  *
- * Date         Ticket#    Engineer    Description
- * ------------ ---------- ----------- --------------------------
- * Oct 8, 2014    5056     polster     Initial creation
- * Jun 19,2021    93248    srussell    Updated getGradientByEnsembleId() to
- *                                     set totalSteps to the number of rscs
- *                                     instead of the hardcoded workaround of
- *                                     20. Added getResourceCount().
- * Nov 15, 2021   97771    srussell    Updated getGradientColor()
+ * Date          Ticket#  Engineer  Description
+ * ------------- -------- --------- --------------------------------------------
+ * Oct 08, 2014  5056     polster   Initial creation
+ * Jun 19,2021   93248    srussell  Updated getGradientByEnsembleId() to set
+ *                                  totalSteps to the number of rscs instead of
+ *                                  the hardcoded workaround of 20. Added
+ *                                  getResourceCount().
+ * Nov 15, 2021  97771    srussell  Updated getGradientColor()
+ * May 03, 2022  103658   tjensen   Make EnsembleGFESColorChooser generic for
+ *                                  any Ensemble models
  *
  * </pre>
  *
  * @author polster
- * @version 1.0
  */
-public class ChosenGEFSColors {
+public class ChosenColors {
 
-    static public ChosenGEFSColors getInstance() {
+    static public ChosenColors getInstance() {
         if (SINGLETON == null) {
-            SINGLETON = new ChosenGEFSColors();
+            SINGLETON = new ChosenColors();
         }
         return SINGLETON;
     }
 
-    static private ChosenGEFSColors SINGLETON = null;
+    static private ChosenColors SINGLETON = null;
 
-    private ChosenGEFSColors() {
+    private ChosenColors() {
 
     }
 
