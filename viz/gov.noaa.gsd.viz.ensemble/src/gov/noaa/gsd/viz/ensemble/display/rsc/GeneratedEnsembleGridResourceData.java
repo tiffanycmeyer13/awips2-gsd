@@ -32,7 +32,8 @@ import gov.noaa.gsd.viz.ensemble.display.calculate.ERFCalculator;
 import gov.noaa.gsd.viz.ensemble.display.calculate.EnsembleCalculator;
 import gov.noaa.gsd.viz.ensemble.display.common.AbstractResourceHolder;
 import gov.noaa.gsd.viz.ensemble.navigator.ui.layer.EnsembleToolLayer;
-import tec.uom.se.format.SimpleUnitFormat;
+import tech.units.indriya.format.SimpleUnitFormat;
+
 
 /**
  * Construct the GeneratedEnsembleGridResource and provide data for it by
