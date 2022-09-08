@@ -1,5 +1,7 @@
 package gov.noaa.gsd.viz.ensemble.display.common;
 
+import java.util.Comparator;
+
 import com.raytheon.uf.common.time.DataTime;
 import com.raytheon.uf.viz.core.drawables.IDescriptor;
 import com.raytheon.uf.viz.core.drawables.IDescriptor.FramesInfo;
@@ -23,17 +25,17 @@ import gov.noaa.gsd.viz.ensemble.display.rsc.timeseries.GeneratedTimeSeriesResou
  * exists to attempt to fill an unusual void in the hierarchy of an
  * AbstractVizResource as there is no convenient way to extract commonly known
  * meteorological metadata information from the resource (needs verification).
- * 
+ *
  * This abstact class forces derived classes to define the equals() and hashCode
  * methods, among other notable getters.
- * 
+ *
  * In order to create a class of this type call the factory method (see
  * createResourceHolder).
- * 
+ *
  * <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date         Ticket#    Engineer    Description
  * ------------ ---------- ----------- --------------------------
  * Nov 17, 2014    5056     polster     Initial creation
@@ -41,9 +43,10 @@ import gov.noaa.gsd.viz.ensemble.display.rsc.timeseries.GeneratedTimeSeriesResou
  *                                      to AbstractResourceHolder
  * Dec 29, 2016    19325    jing        Deal with Image display type in equals()
  * Jun 27  2017    19325    jing        Reinvestigate equals() and save as TODO
- * 
+ * Nov 14  2021    99971    srussell    Added AbstractResourceHolder.EnsIDComparator
+ *
  * </pre>
- * 
+ *
  * @author polster
  * @author jing
  * @version 1.0
@@ -124,6 +127,7 @@ public abstract class AbstractResourceHolder
     // return equals;
     // }
 
+    @Override
     public int hashCode() {
         return getSpecificName().hashCode();
     }
@@ -306,5 +310,59 @@ public abstract class AbstractResourceHolder
     public boolean isIndivdualProduct() {
         return isIndividualProduct;
     }
+
+    /*-
+     * Use this Comparator to sort collections of AbstractResourceHolders that
+     * implement getEnsembleIdRaw() that you want sorted by perturbation.
+     * This comparator will handle IDs that start with letters and end with
+     * digits.
+     * Example: ct110, p1,p2, n2.
+     */
+    public static Comparator<AbstractResourceHolder> EnsIDComparator = new Comparator<AbstractResourceHolder>() {
+
+        @Override
+        public int compare(AbstractResourceHolder arh1,
+                AbstractResourceHolder arh2) {
+
+            int result = 0;
+
+            // get the Ensemble ID, example: ct110, p1,p2...p21
+            String id1 = arh1.getEnsembleIdRaw();
+            String id2 = arh2.getEnsembleIdRaw();
+
+            // Split the ID into a prefix of alphabetic characters and
+            // a suffix of digits
+            // Example: p21 becomes p 21
+            String[] tokens1 = id1.split("((?=\\d)|(?<=\\d))", 2);
+            String[] tokens2 = id2.split("((?=\\d)|(?<=\\d))", 2);
+            String prefixARH1 = tokens1[0];
+            String prefixARH2 = tokens2[0];
+            String suffixARH1 = tokens1[1];
+            String suffixARH2 = tokens2[1];
+            int suffix1 = Integer.parseInt(suffixARH1);
+            int suffix2 = Integer.parseInt(suffixARH2);
+
+            int prefixesCompared = prefixARH1.compareToIgnoreCase(prefixARH2);
+
+            // The 2 alphabetic prefixes are not the same, return the
+            // comparison result
+            if (prefixesCompared != 0) {
+                return prefixesCompared;
+            }
+
+            // Compare the integers of the suffix on the IDs
+            if (suffix1 == suffix2) {
+                result = 0;
+            } else if (suffix1 > suffix2) {
+                result = 1;
+            } else {
+                // if(suffix1 < suffix2 )
+                result = -1;
+            }
+
+            return result;
+        }
+
+    };
 
 }

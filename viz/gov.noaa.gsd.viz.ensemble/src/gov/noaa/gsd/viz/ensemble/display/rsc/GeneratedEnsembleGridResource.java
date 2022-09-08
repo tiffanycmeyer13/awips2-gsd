@@ -37,7 +37,6 @@ import com.raytheon.viz.grid.rsc.general.GridResource;
 import com.raytheon.viz.grid.xml.FieldDisplayTypesFactory;
 
 import gov.noaa.gsd.viz.ensemble.display.calculate.Calculation;
-import gov.noaa.gsd.viz.ensemble.display.calculate.ERFCalculator;
 import gov.noaa.gsd.viz.ensemble.display.calculate.EnsembleCalculator;
 
 /**
@@ -59,6 +58,7 @@ import gov.noaa.gsd.viz.ensemble.display.calculate.EnsembleCalculator;
  * Dec 26, 2016  19325    jing      Display and sample image
  * Feb 17, 2017  19325    jing      Added ERF image capability
  * Apr 23, 2020  8145     randerso  Updated to allow new sample formatting
+ * Jul 26  2021  93923    srussell   Updated setParameter()
  *
  * </pre>
  *
@@ -130,6 +130,7 @@ public class GeneratedEnsembleGridResource
      * @param loadProperties
      */
     public GeneratedEnsembleGridResource(
+
             GeneratedEnsembleGridResourceData resourceData,
             LoadProperties loadProperties, EnsembleCalculator c) {
 
@@ -261,15 +262,6 @@ public class GeneratedEnsembleGridResource
         if (randomRec != null) {
             parameter = randomRec.getParameter();
             this.randomRec = randomRec;
-        }
-
-        /**
-         * Reset the parameter for ERF
-         */
-        if (calculator instanceof ERFCalculator) {
-            parameter.setAbbreviation("ERF");
-            parameter.setName("ERF");
-            parameter.setUnitString("%");
         }
     }
 

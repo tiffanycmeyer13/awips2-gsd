@@ -1,16 +1,10 @@
 package gov.noaa.gsd.viz.ensemble.display.distribution;
 
-import gov.noaa.gsd.viz.ensemble.display.chart.ChartConfig;
-import gov.noaa.gsd.viz.ensemble.display.chart.ChartConfig.BinChooser;
-import gov.noaa.gsd.viz.ensemble.display.chart.ChartConfig.ChartStyle;
-import gov.noaa.gsd.viz.ensemble.display.chart.ChartConfig.HistFrequencyType;
-
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -20,31 +14,45 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
+import gov.noaa.gsd.viz.ensemble.display.chart.ChartConfig;
+import gov.noaa.gsd.viz.ensemble.display.chart.ChartConfig.BinChooser;
+import gov.noaa.gsd.viz.ensemble.display.chart.ChartConfig.ChartStyle;
+import gov.noaa.gsd.viz.ensemble.display.chart.ChartConfig.HistFrequencyType;
+
 /**
- * 
+ *
  * The pop up dialog to interactively configure chart display features. There
  * are three components on the dialog. They are the chart selector, chart
  * options and chart configuration. Each chart is with specified options and
  * configuration. Click the "Change" button, the current configuration will be
  * effected.
- * 
+ *
  * The first time this dialog is opened it is initialized using the default
  * chart configuration object, and will save specified changes, storing
  * configuration, options, and selector changes into the ChartConfig object when
  * closing it. Opening the dialog for subsequent changes will read the
  * previously saved changes from the chart configuration object.
- * 
- * 
+ *
+ *
  * <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date         Ticket#    Engineer    Description
  * ------------ ---------- ----------- --------------------------
- * Dec 21, 2015  12301         jing     Initial creation
- * 
+ * Dec 21, 2015  12301      jing       Initial creation
+ * Jun 03, 2021  92772      srussell   Updated so the dialog does not change
+ *                                     size when different menu items are
+ *                                     chosen. Some bad GUI setups were fixed
+ *                                     and instead of hiding 2 radio buttons
+ *                                     they are now disabled when not wanted. *
+ *                                     Updated createAppsSelectArea(). *
+ *                                     Updated createDialogArea().
+ *                                     Removed createSelectionButtons()
+ *                                     Remo9ved createConfigButtons()
+ *
  * </pre>
- * 
+ *
  * @author jing
  * @version 1.0
  */
@@ -111,9 +119,15 @@ public class DistributionConfigDialog extends Dialog {
     /* The shell of this dialog, is used to auto resize the window */
     Shell shell;
 
+    // CDF option that become a radio button to be enabled/disabled
+    private Button readMoveCheckButton = null;
+
+    // CDF option that become a radio button to be enabled/disabled
+    private Button readDownCheckButton = null;
+
     /**
      * The constructor
-     * 
+     *
      * @param parentShell
      *            - The parent shell
      * @param config
@@ -146,6 +160,8 @@ public class DistributionConfigDialog extends Dialog {
         GridLayout gridLayout = new GridLayout();
         gridLayout.numColumns = 2;
         selectConfigComposite.setLayout(gridLayout);
+        GridData gd = new GridData();
+        gd.verticalAlignment = GridData.BEGINNING;
 
         Label optionLabel = new Label(selectConfigComposite, SWT.NONE);
         optionLabel.setText("Options:");
@@ -154,45 +170,40 @@ public class DistributionConfigDialog extends Dialog {
         configLabel.setText("Configuration:");
 
         createSelectionArea(selectConfigComposite);
-        createSelectButtons();
-
         createConfigArea(selectConfigComposite);
-        createConfigButtons();
+        createPDFSelectButtons();
+        createCDFSelectButtons();
+        createPDFConfigButtons();
 
         return baseComposite;
-
     }
 
     /**
      * Builds the application area which contains chart style selected list.
-     * 
+     *
      * @param parent
      *            - top composite is the baseComposite.
      * @return appComposit
      */
     private Composite createAppsSelectArea(Composite parent) {
         Composite appComposite = new Composite(parent, SWT.BORDER);
-        GridData gd_appComposite = new GridData(SWT.LEFT, SWT.CENTER, false,
-                false, 1, 1);
-        gd_appComposite.widthHint = 419;
-        appComposite.setLayoutData(gd_appComposite);
-        appComposite.setLayout(new GridLayout(2, true));
+        appComposite.setLayout(new GridLayout(2, false));
 
         Label appMenuName = new Label(appComposite, SWT.LEFT);
         appMenuName.setText("Chart Style:");
 
-        final Combo appCombo = new Combo(appComposite, SWT.NONE);
+        final Combo appCombo = new Combo(appComposite, SWT.DROP_DOWN);
         appCombo.setText("PDF-CDF");
         appCombo.add("PDF-CDF");
         appCombo.add("PDF");
         appCombo.add("CDF");
 
-        /* TODO:Implement later */
-        // appCombo.add("Multiple PDFs");
-        // appCombo.add("Whisker");appCombo.add("Slope");
-        // appCombo.add("Time Series");
+        // Give the Chart Style Dropdown Menu Enough Width
+        GridData gridData = new GridData();
+        gridData.widthHint = 125;
+        appCombo.setLayoutData(gridData);
 
-        /** initial selection */
+        // initial selection
         switch (chartStyle) {
         case CHART_PDF_CDF:
             appCombo.select(0);
@@ -203,14 +214,14 @@ public class DistributionConfigDialog extends Dialog {
         case CHART_CDF_ONLY:
             appCombo.select(2);
             break;
-
         default:
             appCombo.select(0);
             break;
         }
 
-        /* listener for the chart style selection */
+        // Listener for the chart style selection
         appCombo.addSelectionListener(new SelectionAdapter() {
+            @Override
             public void widgetSelected(SelectionEvent e) {
 
                 ChartConfig.ChartStyle oldChartStyle = chartStyle;
@@ -226,52 +237,25 @@ public class DistributionConfigDialog extends Dialog {
                 case "CDF":
                     chartStyle = ChartStyle.CHART_CDF_ONLY;
                     break;
-
-                /* TODO: More charts will be implemented later */
-
-                // case "Multiple Distribution":
-                // chartStyle = ChartStyle.CHART_MULTI_DISRTIBUTIONS;
-                // break;
-                // case "Slope":
-                // chartStyle = ChartStyle.CHART_SLOPE;
-                // break;
-                // case "Whisker":
-                // chartStyle = ChartStyle.CHART_WHISKER;
-                // break;
-                // case "Time Series":
-                // chartStyle = ChartStyle.CHART_TIMESERIES;
-                // break;
-
                 default:
                     chartStyle = ChartStyle.CHART_PDF_CDF;
                     break;
                 }
 
-                /*
-                 * Updates the distribution display to the selected chart style.
-                 * Same style or select items, need not change GUI.
-                 */
-
-                if (chartStyle != oldChartStyle
-                        && (chartStyle == ChartStyle.CHART_PDF_ONLY || oldChartStyle == ChartStyle.CHART_PDF_ONLY)) {
-                    createSelectButtons();
-
-                    /*
-                     * TODO: Why aren't we just calling getShell()?
-                     */
-                    final Point newSize = shell.computeSize(SWT.DEFAULT,
-                            SWT.DEFAULT, true);
-                    shell.setSize(newSize.x, newSize.y);
+                // Toggle the CDF options abled/disabled depending on the
+                // Chart Style chosen in the Combo (dropdown) menu.
+                if (chartStyle != oldChartStyle) {
+                    if (chartStyle == ChartStyle.CHART_PDF_ONLY) {
+                        readMoveCheckButton.setEnabled(false);
+                        readDownCheckButton.setEnabled(false);
+                        readDownCheckButton.setSelection(false);
+                    } else {
+                        readMoveCheckButton.setEnabled(true);
+                        readDownCheckButton.setEnabled(true);
+                        readDownCheckButton.setSelection(true);
+                    }
 
                 }
-
-                /*
-                 * TODO: For some charts, need to update the Configuration Area
-                 * by calling the createConfigButtons() which is not the case
-                 * now, the PDF, CDF and PDF_CDF charts are with same
-                 * configuration items.
-                 */
-
             }
 
         });
@@ -281,7 +265,7 @@ public class DistributionConfigDialog extends Dialog {
 
     /**
      * Builds the selection area composite.
-     * 
+     *
      * @param parent
      *            - the selectConfigComposite
      * @return select composite
@@ -301,34 +285,6 @@ public class DistributionConfigDialog extends Dialog {
     }
 
     /**
-     * Builds the option buttons to be selected for any chart.
-     */
-    private void createSelectButtons() {
-
-        /* Removes old buttons if there are any */
-        Control[] children = selectComposite.getChildren();
-        if (children != null && children.length > 0) {
-            for (Control kid : children) {
-                kid.dispose();
-            }
-        }
-
-        /* Creates buttons depending on chart style */
-        if (chartStyle == ChartConfig.ChartStyle.CHART_PDF_ONLY) {
-            createPDFSelectButtons();
-        } else {
-            createCDFSelectButtons();
-        }
-
-        selectComposite.redraw();
-        selectComposite.pack(true);
-        selectComposite.layout(true);
-
-        shell.layout(true, true);
-
-    }
-
-    /**
      * Builds the related option buttons to be selected for PDF chart.
      */
     private void createPDFSelectButtons() {
@@ -344,8 +300,8 @@ public class DistributionConfigDialog extends Dialog {
             }
         });
 
-        final Button hisBarCheckButton = new Button(selectComposite, SWT.CHECK
-                | SWT.MULTI);
+        final Button hisBarCheckButton = new Button(selectComposite,
+                SWT.CHECK | SWT.MULTI);
         hisBarCheckButton.setText("Histogram Bars");
         hisBarCheckButton.setSelection(isHistogramBar);
         hisBarCheckButton.addSelectionListener(new SelectionAdapter() {
@@ -391,8 +347,8 @@ public class DistributionConfigDialog extends Dialog {
 
             }
         });
-        final Button membersCheckButton = new Button(selectComposite, SWT.CHECK
-                | SWT.MULTI);
+        final Button membersCheckButton = new Button(selectComposite,
+                SWT.CHECK | SWT.MULTI);
         membersCheckButton.setText("Plot Members");
         membersCheckButton.setSelection(isPlotMembers);
         membersCheckButton.addSelectionListener(new SelectionAdapter() {
@@ -409,9 +365,9 @@ public class DistributionConfigDialog extends Dialog {
      * Builds the related option buttons to be selected for CDF chart.
      */
     private void createCDFSelectButtons() {
-        createPDFSelectButtons();
+        // createPDFSelectButtons();
 
-        final Button readMoveCheckButton = new Button(selectComposite,
+        readMoveCheckButton = new Button(selectComposite,
                 SWT.RADIO | SWT.MULTI);
         readMoveCheckButton.setText("CDF Read Hover");
         readMoveCheckButton.setSelection(isMouseReadCDFHover);
@@ -423,7 +379,7 @@ public class DistributionConfigDialog extends Dialog {
             }
         });
 
-        final Button readDownCheckButton = new Button(selectComposite,
+        readDownCheckButton = new Button(selectComposite,
                 SWT.RADIO | SWT.MULTI);
         readDownCheckButton.setText("CDF Read Drop/Click");
         readDownCheckButton.setSelection(isMouseDownReadCDF);
@@ -438,7 +394,7 @@ public class DistributionConfigDialog extends Dialog {
 
     /**
      * Builds the configuration area composite.
-     * 
+     *
      * @param parent
      *            - Is the selection and configuration composite
      * @return configComposite
@@ -454,36 +410,6 @@ public class DistributionConfigDialog extends Dialog {
         configComposite.setLayout(gridLayout);
 
         return configComposite;
-    }
-
-    /**
-     * Builds related configuration controls
-     */
-    private void createConfigButtons() {
-
-        /* Removes old configuration controls if there are any */
-        Control[] children = configComposite.getChildren();
-        if (children != null && children.length > 0) {
-            for (Control kid : children) {
-                kid.dispose();
-            }
-        }
-
-        /* Creates items depending on chart style */
-        createPDFConfigButtons();
-        if (chartStyle != ChartConfig.ChartStyle.CHART_PDF_ONLY) {
-
-            /*
-             * TODO: Keeps same configuration items at this release. More chart
-             * configuration items to related chart will added at here.
-             */
-            // createCDFConfigButtons();
-
-        }
-
-        configComposite.redraw();
-
-        configComposite.pack(true);
     }
 
     /**
@@ -503,6 +429,7 @@ public class DistributionConfigDialog extends Dialog {
         frequencyCombo.select(0);
 
         frequencyCombo.addSelectionListener(new SelectionAdapter() {
+            @Override
             public void widgetSelected(SelectionEvent e) {
                 String frequencyTypeStr = frequencyCombo.getText();
                 switch (frequencyTypeStr) {
@@ -547,6 +474,7 @@ public class DistributionConfigDialog extends Dialog {
         binCombo.add("Rise Rule");
         binCombo.select(binNum.ordinal());
         binCombo.addSelectionListener(new SelectionAdapter() {
+            @Override
             public void widgetSelected(SelectionEvent e) {
 
                 String binStr = binCombo.getText();
@@ -607,7 +535,7 @@ public class DistributionConfigDialog extends Dialog {
     /**
      * The override method to use "Change" as label for the OK
      * button(non-Javadoc)
-     * 
+     *
      * @see org.eclipse.jface.dialogs.Dialog#createButtonsForButtonBar(org.eclipse.swt.widgets.Composite)
      */
     @Override

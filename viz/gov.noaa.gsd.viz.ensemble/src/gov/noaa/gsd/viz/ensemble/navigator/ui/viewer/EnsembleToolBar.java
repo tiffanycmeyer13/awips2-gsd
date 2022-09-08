@@ -14,8 +14,10 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.ToolItem;
@@ -26,31 +28,28 @@ import org.eclipse.ui.services.IServiceLocator;
 
 import com.raytheon.uf.common.status.IUFStatusHandler;
 import com.raytheon.uf.common.status.UFStatus;
-import com.raytheon.uf.viz.core.IDisplayPaneContainer;
 import com.raytheon.uf.viz.core.VizApp;
 
 import gov.noaa.gsd.viz.ensemble.control.EnsembleTool;
 import gov.noaa.gsd.viz.ensemble.control.EnsembleTool.EnsembleToolMode;
 import gov.noaa.gsd.viz.ensemble.control.IToolModeChangedListener;
 import gov.noaa.gsd.viz.ensemble.display.calculate.Calculation;
-import gov.noaa.gsd.viz.ensemble.navigator.ui.layer.EnsembleToolLayer;
-import gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.common.PreferencesDialog;
 import gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.matrix.MatrixNavigatorComposite;
 import gov.noaa.gsd.viz.ensemble.util.EnsembleToolImageStore;
 
 /***
- * 
+ *
  * This class is a Composite which contains only a ToolBar. It is tightly
  * coupled with the EnsembleToolViewer (ETV) and is intended to be stored only
  * inside the ETV's top-level CTabFolder.
- * 
+ *
  * It contains tool bar items ("buttons") which change behavior depending upon
  * which state the Ensemble Tool is in: Legend browser or Matrix navigator mode.
- * 
+ *
  * <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date          Ticket#    Engineer      Description
  * ------------ ---------- ----------- --------------------------
  * Oct 15, 2015   12565      polster     Initial creation
@@ -60,9 +59,20 @@ import gov.noaa.gsd.viz.ensemble.util.EnsembleToolImageStore;
  * Mar 01, 2017   19443      polster     Fixed toggle editability problem
  * Jun 01, 2017   19443      polster     Switched to using Eclipse contribution/actions
  * Dec 01, 2017   41520      polster     Added test for isDisposed
- * 
+ * Apr 06, 2021   90326      srussell    Added EnsembleToolBar.ToolRelevantDropDownAction.runWithEvent()
+ *                                       to display a dropdown menu when any part of the Actions dropdown
+ *                                       is pressed.
+ * Jun 08, 2021   92772      srussell    Updated ToolRelevantDropDownAction.getMenu()
+ *                                       to fix the down arrow portion of the
+ *                                       dropdown menu from "sticking" upon starting up.
+ * Jun 17, 2021   93248      srussell    Updated   addLegendsPlanViewItems()
+ *                                       and addLegendsTimeSeriesItems() to
+ *                                       enable menu items when loaded resources
+ *                                       are greater than zero. Removed
+ *                                       isToolEnabled()
+ *
  * </pre>
- * 
+ *
  * @author polster
  * @author jing
  * @version 1.0
@@ -87,8 +97,6 @@ public class EnsembleToolBar extends Composite
     private Menu toolRelevantMenu = null;
 
     private ToolItem actionsDropdownToolItem = null;
-
-    private PreferencesDialog prefsDialog = null;
 
     private IToolBarManager toolbarMgr = null;
 
@@ -142,6 +150,7 @@ public class EnsembleToolBar extends Composite
         }
     }
 
+    @Override
     public void setEnabled(boolean isEnabled) {
         actionsDropdownToolItem.setEnabled(isEnabled);
     }
@@ -182,25 +191,6 @@ public class EnsembleToolBar extends Composite
 
     }
 
-    private boolean isToolEnabled() {
-        boolean isToolEnabled = false;
-        EnsembleTool et = EnsembleTool.getInstance();
-        if (et != null) {
-            IDisplayPaneContainer editor = et.getActiveEditor();
-            if (editor != null) {
-                EnsembleToolLayer toolLayer = EnsembleTool.getToolLayer(editor);
-                if (toolLayer != null) {
-                    if (toolLayer.isEmpty()) {
-                        isToolEnabled = false;
-                    } else {
-                        isToolEnabled = true;
-                    }
-                }
-            }
-        }
-        return isToolEnabled;
-    }
-
     protected void addLegendsPlanViewItems() {
 
         toolRelevantAction.setEnabled(true);
@@ -208,7 +198,13 @@ public class EnsembleToolBar extends Composite
 
         new MenuItem(toolRelevantMenu, SWT.SEPARATOR);
 
-        boolean isEnabled = isToolEnabled();
+        boolean isEnabled = false;
+
+        int rsclistSize = EnsembleTool.getInstance().getResourceList().size();
+
+        if (rsclistSize > 0) {
+            isEnabled = true;
+        }
 
         add(Calculation.MEAN.getTitle(), "Calculate mean of visible resources",
                 isEnabled, legendsCalculationListener);
@@ -259,29 +255,6 @@ public class EnsembleToolBar extends Composite
         add(Calculation.HISTOGRAM_GRAPHICS.getTitle(),
                 "Turn on distribution viewer sampling", isEnabled,
                 legendsCalculationListener);
-
-        /*
-         * TODO: Preferences have been disabled for the 17.3.1 release. Will put
-         * back in the next release.
-         */
-
-        // new MenuItem(toolRelevantMenu, SWT.SEPARATOR);
-        //
-        // MenuItem mi = new MenuItem(toolRelevantMenu, SWT.NONE);
-        // mi.setText(GlobalPreferencesComposite.PREFERENCES_NAME);
-        // mi.setEnabled(true);
-        // mi.addSelectionListener(new SelectionAdapter() {
-        // @Override
-        // public void widgetSelected(SelectionEvent e) {
-        // prefsDialog = new PreferencesDialog(getParent().getShell());
-        // if (prefsDialog.open() == Window.OK) {
-        // prefsDialog.close();
-        // prefsDialog = null;
-        // }
-        //
-        // }
-        // });
-
     }
 
     private void addLegendsTimeSeriesItems() {
@@ -291,7 +264,13 @@ public class EnsembleToolBar extends Composite
 
         new MenuItem(toolRelevantMenu, SWT.SEPARATOR);
 
-        boolean isEnabled = isToolEnabled();
+        boolean isEnabled = false;
+
+        int rsclistSize = EnsembleTool.getInstance().getResourceList().size();
+
+        if (rsclistSize > 0) {
+            isEnabled = true;
+        }
 
         add(Calculation.MEAN.getTitle(), "Calculate mean of visible resources",
                 true, legendsCalculationListener);
@@ -307,29 +286,6 @@ public class EnsembleToolBar extends Composite
         add(Calculation.RANGE.getTitle(),
                 "Calculate range on visible resources", isEnabled,
                 legendsCalculationListener);
-
-        /*
-         * TODO: Preferences have been disabled for the 17.3.1 release. Will put
-         * back in the next release.
-         */
-
-        // new MenuItem(toolRelevantMenu, SWT.SEPARATOR);
-        //
-        // MenuItem mi = new MenuItem(toolRelevantMenu, SWT.NONE);
-        // mi.setText(GlobalPreferencesComposite.PREFERENCES_NAME);
-        // mi.setEnabled(true);
-        // mi.addSelectionListener(new SelectionAdapter() {
-        // @Override
-        // public void widgetSelected(SelectionEvent e) {
-        // prefsDialog = new PreferencesDialog(getParent().getShell());
-        // if (prefsDialog.open() == Window.OK) {
-        // prefsDialog.close();
-        // prefsDialog = null;
-        // }
-        //
-        // }
-        // });
-
     }
 
     /**
@@ -357,6 +313,7 @@ public class EnsembleToolBar extends Composite
 
     class LegendsBrowserCalculationSelectionAdapter extends SelectionAdapter {
 
+        @Override
         public void widgetSelected(SelectionEvent event) {
             MenuItem selected = (MenuItem) event.widget;
 
@@ -381,6 +338,7 @@ public class EnsembleToolBar extends Composite
 
         }
 
+        @Override
         public void run() {
             String clearResourcesPrompt = null;
             /* only act on clearing resources if the active tool layer exists */
@@ -419,6 +377,7 @@ public class EnsembleToolBar extends Composite
             }
         }
 
+        @Override
         public void dispose() {
         }
 
@@ -431,31 +390,56 @@ public class EnsembleToolBar extends Composite
 
         public ToolRelevantDropDownAction() {
             super("Tool Actions", Action.AS_DROP_DOWN_MENU);
-            setId(ID);
             setToolTipText("Actions");
+            // Get an image of gears, a gear icon
             ImageDescriptor imgDscr = ImageDescriptor
                     .createFromImage(EnsembleToolImageStore.OPEN_TOOLS_IMG);
             setImageDescriptor(imgDscr);
             setMenuCreator(this);
         }
 
-        public void run() {
+        /**
+         * Run the action resulting from the specified event. This would not
+         * need overriding were it not for the fact that without it, the user
+         * can only click on the down-arrow on the menu button displayed for
+         * this action. This implementation ensures that the user can click
+         * anywhere on the button to drop down the menu.
+         *
+         * @param event
+         *            Event that triggered this invocation.
+         */
+
+        @Override
+        public final void runWithEvent(Event event) {
+
             if (toolRelevantMenu == null || toolRelevantMenu.isDisposed()
                     || toolRelevantMenu.getItemCount() <= 0) {
                 setToolMode(EnsembleTool.getInstance().getToolMode());
             }
+
+            ToolItem item = (ToolItem) event.widget;
+            Menu menu = getMenu(item.getParent());
+            if (menu != null) {
+                Point point = item.getParent().toDisplay(
+                        new Point(item.getBounds().x, item.getBounds().height));
+                menu.setLocation(point.x, point.y);
+                menu.setVisible(true);
+            }
         }
 
+        @Override
         public void dispose() {
         }
 
         @Override
         public Menu getMenu(Control parent) {
+            setToolMode(EnsembleTool.getInstance().getToolMode());
             return toolRelevantMenu;
         }
 
         @Override
         public Menu getMenu(Menu parent) {
+            setToolMode(EnsembleTool.getInstance().getToolMode());
             return toolRelevantMenu;
         }
 
@@ -474,13 +458,14 @@ public class EnsembleToolBar extends Composite
             setImageDescriptor(imgDscr);
         }
 
+        @Override
         public void run() {
             EnsembleToolMode mode = EnsembleTool.getInstance().getToolMode();
             if (mode == EnsembleToolMode.LEGENDS_PLAN_VIEW
                     || mode == EnsembleToolMode.LEGENDS_TIME_SERIES) {
 
                 IServiceLocator serviceLocator = PlatformUI.getWorkbench();
-                ICommandService commandService = (ICommandService) serviceLocator
+                ICommandService commandService = serviceLocator
                         .getService(ICommandService.class);
 
                 Command command = commandService.getCommand(
@@ -506,6 +491,7 @@ public class EnsembleToolBar extends Composite
             }
         }
 
+        @Override
         public void dispose() {
         }
 
@@ -529,12 +515,14 @@ public class EnsembleToolBar extends Composite
             setImageDescriptor(imgDscr);
         }
 
+        @Override
         public void run() {
             /* In association with VLab AWIPS2_GSD Issue #29762 */
             EnsembleTool.getInstance()
                     .setEditable(!EnsembleTool.getInstance().isToolEditable());
         }
 
+        @Override
         public void dispose() {
         }
 

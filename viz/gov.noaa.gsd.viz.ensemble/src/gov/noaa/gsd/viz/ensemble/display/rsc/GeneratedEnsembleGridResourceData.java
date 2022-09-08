@@ -38,20 +38,24 @@ import tech.units.indriya.format.SimpleUnitFormat;
 /**
  * Construct the GeneratedEnsembleGridResource and provide data for it by
  * calculating with member data
- * 
+ *
  * @author jing
  * @version 1.0
- * 
+ *
  *          <pre>
- * 
+ *
  * SOFTWARE HISTORY
- * 
+ *
  * Date         Ticket#    Engineer    Description
  * ------------ ---------- ----------- --------------------------
  * Jan 2014       5056       jing        Initial creation
  * Dec 2016       19325      jing        Dispaly calculated grid as image
  * May 8, 2019    7596       tgurney     Fixes for Units upgrade
- * 
+ * May 25 2021    92357      srussell    Updated update() to check for the
+ *                                       type of resources before processing
+ *                                       so that only grid resources will get
+ *                                       processed in that method.
+ *
  *          </pre>
  */
 
@@ -68,9 +72,9 @@ public class GeneratedEnsembleGridResourceData extends GridResourceData
      * loading and unloading. To do so, may be need extend D2DGridResource to
      * EnsembleGridResource(need EnsembleGridResourceData too) which can provide
      * more interfaces
-     * 
+     *
      */
-    private Map<String, List<AbstractResourceHolder>> dataHolders = new ConcurrentHashMap<String, List<AbstractResourceHolder>>();
+    private Map<String, List<AbstractResourceHolder>> dataHolders = new ConcurrentHashMap<>();
 
     /**
      * Calculate loaded ensemble data to generate new data, such as mean.
@@ -97,7 +101,7 @@ public class GeneratedEnsembleGridResourceData extends GridResourceData
     protected String unit = "";
 
     // create an empty metadata map
-    protected HashMap<String, RequestConstraint> metadataMap = new HashMap<String, RequestConstraint>();
+    protected HashMap<String, RequestConstraint> metadataMap = new HashMap<>();
 
     private EnsembleToolLayer toolLayer = null;
 
@@ -192,13 +196,13 @@ public class GeneratedEnsembleGridResourceData extends GridResourceData
 
     /**
      * Uses the dataHolders to generate the new data for ensemble display
-     * 
+     *
      * @return
      */
     public Map<DataTime, List<GeneralGridData>> calculate() {
 
         // Do calculation with members of all models by looping
-        Map<DataTime, List<GeneralGridData>> dataMap = new ConcurrentHashMap<DataTime, List<GeneralGridData>>();
+        Map<DataTime, List<GeneralGridData>> dataMap = new ConcurrentHashMap<>();
 
         // Loop calculate. This solution is re-calculating all frames.
         // The second solution is just re-calculating changed or new frames
@@ -236,14 +240,14 @@ public class GeneratedEnsembleGridResourceData extends GridResourceData
 
     /**
      * Get all member resources in the manager
-     * 
+     *
      * @return
      */
     public List<D2DGridResource> getMemberResources() {
 
         // whatever level or unit in this implementation
         Set<String> keys = dataHolders.keySet();
-        List<D2DGridResource> members = new ArrayList<D2DGridResource>();
+        List<D2DGridResource> members = new ArrayList<>();
         for (String key : keys) {
             List<AbstractResourceHolder> rcsList = dataHolders.get(key);
             if (rcsList == null || rcsList.size() == 0) {
@@ -269,8 +273,7 @@ public class GeneratedEnsembleGridResourceData extends GridResourceData
         DataTime[] dataTimes = this.mapDescriptor.getFramesInfo()
                 .getFrameTimes();
 
-        List<DataTime> times = new ArrayList<DataTime>(
-                Arrays.asList(dataTimes));
+        List<DataTime> times = new ArrayList<>(Arrays.asList(dataTimes));
 
         return times;
     }
@@ -284,7 +287,7 @@ public class GeneratedEnsembleGridResourceData extends GridResourceData
      * -Whatever time matched data of the frames, just use them for calculation.
      */
     private List<List<GeneralGridData>> getAllData(DataTime time) {
-        ArrayList<List<GeneralGridData>> allData = new ArrayList<List<GeneralGridData>>();
+        ArrayList<List<GeneralGridData>> allData = new ArrayList<>();
         List<D2DGridResource> members = getMemberResources();
 
         // Get the frame index by the frame time
@@ -357,7 +360,7 @@ public class GeneratedEnsembleGridResourceData extends GridResourceData
      * the dataMap in the AbstractGridResource Is it possible to update the
      * dataMap? The AbstractGridResource methods can be over written?
      * UsesetData(Map<DataTime, List<GeneralGridData>> data)
-     * 
+     *
      * @throws VizException
      */
     public void update() throws VizException {
@@ -379,9 +382,16 @@ public class GeneratedEnsembleGridResourceData extends GridResourceData
 
         if (!dataHolders.isEmpty() && !dataHolders.keySet().isEmpty()) {
             disableMembersRetrieveData();
-            resource.setParameter((GridResource<?>) (dataHolders
-                    .get((dataHolders.keySet().toArray())[0]).get(0).getRsc()));
-            resource.updateData(calculate());
+
+            AbstractVizResource<?, ?> avr = dataHolders
+                    .get((dataHolders.keySet().toArray())[0]).get(0).getRsc();
+
+            if (avr instanceof GridResource) {
+
+                resource.setParameter((GridResource<?>) avr);
+                resource.updateData(calculate());
+            }
+
             enableMembersRetrieveData();
         }
 
@@ -402,7 +412,7 @@ public class GeneratedEnsembleGridResourceData extends GridResourceData
 
     /**
      * For GUI controls data updating.
-     * 
+     *
      * @return
      */
     public void setFrozenData(boolean isFrozenData) {
@@ -424,8 +434,7 @@ public class GeneratedEnsembleGridResourceData extends GridResourceData
     @Override
     public void inited(AbstractVizResource<?, ?> rsc) {
 
-        EnsembleResourceIngester.getInstance()
-                .register((AbstractVizResource<?, ?>) resource);
+        EnsembleResourceIngester.getInstance().register(resource);
 
     }
 
