@@ -81,10 +81,8 @@ import gov.noaa.gsd.viz.ensemble.navigator.ui.layer.EnsembleToolLayer;
 import gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.EnsembleToolViewer;
 import gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.common.ContextMenuManager;
 import gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.common.DistributionViewerComposite;
-import gov.noaa.gsd.viz.ensemble.util.ChosenGEFSColors;
-import gov.noaa.gsd.viz.ensemble.util.ChosenSREFColors;
-import gov.noaa.gsd.viz.ensemble.util.EnsembleGEFSColorChooser;
-import gov.noaa.gsd.viz.ensemble.util.EnsembleSREFColorChooser;
+import gov.noaa.gsd.viz.ensemble.util.ChosenColors;
+import gov.noaa.gsd.viz.ensemble.util.EnsembleColorChooser;
 import gov.noaa.gsd.viz.ensemble.util.GlobalColor;
 import gov.noaa.gsd.viz.ensemble.util.SWTResourceManager;
 import gov.noaa.gsd.viz.ensemble.util.Utilities;
@@ -99,28 +97,35 @@ import gov.noaa.gsd.viz.ensemble.util.Utilities;
  *
  * SOFTWARE HISTORY
  *
- * Date          Ticket#    Engineer      Description
- * ------------ ---------- ----------- --------------------------
- * Oct 15, 2015   12565      polster     Initial creation
- * Dec 14, 2016   19443      polster     added isWidgetReady method
- * Dec 29, 2016   19325      jing        Legend for an image member
- * Feb 17, 2017   19325      jing        Added ERF image capability
- * Mar 01, 2017   19443      polster     Clear all method force clears to empty map
- * Mar 17  2017   19443      jing        Resource group behavior added
- * Mar 31, 2017   19598      jing        Contour control feature
- * Jan 10, 2018   20524      polster     Fixed time series get legend name
- * Nov 12, 2018   7604       bsteffen    Expand tree on first left click.
- * Jun 04, 2021   92772      srussell    Updated updateColorsOnEnsembleResource()
- *                                       to account for case when testing
- *                                       ensemble resource names.
- * Jul 08, 2021   93923       srussell   Updated LegendTreeMouseListener.mouseDown()
- *                                       Updated getEnsembleMemberGenericResources()
- * Nov 15, 2021   97771       srussell   Updated GEFSMembersColorChangeJob.run()
- *                                       Added LegendTreeSorter.comparePerturbations()
+ * Date          Ticket#  Engineer  Description
+ * ------------- -------- --------- --------------------------------------------
+ * Oct 15, 2015  12565    polster   Initial creation
+ * Dec 14, 2016  19443    polster   added isWidgetReady method
+ * Dec 29, 2016  19325    jing      Legend for an image member
+ * Feb 17, 2017  19325    jing      Added ERF image capability
+ * Mar 01, 2017  19443    polster   Clear all method force clears to empty map
+ * Mar 17, 2017  19443    jing      Resource group behavior added
+ * Mar 31, 2017  19598    jing      Contour control feature
+ * Jan 10, 2018  20524    polster   Fixed time series get legend name
+ * Nov 12, 2018  7604     bsteffen  Expand tree on first left click.
+ * Jun 04, 2021  92772    srussell  Updated updateColorsOnEnsembleResource() to
+ *                                  account for case when testing ensemble
+ *                                  resource names.
+ * Jul 08, 2021  93923    srussell  Updated LegendTreeMouseListener.mouseDown()
+ *                                  Updated getEnsembleMemberGenericResources()
+ * Nov 15, 2021  97771    srussell  Updated GEFSMembersColorChangeJob.run()
+ *                                  Added
+ *                                  LegendTreeSorter.comparePerturbations()
+ * Jan 25, 2022  99597    achalla   Modified updateColorsOnEnsembleResource() to
+ *                                  recognize other data types, Updated
+ *                                  GEFSMembersColorChangeJob() not to sort
+ *                                  other data types
+ * May 03, 2022  103658   tjensen   Make EnsembleGFESColorChooser generic for
+ *                                  any Ensemble models
+ *
  * </pre>
  *
  * @author polster
- * @version 1.0
  */
 public class LegendBrowserComposite extends Composite {
 
@@ -153,7 +158,7 @@ public class LegendBrowserComposite extends Composite {
 
     protected TreeItem[] directDescendants = null;
 
-    private ArrayList<ColumnLabelProvider> columnLabelProviders = new ArrayList<>();
+    private final ArrayList<ColumnLabelProvider> columnLabelProviders = new ArrayList<>();
 
     private LegendNameTreeColumnLabelProvider columnNameLabelProvider = null;
 
@@ -1087,42 +1092,21 @@ public class LegendBrowserComposite extends Composite {
             }
         });
 
-        // TODO: poor-man's way of knowing what type of flavor this ensemble is
-        String ensembleNameUpperCase = ensembleName.toUpperCase();
-        if ((ensembleNameUpperCase.indexOf("GEFS") >= 0)
-                || (ensembleNameUpperCase.indexOf("GFS Ensemble") >= 0)) {
-            updateGEFSEnsembleColors(ensembleName, getPerturbationMembers());
-        } else if (ensembleNameUpperCase.indexOf("SREF") >= 0) {
-            updateSREFColors(ensembleName, getPerturbationMembers());
-        }
+        // All models that have ensemble members should go through this code.
+        // Not GEFS specific.
+        updateEnsembleColors(ensembleName, getPerturbationMembers());
     }
 
-    private void updateSREFColors(String ensembleName,
+    private void updateEnsembleColors(String ensembleName,
             final List<AbstractResourceHolder> children) {
 
-        EnsembleSREFColorChooser cd = new EnsembleSREFColorChooser(
+        EnsembleColorChooser cd = new EnsembleColorChooser(
                 rootComposite.getShell());
         cd.setBlockOnOpen(true);
         if (cd.open() == Window.OK) {
             cd.close();
-            SREFMembersColorChangeJob ccj = new SREFMembersColorChangeJob(
-                    "Changing SREF Ensemble Members Colors");
-            ccj.setPriority(Job.INTERACTIVE);
-            ccj.schedule();
-
-        }
-    }
-
-    private void updateGEFSEnsembleColors(String ensembleName,
-            final List<AbstractResourceHolder> children) {
-
-        EnsembleGEFSColorChooser cd = new EnsembleGEFSColorChooser(
-                rootComposite.getShell());
-        cd.setBlockOnOpen(true);
-        if (cd.open() == Window.OK) {
-            cd.close();
-            GEFSMembersColorChangeJob ccj = new GEFSMembersColorChangeJob(
-                    "Changing GEFS Ensemble Members Colors");
+            MembersColorChangeJob ccj = new MembersColorChangeJob(
+                    "Changing Ensemble Members Colors");
             ccj.setPriority(Job.INTERACTIVE);
             ccj.schedule();
         }
@@ -1210,6 +1194,7 @@ public class LegendBrowserComposite extends Composite {
                     /* only enable the ERF menu item if we are in plan view */
                     EnsembleToolMode mode = EnsembleTool.getInstance()
                             .getToolMode();
+
                     if (mode == EnsembleToolMode.LEGENDS_TIME_SERIES) {
                         addERFLayerMenuItem.setEnabled(false);
                     } else if (mode == EnsembleToolMode.LEGENDS_PLAN_VIEW) {
@@ -1284,7 +1269,7 @@ public class LegendBrowserComposite extends Composite {
                             });
                     /*
                      * This menu item allows the user to choose a color gradient
-                     * for either the SREF or GEFS ensemble products.
+                     * for ensemble products.
                      */
                     MenuItem ensembleColorizeMenuItem = new MenuItem(legendMenu,
                             SWT.PUSH);
@@ -1414,6 +1399,7 @@ public class LegendBrowserComposite extends Composite {
                 {
 
                     EnsembleMembersHolder emh = (EnsembleMembersHolder) mousedItem;
+
                     String ensembleName = emh.getGroupName();
 
                     /*
@@ -1644,7 +1630,7 @@ public class LegendBrowserComposite extends Composite {
 
     /**
      * Product legends to be sorted are either individual products (e.g. NAM20,
-     * HRRR, etc) or an ensemble of products (e.g. SREF, GEFS)
+     * HRRR, etc) or an ensemble of products
      */
     private class LegendTreeSorter extends ViewerSorter {
 
@@ -2231,47 +2217,11 @@ public class LegendBrowserComposite extends Composite {
     }
 
     /*
-     * Allow user to change SREF member colors based on a chosen color pattern
-     * map.
+     * Allow user to change member colors based on a chosen color pattern map.
      */
-    protected class SREFMembersColorChangeJob extends Job {
+    protected class MembersColorChangeJob extends Job {
 
-        public SREFMembersColorChangeJob(String name) {
-            super(name);
-        }
-
-        @Override
-        protected IStatus run(IProgressMonitor monitor) {
-            IStatus status = null;
-
-            Color currColor = null;
-            for (AbstractResourceHolder gRsc : getPerturbationMembers()) {
-                if ((gRsc instanceof GridResourceHolder)
-                        || (gRsc instanceof TimeSeriesResourceHolder)) {
-                    AbstractVizResource<?, ?> rsc = gRsc.getRsc();
-                    String ensId = gRsc.getEnsembleIdRaw();
-                    if ((ensId != null) && (ensId.length() > 1)) {
-                        currColor = ChosenSREFColors.getInstance()
-                                .getGradientByEnsembleId(ensId);
-                        rsc.getCapability(ColorableCapability.class)
-                                .setColor(currColor.getRGB());
-                    }
-                }
-            }
-            status = Status.OK_STATUS;
-
-            return status;
-        }
-
-    }
-
-    /*
-     * Allow user to change GEFS member colors based on a chosen color pattern
-     * map.
-     */
-    protected class GEFSMembersColorChangeJob extends Job {
-
-        public GEFSMembersColorChangeJob(String name) {
+        public MembersColorChangeJob(String name) {
             super(name);
         }
 
@@ -2281,7 +2231,16 @@ public class LegendBrowserComposite extends Composite {
             Color currColor = null;
             List<AbstractResourceHolder> p = getPerturbationMembers();
 
-            Collections.sort(p, AbstractResourceHolder.EnsIDComparator);
+            /*
+             * For Input data types like(CMCE GribModel:54:0:71) with an
+             * ensambleID = 4.4 wont be compared properly in EnsIDComparator
+             */
+            if (p != null && !(p.get(0).getGeneralName()
+                    .substring(0, p.get(0).getGeneralName().indexOf(" "))
+                    .matches("[a-zA-Z]+:([0-9]+(:[0-9]+)+)"))) {
+                Collections.sort(p, AbstractResourceHolder.EnsIDComparator);
+            }
+
             // "perturbation" == a child resource
             int numPerturbations = p.size();
             int i = 0;
@@ -2290,7 +2249,7 @@ public class LegendBrowserComposite extends Composite {
                 AbstractVizResource<?, ?> rsc = gRsc.getRsc();
                 String ensId = gRsc.getEnsembleIdRaw();
                 if ((ensId != null) && (ensId.length() > 1)) {
-                    currColor = ChosenGEFSColors.getInstance()
+                    currColor = ChosenColors.getInstance()
                             .getGradientColor(numPerturbations, ++i);
                     rsc.getCapability(ColorableCapability.class)
                             .setColor(currColor.getRGB());

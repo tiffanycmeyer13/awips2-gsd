@@ -43,6 +43,10 @@ import com.raytheon.viz.ui.dialogs.CaveJFACEDialog;
  * Oct 28, 2021   97771      srussell Updated createDialogArea()
  *                                    Updated addThresholdValueModifyBehavior()
  *                                    Added addFocusListenersForInputFields()
+ * Dec 28, 2021   99596      thuggins Fixing functionality of the contour control
+ *                                    so that users can enter negative values.
+ *                                    Changes made to the modifyText() method
+ * Feb 18, 2022   99598      srussell Updated increaseContour(), createButtonsForButtonBar()
  * </pre>
  *
  * @author jing
@@ -311,7 +315,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
         }
         setValueEntryTxt(value);
 
-        contourControl.changeContourValues(increment, value, false);
+        contourControl.changeContourValues(value);
         if (rscList.size() > 1) {
             contourControl.changeContourGroup(rscList, increment, value);
         }
@@ -352,6 +356,10 @@ public class ContourControlDialog extends CaveJFACEDialog {
                 value = handleTextEntry(contourValue);
                 if (length == 0) {
                     return;
+                }
+                if (length == 1 && "-".contentEquals(contourValue)) {
+                    return;
+
                 }
                 if (Float.isNaN(value) && length == 1) {
                     contourValueEntryTxt.setText("");
@@ -480,7 +488,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
         updateButton.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent event) {
-                contourControl.changeContourValues(increment, value, false);
+                contourControl.changeContourValues(value);
                 if (rscList.size() > 1) {
                     contourControl.changeContourGroup(rscList, increment,
                             value);
