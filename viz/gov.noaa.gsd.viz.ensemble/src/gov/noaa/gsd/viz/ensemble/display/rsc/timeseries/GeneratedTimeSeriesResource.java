@@ -35,7 +35,7 @@ import com.raytheon.viz.core.graphing.util.GraphPrefsFactory;
 import com.raytheon.viz.core.graphing.xy.XYData;
 
 import gov.noaa.gsd.viz.ensemble.display.calculate.Calculation;
-import tec.uom.se.AbstractUnit;
+import tech.units.indriya.AbstractUnit;
 
 
 /**
