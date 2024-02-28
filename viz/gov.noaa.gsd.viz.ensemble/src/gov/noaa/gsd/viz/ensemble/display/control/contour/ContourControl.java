@@ -1,6 +1,8 @@
+
 package gov.noaa.gsd.viz.ensemble.display.control.contour;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.commons.lang.ArrayUtils;
@@ -16,14 +18,14 @@ import com.raytheon.uf.viz.core.rsc.DisplayType;
 import com.raytheon.uf.viz.core.rsc.capabilities.DensityCapability;
 
 /**
- * 
+ *
  * Supports interactive contour control display by changing the label increment
  * and a given value.
- * 
+ *
  * The implementation is to access the AbstractStylePreferences object of a grid
  * resource. A methods getStylePreferences() should be added in the
  * AbstractGridResource. The code is,
- * 
+ *
  * public AbstractStylePreferences getStylePreferences() { return
  * stylePreferences; }
  *
@@ -31,11 +33,16 @@ import com.raytheon.uf.viz.core.rsc.capabilities.DensityCapability;
  *
  * SOFTWARE HISTORY
  *
- * Date         Ticket#    Engineer    Description
- * ------------ ---------- ----------- --------------------------
- * Feb 28, 2017   19598         jing     Initial creation
- * Jun 27, 2017   19325         jing     Upgrade to 17.3.1
- * Jun 03, 2019   64512         ksunil   changes to absorb new labelingPreferences
+ * Date          Ticket#  Engineer  Description
+ * ------------- -------- --------- ------------------------------------------
+ * Feb 28, 2017  19598    jing      Initial creation
+ * Jun 27, 2017  19325    jing      Upgrade to 17.3.1
+ * Jun 03, 2019  64512    ksunil    changes to absorb new labelingPreferences
+ * Jul 01, 2021  93753    tjensen   Fix error in ValueLabelPreferences change
+ * Sep 07, 2021  95492    srussell  Updated initCountourLabeling()
+ * Oct 28, 2021  97771    srussell  Updated changeContourValues(),getIncrementOrig()
+ * Feb 18, 2022  99858    srussell  Updated changeContourValues()
+ *
  * </pre>
  *
  * @author jing
@@ -66,7 +73,7 @@ public class ContourControl {
     /*
      * The grid resource be controlled
      */
-    private AbstractGridResource<?> rsc;
+    private final AbstractGridResource<?> rsc;
 
     /*
      * A flag with value 1 or -1, is used to change the density just a little to
@@ -83,7 +90,7 @@ public class ContourControl {
     /**
      * Initializes and returns the LabelingPreferences object of a grid
      * resource.
-     * 
+     *
      * @param rsc
      *            A grid resource
      * @return The labelingPreferences object of the grid resource
@@ -104,7 +111,7 @@ public class ContourControl {
             }
             for (IncrementLabelingPreferences labelPrefs : labelingPreferences
                     .getIncrement()) {
-                incrementOrig = ArrayUtils.addAll(valuesOrig,
+                incrementOrig = ArrayUtils.addAll(incrementOrig,
                         labelPrefs.getValues());
             }
 
@@ -115,7 +122,7 @@ public class ContourControl {
 
     /**
      * Get the default value if the configured contour values are existing.
-     * 
+     *
      * @return The contour value or Float.NaN
      */
     public float getDefaultValue() {
@@ -132,46 +139,44 @@ public class ContourControl {
     /**
      * Change contour with user specified increment and value. The contours will
      * be as default if the value is "NaN", that only use the increment.
-     * 
+     *
      * @param increment
      *            The contour increment
      * @param contourValue
      *            The contour value
      */
-    public void changeContourValues(float increment, float contourValue) {
+    public void changeContourValues(float contourValue) {
 
-        /*
-         * Converts the contourValue into a float array
-         */
+        // Converts the contourValue into a float array
         float[] values = null;
         if (!Float.isNaN(contourValue)) {
             values = new float[1];
             values[0] = contourValue;
         }
 
-        /*
-         * Sets contour label increment and values.
-         */
-        IncrementLabelingPreferences incr = new IncrementLabelingPreferences();
-        incr.setValues(new float[] { increment });
-        labelingPreferences.setIncrement(Arrays.asList(incr));
+        // Empty out old values so that only the contours the user chooses
+        // is displayed in CAVE. Those contours should be ContourValue +
+        // increment value, only.
+        labelingPreferences.setIncrement(Collections.emptyList());
 
-        ValuesLabelingPreferences val = new ValuesLabelingPreferences();
-        incr.setValues(new float[] { contourValue });
-        labelingPreferences.setValues(Arrays.asList(val));
+        // Sets contour label value for the ContourLabelingPreferences obj
+        if (values != null) {
+            ValuesLabelingPreferences val = new ValuesLabelingPreferences();
+            val.setValues(values);
+            labelingPreferences.setValues(Arrays.asList(val));
+        }
 
+        contourPreferences.setContourLabeling(labelingPreferences);
         rsc.setStylePreferences(contourPreferences);
 
-        /*
-         * Force redrawing the contour.
-         */
+        // Force redrawing the contours.
         redrawContours(rsc);
     }
 
     /**
      * Change contour with user specified increment and value for a group grid
      * resources start from second resource.
-     * 
+     *
      * @param rscList
      *            A group grid resources
      * @param increment
@@ -235,7 +240,7 @@ public class ContourControl {
      * Force redrawing the contour of a grid resource. TODO:trick to force
      * redrawing by change density a little. Replace this code when there is any
      * other way.
-     * 
+     *
      * @param gRsc
      *            The grid resource
      */
@@ -262,11 +267,12 @@ public class ContourControl {
     }
 
     public float getIncrementOrig() {
+        float origInc = 0.0f;
         if (incrementOrig == null || incrementOrig.length == 0) {
             return 0;
-        } else {
-            return incrementOrig[0];
         }
+        origInc = (incrementOrig[0] != 0) ? incrementOrig[0] : incrementOrig[1];
+        return origInc;
     }
 
 }

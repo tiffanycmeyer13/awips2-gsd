@@ -4,11 +4,12 @@ import java.util.List;
 
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.FocusAdapter;
+import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -23,17 +24,14 @@ import com.raytheon.uf.common.style.StyleException;
 import com.raytheon.uf.viz.core.grid.rsc.AbstractGridResource;
 import com.raytheon.viz.ui.dialogs.CaveJFACEDialog;
 
-import gov.noaa.gsd.viz.ensemble.util.GlobalColor;
-import gov.noaa.gsd.viz.ensemble.util.SWTResourceManager;
-
 /**
- * 
+ *
  * A dialog to interactively control the contour display of one or multiple grid
  * resources. It can be popped up by selecting "Contour Control" on the legend
  * right clicking menu of a loaded product, generated product or a ensemble
  * product.
- * 
- * 
+ *
+ *
  * <pre>
  *
  * SOFTWARE HISTORY
@@ -42,7 +40,13 @@ import gov.noaa.gsd.viz.ensemble.util.SWTResourceManager;
  * ------------ ---------- ----------- --------------------------
  * Feb 28, 2017   19598      jing     Initial creation
  * Jun 27, 2017   19325      jing     Upgrade to 17.3.1
- *
+ * Oct 28, 2021   97771      srussell Updated createDialogArea()
+ *                                    Updated addThresholdValueModifyBehavior()
+ *                                    Added addFocusListenersForInputFields()
+ * Dec 28, 2021   99596      thuggins Fixing functionality of the contour control
+ *                                    so that users can enter negative values.
+ *                                    Changes made to the modifyText() method
+ * Feb 18, 2022   99598      srussell Updated increaseContour(), createButtonsForButtonBar()
  * </pre>
  *
  * @author jing
@@ -98,7 +102,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
 
     /**
      * Constructor.
-     * 
+     *
      * @param parentShell
      *            The parent shell.
      * @param name
@@ -124,7 +128,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
     }
 
     /*
-     * 
+     *
      * @see org.eclipse.jface.dialogs.Dialog#isResizable()
      */
     @Override
@@ -134,7 +138,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
 
     /**
      * Create contents of the dialog.
-     * 
+     *
      * @param parent
      * @return A Control
      */
@@ -160,6 +164,8 @@ public class ContourControlDialog extends CaveJFACEDialog {
         contourIncrementEntryTxt.setEnabled(true);
 
         addThresholdValueModifyBehavior();
+
+        addFocusListenersForInputFields();
 
         return parent;
 
@@ -190,7 +196,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
 
         ensembleProductNameLbl = new Label(titleContainerComposite,
                 SWT.CENTER | SWT.BORDER);
-    
+
         GridData frameTimeUsingBasisLbl_gd = new GridData(SWT.FILL, SWT.CENTER,
                 true, true, 1, 1);
         ensembleProductNameLbl.setLayoutData(frameTimeUsingBasisLbl_gd);
@@ -210,7 +216,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
                 true, true, 1, 1);
         contourRootComposite.setLayoutData(contourRootComposite_gd);
         contourRootComposite.setLayout(new GridLayout(2, false));
-        
+
         Label contourLabel = new Label(contourRootComposite,
                 SWT.SINGLE | SWT.CENTER);
         contourLabel.setText("Contour");
@@ -231,8 +237,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
                 SWT.CENTER, true, true, 1, 1);
         contourControllerComposite.setLayoutData(contourControllerComposite_gd);
         contourControllerComposite.setLayout(new GridLayout(2, false));
-        
-       
+
         /*
          * Text entry for specifying contour value
          */
@@ -260,6 +265,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
         final Button contourIncreaseButton = new Button(
                 contourControllerUpDownComposite, SWT.ARROW | SWT.UP);
         contourIncreaseButton.addSelectionListener(new SelectionAdapter() {
+            @Override
             public void widgetSelected(SelectionEvent e) {
                 increaseContour(true);
             }
@@ -271,6 +277,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
         final Button contourDecreaseButton = new Button(
                 contourControllerUpDownComposite, SWT.ARROW | SWT.DOWN);
         contourDecreaseButton.addSelectionListener(new SelectionAdapter() {
+            @Override
             public void widgetSelected(SelectionEvent e) {
                 increaseContour(false);
             }
@@ -287,12 +294,11 @@ public class ContourControlDialog extends CaveJFACEDialog {
         setIncrementEntryTxt(increment);
         contourIncrementEntryTxt.setToolTipText("The contour increment");
 
-
     }
 
     /**
      * Increase/Decrease the contour base on the flag passed in
-     * 
+     *
      * @param increase
      *            If it is true then increase the contour value and display it
      *            Otherwise decrease the contour.
@@ -309,7 +315,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
         }
         setValueEntryTxt(value);
 
-        contourControl.changeContourValues(increment, value);
+        contourControl.changeContourValues(value);
         if (rscList.size() > 1) {
             contourControl.changeContourGroup(rscList, increment, value);
         }
@@ -341,10 +347,28 @@ public class ContourControlDialog extends CaveJFACEDialog {
             @Override
             public void modifyText(ModifyEvent e) {
 
+                // Prevent the user from entering any character that is not
+                // a digit or a decimal point.
                 Text text = (Text) e.widget;
-                value = handleTextEntry(text.getText());
-            }
+                String contourValue = text.getText();
+                int length = 0;
+                length = (contourValue == null) ? 0 : contourValue.length();
+                value = handleTextEntry(contourValue);
+                if (length == 0) {
+                    return;
+                }
+                if (length == 1 && "-".contentEquals(contourValue)) {
+                    return;
 
+                }
+                if (Float.isNaN(value) && length == 1) {
+                    contourValueEntryTxt.setText("");
+                } else if (Float.isNaN(value) && length > 1) {
+                    contourValue = contourValue.substring(0, (length - 1));
+                    contourValueEntryTxt.setText(contourValue);
+                    contourValueEntryTxt.setSelection(length);
+                }
+            }
         });
 
         contourIncrementEntryTxt.addModifyListener(new ModifyListener() {
@@ -352,8 +376,56 @@ public class ContourControlDialog extends CaveJFACEDialog {
             @Override
             public void modifyText(ModifyEvent e) {
 
+                // Prevent the user from entering anything other than a digit
+                // or a decimal point into the field.
                 Text text = (Text) e.widget;
-                increment = handleTextEntry(text.getText());
+                String incrementValue = text.getText();
+                int length = 0;
+                length = (incrementValue == null) ? 0 : incrementValue.length();
+                increment = handleTextEntry(incrementValue);
+                if (length == 0) {
+                    return;
+                }
+                if (Float.isNaN(increment) && length == 1) {
+                    contourIncrementEntryTxt.setText("");
+                } else if (Float.isNaN(increment) && length > 1) {
+                    incrementValue = incrementValue.substring(0, (length - 1));
+                    contourIncrementEntryTxt.setText(incrementValue);
+                    contourIncrementEntryTxt.setSelection(length);
+                }
+
+            }
+        });
+
+    }
+
+    private void addFocusListenersForInputFields() {
+
+        contourValueEntryTxt.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent fe) {
+                // If it ends with a decimal point, add a zero after that
+                String incrementValue = contourValueEntryTxt.getText();
+                incrementValue = (incrementValue == null) ? ""
+                        : incrementValue.trim();
+                if (incrementValue.endsWith(".")) {
+                    incrementValue += "0";
+                    contourValueEntryTxt.setText(incrementValue);
+                }
+            }
+        });
+
+        contourIncrementEntryTxt.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent fe) {
+                // If it ends with a decimal point, add a zero after that
+                String incrementValue = contourIncrementEntryTxt.getText();
+                incrementValue = (incrementValue == null) ? ""
+                        : incrementValue.trim();
+                if (incrementValue.endsWith(".")) {
+                    incrementValue += "0";
+                    contourIncrementEntryTxt.setText(incrementValue);
+                }
             }
         });
 
@@ -362,6 +434,10 @@ public class ContourControlDialog extends CaveJFACEDialog {
     protected float handleTextEntry(String entry) {
 
         if ((entry == null) || (entry.length() == 0)) {
+            return Float.NaN;
+        }
+
+        if (!entry.matches("[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)")) {
             return Float.NaN;
         }
         float value = Float.NaN;
@@ -398,9 +474,9 @@ public class ContourControlDialog extends CaveJFACEDialog {
     }
 
     /**
-     * 
+     *
      * Create contents of the button bar.
-     * 
+     *
      * @param parent
      */
 
@@ -410,8 +486,9 @@ public class ContourControlDialog extends CaveJFACEDialog {
         Button updateButton = createButton(parent, SWT.PUSH, "Apply", true);
 
         updateButton.addSelectionListener(new SelectionAdapter() {
+            @Override
             public void widgetSelected(SelectionEvent event) {
-                contourControl.changeContourValues(increment, value);
+                contourControl.changeContourValues(value);
                 if (rscList.size() > 1) {
                     contourControl.changeContourGroup(rscList, increment,
                             value);
@@ -423,6 +500,7 @@ public class ContourControlDialog extends CaveJFACEDialog {
                 IDialogConstants.CLOSE_LABEL, false);
         closeButton.addSelectionListener(new SelectionAdapter() {
 
+            @Override
             public void widgetSelected(SelectionEvent e) {
                 close();
             }
