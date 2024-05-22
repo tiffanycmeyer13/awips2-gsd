@@ -1,8 +1,8 @@
 package gov.noaa.gsd.viz.ensemble.navigator.ui.viewer.matrix;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 import org.geotools.api.referencing.crs.CoordinateReferenceSystem;
 import org.geotools.coverage.grid.GeneralGridGeometry;
