@@ -33,8 +33,9 @@ Require-Bundle: org.eclipse.ui,
  com.raytheon.uf.viz.d2d.ui,
  com.raytheon.uf.viz.datacube,
  com.raytheon.uf.viz.core.maps,
-  org.eclipse.osgi,
- jakarta.xml.bind
+ org.eclipse.osgi,
+ jakarta.xml.bind,
+ org.apache.commons.lang
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Export-Package: gov.noaa.gsd.viz.ensemble.display.control.load,
