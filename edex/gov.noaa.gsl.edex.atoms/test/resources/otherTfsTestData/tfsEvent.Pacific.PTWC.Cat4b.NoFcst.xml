@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Pacific.PTWC.Cat4b.NoFcst</EventID>
+  <EventType>Seismic</EventType>
+  <Source>PTWC</Source>
+  <OriginTime>2022-09-07T12:15:32</OriginTime>
+  <Latitude>-34.47</Latitude>
+  <Longitude>-168.14</Longitude>
+  <Originator>PTWC</Originator>
+  <CreationTime>2022-09-07T12:16:38</CreationTime>
+  <DistanceToCoast>1076</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.7</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>5.0</Depth>
+    <AzimuthalCoverage>244</AzimuthalCoverage>
+    <Stations>14</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

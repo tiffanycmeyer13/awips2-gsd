@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="gov.noaa.gsl.viz.pem.pemDialogTabs">
+      <pemDialogTab physicalEventType="SEISMIC" orderIndex = "1" title = "Tsunami Forecast Runs" class="gov.noaa.gsl.viz.atomsForecast.ui.TsunamiForecastsTab"/>
+      <pemDialogTab physicalEventType="VOLCANIC" orderIndex = "1" title = "Tsunami Forecast Runs" class="gov.noaa.gsl.viz.atomsForecast.ui.TsunamiForecastsTab"/>
+      <pemDialogTab physicalEventType="LANDSLIDE" orderIndex = "1" title = "Tsunami Forecast Runs" class="gov.noaa.gsl.viz.atomsForecast.ui.TsunamiForecastsTab"/>
+      <pemDialogTab physicalEventType="UNKNOWN" orderIndex = "1" title = "Tsunami Forecast Runs" class="gov.noaa.gsl.viz.atomsForecast.ui.TsunamiForecastsTab"/>
+   </extension>
+</plugin>

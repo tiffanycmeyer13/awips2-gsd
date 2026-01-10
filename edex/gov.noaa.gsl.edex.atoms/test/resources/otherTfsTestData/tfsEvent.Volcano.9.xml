@@ -1,0 +1,14 @@
+<atomsEventData>
+  <EventID>9</EventID>
+  <Name>Big Volcano</Name>
+  <EventType>VOLCANIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>PTWC</Originator>
+  <CreationTime>2021-09-09T19:29:29</CreationTime>
+  <OriginTime>2021-09-09T09:09:09</OriginTime>
+  <Latitude>60.0</Latitude>
+  <Longitude>160.0</Longitude>
+  <DistanceToCoast>56</DistanceToCoast>
+  <atomsEventDataRecord>
+  </atomsEventDataRecord>
+</atomsEventData>

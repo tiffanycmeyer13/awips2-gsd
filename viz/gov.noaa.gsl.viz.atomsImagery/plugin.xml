@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="gov.noaa.gsl.viz.pem.pemDialogTabs">
+      <pemDialogTab physicalEventType="SEISMIC" orderIndex = "3" title = "TFS Imagery" class="gov.noaa.gsl.viz.atomsImagery.ui.TfsImageryTab"/>
+      <pemDialogTab physicalEventType="VOLCANIC" orderIndex = "3" title = "TFS Imagery" class="gov.noaa.gsl.viz.atomsImagery.ui.TfsImageryTab"/>
+      <pemDialogTab physicalEventType="LANDSLIDE" orderIndex = "3" title = "TFS Imagery" class="gov.noaa.gsl.viz.atomsImagery.ui.TfsImageryTab"/>
+      <pemDialogTab physicalEventType="UNKNOWN" orderIndex = "3" title = "TFS Imagery" class="gov.noaa.gsl.viz.atomsImagery.ui.TfsImageryTab"/>
+   </extension>
+</plugin>
+

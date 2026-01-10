@@ -1,0 +1,14 @@
+<atomsEventData>
+  <EventID>Landslide_789</EventID>
+  <Name>No Name Landslide</Name>
+  <EventType>LANDSLIDE</EventType>
+  <Source>NTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2023-09-10T19:40:00</CreationTime>
+  <OriginTime>2023-09-10T14:03:00</OriginTime>
+  <Latitude>62.29</Latitude>
+  <Longitude>176.28</Longitude>
+  <DistanceToCoast>0</DistanceToCoast>
+  <atomsEventDataRecord>
+  </atomsEventDataRecord>
+</atomsEventData>

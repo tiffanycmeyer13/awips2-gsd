@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>NorthCarolina7.3</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>PTWC</Originator>
+  <CreationTime>2021-05-08T00:16:06</CreationTime>
+  <OriginTime>2023-02-22T22:46:46</OriginTime>
+  <Latitude>34.75</Latitude>
+  <Longitude>-78.44</Longitude>
+  <DistanceToCoast>-76</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>7.3</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>7.5</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

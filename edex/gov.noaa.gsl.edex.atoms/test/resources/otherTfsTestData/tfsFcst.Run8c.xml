@@ -1,0 +1,31 @@
+<atomsTsunamiForecastData>
+  <EventID>8</EventID>
+  <Source>NTWC</Source>
+  <ForecastType>TTT</ForecastType>
+  <CreationTime>2021-06-29T02:12:23</CreationTime>
+  <ForecastRunTime>2022-02-02T02:13:33</ForecastRunTime>
+  <atomsForecastRecord>
+    <StationID>ACJ</StationID>
+    <ArrivalTime>2021-08-08T17:15:55</ArrivalTime>
+  </atomsForecastRecord>
+  <atomsForecastRecord>
+    <StationID>BLT</StationID>
+    <ArrivalTime>2021-08-08T17:18:41</ArrivalTime>
+    <Duration>90</Duration>
+  </atomsForecastRecord>
+  <atomsForecastRecord>
+    <StationID>EFC</StationID>
+    <ArrivalTime>2021-08-08T16:55:55</ArrivalTime>
+    <Duration>90</Duration>
+  </atomsForecastRecord>
+  <atomsForecastRecord>
+    <StationID>HPB</StationID>
+    <ArrivalTime>2021-08-08T16:53:55</ArrivalTime>
+    <Duration>90</Duration>
+  </atomsForecastRecord>
+  <atomsForecastRecord>
+    <StationID>JUN</StationID>
+    <ArrivalTime>2021-08-08T16:44:44</ArrivalTime>
+    <Duration>90</Duration>
+  </atomsForecastRecord>
+</atomsTsunamiForecastData>

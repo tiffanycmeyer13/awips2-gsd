@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="atomsImageryPluginName" class="java.lang.String">
+        <constructor-arg type="java.lang.String" value="atomsImagery" />
+    </bean>
+
+    <bean id="atomsImageryProperties" class="com.raytheon.uf.common.dataplugin.PluginProperties">
+        <property name="pluginName" ref="atomsImageryPluginName" />
+        <property name="pluginFQN" value="gov.noaa.gsl.common.dataplugin.atomsImagery" />
+        <property name="record" value="gov.noaa.gsl.common.dataplugin.atomsImagery.TfsImageryDescriptor" />
+        <property name="dao" value="gov.noaa.gsl.edex.atomsImagery.TfsImageryEdexDao"/>
+        <property name="dependencyFQNs">
+            <list>
+               <value>gov.noaa.gsl.common.dataplugin.atoms</value>
+            </list>
+        </property>
+
+    </bean>
+
+    <bean id="atomsImageryRegistered" factory-bean="pluginRegistry" factory-method="register" depends-on="atomsRegistered">
+        <constructor-arg ref="atomsImageryPluginName"/>
+        <constructor-arg ref="atomsImageryProperties"/>
+    </bean>
+
+</beans>

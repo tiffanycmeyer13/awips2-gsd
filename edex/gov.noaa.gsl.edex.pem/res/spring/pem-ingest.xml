@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.raytheon.uf.common.logback.appender.ThreadBasedAppender" factory-method="registerThreadPattern">
+        <constructor-arg value="pem" />
+        <constructor-arg value="Ingest.Pem.*" />
+    </bean>
+
+    <bean id="pemDecoder" class="gov.noaa.gsl.edex.pem.PhysicalEventDecoder" />
+
+    <bean id="pemDistRegistry" factory-bean="distributionSrv" factory-method="register">
+        <constructor-arg ref="pemPluginName" />
+        <constructor-arg value="jms-durable:queue:Ingest.Pem" />
+        <constructor-arg value="true" />
+    </bean>
+
+    <bean id="pem-camel" factory-bean="routeContextFactory" factory-method="create">
+        <constructor-arg>
+            <bean class="gov.noaa.gsl.edex.pem.plugin.PEMCamelRoutes" />
+        </constructor-arg>
+    </bean>
+
+</beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="atomsSeaLevelObsPluginName" class="java.lang.String">
+        <constructor-arg type="java.lang.String" value="atomsSeaLevelObs" />
+    </bean>
+
+    <bean id="atomsSeaLevelObsProperties" class="com.raytheon.uf.common.dataplugin.PluginProperties">
+        <property name="pluginName" ref="atomsSeaLevelObsPluginName" />
+        <property name="pluginFQN" value="gov.noaa.gsl.common.dataplugin.atomsSeaLevelObs" />
+        <property name="record" value="gov.noaa.gsl.common.dataplugin.atomsSeaLevelObs.SeaLevelObservations" />
+        <property name="dao" value="gov.noaa.gsl.edex.atomsSeaLevelObs.SeaLevelObsEdexDao"/>
+        <property name="dependencyFQNs">
+            <list>
+               <value>gov.noaa.gsl.common.dataplugin.atoms</value>
+            </list>
+        </property>
+
+    </bean>
+
+    <bean id="atomsSeaLevelObsRegistered" factory-bean="pluginRegistry" factory-method="register" depends-on="atomsRegistered">
+        <constructor-arg ref="atomsSeaLevelObsPluginName"/>
+        <constructor-arg ref="atomsSeaLevelObsProperties"/>
+    </bean>
+
+</beans>

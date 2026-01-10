@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>EcGc.Cat1</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2021-05-09T00:16:06</CreationTime>
+  <OriginTime>2022-05-18T00:06:06</OriginTime>
+  <Latitude>39.02</Latitude>
+  <Longitude>-71.19</Longitude>
+  <DistanceToCoast>230</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>3.8</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>8</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

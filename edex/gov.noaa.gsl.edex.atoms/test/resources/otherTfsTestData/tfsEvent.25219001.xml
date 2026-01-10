@@ -1,0 +1,19 @@
+<atomsEventData>
+  <EventID>25219001.PTWC.Kamchatka</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <OriginTime>2025-07-29T23:24:53</OriginTime>
+  <Longitude>160.360</Longitude>
+  <Latitude>52.390</Latitude>
+  <DistanceToCoast>555.0</DistanceToCoast>
+  <LocationName>OFF THE EAST COAST OF KAMCHATKA, RUSSIA</LocationName>
+  <Originator>PTWC</Originator>
+  <CreationTime>2025-08-07T19:55:29</CreationTime>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.8</PreferredMagnitude>
+    <PreferredMagType>MOMENT_P</PreferredMagType>
+    <Depth>41.0</Depth>
+    <AzimuthalCoverage>345</AzimuthalCoverage>
+    <Stations>24</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

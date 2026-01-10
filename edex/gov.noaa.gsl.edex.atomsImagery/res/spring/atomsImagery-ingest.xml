@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.raytheon.uf.common.logback.appender.ThreadBasedAppender" factory-method="registerThreadPattern">
+        <constructor-arg value="atomsImagery" />
+        <constructor-arg value="Ingest.AtomsImagery.*" />
+    </bean>
+
+    <bean id="atomsImageryDecoder" class="gov.noaa.gsl.edex.atomsImagery.TfsImageryDecoder">
+        <property name="parentDataDir" value="/data/fxa/ATOMS/dissemination" />
+        <property name="dissemScriptsDir" value="/data/fxa/ATOMS/scripts" />
+    </bean>
+
+    <bean id="atomsImageryDistRegistry" factory-bean="distributionSrv" factory-method="register">
+        <constructor-arg ref="atomsImageryPluginName" />
+        <constructor-arg value="jms-durable:queue:Ingest.AtomsImagery" />
+        <constructor-arg value="true" />
+    </bean>
+
+    <bean id="atomsImagery-camel" factory-bean="routeContextFactory" factory-method="create">
+        <constructor-arg>
+            <bean class="gov.noaa.gsl.edex.atomsImagery.plugin.AtomsImageryCamelRoutes" />
+        </constructor-arg>
+    </bean>
+
+</beans>

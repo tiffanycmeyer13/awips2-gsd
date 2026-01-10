@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+    <displayList>
+        <displays xsi:type="d2DMapRenderableDisplay" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <descriptor xsi:type="mapDescriptor">
+                <resource>
+                    <loadProperties loadWithoutData="true">
+                        <capabilities>
+                            <capability xsi:type="shadeableCapability" opacity="0.3" />
+                            <capability xsi:type="outlineCapability" lineStyle="SOLID"
+                                outlineOn="true" outlineWidth="2" />
+                            <capability xsi:type="colorableCapability" colorAsString="#f58142" />
+                             <capability xsi:type="timeMatchBasisCapability"/>
+                        </capabilities>
+                    </loadProperties>
+                    <properties isSystemResource="false" isBlinking="false" isMapLayer="false"
+                        isHoverOn="false" isVisible="true" />
+                    <resourceData xsi:type="phiPlumeResourceData"
+                        isUpdatingOnMetadataOnly="false" isRequeryNecessaryOnTimeMatch="true" retrieveData="true"
+                        name="PHI Interpolated Objects" 
+                        >
+                        <metadataMap>
+                            <mapping key="pluginName">
+                                <constraint constraintValue="phiinterpolated" constraintType="EQUALS"/>
+                            </mapping>
+                        </metadataMap>
+                    </resourceData>
+                </resource>
+            </descriptor>
+        </displays>
+    </displayList>
+</bundle>

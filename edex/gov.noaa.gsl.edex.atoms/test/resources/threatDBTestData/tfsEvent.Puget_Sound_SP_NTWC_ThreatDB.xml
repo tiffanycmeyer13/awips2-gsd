@@ -1,0 +1,19 @@
+<atomsEventData>
+  <EventID>Puget_Sound_SP_NTWC_ThreatDB</EventID>
+  <EventType>Seismic</EventType>
+  <IsKnown>False</IsKnown>
+  <Source>NTWC</Source>
+  <OriginTime>2023-01-06T12:15:00</OriginTime>
+  <Latitude>47.53</Latitude>
+  <Longitude>-122.68</Longitude>
+  <Originator>NTWC</Originator>
+  <CreationTime>2023-01-06T12:17:00</CreationTime>
+  <DistanceToCoast>14</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>7.2</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>50</Depth>
+    <AzimuthalCoverage>260</AzimuthalCoverage>
+    <Stations>16</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

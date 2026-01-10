@@ -1,0 +1,20 @@
+<atomsEventData>
+  <EventID>Pacifex</EventID>
+  <EventType>Seismic</EventType>
+  <Source>NTWC</Source>
+  <OriginTime>2023-04-13T16:30:00</OriginTime>
+  <Latitude>56.7</Latitude>
+  <Longitude>-153.2</Longitude>
+  <Originator>PTWC</Originator>
+  <CreationTime>2023-04-13T16:32:20</CreationTime>
+  <DistanceToCoast>32</DistanceToCoast>
+  <atomsEventDataRecord>
+    <!-- Initial Assessment is 8.3 -->
+    <!--PreferredMagnitude>8.3</PreferredMagnitude-->
+    <PreferredMagnitude>9.3</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>7</Depth>
+    <AzimuthalCoverage>244</AzimuthalCoverage>
+    <Stations>14</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

@@ -1,0 +1,30 @@
+<atomsSeaLevelObservations>
+  <EventID>6</EventID>
+  <Source>PTWC</Source>
+  <CreationTime>2025-01-06T02:32:22</CreationTime>
+  <atomsSeaLevelRecord>
+    <StationID>CCMD</StationID>
+    <SensorType>PR</SensorType>
+    <ObservationType>ZERO_TO_PEAK</ObservationType>
+    <StartTime>2025-01-15T02:02:02</StartTime>
+    <EndTime>2021-03-10T02:04:04</EndTime>
+    <Period>00.03</Period>
+    <Amplitude>08.8</Amplitude>
+    <Measurement1Clipped>False</Measurement1Clipped>
+    <Measurement2Clipped>True</Measurement2Clipped>
+  </atomsSeaLevelRecord>
+  <atomsSeaLevelRecord>
+    <StationID>ARIC</StationID>
+    <SensorType>PRS</SensorType>
+    <ObservationType>FIRST_ARRIVAL</ObservationType>
+    <StartTime>2025-01-15T03:33:33</StartTime>
+    <TsunamiDetected>False</TsunamiDetected>
+  </atomsSeaLevelRecord>
+  <atomsSeaLevelRecord>
+    <StationID>CHRP</StationID>
+    <SensorType>PWL</SensorType>
+    <ObservationType>GAUGE_STOPPED_REPORTING</ObservationType>
+    <StartTime>2025-01-15T11:11:11</StartTime>
+  </atomsSeaLevelRecord>
+</atomsSeaLevelObservations>
+

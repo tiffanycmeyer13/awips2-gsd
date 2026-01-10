@@ -1,0 +1,1241 @@
+OBJECTID,Code,Name,Type,State,Country ,Latitude,Longitude,Source
+1359,ABA,Abaco_Island,ForecastPoint,n/a,Bahamas,26.556,-77.079,PTWC_WPs
+1033,ACJ,Acajutla,ForecastPoint,n/a,El_Salvador,13.6,-89.8,PTWC_WPs
+1026,ACP,Acapulco,ForecastPoint,n/a,Mexico,16.9,-99.9,PTWC_WPs
+1356,ADN,Aden,ForecastPoint,n/a,Yemen,13,45.2,PTWC_WPs
+1398,AGD,Aguadilla,ForecastPoint,n/a,Puerto_Rico,18.457,-67.165,PTWC_WPs
+1559,AGR,Agrihan,ForecastPoint,n/a,Cnmi,18.765,145.667,PTWC_WPs
+1108,AKE,Auckland_East,ForecastPoint,n/a,New_Zealand,-36.7,175,PTWC_WPs
+1109,AKW,Auckland_West,ForecastPoint,n/a,New_Zealand,-37.1,174.2,PTWC_WPs
+1557,AL1,Alamagan,ForecastPoint,n/a,Cnmi,17.599,145.833,PTWC_WPs
+1457,ALG,Aligandi,ForecastPoint,n/a,Panama,9.233,-78.017,PTWC_WPs
+1355,ALM,Al_Mukalla,ForecastPoint,n/a,Yemen,14.5,49.2,PTWC_WPs
+1262,ALX,Alexandrovsk_Sak,ForecastPoint,n/a,Russia,50.9,142.1,PTWC_WPs
+1526,AM1,Amanave,ForecastPoint,n/a,Tutuila,-14.329,-170.834,PTWC_WPs
+1040,AMA,Amapala,ForecastPoint,n/a,Honduras,13.23,-87.64,PTWC_WPs
+1244,AMN,Amun,ForecastPoint,n/a,Papua_New_Guinea,-5.96,154.69,PTWC_WPs
+1164,ANA,Anatom_Island,ForecastPoint,n/a,Vanuatu,-20.16,169.85,PTWC_WPs
+1369,AND,Andros_Island,ForecastPoint,n/a,Bahamas,25.03,-77.901,PTWC_WPs
+1412,ANE,Anegada,ForecastPoint,n/a,Br_Virgin_Is,18.75,-64.3,PTWC_WPs
+1066,ANF,Antofagasta,ForecastPoint,n/a,Chile,-23.32,-70.43,PTWC_WPs
+1322,ANG,Angoche,ForecastPoint,n/a,Mozambique,-15.5,40.6,PTWC_WPs
+1309,ANI,Antsiranana,ForecastPoint,n/a,Madagascar,-12.1,49.5,PTWC_WPs
+1554,ANT,Anatahan,ForecastPoint,n/a,Cnmi,16.351,145.678,PTWC_WPs
+1540,APR,Apra_Harbor,ForecastPoint,n/a,Guam,13.454,144.62,PTWC_WPs
+1517,APU,Apia_Upolu,ForecastPoint,n/a,Samoa,-13.826,-171.765,PTWC_WPs
+1399,ARC,Arecibo,ForecastPoint,n/a,Puerto_Rico,18.481,-66.702,PTWC_WPs
+1064,ARI,Arica,ForecastPoint,n/a,Chile,-18.5,-70.3,PTWC_WPs
+1560,ASU,Asuncion,ForecastPoint,n/a,Cnmi,19.688,145.402,PTWC_WPs
+1544,ATS,Aratsu_Bay,ForecastPoint,n/a,Rota,14.144,145.243,PTWC_WPs
+1271,AUG,Augusta,ForecastPoint,n/a,Australia,-34.3,114.7,PTWC_WPs
+1233,AUK,Auki,ForecastPoint,n/a,Solomon_Islands,-8.75,160.62,PTWC_WPs
+1533,AUM,Aumi,ForecastPoint,n/a,Tutuila,-14.291,-170.653,PTWC_WPs
+1534,AUN,Aunuu_Island,ForecastPoint,n/a,Aunuu,-14.283,-170.563,PTWC_WPs
+1305,BAC,Banda_Aceh,ForecastPoint,n/a,Indonesia,5.5,95.1,PTWC_WPs
+1052,BAH,Bahia_Solano,ForecastPoint,n/a,Colombia,6.3,-77.4,PTWC_WPs
+1298,BAL,Bali,ForecastPoint,n/a,Indonesia,-8.7,115.3,PTWC_WPs
+1382,BAR,Baracoa,ForecastPoint,n/a,Cuba,20.356,-74.498,PTWC_WPs
+1286,BAS,Baleshwar,ForecastPoint,n/a,India,21.6,87.3,PTWC_WPs
+1414,BBB,Baie_Blanche,ForecastPoint,n/a,Saint_Martin,18.115,-62.992,PTWC_WPs
+1479,BCL,Bac_Lieu,ForecastPoint,n/a,Vietnam,9.3,105.8,PTWC_WPs
+1459,BDT,Bocas_Del_Toro,ForecastPoint,n/a,Panama,9.351,-82.242,PTWC_WPs
+1306,BEL,Belawan,ForecastPoint,n/a,Indonesia,3.8,98.8,PTWC_WPs
+1466,BEZ,Belize_City,ForecastPoint,n/a,Belize,17.503,-88.178,PTWC_WPs
+1415,BGC,Baie_Grand_Case,ForecastPoint,n/a,Saint_Martin,18.11,-63.06,PTWC_WPs
+1048,BHB,Balboa_Heights,ForecastPoint,n/a,Panama,9,-79.6,PTWC_WPs
+1370,BIM,Bimini,ForecastPoint,n/a,Bahamas,25.761,-79.287,PTWC_WPs
+1116,BLF,Bluff,ForecastPoint,n/a,New_Zealand,-46.566,168.333,PTWC_WPs
+1300,BLP,Bandar_Lampung,ForecastPoint,n/a,Indonesia,-5.7,105.3,PTWC_WPs
+1055,BLT,Baltra_Island,ForecastPoint,n/a,Ecuador,-0.5,-90.3,PTWC_WPs
+1416,BLU,Baie_Lucas,ForecastPoint,n/a,Saint_Martin,18.06,-63.008,PTWC_WPs
+1291,BMB,Bombay,ForecastPoint,n/a,India,18.8,72.6,PTWC_WPs
+1301,BNK,Bengkulu,ForecastPoint,n/a,Indonesia,-3.9,102,PTWC_WPs
+1490,BNT,Bintulu,ForecastPoint,n/a,Malaysia,3.2,113,PTWC_WPs
+1053,BNV,Buenaventura,ForecastPoint,n/a,Colombia,3.8,-77.2,PTWC_WPs
+1211,BPP,Barbers_Pt,ForecastPoint,HI,United_States,21.322,-158.119,PTWC_WPs
+1324,BRA,Beira,ForecastPoint,n/a,Mozambique,-19.9,35.1,PTWC_WPs
+1252,BRB,Berebere,ForecastPoint,n/a,Indonesia,2.46,128.69,PTWC_WPs
+1429,BRD,Bridgetown,ForecastPoint,n/a,Barbados,13.091,-59.622,PTWC_WPs
+1450,BRN,Barranquilla,ForecastPoint,n/a,Colombia,11.07,-74.866,PTWC_WPs
+1081,BRS,Brisbane,ForecastPoint,n/a,Australia,-27.22,153.3,PTWC_WPs
+1421,BSS,Basseterre,ForecastPoint,n/a,Saint_Kitts,17.29,-62.718,PTWC_WPs
+1425,BST,Basse_Terre,ForecastPoint,n/a,Guadeloupe,15.982,-61.737,PTWC_WPs
+1142,BUS,Busan,ForecastPoint,n/a,Republic_Of_Korea,35.05,129.1,PTWC_WPs
+1375,CAB,Cayman_Brac,ForecastPoint,n/a,Cayman_Islands,19.681,-79.883,PTWC_WPs
+1078,CAD,Cape_Adare,ForecastPoint,n/a,Antarctica,-71,170,PTWC_WPs
+1368,CAT,Cat_Island,ForecastPoint,n/a,Bahamas,24.401,-75.532,PTWC_WPs
+1376,CAY,Grand_Cayman,ForecastPoint,n/a,Cayman_Islands,19.297,-81.342,PTWC_WPs
+1321,CDL,Cabo_Delgado,ForecastPoint,n/a,Mozambique,-10.7,40.7,PTWC_WPs
+1401,CDM,Caja_De_Muertos,ForecastPoint,n/a,Puerto_Rico,17.888,-66.531,PTWC_WPs
+1390,CEN,Cabo_Engano,ForecastPoint,n/a,Dominican_Rep,18.612,-68.29,PTWC_WPs
+1338,CGU,Cape_Guaro,ForecastPoint,n/a,Somalia,11.9,51.4,PTWC_WPs
+1548,CH1,Chulu_Beach,ForecastPoint,n/a,Tinian,15.073,145.614,PTWC_WPs
+1327,CH2,Cheduba_Island,ForecastPoint,n/a,Myanmar,18.9,93.4,PTWC_WPs
+1406,CH3,Charlotte_Amalie,ForecastPoint,n/a,Us_Virgin_Is,18.336,-64.92,PTWC_WPs
+1408,CH4,Christiansted,ForecastPoint,n/a,Us_Virgin_Is,17.748,-64.698,PTWC_WPs
+1096,CHC,Chichi_Jima,ForecastPoint,n/a,Japan,27.05,142.25,PTWC_WPs
+1288,CHE,Chennai,ForecastPoint,n/a,India,13.4,80.4,PTWC_WPs
+1278,CHI,Christmas_Island,ForecastPoint,n/a,Australia,-10.4,105.4,PTWC_WPs
+1141,CHJ,Cheju_Island,ForecastPoint,n/a,Republic_Of_Korea,33.5,127,PTWC_WPs
+1134,CHL,Chilung,ForecastPoint,n/a,Taiwan,25.2,121.8,PTWC_WPs
+1061,CHM,Chimbote,ForecastPoint,n/a,Peru,-9,-78.83,PTWC_WPs
+1165,CHR,Christmas_Island,ForecastPoint,n/a,Kiribati,1.98,-157.48,PTWC_WPs
+1281,CHT,Chittagong,ForecastPoint,n/a,Bangladesh,22.7,91.2,PTWC_WPs
+1387,CHZ,Cap_Haiten,ForecastPoint,n/a,Haiti,19.792,-72.188,PTWC_WPs
+1299,CIL,Cilacap,ForecastPoint,n/a,Indonesia,-7.8,108.9,PTWC_WPs
+1404,CLB,Culebra_Is,ForecastPoint,n/a,Puerto_Rico,18.301,-65.303,PTWC_WPs
+1067,CLD,Caldera,ForecastPoint,n/a,Chile,-27.1,-70.8,PTWC_WPs
+1468,CMH,Campeche,ForecastPoint,n/a,Mexico,19.867,-90.539,PTWC_WPs
+1444,CMN,Cumana,ForecastPoint,n/a,Venezuela,10.469,-64.197,PTWC_WPs
+1043,CMP,Cabo_Matapalo,ForecastPoint,n/a,Costa_Rica,8.35,-83.29,PTWC_WPs
+1378,CNF,Cienfuegos,ForecastPoint,n/a,Cuba,22.007,-80.465,PTWC_WPs
+1279,COI,Cocos_Island,ForecastPoint,n/a,Australia,-12.1,96.7,PTWC_WPs
+1349,COL,Colombo,ForecastPoint,n/a,Sri_Lanka,6.9,79.8,PTWC_WPs
+1458,CON,Colon,ForecastPoint,n/a,Panama,9.372,-79.914,PTWC_WPs
+1045,COR,Corinto,ForecastPoint,n/a,Nicaragua,12.5,-87.2,PTWC_WPs
+1467,COZ,Cozumel,ForecastPoint,n/a,Mexico,20.516,-86.955,PTWC_WPs
+1274,CPI,Cape_Inspiration,ForecastPoint,n/a,Australia,-25.9,113,PTWC_WPs
+1276,CPL,Cape_Leveque,ForecastPoint,n/a,Australia,-16.1,122.6,PTWC_WPs
+1068,CQB,Coquimbo,ForecastPoint,n/a,Chile,-29.93,-71.35,PTWC_WPs
+1364,CRI,Crooked_Island,ForecastPoint,n/a,Bahamas,22.747,-74.141,PTWC_WPs
+1075,CRL,Corral,ForecastPoint,n/a,Chile,-39.77,-73.54,PTWC_WPs
+1084,CRN,Cairns,ForecastPoint,n/a,Australia,-16.74,145.79,PTWC_WPs
+1037,CRT,Champerico_Retalhuleu,ForecastPoint,n/a,Guatemala,14.289,-91.913,PTWC_WPs
+1285,CRZ,Crozet_Islands,ForecastPoint,n/a,Crozet_Islands,-46.4,51.8,PTWC_WPs
+1041,CSE,Cabo_San_Elena,ForecastPoint,n/a,Costa_Rica,10.85,-86.04,PTWC_WPs
+1020,CSL,Cabo_San_Lucas,ForecastPoint,n/a,Mexico,22.84,-109.98,PTWC_WPs
+1312,CSM,Cap_Ste_Marie,ForecastPoint,n/a,Madagascar,-25.8,45.2,PTWC_WPs
+1428,CST,Castries,ForecastPoint,n/a,Saint_Lucia,14.017,-61.031,PTWC_WPs
+1500,CTB,Cotabuto_City,ForecastPoint,n/a,Philippines,7.25,124.17,PTWC_WPs
+1451,CTG,Cartagena,ForecastPoint,n/a,Colombia,10.412,-75.563,PTWC_WPs
+1344,CTN,Cape_Town,ForecastPoint,n/a,South_Africa,-34.1,18,PTWC_WPs
+1441,CYN,Cayenne,ForecastPoint,n/a,French_Guyane,4.931,-52.35,PTWC_WPs
+1100,DAV,Davao,ForecastPoint,n/a,Philippines,6.85,125.65,PTWC_WPs
+1350,DES,Dar_Es_Salaam,ForecastPoint,n/a,Tanzania,-6.7,39.4,PTWC_WPs
+1358,DGG,Diego_Garcia,ForecastPoint,n/a,United_Kingdom,-7.3,72.4,PTWC_WPs
+1348,DHD,Dondra_Head,ForecastPoint,n/a,Sri_Lanka,5.9,80.6,PTWC_WPs
+1332,DQM,Duqm,ForecastPoint,n/a,Oman,19.7,57.8,PTWC_WPs
+1342,DRB,Durban,ForecastPoint,n/a,South_Africa,-29.8,31.2,PTWC_WPs
+1277,DRW,Darwin,ForecastPoint,n/a,Australia,-12.1,130.7,PTWC_WPs
+1115,DUN,Dunedin,ForecastPoint,n/a,New_Zealand,-45.883,170.514,PTWC_WPs
+1110,ECP,East_Cape,ForecastPoint,n/a,New_Zealand,-37.667,178.5,PTWC_WPs
+1074,EIC,Easter_Island,ForecastPoint,n/a,Chile,-27.15,-109.45,PTWC_WPs
+1362,ELE,Eleuthera_Island,ForecastPoint,n/a,Bahamas,25.157,-76.124,PTWC_WPs
+1269,EMO,Eucla_Motel,ForecastPoint,n/a,Australia,-31.8,128.9,PTWC_WPs
+1153,ENI,Eniwetok,ForecastPoint,n/a,Marshall_Islands,11.4,162.3,PTWC_WPs
+1019,ENS,Ensenada,ForecastPoint,n/a,Mexico,31.83,-116.78,PTWC_WPs
+1056,ESM,Esmereldas,ForecastPoint,n/a,Ecuador,1.17,-79.79,PTWC_WPs
+1374,ESO,Esso_Pier,ForecastPoint,n/a,Bermuda,32.373,-64.703,PTWC_WPs
+1163,ESP,Esperitu_Santo,ForecastPoint,n/a,Vanuatu,-15.11,167.29,PTWC_WPs
+1270,ESR,Esperance,ForecastPoint,n/a,Australia,-34,121.8,PTWC_WPs
+1367,EXU,Exuma,ForecastPoint,n/a,Bahamas,23.57,-75.851,PTWC_WPs
+1396,FAJ,Fajardo,ForecastPoint,n/a,Puerto_Rico,18.335,-65.631,PTWC_WPs
+1427,FDF,Fort_De_France,ForecastPoint,n/a,Martinique,14.598,-61.082,PTWC_WPs
+1220,FFR,French_Frigate,ForecastPoint,HI,United_States,23.868,-166.299,PTWC_WPs
+1505,FGL,Fagalele_Savaii,ForecastPoint,n/a,Samoa,-13.487,-172.766,PTWC_WPs
+1508,FGM,Fagamalo_Savaii,ForecastPoint,n/a,Samoa,-13.433,-172.357,PTWC_WPs
+1528,FGS,Fagasa,ForecastPoint,n/a,Tutuila,-14.281,-170.727,PTWC_WPs
+1515,FLE,Faleolo_Upolu,ForecastPoint,n/a,Samoa,-13.804,-172.016,PTWC_WPs
+1518,FLF,Falefa_Upolu,ForecastPoint,n/a,Samoa,-13.888,-171.58,PTWC_WPs
+1514,FLL,Falelima_Savaii,ForecastPoint,n/a,Samoa,-13.598,-172.727,PTWC_WPs
+1227,FLM,Falamae,ForecastPoint,n/a,Solomon_Islands,-7.36,155.56,PTWC_WPs
+1167,FLN,Flint_Island,ForecastPoint,n/a,Kiribati,-11.4,-151.82,PTWC_WPs
+1527,FML,Fagamalo,ForecastPoint,n/a,Tutuila,-14.297,-170.814,PTWC_WPs
+1186,FNA,Funafuti_Island,ForecastPoint,n/a,Tuvalu,-7.88,178.5,PTWC_WPs
+1360,FRE,Freeport,ForecastPoint,n/a,Bahamas,26.514,-78.782,PTWC_WPs
+1438,FTZ,Fortaleza,ForecastPoint,n/a,Brazil,-3.707,-38.48,PTWC_WPs
+1357,FUJ,Fujairah,ForecastPoint,n/a,Uae,25.1,56.4,PTWC_WPs
+1188,FUT,Futuna_Island,ForecastPoint,n/a,Wallis_And_Futuna,-14.296,-178.16,PTWC_WPs
+1318,GAN,Gan,ForecastPoint,n/a,Maldives,-0.6,73.2,PTWC_WPs
+1307,GAT,Gavater,ForecastPoint,n/a,Iran,25,61.3,PTWC_WPs
+1129,GBI,Great_Barrier_Is,ForecastPoint,n/a,New_Zealand,-37.018,157.414,PTWC_WPs
+1076,GDP,Golfo_De_Penas,ForecastPoint,n/a,Chile,-47.1,-74.89,PTWC_WPs
+1273,GER,Geraldtown,ForecastPoint,n/a,Australia,-28.6,114.3,PTWC_WPs
+1443,GGT,Georgetown,ForecastPoint,n/a,Guyana,6.84,-58.196,PTWC_WPs
+1232,GHT,Ghatere,ForecastPoint,n/a,Solomon_Islands,-7.77,159.17,PTWC_WPs
+1381,GIR,Gibara,ForecastPoint,n/a,Cuba,21.119,-76.122,PTWC_WPs
+1082,GLD,Gladstone,ForecastPoint,n/a,Australia,-23.82,151.44,PTWC_WPs
+1253,GME,Geme,ForecastPoint,n/a,Indonesia,4.59,126.8,PTWC_WPs
+1295,GNI,Great_Nicobar,ForecastPoint,n/a,India,7.1,93.6,PTWC_WPs
+1292,GOK,Gulf_Of_Kutch,ForecastPoint,n/a,India,22.7,68.9,PTWC_WPs
+1315,GRG,Georgetown,ForecastPoint,n/a,Malaysia,5.4,100.1,PTWC_WPs
+1371,GRI,Great_Inagua,ForecastPoint,n/a,Bahamas,20.948,-73.684,PTWC_WPs
+1133,GRM,Greymouth,ForecastPoint,n/a,New_Zealand,-42.45,171.21,PTWC_WPs
+1549,GRP,Garapan,ForecastPoint,n/a,Saipan,15.214,145.699,PTWC_WPs
+1111,GSB,Gisborne,ForecastPoint,n/a,New_Zealand,-38.667,178.017,PTWC_WPs
+1263,GST,Gastello,ForecastPoint,n/a,Russia,49.1,143,PTWC_WPs
+1373,GTU,Grand_Turk,ForecastPoint,n/a,Turks_N_Caicos,21.468,-71.107,PTWC_WPs
+1556,GUG,Guguan,ForecastPoint,n/a,Cnmi,17.308,145.841,PTWC_WPs
+1147,GUM,Guam,ForecastPoint,n/a,Guam,13.436,144.652,PTWC_WPs
+1447,GVN,Golfo_Venezuela,ForecastPoint,n/a,Venezuela,11.399,-71.245,PTWC_WPs
+1335,GWA,Gwadar,ForecastPoint,n/a,Pakistan,25.1,62.4,PTWC_WPs
+1031,GYM,Guaymas,ForecastPoint,n/a,Mexico,27.85,-110.85,PTWC_WPs
+1085,HAC,Hachinohe,ForecastPoint,n/a,Japan,40.5,141.5,PTWC_WPs
+1215,HAN,Hanalei,ForecastPoint,HI,United_States,22.216,-159.501,PTWC_WPs
+1181,HBK,Howland_Island,ForecastPoint,n/a,Howland_And_Baker,0.55,-176.62,PTWC_WPs
+1095,HCH,Hachijo_Jima,ForecastPoint,n/a,Japan,33.13,139.82,PTWC_WPs
+1280,HEI,Heard_Island,ForecastPoint,n/a,Australia,-54,73.5,PTWC_WPs
+1339,HIA,Hilalaya,ForecastPoint,n/a,Somalia,6.4,49.1,PTWC_WPs
+1102,HIE,Hienghene,ForecastPoint,n/a,New_Caledonia,-20.633,164.967,PTWC_WPs
+1225,HIL,Hilo,ForecastPoint,HI,United_States,19.7,-155.1,PTWC_WPs
+1473,HKC,Hong_Kong,ForecastPoint,n/a,China,22.3,114.2,PTWC_WPs
+1183,HLA,Holeva,ForecastPoint,n/a,Tonga,-18.643,-173.912,PTWC_WPs
+1191,HLO,Hilo,ForecastPoint,HI,United_States,19.73,-155.056,PTWC_WPs
+1208,HLW,Haleiwa,ForecastPoint,HI,United_States,21.6,-158.11,PTWC_WPs
+1476,HML,Homel,ForecastPoint,n/a,Taiwan,24.2,120.4,PTWC_WPs
+1202,HNA,Hana,ForecastPoint,HI,United_States,20.756,-155.982,PTWC_WPs
+1192,HNK,Honokohau,ForecastPoint,HI,United_States,19.671,-156.029,PTWC_WPs
+1212,HNL,Honolulu,ForecastPoint,HI,United_States,21.3,-157.9,PTWC_WPs
+1474,HNN,Hainan_Island,ForecastPoint,n/a,China,18.75,110.5,PTWC_WPs
+1197,HNP,Honuapu,ForecastPoint,HI,United_States,19.087,-155.553,PTWC_WPs
+1229,HOA,Honiara,ForecastPoint,n/a,Solomon_Islands,-9.29,159.96,PTWC_WPs
+1267,HOB,Hobart,ForecastPoint,n/a,Australia,-43.27,147.65,PTWC_WPs
+1224,HON,Honolulu,ForecastPoint,HI,United_States,21.3,-157.9,PTWC_WPs
+1135,HUA,Hualien,ForecastPoint,n/a,Taiwan,24,121.7,PTWC_WPs
+1172,HVA,Hiva_Oa,ForecastPoint,n/a,French_Polynesia,-10,-139,PTWC_WPs
+1143,ICH,Inchon,ForecastPoint,n/a,Republic_Of_Korea,37.3,126.4,PTWC_WPs
+1044,IDC,Isla_Del_Coco,ForecastPoint,n/a,Costa_Rica,5.536,-87.081,PTWC_WPs
+1520,ILI,Iliili_Upolu,ForecastPoint,n/a,Samoa,-14.04,-171.698,PTWC_WPs
+1496,ILL,Iloilo,ForecastPoint,n/a,Philippines,10.7,122.5,PTWC_WPs
+1440,ILM,Ilha_De_Maraca,ForecastPoint,n/a,Brazil,2.208,-50.488,PTWC_WPs
+1539,INJ,Inarajan,ForecastPoint,n/a,Guam,13.274,144.753,PTWC_WPs
+1065,IQU,Iquique,ForecastPoint,n/a,Chile,-20.2,-70.1,PTWC_WPs
+1389,JAC,Jacamel,ForecastPoint,n/a,Haiti,18.1,-72.5,PTWC_WPs
+1346,JAF,Jaffna,ForecastPoint,n/a,Sri_Lanka,9.9,80,PTWC_WPs
+1128,JKB,Jackson_Bay,ForecastPoint,n/a,New_Zealand,-43.962,168.588,PTWC_WPs
+1178,JON,Johnston_Island,ForecastPoint,n/a,Johnston_Island,16.738,-169.525,PTWC_WPs
+1386,JRM,Jeremie,ForecastPoint,n/a,Haiti,18.641,-74.107,PTWC_WPs
+1179,JRV,Jarvis_Island,ForecastPoint,n/a,Jarvis_Island,-0.37,-160.05,PTWC_WPs
+1247,JYP,Jayapura,ForecastPoint,n/a,Indonesia,-2.41,140.76,PTWC_WPs
+1194,KA1,Kapoho,ForecastPoint,HI,United_States,19.5,-154.817,PTWC_WPs
+1341,KAA,Kaambooni,ForecastPoint,n/a,Somalia,-1.5,41.9,PTWC_WPs
+1226,KAH,Kahului,ForecastPoint,HI,United_States,20.898,-156.472,PTWC_WPs
+1287,KAK,Kakinada,ForecastPoint,n/a,India,17.2,82.7,PTWC_WPs
+1475,KAO,Kaohsiung,ForecastPoint,n/a,Taiwan,22.5,120.3,PTWC_WPs
+1334,KAR,Karachi,ForecastPoint,n/a,Pakistan,24.7,66.9,PTWC_WPs
+1088,KAT,Katsuura,ForecastPoint,n/a,Japan,35.11,140.33,PTWC_WPs
+1198,KAW,Kawaihae,ForecastPoint,HI,United_States,20.036,-155.832,PTWC_WPs
+1200,KEH,Keahou,ForecastPoint,HI,United_States,19.561,-155.964,PTWC_WPs
+1216,KEK,Kekaha,ForecastPoint,HI,United_States,21.965,-159.717,PTWC_WPs
+1430,KGS,Kingstown,ForecastPoint,n/a,Saint_Vincent,13.136,-61.214,PTWC_WPs
+1203,KHL,Kahului,ForecastPoint,HI,United_States,20.898,-156.472,PTWC_WPs
+1488,KID,Kuala_Indragiri,ForecastPoint,n/a,Indonesia,-0.5,103.75,PTWC_WPs
+1243,KIE,Kieta,ForecastPoint,n/a,Papua_New_Guinea,-6.07,155.63,PTWC_WPs
+1204,KIH,Kihei,ForecastPoint,HI,United_States,20.759,-156.461,PTWC_WPs
+1199,KKN,Kailua_Kona,ForecastPoint,HI,United_States,19.638,-155.995,PTWC_WPs
+1206,KLP,Kalaupapa,ForecastPoint,HI,United_States,21.21,-156.98,PTWC_WPs
+1205,KML,Kaumalapau,ForecastPoint,HI,United_States,20.787,-156.991,PTWC_WPs
+1120,KNG,Kaingaroa_Chatham,ForecastPoint,n/a,New_Zealand,-43.725,-176.271,PTWC_WPs
+1207,KNK,Kaunakakai,ForecastPoint,HI,United_States,21.082,-157.029,PTWC_WPs
+1385,KNN,Kingston,ForecastPoint,n/a,Jamaica,17.913,-76.854,PTWC_WPs
+1168,KNT,Kanton_Island,ForecastPoint,n/a,Kiribati,-2.82,-171.67,PTWC_WPs
+1152,KOS,Kosrae_Island,ForecastPoint,n/a,Kosrae,5.5,163,PTWC_WPs
+1487,KPR,Kepulauan_Riau,ForecastPoint,n/a,Indonesia,4,108.5,PTWC_WPs
+1354,KPT,Ko_Phra_Thong,ForecastPoint,n/a,Thailand,9.1,98.2,PTWC_WPs
+1230,KRA,Kirakira,ForecastPoint,n/a,Solomon_Islands,-10.36,161.94,PTWC_WPs
+1268,KSE,Kingston_Southeast,ForecastPoint,n/a,Australia,-37,139.4,PTWC_WPs
+1089,KSH,Kushiro,ForecastPoint,n/a,Japan,42.9,144.33,PTWC_WPs
+1353,KTA,Ko_Tarutao,ForecastPoint,n/a,Thailand,6.6,99.6,PTWC_WPs
+1491,KTK,Kota_Kinabalu,ForecastPoint,n/a,Malaysia,6,116,PTWC_WPs
+1484,KTR,K_Terengganu,ForecastPoint,n/a,Malaysia,5.3,103.2,PTWC_WPs
+1297,KUP,Kupang,ForecastPoint,n/a,Indonesia,-10,123.4,PTWC_WPs
+1241,KVG,Kavieng,ForecastPoint,n/a,Papua_New_Guinea,-2.53,150.69,PTWC_WPs
+1154,KWA,Kwajalein,ForecastPoint,n/a,Marshall_Islands,8.7,167.7,PTWC_WPs
+1238,LAE,Lae,ForecastPoint,n/a,Papua_New_Guinea,-6.76,147.03,PTWC_WPs
+1493,LAG,Laoag,ForecastPoint,n/a,Philippines,18.2,120.6,PTWC_WPs
+1201,LAH,Lahaina,ForecastPoint,HI,United_States,20.886,-156.69,PTWC_WPs
+1296,LAM,Little_Andaman,ForecastPoint,n/a,India,10.7,92.3,PTWC_WPs
+1058,LAP,La_Punta,ForecastPoint,n/a,Peru,-12.1,-77.2,PTWC_WPs
+1221,LAY,Laysan,ForecastPoint,HI,United_States,25.776,-171.744,PTWC_WPs
+1098,LEG,Legaspi,ForecastPoint,n/a,Philippines,13.2,123.8,PTWC_WPs
+1547,LGB,Long_Beach,ForecastPoint,n/a,Tinian,15.034,145.657,PTWC_WPs
+1380,LHB,La_Habana,ForecastPoint,n/a,Cuba,23.151,-82.364,PTWC_WPs
+1501,LHD,Lahad_Datu,ForecastPoint,n/a,Malaysia,4.9,118.4,PTWC_WPs
+1365,LID,Long_Island,ForecastPoint,n/a,Bahamas,23.272,-75.082,PTWC_WPs
+1105,LIF,Lifou_Isl,ForecastPoint,n/a,New_Caledonia,-20.9,167.3,PTWC_WPs
+1351,LIN,Lindi,ForecastPoint,n/a,Tanzania,-9.8,39.9,PTWC_WPs
+1222,LIS,Lisianski,ForecastPoint,HI,United_States,26.063,-173.96,PTWC_WPs
+1057,LLB,La_Libertad,ForecastPoint,n/a,Ecuador,-2.19,-81.23,PTWC_WPs
+1407,LMS,Lameshur_Bay,ForecastPoint,n/a,Us_Virgin_Is,18.318,-64.724,PTWC_WPs
+1409,LMT,Limetree,ForecastPoint,n/a,Us_Virgin_Is,17.695,-64.754,PTWC_WPs
+1525,LNE,Leone,ForecastPoint,n/a,Tutuila,-14.343,-170.793,PTWC_WPs
+1195,LP1,Laupahoehoe,ForecastPoint,HI,United_States,19.995,-155.243,PTWC_WPs
+1131,LTP,Lottin_Point,ForecastPoint,n/a,New_Zealand,-37.534,178.19,PTWC_WPs
+1114,LYT,Lyttelton,ForecastPoint,n/a,New_Zealand,-43.617,172.717,PTWC_WPs
+1028,LZC,Lazaro_Cardenas,ForecastPoint,n/a,Mexico,17.9,-102.2,PTWC_WPs
+1314,MA2,Mahajanga,ForecastPoint,n/a,Madagascar,-15.4,46.2,PTWC_WPs
+1499,MA3,Maimbung,ForecastPoint,n/a,Philippines,5.9,121,PTWC_WPs
+1196,MAH,Mahukona,ForecastPoint,HI,United_States,20.186,-155.906,PTWC_WPs
+1155,MAJ,Majuro,ForecastPoint,n/a,Marshall_Islands,7.117,171.37,PTWC_WPs
+1148,MAK,Malakal,ForecastPoint,n/a,Palau,7.3,134.5,PTWC_WPs
+1325,MAP,Maputo,ForecastPoint,n/a,Mozambique,-25.9,32.8,PTWC_WPs
+1104,MAR,Mare_Isl,ForecastPoint,n/a,New_Caledonia,-21.567,167.833,PTWC_WPs
+1366,MAY,Mayaguana,ForecastPoint,n/a,Bahamas,22.33,-72.999,PTWC_WPs
+1022,MAZ,Mazatlan,ForecastPoint,n/a,Mexico,23.17,-106.44,PTWC_WPs
+1545,MCH,Mochon_Beach,ForecastPoint,n/a,Rota,14.202,145.257,PTWC_WPs
+1083,MCK,Mackay,ForecastPoint,n/a,Australia,-21.06,149.27,PTWC_WPs
+1237,MDG,Madang,ForecastPoint,n/a,Papua_New_Guinea,-5.17,145.84,PTWC_WPs
+1553,MDN,Medinilla,ForecastPoint,n/a,Cnmi,16.017,146.058,PTWC_WPs
+1470,MDR,Madero,ForecastPoint,n/a,Mexico,22.291,-97.785,PTWC_WPs
+1255,MED,Mednny_Island,ForecastPoint,n/a,Russia,54.72,167.43,PTWC_WPs
+1117,MFS,Milford_Sound,ForecastPoint,n/a,New_Zealand,-44.626,167.877,PTWC_WPs
+1550,MGC,Magicienne_Bay,ForecastPoint,n/a,Saipan,15.145,145.756,PTWC_WPs
+1123,MGN,Mount_Maunganui,ForecastPoint,n/a,New_Zealand,-37.624,176.173,PTWC_WPs
+1403,MGY,Magueyes_Is,ForecastPoint,n/a,Puerto_Rico,17.97,-67.046,PTWC_WPs
+1177,MID,Midway_Island,ForecastPoint,n/a,Midway_Island,28.2,-177.4,PTWC_WPs
+1193,MIL,Milolii,ForecastPoint,HI,United_States,19.188,-155.91,PTWC_WPs
+1097,MIN,Minamitorishima,ForecastPoint,n/a,Minamitorishima,24.3,154,PTWC_WPs
+1213,MKL,Mokuoloe,ForecastPoint,HI,United_States,21.437,-157.793,PTWC_WPs
+1209,MKP,Makapuu,ForecastPoint,HI,United_States,21.323,-157.672,PTWC_WPs
+1166,MLD,Malden_Island,ForecastPoint,n/a,Kiribati,-3.94,-154.9,PTWC_WPs
+1317,MLE,Male,ForecastPoint,n/a,Maldives,4.2,73.6,PTWC_WPs
+1062,MLN,Mollendo,ForecastPoint,n/a,Peru,-17.08,-72,PTWC_WPs
+1125,MLS,Marlborough_Sounds,ForecastPoint,n/a,New_Zealand,-41.091,174.387,PTWC_WPs
+1311,MN1,Manakara,ForecastPoint,n/a,Madagascar,-22.2,48.2,PTWC_WPs
+1228,MN2,Munda,ForecastPoint,n/a,Solomon_Islands,-8.38,157.21,PTWC_WPs
+1397,MNA,Mona_Island,ForecastPoint,n/a,Puerto_Rico,18.09,-67.939,PTWC_WPs
+1384,MNB,Montego_Bay,ForecastPoint,n/a,Jamaica,18.471,-77.933,PTWC_WPs
+1319,MNC,Minicov,ForecastPoint,n/a,Maldives,8.3,73,PTWC_WPs
+1504,MND,Manado,ForecastPoint,n/a,Indonesia,1.6,124.9,PTWC_WPs
+1290,MNG,Mangalore,ForecastPoint,n/a,India,13.3,74.4,PTWC_WPs
+1249,MNK,Manokwari,ForecastPoint,n/a,Indonesia,-0.81,134.21,PTWC_WPs
+1495,MNL,Manila,ForecastPoint,n/a,Philippines,14.6,121,PTWC_WPs
+1242,MNS,Manus_Island,ForecastPoint,n/a,Papua_New_Guinea,-2.03,147.49,PTWC_WPs
+1024,MNZ,Manzanillo,ForecastPoint,n/a,Mexico,19.1,-104.3,PTWC_WPs
+1340,MOG,Mogadishu,ForecastPoint,n/a,Somalia,2,45.5,PTWC_WPs
+1308,MOM,Mombasa,ForecastPoint,n/a,Kenya,-4,39.7,PTWC_WPs
+1282,MOR,Moroni,ForecastPoint,n/a,Comores,-11.6,43.3,PTWC_WPs
+1445,MQT,Maiquetia,ForecastPoint,n/a,Venezuela,10.608,-66.966,PTWC_WPs
+1489,MRA,Muara,ForecastPoint,n/a,Brunei,5,115.1,PTWC_WPs
+1329,MRG,Mergui,ForecastPoint,n/a,Myanmar,12.8,98.4,PTWC_WPs
+1530,MSF,Masefau,ForecastPoint,n/a,Tutuila,-14.254,-170.624,PTWC_WPs
+1039,MSO,Monterrico_Santa_Rosa,ForecastPoint,n/a,Guatemala,13.889,-90.483,PTWC_WPs
+1561,MUG,Maug,ForecastPoint,n/a,Cnmi,20.022,145.221,PTWC_WPs
+1331,MUS,Muscat,ForecastPoint,n/a,Oman,23.9,58.6,PTWC_WPs
+1394,MYG,Mayaguez,ForecastPoint,n/a,Puerto_Rico,18.22,-67.16,PTWC_WPs
+1293,NAA,North_Andaman,ForecastPoint,n/a,India,13.3,92.6,PTWC_WPs
+1175,NAR,Nauru,ForecastPoint,n/a,Nauru,-0.518,166.9,PTWC_WPs
+1361,NAS,Nassau,ForecastPoint,n/a,Bahamas,25.094,-77.351,PTWC_WPs
+1223,NAW,Nawiliwili,ForecastPoint,HI,United_States,21.951,-159.354,PTWC_WPs
+1219,NCK,Necker,ForecastPoint,HI,United_States,23.575,-164.7,PTWC_WPs
+1107,NCP,North_Cape,ForecastPoint,n/a,New_Zealand,-34.4,173.3,PTWC_WPs
+1377,NGR,Nueva_Gerona,ForecastPoint,n/a,Cuba,21.922,-82.797,PTWC_WPs
+1090,NGS,Nagasaki,ForecastPoint,n/a,Japan,32.7,129.7,PTWC_WPs
+1093,NI1,Niigata,ForecastPoint,n/a,Japan,38,139,PTWC_WPs
+1218,NIH,Nihoa,ForecastPoint,HI,United_States,23.06,-161.922,PTWC_WPs
+1190,NIU,Niue_Island,ForecastPoint,n/a,Niue,-19,-170,PTWC_WPs
+1184,NKA,Nukualofa,ForecastPoint,n/a,Tonga,-21.02,-175.23,PTWC_WPs
+1119,NLS,Nelson,ForecastPoint,n/a,New_Zealand,-41.26,173.266,PTWC_WPs
+1145,NMP,Nampho,ForecastPoint,n/a,Dpr_Of_Korea,38.75,125,PTWC_WPs
+1091,NOB,Nobeoka,ForecastPoint,n/a,Japan,32.5,131.8,PTWC_WPs
+1101,NOU,Noumea,ForecastPoint,n/a,New_Caledonia,-22.3,166.5,PTWC_WPs
+1106,NPL,New_Plymouth,ForecastPoint,n/a,New_Zealand,-39.053,174.069,PTWC_WPs
+1112,NPR,Napier,ForecastPoint,n/a,New_Zealand,-39.474,176.91,PTWC_WPs
+1182,NPU,Niuatoputapu,ForecastPoint,n/a,Tonga,-15.942,-173.767,PTWC_WPs
+1483,NST,Nk_Si_Thammarat,ForecastPoint,n/a,Thailand,8.4,100,PTWC_WPs
+1162,NUK,Nukunonu_Island,ForecastPoint,n/a,Tokelau,-9.16,-171.83,PTWC_WPs
+1275,NWC,North_West_Cape,ForecastPoint,n/a,Australia,-21.5,113.9,PTWC_WPs
+1214,NWL,Nawiliwili,ForecastPoint,HI,United_States,21.951,-159.354,PTWC_WPs
+1552,OBY,Obyan,ForecastPoint,n/a,Saipan,15.103,145.727,PTWC_WPs
+1036,OCO,Ocos_San_Marcos,ForecastPoint,n/a,Guatemala,14.507,-92.197,PTWC_WPs
+1536,OFI,Ofu_Island,ForecastPoint,n/a,Manua,-14.185,-169.679,PTWC_WPs
+1264,OKH,Okhotsk,ForecastPoint,n/a,Russia,59.3,143.25,PTWC_WPs
+1086,OKI,Okinawa,ForecastPoint,n/a,Japan,26.2,127.8,PTWC_WPs
+1266,OKR,Ostrov_Karaginskiy,ForecastPoint,n/a,Russia,58.8,164.5,PTWC_WPs
+1519,OLI,Olionono_Upolu,ForecastPoint,n/a,Samoa,-13.974,-171.443,PTWC_WPs
+1537,OLS,Olesega_Island,ForecastPoint,n/a,Manua,-14.185,-169.625,PTWC_WPs
+1435,ONM,Onima,ForecastPoint,n/a,Bonaire,12.256,-68.309,PTWC_WPs
+1437,ORA,Oranjestad,ForecastPoint,n/a,Aruba,12.506,-70.042,PTWC_WPs
+1103,OUI,Ouinne,ForecastPoint,n/a,New_Caledonia,-21.967,166.767,PTWC_WPs
+1021,PAB,Punta_Abreojos,ForecastPoint,n/a,Mexico,26.68,-113.62,PTWC_WPs
+1284,PAF,Port_Aux_Francais,ForecastPoint,n/a,Kerguelen_Islands,-49,69.1,PTWC_WPs
+1158,PAG,Pago_Pago,ForecastPoint,n/a,American_Samoa,-14.3,-170.7,PTWC_WPs
+1099,PAL,Palanan,ForecastPoint,n/a,Philippines,17.15,122.61,PTWC_WPs
+1231,PAN,Panggoe,ForecastPoint,n/a,Solomon_Islands,-6.87,157.16,PTWC_WPs
+1388,PAP,Port_Au_Prince,ForecastPoint,n/a,Haiti,18.544,-72.369,PTWC_WPs
+1465,PBB,Puerto_Barrios,ForecastPoint,n/a,Guatemala,15.745,-88.597,PTWC_WPs
+1294,PBL,Port_Blair,ForecastPoint,n/a,India,11.9,92.7,PTWC_WPs
+1049,PBR,Punta_Burica,ForecastPoint,n/a,Panama,8.02,-82.85,PTWC_WPs
+1464,PCO,Puerto_Cortes,ForecastPoint,n/a,Honduras,15.85,-87.973,PTWC_WPs
+1452,PCR,Punta_Caribana,ForecastPoint,n/a,Colombia,8.624,-76.898,PTWC_WPs
+1462,PCZ,Puerto_Cabezas,ForecastPoint,n/a,Nicaragua,14.019,-83.374,PTWC_WPs
+1303,PDG,Padang,ForecastPoint,n/a,Indonesia,-0.9,100.1,PTWC_WPs
+1316,PDK,Port_Dickson,ForecastPoint,n/a,Malaysia,2.5,101.7,PTWC_WPs
+1345,PEI,Prince_Edward_Is,ForecastPoint,n/a,South_Africa,-46.6,37.6,PTWC_WPs
+1343,PEL,Port_Elizabeth,ForecastPoint,n/a,South_Africa,-33.9,25.8,PTWC_WPs
+1272,PER,Perth,ForecastPoint,n/a,Australia,-32,115.3,PTWC_WPs
+1446,PFJ,Punto_Fijo,ForecastPoint,n/a,Venezuela,11.707,-70.232,PTWC_WPs
+1523,PG1,Pago_Pago,ForecastPoint,n/a,Tutuila,-14.276,-170.689,PTWC_WPs
+1542,PG2,Pago_Bay,ForecastPoint,n/a,Guam,13.417,144.791,PTWC_WPs
+1532,PGA,Pagai,ForecastPoint,n/a,Tutuila,-14.273,-170.61,PTWC_WPs
+1558,PGN,Pagan,ForecastPoint,n/a,Cnmi,18.124,145.775,PTWC_WPs
+1461,PGO,Punta_Gorda,ForecastPoint,n/a,Nicaragua,11.437,-83.793,PTWC_WPs
+1472,PGS,Progreso,ForecastPoint,n/a,Mexico,21.3,-89.66,PTWC_WPs
+1352,PHU,Phuket,ForecastPoint,n/a,Thailand,8,98.2,PTWC_WPs
+1132,PIC,Picton,ForecastPoint,n/a,New_Zealand,-41.28,174,PTWC_WPs
+1060,PIM,Pimental,ForecastPoint,n/a,Peru,-6.9,-80.02,PTWC_WPs
+1562,PJR,Pajaros,ForecastPoint,n/a,Cnmi,20.544,144.892,PTWC_WPs
+1161,PKA,Pukapuka_Island,ForecastPoint,n/a,Cook_Islands,-10.8,-165.86,PTWC_WPs
+1480,PKK,Pra_Khiri_Khan,ForecastPoint,n/a,Thailand,11.8,99.8,PTWC_WPs
+1486,PKP,Pangkalpinang,ForecastPoint,n/a,Indonesia,-2.1,106.1,PTWC_WPs
+1460,PL1,Puerto_Limon,ForecastPoint,n/a,Costa_Rica,10.001,-83.013,PTWC_WPs
+1180,PLM,Palmyra_Island,ForecastPoint,n/a,Palmyra_Island,5.9,-162.1,PTWC_WPs
+1422,PLP,Palmetto_Point,ForecastPoint,n/a,Barbuda,17.578,-61.863,PTWC_WPs
+1424,PLY,Plymouth,ForecastPoint,n/a,Montserrat,16.706,-62.234,PTWC_WPs
+1240,PMB,Port_Moresby,ForecastPoint,n/a,Papua_New_Guinea,-9.34,146.94,PTWC_WPs
+1023,PMD,Puerto_Madero,ForecastPoint,n/a,Mexico,14.79,-92.53,PTWC_WPs
+1050,PML,Punta_Mala,ForecastPoint,n/a,Panama,7.48,-79.95,PTWC_WPs
+1395,PNC,Ponce,ForecastPoint,n/a,Puerto_Rico,17.968,-66.621,PTWC_WPs
+1402,PNL,Penuelas,ForecastPoint,n/a,Puerto_Rico,17.973,-66.762,PTWC_WPs
+1160,PNR,Penryn_Island,ForecastPoint,n/a,Cook_Islands,-8.88,-157.84,PTWC_WPs
+1455,POB,Puerto_Obaldia,ForecastPoint,n/a,Panama,8.667,-77.417,PTWC_WPs
+1150,PON,Pohnpei_Island,ForecastPoint,n/a,Pohnpei,7,158.218,PTWC_WPs
+1434,POR,Porlamar,ForecastPoint,n/a,Venezuela,10.948,-63.842,PTWC_WPs
+1433,POS,Port_Of_Spain,ForecastPoint,n/a,Trinidad_Tobago,10.641,-61.528,PTWC_WPs
+1257,PPK,Petropavlovsk,ForecastPoint,n/a,Russia,53.23,159.58,PTWC_WPs
+1391,PPL,Puerto_Plata,ForecastPoint,n/a,Dominican_Rep,19.813,-70.692,PTWC_WPs
+1051,PPN,Puerto_Pina,ForecastPoint,n/a,Panama,7.39,-78.05,PTWC_WPs
+1497,PPR,Puerto_Princesa,ForecastPoint,n/a,Philippines,9.8,118.8,PTWC_WPs
+1170,PPT,Papeete,ForecastPoint,n/a,French_Polynesia,-17.533,-149.567,PTWC_WPs
+1042,PQP,Puerto_Quepos,ForecastPoint,n/a,Costa_Rica,9.4,-84.2,PTWC_WPs
+1442,PRM,Paramaribo,ForecastPoint,n/a,Suriname,5.934,-55.198,PTWC_WPs
+1432,PRT,Pirates_Bay,ForecastPoint,n/a,Trinidad_Tobago,11.327,-60.559,PTWC_WPs
+1035,PSJ,Puerto_De_San_Jose,ForecastPoint,n/a,Guatemala,13.909,-90.819,PTWC_WPs
+1541,PT1,Pati_Point,ForecastPoint,n/a,Guam,13.603,144.962,PTWC_WPs
+1189,PTC,Pitcairn_Island,ForecastPoint,n/a,Pitcairn,-25.08,-130.08,PTWC_WPs
+1320,PTL,Port_Louis,ForecastPoint,n/a,Mauritius,-20,57.3,PTWC_WPs
+1251,PTN,Patani,ForecastPoint,n/a,Indonesia,0.43,128.76,PTWC_WPs
+1130,PTR,Port_Tauranga,ForecastPoint,n/a,New_Zealand,-37.651,176.174,PTWC_WPs
+1481,PTY,Pattaya,ForecastPoint,n/a,Thailand,12.8,100.85,PTWC_WPs
+1509,PUA,Puapua_Savaii,ForecastPoint,n/a,Samoa,-13.584,-172.205,PTWC_WPs
+1456,PUC,Puerto_Carreto,ForecastPoint,n/a,Panama,8.783,-77.573,PTWC_WPs
+1511,PUL,Puleia_Savaii,ForecastPoint,n/a,Samoa,-13.786,-172.38,PTWC_WPs
+1071,PUM,Puerto_Montt,ForecastPoint,n/a,Chile,-41.5,-73,PTWC_WPs
+1072,PUN,Punta_Arenas,ForecastPoint,n/a,Chile,-53.2,-70.9,PTWC_WPs
+1217,PUU,Puuwai,ForecastPoint,HI,United_States,21.906,-160.207,PTWC_WPs
+1073,PUW,Puerto_Williams,ForecastPoint,n/a,Chile,-54.9,-67.6,PTWC_WPs
+1029,PVA,Puerto_Vallarta,ForecastPoint,n/a,Mexico,20.65,-105.25,PTWC_WPs
+1330,PYI,Pyinkayaing,ForecastPoint,n/a,Myanmar,15.9,94.3,PTWC_WPs
+1323,QLM,Quelimane,ForecastPoint,n/a,Mozambique,-18,37.1,PTWC_WPs
+1137,QND,Qingdao,ForecastPoint,n/a,China,36,120.4,PTWC_WPs
+1478,QNH,Qui_Nhon,ForecastPoint,n/a,Vietnam,13.7,109.2,PTWC_WPs
+1140,QNZ,Quanzhou,ForecastPoint,n/a,China,24.8,118.8,PTWC_WPs
+1239,RAB,Rabaul,ForecastPoint,n/a,Papua_New_Guinea,-4.18,152.27,PTWC_WPs
+1185,RAO,Raoul_Island,ForecastPoint,n/a,Kermadec_Islands,-29.21,-177.94,PTWC_WPs
+1410,RDT,Roadtown,ForecastPoint,n/a,Br_Virgin_Is,18.425,-64.608,PTWC_WPs
+1448,RHC,Riohacha,ForecastPoint,n/a,Colombia,11.554,-72.92,PTWC_WPs
+1171,RIK,Rikitea,ForecastPoint,n/a,French_Polynesia,-23.1,-135,PTWC_WPs
+1159,ROR,Rarotonga,ForecastPoint,n/a,Cook_Islands,-21.2,-159.8,PTWC_WPs
+1426,ROS,Roseau,ForecastPoint,n/a,Dominica,15.297,-61.396,PTWC_WPs
+1173,RPI,Rapa_Iti,ForecastPoint,n/a,French_Polynesia,-27.6,-144.3,PTWC_WPs
+1513,SA1,Salailoa_Savaii,ForecastPoint,n/a,Samoa,-13.716,-172.604,PTWC_WPs
+1453,SA2,San_Andres,ForecastPoint,n/a,San_Andres_Provid,13.38,-81.39,PTWC_WPs
+1419,SAB,Saba,ForecastPoint,n/a,Saba,17.64,-63.22,PTWC_WPs
+1015,SAC,San_Francisco,ForecastPoint,CA,United_States,37.8,-122.5,PTWC_WPs
+1146,SAI,Saipan,ForecastPoint,n/a,Northern_Marianas,15.3,145.8,PTWC_WPs
+1333,SAL,Salalah,ForecastPoint,n/a,Oman,16.9,54.1,PTWC_WPs
+1046,SAN,Puerto_Sandino,ForecastPoint,n/a,Nicaragua,12.2,-86.8,PTWC_WPs
+1507,SAS,Sasina_Savaii,ForecastPoint,n/a,Samoa,-13.464,-172.449,PTWC_WPs
+1030,SBL,San_Blas,ForecastPoint,n/a,Mexico,21.5,-105.3,PTWC_WPs
+1417,SBT,Saint_Barthelemy,ForecastPoint,n/a,Saint_Barthelemy,17.91,-62.825,PTWC_WPs
+1383,SDC,Santiago_D_Cuba,ForecastPoint,n/a,Cuba,19.947,-75.85,PTWC_WPs
+1502,SDK,Sandakan,ForecastPoint,n/a,Malaysia,5.9,118.1,PTWC_WPs
+1392,SDM,Santo_Domingo,ForecastPoint,n/a,Dominican_Rep,18.455,-69.893,PTWC_WPs
+1420,SEU,Sint_Eustatius,ForecastPoint,n/a,Sint_Eustatius,17.5,-62.975,PTWC_WPs
+1032,SFL,San_Felipe,ForecastPoint,n/a,Mexico,31,-114.8,PTWC_WPs
+1494,SFR,San_Fernando,ForecastPoint,n/a,Philippines,16.6,120.3,PTWC_WPs
+1521,SFT,Safata_Upolu,ForecastPoint,n/a,Samoa,-14.012,-171.856,PTWC_WPs
+1138,SGH,Shanghai,ForecastPoint,n/a,China,31.2,122.3,PTWC_WPs
+1087,SHI,Shimizu,ForecastPoint,n/a,Japan,32.8,133,PTWC_WPs
+1092,SHM,Shimane,ForecastPoint,n/a,Japan,35.75,133,PTWC_WPs
+1482,SHN,Sihanoukville,ForecastPoint,n/a,Cambodia,10.6,103.6,PTWC_WPs
+1302,SIB,Siberut,ForecastPoint,n/a,Indonesia,-1.5,98.7,PTWC_WPs
+1304,SIM,Simeulue,ForecastPoint,n/a,Indonesia,2.5,96,PTWC_WPs
+1034,SIP,Sipacate,ForecastPoint,n/a,Guatemala,13.9,-91.23,PTWC_WPs
+1047,SJD,San_Juan_Dl_Sur,ForecastPoint,n/a,Nicaragua,11.2,-85.9,PTWC_WPs
+1063,SJN,San_Juan,ForecastPoint,n/a,Peru,-15.33,-75.24,PTWC_WPs
+1546,SJS,San_Jose,ForecastPoint,n/a,Tinian,14.96,145.623,PTWC_WPs
+1393,SJU,San_Juan,ForecastPoint,n/a,Puerto_Rico,18.459,-66.116,PTWC_WPs
+1492,SKW,Singkawang,ForecastPoint,n/a,Indonesia,1,109,PTWC_WPs
+1027,SLC,Salina_Cruz,ForecastPoint,n/a,Mexico,16.5,-95.2,PTWC_WPs
+1516,SLE,Saleimoa_Upolu,ForecastPoint,n/a,Samoa,-13.782,-171.894,PTWC_WPs
+1439,SLU,Sao_Luis,ForecastPoint,n/a,Brazil,-2.47,-44.309,PTWC_WPs
+1418,SMB,Simpson_Baai,ForecastPoint,n/a,Sint_Maarten,18.034,-63.104,PTWC_WPs
+1449,SMT,Santa_Marta,ForecastPoint,n/a,Colombia,11.247,-74.225,PTWC_WPs
+1144,SNC,Sinchang,ForecastPoint,n/a,Dpr_Of_Korea,40.13,128.47,PTWC_WPs
+1454,SND,Providencia,ForecastPoint,n/a,San_Andres_Provid,12.59,-81.68,PTWC_WPs
+1485,SNG,Singapore,ForecastPoint,n/a,Singapore,1.2,103.8,PTWC_WPs
+1025,SOC,Socorro,ForecastPoint,n/a,Mexico,18.8,-111,PTWC_WPs
+1016,SPD,San_Pedro,ForecastPoint,CA,United_States,33.7,-118.3,PTWC_WPs
+1094,SPO,Sapporo,ForecastPoint,n/a,Japan,43.5,141,PTWC_WPs
+1555,SRG,Sarigan,ForecastPoint,n/a,Cnmi,16.705,145.779,PTWC_WPs
+1250,SRN,Sorong,ForecastPoint,n/a,Indonesia,-0.81,131.13,PTWC_WPs
+1363,SSL,San_Salvador,ForecastPoint,n/a,Bahamas,24.066,-74.547,PTWC_WPs
+1543,SSN,Songsong,ForecastPoint,n/a,Rota,14.115,145.118,PTWC_WPs
+1283,STD,St_Denis,ForecastPoint,n/a,Reunion,-20.8,55.2,PTWC_WPs
+1431,STG,Saint_Georges,ForecastPoint,n/a,Grenada,12.046,-61.754,PTWC_WPs
+1423,STJ,Saint_Johns,ForecastPoint,n/a,Antigua,17.131,-61.874,PTWC_WPs
+1326,STT,Sittwe,ForecastPoint,n/a,Myanmar,20,92.9,PTWC_WPs
+1127,STW,Stewart_Island,ForecastPoint,n/a,New_Zealand,-47.293,167.505,PTWC_WPs
+1156,SUV,Suva,ForecastPoint,n/a,Fiji,-18.137,178.425,PTWC_WPs
+1522,SVA,Savaia_Upolu,ForecastPoint,n/a,Samoa,-13.969,-171.695,PTWC_WPs
+1258,SVK,Severo_Kurilsk,ForecastPoint,n/a,Russia,50.83,156.07,PTWC_WPs
+1538,SWN,Swains_Island,ForecastPoint,n/a,Swains,-11.07,-171.08,PTWC_WPs
+1080,SYD,Sydney,ForecastPoint,n/a,Australia,-33.86,151.45,PTWC_WPs
+1512,TAG,Taga_Savaii,ForecastPoint,n/a,Samoa,-13.801,-172.511,PTWC_WPs
+1070,TAL,Talcahuano,ForecastPoint,n/a,Chile,-36.7,-73.1,PTWC_WPs
+1169,TAR,Tarawa_Island,ForecastPoint,n/a,Kiribati,1.5,173,PTWC_WPs
+1535,TAU,Tau_Island,ForecastPoint,n/a,Manua,-14.26,-169.456,PTWC_WPs
+1254,TBT,Tabukan_Tengah,ForecastPoint,n/a,Indonesia,3.6,125.6,PTWC_WPs
+1524,TFN,Tafuna,ForecastPoint,n/a,Tutuila,-14.342,-170.715,PTWC_WPs
+1077,THR,Thurston_Island,ForecastPoint,n/a,Antarctica,-72,-100,PTWC_WPs
+1038,TIQ,Tiquisate_Escuintla,ForecastPoint,n/a,Guatemala,14.041,-91.529,PTWC_WPs
+1531,TLA,Tula,ForecastPoint,n/a,Tutuila,-14.252,-170.562,PTWC_WPs
+1059,TLR,Talara,ForecastPoint,n/a,Peru,-4.63,-81.47,PTWC_WPs
+1126,TMR,Timaru,ForecastPoint,n/a,New_Zealand,-44.387,171.269,PTWC_WPs
+1310,TMS,Toamasina,ForecastPoint,n/a,Madagascar,-17.8,49.6,PTWC_WPs
+1313,TOL,Toliara,ForecastPoint,n/a,Madagascar,-23.4,43.6,PTWC_WPs
+1463,TRJ,Trujillo,ForecastPoint,n/a,Honduras,15.931,-85.958,PTWC_WPs
+1503,TRK,Tarakan,ForecastPoint,n/a,Indonesia,3.3,117.6,PTWC_WPs
+1347,TRN,Trincomalee,ForecastPoint,n/a,Sri_Lanka,8.7,81.3,PTWC_WPs
+1151,TRU,Chuuk_Island,ForecastPoint,n/a,Chuuk,7.445,151.845,PTWC_WPs
+1289,TRV,Trivandrum,ForecastPoint,n/a,India,8.3,76.9,PTWC_WPs
+1136,TTG,Taitung,ForecastPoint,n/a,Taiwan,22.7,121.2,PTWC_WPs
+1510,TUA,Tuasivi_Savaii,ForecastPoint,n/a,Samoa,-13.666,-172.168,PTWC_WPs
+1174,TUB,Tubuai,ForecastPoint,n/a,French_Polynesia,-23.34,-149.51,PTWC_WPs
+1054,TUM,Tumaco,ForecastPoint,n/a,Colombia,1.82,-78.86,PTWC_WPs
+1413,TVL,The_Valley,ForecastPoint,n/a,Anguilla,18.252,-63.051,PTWC_WPs
+1471,TXB,Texas_Border,ForecastPoint,n/a,Mexico,25.972,-97.141,PTWC_WPs
+1265,UKH,Ust_Kahyryuzovo,ForecastPoint,n/a,Russia,57.1,156.7,PTWC_WPs
+1246,ULM,Ulamona,ForecastPoint,n/a,Papua_New_Guinea,-5,151.25,PTWC_WPs
+1259,URP,Urup_Island,ForecastPoint,n/a,Russia,46.12,150.54,PTWC_WPs
+1256,UST,Ust_Kamchatsk,ForecastPoint,n/a,Russia,56.12,162.58,PTWC_WPs
+1506,UTU,Utuloa_Savaii,ForecastPoint,n/a,Samoa,-13.499,-172.647,PTWC_WPs
+1069,VAL,Valparaiso,ForecastPoint,n/a,Chile,-33,-71.6,PTWC_WPs
+1529,VAT,Vatia,ForecastPoint,n/a,Tutuila,-14.248,-170.672,PTWC_WPs
+1469,VCR,Veracruz,ForecastPoint,n/a,Mexico,19.201,-96.116,PTWC_WPs
+1336,VCT,Victoria,ForecastPoint,n/a,Seychelles,-4.5,55.6,PTWC_WPs
+1411,VGD,Virgin_Gorda,ForecastPoint,n/a,Br_Virgin_Is,18.48,-64.38,PTWC_WPs
+1405,VIQ,Vieques_Is,ForecastPoint,n/a,Puerto_Rico,18.153,-65.444,PTWC_WPs
+1260,VLD,Vladivostok,ForecastPoint,n/a,Russia,42.75,132,PTWC_WPs
+1477,VNH,Vinh,ForecastPoint,n/a,Vietnam,18.6,105.7,PTWC_WPs
+1235,VNM,Vanimo,ForecastPoint,n/a,Papua_New_Guinea,-2.58,141.34,PTWC_WPs
+1261,VNN,Vanino,ForecastPoint,n/a,Russia,49.05,140.35,PTWC_WPs
+1210,WAI,Waianae,ForecastPoint,HI,United_States,21.44,-158.17,PTWC_WPs
+1176,WAK,Wake_Island,ForecastPoint,n/a,Wake_Island,19.3,166.6,PTWC_WPs
+1187,WAL,Wallis_Island,ForecastPoint,n/a,Wallis_And_Futuna,-13.25,-176.25,PTWC_WPs
+1372,WCA,West_Caicos,ForecastPoint,n/a,Turks_N_Caicos,21.671,-72.487,PTWC_WPs
+1245,WDL,Woodlark_Island,ForecastPoint,n/a,Papua_New_Guinea,-9,152.9,PTWC_WPs
+1113,WEL,Wellington,ForecastPoint,n/a,New_Zealand,-41.27,174.837,PTWC_WPs
+1551,WGB,Wing_Beach,ForecastPoint,n/a,Saipan,15.273,145.791,PTWC_WPs
+1124,WGN,Wanganui,ForecastPoint,n/a,New_Zealand,-39.946,174.98,PTWC_WPs
+1122,WHG,Whangarei,ForecastPoint,n/a,New_Zealand,-35.805,174.514,PTWC_WPs
+1436,WIL,Willemstad,ForecastPoint,n/a,Curacao,12.094,-68.934,PTWC_WPs
+1139,WNZ,Wenzhou,ForecastPoint,n/a,China,27.8,121.2,PTWC_WPs
+1248,WRS,Warsa,ForecastPoint,n/a,Indonesia,-0.62,135.79,PTWC_WPs
+1118,WSP,Westport,ForecastPoint,n/a,New_Zealand,-41.752,171.583,PTWC_WPs
+1121,WTG,Waitangi_Chatham,ForecastPoint,n/a,New_Zealand,-43.941,-176.571,PTWC_WPs
+1236,WWK,Wewak,ForecastPoint,n/a,Papua_New_Guinea,-3.52,143.65,PTWC_WPs
+1328,YAN,Yangon,ForecastPoint,n/a,Myanmar,16.5,96.4,PTWC_WPs
+1149,YAP,Yap_Island,ForecastPoint,n/a,Yap,9.5,138.1,PTWC_WPs
+1400,YBC,Yabucoa,ForecastPoint,n/a,Puerto_Rico,18.055,-65.833,PTWC_WPs
+1498,ZAM,Zamboanga,ForecastPoint,n/a,Philippines,7,122.3,PTWC_WPs
+407,5ST,5Th Street,Breakpoint,HI,United States,21.352876,-157.960053,Sift5
+2,ABD,Aberdeen,ForecastPoint,WA,United States,46.958398,-123.840544,Sift5
+6,ABE,Aberdeen,ForecastPoint,n/a,United Kingdom,57.14,-2.08,Sift5
+45,ABY,Auke Bay,ForecastPoint,AK,United States,58.38,-134.65,Sift5
+103,ACT,Anacortes,ForecastPoint,WA,United States,48.521676,-122.617037,Sift5
+94,ADK,Adak,ForecastPoint,AK,United States,51.861667,-176.635,Sift5
+445,AFO,Afono,ForecastPoint,AS,United States,-14.250275,-170.675687,Sift5
+95,AGN,Agony Point,ForecastPoint,AK,United States,51.79,-176.09,Sift5
+496,AIB,Abaco Island,Breakpoint,n/a,Bahamas,26.556,-77.079,Sift5
+80,AKT,Akutan,ForecastPoint,AK,United States,54.1333,-165.77333,Sift5
+251,ALA,Alameda,ForecastPoint,CA,United States,37.78,-122.32,Sift5
+285,ALB,Atlantic Beach,ForecastPoint,NC,United States,34.695969,-76.739992,Sift5
+88,ALI,Alaid Island,ForecastPoint,AK,United States,52.75,173.88,Sift5
+62,ALT,Alitak Bay,ForecastPoint,AK,United States,56.883,-154.117,Sift5
+773,ALV,Alvarado,ForecastPoint,n/a,Mexico,18.78,-95.757,Sift5
+97,AMK,Amchitka,ForecastPoint,AK,United States,51.378,179.3019,Sift5
+663,AMM,Ammassalik,ForecastPoint,n/a,Greenland,65.5,-37,Sift5
+98,AMP,Amchitka Pass,Breakpoint,AK,United States,51.306383,-179.797,Sift5
+456,AMV,Amanave,ForecastPoint,AS,United States,-14.326013,-170.830121,Sift5
+19,ANC,Anchorage,ForecastPoint,AK,United States,61.2383,-149.889999,Sift5
+740,ANN,Antsiranana,Breakpoint,n/a,Madagascar,-12.1,49.5,Sift5
+227,ANS,Annapolis,ForecastPoint,MD,United States,38.983299,-76.480003,Sift5
+355,APA,Apalachicola,ForecastPoint,FL,United States,29.73,-84.98,Sift5
+874,API,Apia,ForecastPoint,n/a,Samoa,-13.8,-171.8,Sift5
+362,APS,Amerada Pass,ForecastPoint,LA,United States,29.448299,-91.336601,Sift5
+421,ARE,Arecibo,ForecastPoint,PR,United States,18.47912,-66.701435,Sift5
+564,ARG,Argentia,ForecastPoint,New Foundland and Labrador,Canada,47.3,-53.98,Sift5
+229,ARN,Arena Cove,ForecastPoint,CA,United States,38.914583,-123.711111,Sift5
+470,ARU,Oranjestad,Breakpoint,n/a,Aruba,12.506,-70.042,Sift5
+517,ASC,Ascension Island,ForecastPoint,n/a,British Territory,-7.9167,-14.4167,Sift5
+335,ASG,Altamaha Sound,Breakpoint,GA,United States,31.318,-81.293,Sift5
+405,ASS,Astoria Street,ForecastPoint,HI,United States,21.362403,-157.94605,Sift5
+143,AST,Astoria,ForecastPoint,OR,United States,46.19333,-123.81,Sift5
+659,ATH,Athens,Breakpoint,n/a,Greece,37.97,23.72,Sift5
+850,ATI,Atico,ForecastPoint,n/a,Peru,-16.2333,-73.6666,Sift5
+92,ATK,Atka,ForecastPoint,AK,United States,52.232083,-174.172667,Sift5
+222,ATL,Atlantic City,ForecastPoint,NJ,United States,39.356667,-74.417778,Sift5
+85,ATU,Attu,Breakpoint,AK,United States,52.85,173.216667,Sift5
+318,AVN,Avalon,ForecastPoint,CA,United States,33.34629,-118.323326,Sift5
+258,AVO,Alviso,ForecastPoint,CA,United States,37.465351,-122.06177,Sift5
+81,AVT,Avatanak Island,ForecastPoint,AK,United States,54.07,-165.33,Sift5
+494,AZO,Ponta Delgada,ForecastPoint,n/a,Azore Is,37.73,-25.683,Sift5
+555,BAM,Bamfield,ForecastPoint,BC,Canada,48.84,-125.139999,Sift5
+506,BBD,Bridgetown,Breakpoint,n/a,Barbados,13.091,-59.622,Sift5
+179,BBE,Bastendorf Beach,ForecastPoint,OR,United States,43.35,-124.35,Sift5
+389,BBF,Bonita Beach,Breakpoint,FL,United States,26.33,-81.85,Sift5
+542,BBL,Bella Bella,ForecastPoint,BC,Canada,52.15999985,-128.1399994,Sift5
+896,BBO,Bilbao,ForecastPoint,n/a,Spain,43.38,-3.08,Sift5
+385,BBX,Baffin Bay,Breakpoint,TX,United States,27.27878871,-97.3453093,Sift5
+235,BBY,Bodega Bay,ForecastPoint,CA,United States,38.3,-123.02,Sift5
+78,BCA,The Bc/Alaska Border,Breakpoint,AK,United States,54.427888,-133.403929,Sift5
+623,BCO,Baracoa,Breakpoint,n/a,Cuba,20.356,-74.498,Sift5
+560,BDB,Belledune,ForecastPoint,New Brunswick,Canada,47.9,-65.85,Sift5
+818,BDO,Bodo,ForecastPoint,n/a,Norway,67.2692,14.3722,Sift5
+284,BEA,Beaufort,ForecastPoint,NC,United States,34.72,-76.67,Sift5
+509,BER,Bermuda,ForecastPoint,n/a,Bermuda,32.37,-64.7,Sift5
+236,BHE,Bishops Head,ForecastPoint,MD,United States,38.220001,-76.038002,Sift5
+168,BHM,Bar Harbor,ForecastPoint,ME,United States,44.391556,-68.205,Sift5
+829,BHP,Balboa Hts.,ForecastPoint,n/a,Panama,9,-79.6,Sift5
+63,BIO,Biorka Island,ForecastPoint,AK,United States,56.85,-135.57,Sift5
+189,BKG,Brookings,ForecastPoint,OR,United States,42.03,-124.27,Sift5
+1,BLA,Blaine,ForecastPoint,WA,United States,48.992926,-122.76956,Sift5
+4,BLG,Bandar Lampung,Breakpoint,n/a,Indonesia,-5.7,105.3,Sift5
+707,BLI,Bali,Breakpoint,n/a,Indonesia,-8.7,115.3,Sift5
+100,BLM,Bellingham,ForecastPoint,WA,United States,48.75,-122.5,Sift5
+244,BLN,Bolinas Lagoon,ForecastPoint,CA,United States,37.9081,-122.679001,Sift5
+508,BLZ,Belize City,Breakpoint,n/a,Belize,17.503,-88.178,Sift5
+187,BMA,Boston,ForecastPoint,MA,United States,42.36,-71.05,Sift5
+117,BNG,Bangor,ForecastPoint,WA,United States,47.74811,-122.728224,Sift5
+245,BNS,Bolinas,ForecastPoint,CA,United States,37.903239,-122.685848,Sift5
+155,BOP,Bayocean Peninsula,ForecastPoint,OR,United States,45.5295,-123.9602,Sift5
+718,BOS,Boso,ForecastPoint,n/a,Japan,34.75,140.76,Sift5
+204,BPC,Bridgeport,ForecastPoint,CT,United States,41.17,-73.18,Sift5
+213,BPJ,Bergen Point,ForecastPoint,NY,United States,40.64,-74.15,Sift5
+328,BPT,Ballast Point,ForecastPoint,CA,United States,32.68,-117.23,Sift5
+602,BQC,Barranquilla,Breakpoint,n/a,Colombia,11.07,-74.866,Sift5
+120,BRE,Bremerton,ForecastPoint,WA,United States,47.555233,-122.638632,Sift5
+477,BRM,Broome,ForecastPoint,n/a,Australia,-18,122.22,Sift5
+9,BRO,Point Barrow,ForecastPoint,AK,United States,71.3875,-156.4811,Sift5
+738,BRT,Beirut,ForecastPoint,n/a,Lebanon,33.53,35.31,Sift5
+530,BRV,Brevoort Harbour,ForecastPoint,n/a,Canada,63.32,-64.32,Sift5
+682,BSH,Baleshwar,Breakpoint,n/a,India,21.6,87.3,Sift5
+74,BSK,Belkofski,ForecastPoint,AK,United States,55.08,-162.03,Sift5
+226,BSL,Brandywine Shoal Light,ForecastPoint,DE,United States,39,-75.099998,Sift5
+872,BSM,Baie Blanche,Breakpoint,n/a,Saint Martin,18.117,-63.01,Sift5
+541,BTL,Battle Harbour,ForecastPoint,New Foundland and Labrador,Canada,52.26,-55.6,Sift5
+828,BTP,Bocas Del Toro,Breakpoint,n/a,Panama,9.351,-82.242,Sift5
+11,BTR,Barter Island,ForecastPoint,AK,United States,70.118,-143.6667,Sift5
+557,BVA,Bonavista,ForecastPoint,New Foundland and Labrador,Canada,48.63,-53.12,Sift5
+520,BVI,Roadtown,ForecastPoint,n/a,British Virgin Is.,18.41,-64.6,Sift5
+392,BVX,Brownsville,Breakpoint,TX,United States,25.95,-97.16,Sift5
+339,BXM,Biloxi,ForecastPoint,MS,United States,30.41,-88.9,Sift5
+604,CAC,Punta Caribana,Breakpoint,n/a,Colombia,8.624,-76.898,Sift5
+375,CAF,Port Canaveral,ForecastPoint,FL,United States,28.42,-80.59,Sift5
+426,CAM,Charlotte Amalie,ForecastPoint,PR,United States,18.335,-64.920926,Sift5
+271,CAR,Carmel,ForecastPoint,CA,United States,36.55,-121.93,Sift5
+264,CBB,Chesapeake Bridge ,ForecastPoint,VA,United States,36.97,-76.11,Sift5
+149,CBE,Cannon Beach,ForecastPoint,OR,United States,45.9,-123.97,Sift5
+184,CBL,Cape Blanco,ForecastPoint,OR,United States,42.85,-124.55,Sift5
+50,CBM,Cape Bingham,ForecastPoint,AK,United States,58.1,-136.53,Sift5
+160,CCH,Cascade Head,Breakpoint,OR,United States,45.04645671,-124.0112481,Sift5
+531,CCL,Cape Chidley,Breakpoint,n/a,Canada,60.22,-64.84,Sift5
+767,CCN,Cancun,ForecastPoint,n/a,Mexico,20.5,-87,Sift5
+454,CCP,Coconut Point,ForecastPoint,AS,United States,-14.312983,-170.69941,Sift5
+384,CCX,Corpus Christi,ForecastPoint,TX,United States,27.58,-97.22,Sift5
+73,CDB,Cold Bay,ForecastPoint,AK,United States,55.216667,-162.71667,Sift5
+66,CDC,Cape Decision,Breakpoint,AK,United States,56.005839,-134.139757,Sift5
+24,CDV,Cordova,ForecastPoint,AK,United States,60.558444,-145.752222,Sift5
+529,CDY,Cape Dyer,ForecastPoint,n/a,Canada,66.56,-61.66,Sift5
+371,CED,Cedar Key,ForecastPoint,FL,United States,29.14,-83.03,Sift5
+641,CEG,Cabo Engano,Breakpoint,n/a,Dominican Republic,18.612,-68.29,Sift5
+619,CFC,Cienfuegos,Breakpoint,n/a,Cuba,22.007,-80.465,Sift5
+653,CFG,Cayenne,Breakpoint,n/a,French Guiana,4.931,-52.35,Sift5
+104,CFL,The Wash./Bc Border,Breakpoint,WA,United States,48.38,-124.71667,Sift5
+42,CFW,Cape Fairweather,Breakpoint,AK,United States,58.805382,-137.948516,Sift5
+609,CGO,Pointe Noire,ForecastPoint,n/a,Congo,-4.7833,11.8333,Sift5
+64,CHB,Chignik Bay,Breakpoint,AK,United States,56.296111,-158.402222,Sift5
+230,CHD,Cape Henlopen,Breakpoint,DE,United States,38.8,-75.09,Sift5
+671,CHH,Cap-Haiten,Breakpoint,n/a,Haiti,19.792,-72.188,Sift5
+27,CHN,Cape Hinchinbrook,ForecastPoint,AK,United States,60.23,-146.63,Sift5
+769,CHP,Champoton,ForecastPoint,n/a,Mexico,19.35,-90.7167,Sift5
+502,CIB,Crooked Island,Breakpoint,n/a,Bahamas,22.747,-74.141,Sift5
+298,CIH,Channel Islands Harbor,ForecastPoint,CA,United States,34.153646,-119.228477,Sift5
+784,CIM,Cheduba Island,Breakpoint,n/a,Myanmar,18.9,93.4,Sift5
+353,CLA,Cameron,ForecastPoint,LA,United States,29.765,-93.3433,Sift5
+193,CLI,Conimicut Light,ForecastPoint,RI,United States,41.716599,-71.3433,Sift5
+380,CLW,Clearwater Beach,ForecastPoint,FL,United States,27.98,-82.83,Sift5
+526,CLY,Clyde River,ForecastPoint,n/a,Canada,70.47,-68.57,Sift5
+228,CMJ,Cape May,ForecastPoint,NJ,United States,38.97,-74.96,Sift5
+534,CMK,Cape Makkovik ,ForecastPoint,New Foundland and Labrador,Canada,55.242729,-59.149946,Sift5
+921,CMR,Cromer,ForecastPoint,n/a,United Kingdom,52.93,1.3,Sift5
+333,CMX,The Cal./Mexico Border,Breakpoint,CA,United States,32.52,-117.13,Sift5
+636,CNH,Copenhagen,Breakpoint,n/a,Denmark,55.752,12.672,Sift5
+164,CNM,Cutler Nas,ForecastPoint,ME,United States,44.64,-67.3,Sift5
+580,CNS,Charlesville,Breakpoint,Nova Scotia,Canada,43.6,-65.78,Sift5
+43,CNW,Cape Newenham,ForecastPoint,AK,United States,58.699267,-162.19778,Sift5
+177,COO,Coos Bay,ForecastPoint,OR,United States,43.37,-124.21,Sift5
+827,COP,Colon,Breakpoint,n/a,Panama,9.372,-79.914,Sift5
+569,CPE,Charlottetown,ForecastPoint,n/a,Canada,46.23,-63.13,Sift5
+768,CPH,Campeche,Breakpoint,n/a,Mexico,19.867,-90.539,Sift5
+215,CPM,Cape Mendocino,Breakpoint,CA,United States,40.516667,-124.4,Sift5
+99,CPO,Cherry Point,ForecastPoint,WA,United States,48.8633,-122.758003,Sift5
+428,CPR,Culebra,ForecastPoint,PR,United States,18.3008,-65.3028,Sift5
+181,CPT,Coquille Point,ForecastPoint,OR,United States,43.13,-124.43,Sift5
+550,CR1,Campbell River,ForecastPoint,BC,Canada,50.04000092,-125.25,Sift5
+561,CRA,Cape Ray,Breakpoint,New Foundland and Labrador,Canada,47.62,-59.24,Sift5
+626,CRC,Willemstad,Breakpoint,n/a,Curacao,12.094,-68.934,Sift5
+192,CRE,Crescent City,ForecastPoint,CA,United States,41.745115,-124.183971,Sift5
+70,CRG,Craig,ForecastPoint,AK,United States,55.488535,-133.142129,Sift5
+294,CRP,Carpinteria,ForecastPoint,CA,United States,34.38,-119.52,Sift5
+178,CRS,Charleston,ForecastPoint,OR,United States,43.35,-124.33,Sift5
+324,CSC,Charleston,ForecastPoint,SC,United States,32.78,-79.93,Sift5
+30,CSK,Cape Suckling,Breakpoint,AK,United States,59.981399,-143.882489,Sift5
+140,CSS,Clatsop Spit,ForecastPoint,OR,United States,46.22,-124.01,Sift5
+603,CTC,Cartagena,Breakpoint,n/a,Colombia,10.412,-75.563,Sift5
+272,CUR,Currituck,ForecastPoint,NC,United States,36.38,-75.83,Sift5
+931,CUV,Cumana,Breakpoint,n/a,Venezuela,10.469,-64.197,Sift5
+437,CVI,Christiansted,ForecastPoint,PR,United States,17.748519,-64.698519,Sift5
+356,CYP,Cypremort Point,ForecastPoint,LA,United States,29.712245,-91.881936,Sift5
+345,DE.,Dock E,ForecastPoint,MS,United States,30.348301,-88.504997,Sift5
+635,DEN,Hanstholm,ForecastPoint,n/a,Denmark,57.12,8.6,Sift5
+343,DFL,Destin,Breakpoint,FL,United States,30.39,-86.5,Sift5
+598,DGR,Diego Ramirez,Breakpoint,n/a,Chile,-57,-67.267,Sift5
+524,DHN,Dundas Harbor,ForecastPoint,n/a,Canada,74.52,-82.43,Sift5
+280,DIC,Diablo Canyon,ForecastPoint,CA,United States,35.205255,-120.858065,Sift5
+348,DIS,Dauphin Island,ForecastPoint,AL,United States,30.25,-88.074997,Sift5
+638,DJB,Djibouti,ForecastPoint,n/a,Djibouti,11.6,43.15,Sift5
+875,DKR,Dakar,ForecastPoint,n/a,Senegal,14.7,-17.4,Sift5
+862,DKS,Dikson,ForecastPoint,n/a,Russia,73.367,80.65,Sift5
+41,DLG,Dillingham,ForecastPoint,AK,United States,59.002,-158.502,Sift5
+173,DLL,Douglas/Lane Line,Breakpoint,OR,United States,43.863116,-124.1679,Sift5
+274,DNC,Duck,Breakpoint,NC,United States,36.23185631,-75.7695286,Sift5
+628,DNM,Danmarkshavn,ForecastPoint,n/a,Denmark,76.76,-18.66,Sift5
+13,DOG,Red Dog Dock,ForecastPoint,AK,United States,67.5766,-164.065,Sift5
+639,DOM,Roseau,Breakpoint,n/a,Dominica,15.297,-61.396,Sift5
+163,DPO,Depoe Bay,ForecastPoint,OR,United States,44.82,-124.07,Sift5
+313,DPT,Dana Point,ForecastPoint,CA,United States,33.454777,-117.690146,Sift5
+370,DTN,Daytona,ForecastPoint,FL,United States,29.2075,-80.9935,Sift5
+262,DVN,Davenport,Breakpoint,CA,United States,37.00525,-122.196494,Sift5
+101,EAS,Eastsound,ForecastPoint,WA,United States,48.693377,-122.906979,Sift5
+47,EFC,Elfin Cove,ForecastPoint,AK,United States,58.195185,-136.347037,Sift5
+646,EGY,Alexandria,ForecastPoint,n/a,Egypt,31.210899,29.9235,Sift5
+498,EIB,Eleuthera Island,ForecastPoint,n/a,Bahamas,25.157,-76.124,Sift5
+225,ELK,Elk,ForecastPoint,CA,United States,39.12,-123.72,Sift5
+176,EMP,Empire,ForecastPoint,OR,United States,43.4,-124.28,Sift5
+321,ENC,Encinitas,ForecastPoint,CA,United States,33.03,-117.3,Sift5
+39,ENG,English Bay,ForecastPoint,AK,United States,59.35,-151.93,Sift5
+457,EOC,Eoc - Airport,Breakpoint,AS,United States,-14.331923,-170.718457,Sift5
+360,EPO,Eagle Point,ForecastPoint,TX,United States,29.48,-94.918297,Sift5
+488,ESA,Esperance,Breakpoint,n/a,Australia,-34,121.8,Sift5
+364,EUL,Eugene Island,ForecastPoint,LA,United States,29.37,-91.39,Sift5
+209,EUR,Eureka,ForecastPoint,CA,United States,40.766111,-124.217222,Sift5
+114,EVT,Everett,ForecastPoint,WA,United States,47.98,-122.23,Sift5
+461,EZA,Esperanza,Breakpoint,n/a,Antarctica,-63.4083,-56.9833,Sift5
+452,FAA,Fagalul,ForecastPoint,AS,United States,-14.290195,-170.682381,Sift5
+453,FAN,Faganeanea,ForecastPoint,AS,United States,-14.305184,-170.690006,Sift5
+632,FAR,Torshavn,ForecastPoint,n/a,Denmark,62.0167,-6.7667,Sift5
+363,FBF,Flagler Beach,Breakpoint,FL,United States,29.42883375,-81.099874,Sift5
+221,FBG,Fort Bragg,ForecastPoint,CA,United States,39.427818,-123.817707,Sift5
+96,FBY,Forecastpoint Bay,ForecastPoint,AK,United States,51.63,-176.77,Sift5
+359,FCA,Freshwater Canal,ForecastPoint,LA,United States,29.555,-92.305,Sift5
+399,FFS,French Frigate,ForecastPoint,HI,United States,23.52,-166.174,Sift5
+102,FHA,Friday Harbor,ForecastPoint,WA,United States,48.547001,-123.007004,Sift5
+214,FIR,Fire Island Light,ForecastPoint,NY,United States,40.63,-73.21,Sift5
+449,FIT,Fagaitua,ForecastPoint,AS,United States,-14.268025,-170.614032,Sift5
+648,FKL,Port Stanley,ForecastPoint,n/a,Falkland Islands (Malvinas),-51.75,-57.93,Sift5
+396,FLO,Flamingo,Breakpoint,FL,United States,25.17543359,-80.8584623,Sift5
+76,FLP,Forecastpoint Pass,ForecastPoint,AK,United States,54.85,-163.41,Sift5
+387,FMY,Fort Myers,ForecastPoint,FL,United States,26.65,-81.87,Sift5
+372,FOR,Port Fourchon,ForecastPoint,LA,United States,29.12,-90.2,Sift5
+497,FPB,Freeport,Breakpoint,n/a,Bahamas,26.514,-78.782,Sift5
+182,FPH,Fort Point,ForecastPoint,NH,United States,43.07,-70.71,Sift5
+373,FPX,Freeport,ForecastPoint,TX,United States,28.95,-95.31,Sift5
+652,FRA,Marseille,ForecastPoint,n/a,France,43.18,5.23,Sift5
+194,FRI,Fall River,ForecastPoint,MA,United States,41.705002,-71.1633,Sift5
+337,FRN,Fernandina Beach,ForecastPoint,FL,United States,30.67,-81.47,Sift5
+514,FTB,Fortaleza,Breakpoint,n/a,Brazil,-3.707,-38.48,Sift5
+710,GAL,Galway,ForecastPoint,n/a,Ireland,53.17,-9.03,Sift5
+287,GAV,Gaviota,ForecastPoint,CA,United States,34.47,-120.22,Sift5
+365,GBE,Galveston Bay Entrance,ForecastPoint,TX,United States,29.358299,-94.724998,Sift5
+625,GCU,Guantanamo Bay,ForecastPoint,n/a,Cuba,19.9,-75.15,Sift5
+667,GDL,Basse-Terre,Breakpoint,n/a,Guadeloupe,15.982,-61.737,Sift5
+666,GGR,Saint Georges,Breakpoint,n/a,Grenada,12.046,-61.754,Sift5
+658,GIB,Gibraltar,ForecastPoint,n/a,Gibraltar,36.1482,-5.3649,Sift5
+125,GIG,Gig Harbor,ForecastPoint,WA,United States,47.325351,-122.575231,Sift5
+369,GIL,Grand Isle,ForecastPoint,LA,United States,29.26,-89.96,Sift5
+504,GIN,Great Inagua,ForecastPoint,n/a,Bahamas,20.948,-73.684,Sift5
+292,GLT,Goleta,ForecastPoint,CA,United States,34.413715,-119.82895,Sift5
+17,GMB,Gambell,ForecastPoint,AK,United States,63.78,-171.7,Sift5
+7,GMN,Grand Manan Island,ForecastPoint,ME,United States,44.83,-66.97,Sift5
+657,GNA,Takoradi,ForecastPoint,n/a,Ghana,4.9166,-1.75,Sift5
+186,GOL,Gold Beach,ForecastPoint,OR,United States,42.42,-124.4,Sift5
+368,GPP,Galveston Pleasure Pier,ForecastPoint,TX,United States,29.285,-94.7883,Sift5
+54,GPT,Gull Point,ForecastPoint,AK,United States,57.37,-152.6,Sift5
+919,GTT,Grand Turk,Breakpoint,n/a,Turks And Caicos Islands,21.468,-71.107,Sift5
+439,GUA,Apra Harbor,ForecastPoint,GM,United States,13.443287,144.65662,Sift5
+232,GUP,Gualala River,Breakpoint,CA,United States,38.76838188,-123.5344167,Sift5
+44,GUS,Gustavus,ForecastPoint,AK,United States,58.4,-135.92,Sift5
+670,GUY,Georgetown (Gy),Breakpoint,n/a,Guyana,6.84,58.196,Sift5
+709,GVT,Gavater,Breakpoint,n/a,"Iran, Islamic Republic Of",25,61.3,Sift5
+928,GVV,Golfo Venezuela,Breakpoint,n/a,Venezuela,11.399,-71.245,Sift5
+366,GVX,Galveston,ForecastPoint,TX,United States,29.31,-94.79,Sift5
+142,HAD,Hammond,ForecastPoint,OR,United States,46.201599,-123.945,Sift5
+402,HAL,Haleiwa,Breakpoint,HI,United States,21.592963,-158.105556,Sift5
+279,HAR,Hatteras,ForecastPoint,NC,United States,35.208302,-75.7033,Sift5
+278,HAT,Cape Hatteras,ForecastPoint,NC,United States,35.222786,-75.635227,Sift5
+210,HBB,Humboldt Bay,ForecastPoint,CA,United States,40.76,-124.22667,Sift5
+26,HBE,Hinchinbrook Entrance,Breakpoint,AK,United States,60.269167,-146.798333,Sift5
+408,HBP,Hickman Bike Path,ForecastPoint,HI,United States,21.337537,-157.96822,Sift5
+34,HCV,Halibut Cove,ForecastPoint,AK,United States,59.6,-151.18,Sift5
+199,HDL,Humboldt/Del Norete Line ,Breakpoint,CA,United States,41.464722,-124.066111,Sift5
+532,HEB,Hebron,ForecastPoint,New Foundland and Labrador,Canada,58.2,-62.63,Sift5
+576,HFX,Halifax,ForecastPoint,n/a,Canada,44.67,-63.58,Sift5
+535,HHL,Holton Harbour,ForecastPoint,New Foundland and Labrador,Canada,54.58,-57.265,Sift5
+548,HHQ,Harrington Harbour,ForecastPoint,Quebec,Canada,50.5,-59.48,Sift5
+358,HIX,High Island,Breakpoint,TX,United States,29.57,-94.39,Sift5
+257,HMB,Half Moon Bay,ForecastPoint,CA,United States,37.47,-122.45,Sift5
+33,HMR,Homer,ForecastPoint,AK,United States,59.605833,-151.417917,Sift5
+713,HNJ,Hanasaki,ForecastPoint,n/a,Japan,43.28,145.57,Sift5
+750,HNM,Hanimaadhoo,ForecastPoint,n/a,Maldives,6.77,73.17,Sift5
+884,HNR,Honiara,ForecastPoint,n/a,Solomon Islands,-9.29,159.96,Sift5
+420,HNU,Honuapo,ForecastPoint,HI,United States,19.087,-155.553,Sift5
+123,HOD,Hoodsport,ForecastPoint,WA,United States,47.408064,-123.137687,Sift5
+116,HOH,Hoh,ForecastPoint,WA,United States,47.748268,-124.439324,Sift5
+48,HOO,Hoonah,ForecastPoint,AK,United States,58.12,-135.47,Sift5
+12,HOP,Point Hope,ForecastPoint,AK,United States,68.3417,-167.2371,Sift5
+18,HPB,Hooper Bay,ForecastPoint,AK,United States,61.531111,-166.096667,Sift5
+527,HRS,Herschel Island,ForecastPoint,n/a,Canada,69.5833,-139.0833,Sift5
+634,HRT,Hirtshals,ForecastPoint,n/a,Denmark,57.711,9.965,Sift5
+903,HTA,Hualien,ForecastPoint,n/a,Taiwan,24,121.6,Sift5
+310,HUN,Huntington Beach,ForecastPoint,CA,United States,33.65,-118,Sift5
+679,HVK,Hunited Statesvik,ForecastPoint,n/a,Iceland,66.033,-17.35,Sift5
+887,HYA,Hilalaya,Breakpoint,n/a,Somalia,6.4,49.1,Sift5
+68,IBY,Ivanof Bay,ForecastPoint,AK,United States,55.9,-159.48,Sift5
+31,ICY,Icy Bay,ForecastPoint,AK,United States,59.98,-141.52,Sift5
+440,IHE,Inner Harbor Entrance,ForecastPoint,GM,United States,13.442121,144.665082,Sift5
+113,IIS,Indian Island,ForecastPoint,WA,United States,48.051507,-122.744194,Sift5
+512,IMB,Ilha De Maraca,Breakpoint,n/a,Brazil,2.208,-50.488,Sift5
+725,ISH,Ishigakijima,Breakpoint,n/a,Japan,24.3,124.2,Sift5
+661,ITT,Ittoqqortoormiit,ForecastPoint,n/a,Greenland,70.483803,-21.962,Sift5
+672,JEH,Jeremie,Breakpoint,n/a,Haiti,18.641,-74.107,Sift5
+590,JFC,Juan Fernandez,ForecastPoint,n/a,Chile,-33.617,-78.825,Sift5
+386,JIF,Jupiter Inlet,Breakpoint,FL,United States,26.97072838,-80.0773984,Sift5
+817,JMI,Jan Mayen Island,ForecastPoint,n/a,Norway,71,-8.6,Sift5
+803,JNZ,Jackson Bay,ForecastPoint,n/a,New Zealand,-43.975,168.615,Sift5
+46,JUN,Juneau,ForecastPoint,AK,United States,58.298333,-134.4,Sift5
+346,JVB,Jacksonville Beach,ForecastPoint,FL,United States,30.29,-81.3,Sift5
+411,KAL,Kalaupapa,ForecastPoint,HI,United States,21.2,-156.98,Sift5
+776,KAP,Kapingamarangi,ForecastPoint,n/a,"Micronesia, Federated States Of",1.059,154.466,Sift5
+91,KBC,Karab Cove,ForecastPoint,AK,United States,52.38,173.6,Sift5
+75,KCV,King Cove,ForecastPoint,AK,United States,55.059815,-162.325741,Sift5
+418,KEA,Keauhou,ForecastPoint,HI,United States,19.561667,-155.962593,Sift5
+71,KET,Ketchikan,ForecastPoint,AK,United States,55.3333,-131.66667,Sift5
+712,KIJ,Kingston,Breakpoint,n/a,Jamaica,17.913,-76.854,Sift5
+417,KKA,Kailua-Kona,ForecastPoint,HI,United States,19.639722,-155.99537,Sift5
+629,KLV,Klaksvig,Breakpoint,n/a,Denmark,62.183,-6.609,Sift5
+908,KMG,Ko Miang,ForecastPoint,n/a,Thailand,8.55,97.63,Sift5
+40,KNE,Kennedy Entrance,Breakpoint,AK,United States,59.008333,-152,Sift5
+53,KOD,Kodiak ,ForecastPoint,AK,United States,57.731385,-152.511813,Sift5
+327,KPN,"K Pier, Nas Coronado",ForecastPoint,CA,United States,32.711111,-117.186111,Sift5
+261,KPV,Kiptopeke,ForecastPoint,VA,United States,37.17,-75.99,Sift5
+208,KPY,Kings Point,ForecastPoint,NY,United States,40.81,-73.765,Sift5
+196,KRM,Klamath River Mouth,ForecastPoint,CA,United States,41.53,-124.08,Sift5
+57,KSI,Krestof Island,ForecastPoint,AK,United States,57.17,-135.48,Sift5
+910,KTO,Ko Taphao,ForecastPoint,n/a,Thailand,7.83,98.43,Sift5
+398,KWF,Key West,ForecastPoint,FL,United States,24.554861,-81.808565,Sift5
+59,KZI,Kruzof Island,ForecastPoint,AK,United States,57.07,-135.85,Sift5
+427,LAB,Lameshur Bay,ForecastPoint,PR,United States,18.32,-64.725,Sift5
+544,LAC,Lanse Au Clair,ForecastPoint,Quebec,Canada,51.41,-57.11,Sift5
+689,LAD,Little Andaman,Breakpoint,n/a,India,10.7,92.3,Sift5
+649,LAF,Lautoka,ForecastPoint,n/a,Fiji,-17.6,177.43,Sift5
+323,LAJ,La Jolla,ForecastPoint,CA,United States,32.866667,-117.2575,Sift5
+538,LAN,Langara,ForecastPoint,BC,Canada,54.26667,-133.06667,Sift5
+307,LAX,Los Angeles Harbor,ForecastPoint,CA,United States,33.719491,-118.272176,Sift5
+137,LBE,Long Beach,ForecastPoint,WA,United States,46.35,-124.07,Sift5
+858,LBN,Lisbon,ForecastPoint,n/a,Portugal,38.7,-9.1,Sift5
+459,LBT,Lobito,ForecastPoint,n/a,Angola,-12.3333,13.5667,Sift5
+349,LCH,Lake Charles,ForecastPoint,LA,United States,30.223301,-93.221603,Sift5
+106,LCN,La Conner,ForecastPoint,WA,United States,48.360516,-122.513745,Sift5
+218,LCS,Lost Coast Shoreline,ForecastPoint,CA,United States,40.171844,-124.238942,Sift5
+231,LDE,Lewes,ForecastPoint,DE,United States,38.78,-75.12,Sift5
+14,LDI,Little Diomede Island,ForecastPoint,AK,United States,65.723056,-168.921111,Sift5
+458,LEO,Leone,ForecastPoint,AS,United States,-14.337508,-170.786596,Sift5
+746,LGK,Langkawi,ForecastPoint,n/a,Malaysia,6.43,99.77,Sift5
+312,LGU,Laguna Beach,ForecastPoint,CA,United States,33.53,-117.78,Sift5
+618,LHC,La Habana,Breakpoint,n/a,Cuba,23.151,-82.364,Sift5
+413,LHN,Lahaina,ForecastPoint,HI,United States,20.871944,-156.678796,Sift5
+283,LIO,Lions Head,ForecastPoint,CA,United States,34.87,-120.62,Sift5
+579,LKP,Lockeport,ForecastPoint,Nova Scotia,Canada,43.7,-65.11,Sift5
+565,LMN,La Manche,Breakpoint,New Foundland and Labrador,Canada,47.17,-52.86,Sift5
+728,LMU,Lamu,ForecastPoint,n/a,Kenya,-2.27,40.9,Sift5
+846,LOB,Lobos De Afuera,ForecastPoint,n/a,Peru,-6.935,-80.72,Sift5
+145,LON,Longview,ForecastPoint,OR,United States,46.092458,-122.927211,Sift5
+581,LPA,Las Palmas,ForecastPoint,n/a,Canary Is,28.13,-15.4167,Sift5
+115,LPH,La Push,ForecastPoint,WA,United States,47.912578,-124.636037,Sift5
+521,LRT,Alert,ForecastPoint,n/a,Canada,82.5,-62.346,Sift5
+444,LSD,Lower Sumay Drive,ForecastPoint,GM,United States,13.422454,144.665004,Sift5
+406,LST,Laffey Street,ForecastPoint,HI,United States,21.355913,-157.947714,Sift5
+438,LTB,Limetree Bay,ForecastPoint,PR,United States,17.7,-64.75,Sift5
+241,LWV,Lewisseta,ForecastPoint,VA,United States,38,-76.47,Sift5
+122,LYC,Lynch Cove,ForecastPoint,WA,United States,47.43803,-122.850066,Sift5
+429,MA1,Mayaguez,ForecastPoint,PR,United States,18.216713,-67.159988,Sift5
+342,MAA,Mayport,ForecastPoint,FL,United States,30.3967,-81.43,Sift5
+341,MAB,The Miss./Alabama Border,Breakpoint,MS,United States,30.4,-88.4,Sift5
+763,MAD,Madero,Breakpoint,n/a,Mexico,22.291,-97.785,Sift5
+507,MAL,Malakal,ForecastPoint,n/a,Belau,7.3,134.5,Sift5
+853,MAN,Manila,ForecastPoint,n/a,Philippines,14.48,120.97,Sift5
+447,MAS,Masefau,ForecastPoint,AS,United States,-14.255593,-170.632105,Sift5
+930,MAV,Maiquetia,Breakpoint,n/a,Venezuela,10.608,-66.966,Sift5
+378,MBF,Melbourne Beach,ForecastPoint,FL,United States,28.07,-80.63,Sift5
+711,MBJ,Montego Bay,Breakpoint,n/a,Jamaica,18.471,-77.933,Sift5
+474,MBY,Milner Bay,ForecastPoint,n/a,Australia,-13.83,136.5,Sift5
+129,MCL,Moclips,ForecastPoint,WA,United States,47.23,-124.22,Sift5
+601,MCO,Santa Marta,Breakpoint,n/a,Colombia,11.247,-74.225,Sift5
+567,MCV,Meat Cove,Breakpoint,Nova Scotia,Canada,47.04,-60.55,Sift5
+223,MEN,Mendocino,ForecastPoint,CA,United States,39.32,-123.82,Sift5
+630,MGG,Myggeneas,ForecastPoint,n/a,Denmark,62.117,-7.683,Sift5
+219,MHL,Mendo/Hum County Line ,Breakpoint,CA,United States,40.0006,-124.025648,Sift5
+305,MHR,Middle Harbor,ForecastPoint,CA,United States,33.75,-118.23,Sift5
+393,MIF,Miami,ForecastPoint,FL,United States,25.76,-80.21,Sift5
+753,MII,Marcus Island,ForecastPoint,n/a,Marcus Is.,24.3,154,Sift5
+743,MKM,Manakara,Breakpoint,n/a,Madagascar,-22.2,48.2,Sift5
+361,MLA,Morgan City,Breakpoint,LA,United States,29.47992542,-91.2790338,Sift5
+300,MLB,Malibu,ForecastPoint,CA,United States,34.03,-118.67,Sift5
+786,MLM,Moulmein,ForecastPoint,n/a,Myanmar,16.48,97.62,Sift5
+865,MMN,Murmansk,ForecastPoint,n/a,Russia,68.967,33.083,Sift5
+724,MNJ,Minamitorishima,ForecastPoint,n/a,Japan,24.3,153.97,Sift5
+270,MNT,Monterey,ForecastPoint,CA,United States,36.605,-121.889444,Sift5
+206,MNY,Montauk,ForecastPoint,NY,United States,41.048333,-71.96,Sift5
+277,MOB,Morro Bay,ForecastPoint,CA,United States,35.37,-120.87,Sift5
+403,MOK,Moku O Loe,ForecastPoint,HI,United States,21.433241,-157.79,Sift5
+522,MOL,Mould Bay,ForecastPoint,n/a,Canada,76.2833,-119.4667,Sift5
+466,MPA,Mar Del Plata,ForecastPoint,n/a,Argentina,-38.05,-57.55,Sift5
+357,MPO,Morgans Point,ForecastPoint,TX,United States,29.681601,-94.985001,Sift5
+551,MPT,Matlahaw Point,ForecastPoint,BC,Canada,49.37,-126.47,Sift5
+269,MPV,Money Point,ForecastPoint,VA,United States,36.78,-76.3,Sift5
+239,MRE,Mare Island,ForecastPoint,CA,United States,38.07,-122.25,Sift5
+608,MRI,Moroni,Breakpoint,n/a,Comores,-11.6,43.3,Sift5
+183,MRM,Merrimack River ,Breakpoint,NH,United States,42.87199358,-70.8165454,Sift5
+739,MRV,Monrovia,ForecastPoint,n/a,Liberia,6.31,-10.8,Sift5
+325,MSB,Mission Bay,ForecastPoint,CA,United States,32.766424,-117.258092,Sift5
+268,MSL,Moss Landing,ForecastPoint,CA,United States,36.804143,-121.793467,Sift5
+821,MSR,Masirah,ForecastPoint,n/a,Oman,20.68,58.87,Sift5
+29,MTG,Montague Island,ForecastPoint,AK,United States,60.07,-147.32,Sift5
+212,MTN,Manhattan,ForecastPoint,NY,United States,40.68,-74.04,Sift5
+217,MTR,Mattole River,ForecastPoint,CA,United States,40.295076,-124.355917,Sift5
+777,MTS,Plymouth,Breakpoint,n/a,Montserrat,16.706,-62.234,Sift5
+8,MTX,Texas Border,Breakpoint,TX,United States,25.972,-97.141,Sift5
+503,MYB,Mayaguana,ForecastPoint,n/a,Bahamas,22.33,-72.999,Sift5
+308,MYR,Myrtle Beach,ForecastPoint,SC,United States,33.686287,-78.882164,Sift5
+151,MZT,Manzanita,ForecastPoint,OR,United States,45.72,-123.95,Sift5
+686,NAD,North Andaman,Breakpoint,n/a,India,13.3,92.6,Sift5
+722,NAH,Naha,ForecastPoint,n/a,Japan,26.22,127.67,Sift5
+202,NAN,Nantucket,ForecastPoint,MA,United States,41.285833,-70.095556,Sift5
+390,NAP,Naples,ForecastPoint,FL,United States,26.13,-81.81,Sift5
+443,NBE,Us Naval Base Entrance,ForecastPoint,GM,United States,13.423437,144.670915,Sift5
+158,NBY,Nestucca Bay,ForecastPoint,OR,United States,45.18,-123.98,Sift5
+105,NEA,Neah Bay,ForecastPoint,WA,United States,48.366389,-124.611667,Sift5
+166,NEW,Newport,ForecastPoint,OR,United States,44.625648,-124.045278,Sift5
+620,NGC,Nueva Gerona,Breakpoint,n/a,Cuba,21.922,-82.797,Sift5
+203,NHC,New Haven,ForecastPoint,CT,United States,41.28,-72.91,Sift5
+654,NHV,Nuku Hiva,ForecastPoint,n/a,French Polynesia,-8.918,-140.068,Sift5
+332,NIB,North Imperial Beach,ForecastPoint,CA,United States,32.59,-117.133,Sift5
+813,NIG,Lagos,ForecastPoint,n/a,Nigeria,6.4167,3.45,Sift5
+23,NII,Nikiski,ForecastPoint,AK,United States,60.6833,-151.397995,Sift5
+84,NIK,Nikolski,ForecastPoint,AK,United States,52.941111,-168.87,Sift5
+330,NIS,North Island,ForecastPoint,CA,United States,32.68,-117.19,Sift5
+200,NLC,New London,ForecastPoint,CT,United States,41.36,-72.09,Sift5
+533,NNL,Nain,ForecastPoint,New Foundland and Labrador,Canada,56.55,-61.68,Sift5
+15,NOM,Nome,ForecastPoint,AK,United States,64.499185,-165.400614,Sift5
+311,NPB,Newport Beach,ForecastPoint,CA,United States,33.613688,-117.938058,Sift5
+165,NPC,Newport Coast,ForecastPoint,OR,United States,44.6266,-124.0704,Sift5
+797,NPM,New Plymouth,ForecastPoint,n/a,New Zealand,-39.053,174.069,Sift5
+627,NRD,Nord,ForecastPoint,n/a,Denmark,81.7,-17.5,Sift5
+198,NRI,Newport,ForecastPoint,RI,United States,41.5,-71.32,Sift5
+146,NRM,Necanicum R. Mouth,ForecastPoint,OR,United States,46.02,-123.93,Sift5
+499,NSB,Nassau,Breakpoint,n/a,Bahamas,25.094,-77.351,Sift5
+207,NSC,North Spit Coast,ForecastPoint,CA,United States,40.962094,-124.13195,Sift5
+322,NSI,North San Clemente Is.,ForecastPoint,CA,United States,33.022754,-118.608883,Sift5
+159,NSK,Neskowin,ForecastPoint,OR,United States,45.12,-124,Sift5
+331,NSN,Naval Station,ForecastPoint,CA,United States,32.67,-117.12,Sift5
+131,NSQ,Nisqually Delta,ForecastPoint,WA,United States,47.109563,-122.703737,Sift5
+571,NSS,North Sydney,ForecastPoint,Nova Scotia,Canada,46.22,-60.25,Sift5
+665,NTK,Nanortalik,ForecastPoint,n/a,Greenland,60,-45.302,Sift5
+664,NUU,Nuuk,ForecastPoint,n/a,Greenland,64.16666,-51.73333,Sift5
+546,NVI,North Vancouver Island,Breakpoint,BC,Canada,50.76666,-128.4167,Sift5
+922,NWN,Newlyn,ForecastPoint,n/a,United Kingdom,50.1,-5.55,Sift5
+89,NZI,Nizki Island,ForecastPoint,AK,United States,52.73,174.01,Sift5
+108,OAK,Oak Harbor,ForecastPoint,WA,United States,48.287472,-122.622183,Sift5
+252,OCB,Ocean Beach,ForecastPoint,CA,United States,37.77,-122.51,Sift5
+190,OCL,The Oregon/Cal. Border,Breakpoint,OR,United States,42,-124.21667,Sift5
+234,OCM,Ocean City,ForecastPoint,MD,United States,38.32875,-75.09125,Sift5
+157,OCN,Netarts,ForecastPoint,OR,United States,45.43,-123.95,Sift5
+716,OFU,Ofunato,ForecastPoint,n/a,Japan,39,141.75,Sift5
+56,OHB,Old Harbor,ForecastPoint,AK,United States,57.2,-153.31,Sift5
+317,OLA,Oyster Landing,ForecastPoint,SC,United States,33.349392,-79.188896,Sift5
+132,OLY,Olympia,ForecastPoint,WA,United States,47.059662,-122.903453,Sift5
+719,OMA,Omaezaki,ForecastPoint,n/a,Japan,34.6,138.23,Sift5
+511,ONB,Onima,Breakpoint,n/a,Bonaire,12.256,-68.309,Sift5
+319,ONS,Oceanside,ForecastPoint,CA,United States,33.204208,-117.400569,Sift5
+248,OOH,Oakland Outer Harbor,ForecastPoint,CA,United States,37.82,-122.32,Sift5
+395,ORF,Ocean Reef,Breakpoint,FL,United States,25.33456367,-80.2547609,Sift5
+275,ORI,Oregon Inlet,ForecastPoint,NC,United States,35.8,-75.55,Sift5
+156,OSO,Oceanside Beach,ForecastPoint,OR,United States,45.45,-123.97,Sift5
+51,OUZ,Ouzinkie,ForecastPoint,AK,United States,57.92,-152.53,Sift5
+139,OWB,The Oregon/Wash. Border,Breakpoint,WA,United States,46.254039,-124.076339,Sift5
+804,OWG,Chatham Islands,ForecastPoint,n/a,New Zealand,-44.025,-176.368,Sift5
+253,PAC,Pacifica,ForecastPoint,CA,United States,37.63,-122.5,Sift5
+553,PAI,Port Alberni,ForecastPoint,BC,Canada,49.2519,-124.789001,Sift5
+344,PAS,Pascagoula,ForecastPoint,MS,United States,30.358299,-88.566597,Sift5
+65,PAX,Port Alexander,ForecastPoint,AK,United States,56.246667,-134.648333,Sift5
+559,PBA,Patricia Bay,ForecastPoint,BC,Canada,48.400002,-123.400002,Sift5
+282,PBE,Pismo Beach,ForecastPoint,CA,United States,35.14,-120.65,Sift5
+668,PBG,Puerto Barrios,Breakpoint,n/a,Guatemala,15.745,-88.597,Sift5
+388,PBH,Palm Beach,ForecastPoint,FL,United States,26.611574,-80.033472,Sift5
+562,PBQ,Port Aux Basque,ForecastPoint,New Foundland and Labrador,Canada,47.57,-59.13,Sift5
+914,PBT,Pirates Bay,Breakpoint,n/a,Trinidad And Tobago,11.327,-60.559,Sift5
+350,PCB,Panama City Beach,ForecastPoint,FL,United States,30.213333,-85.878334,Sift5
+289,PCC,Point Conception,Breakpoint,CA,United States,34.44849938,-120.472542,Sift5
+351,PCF,Panama City,ForecastPoint,FL,United States,30.152176,-85.666713,Sift5
+240,PCG,Port Chicago,ForecastPoint,CA,United States,38.056999,-122.038002,Sift5
+675,PCH,Puerto Cortes,Breakpoint,n/a,Honduras,15.85,-87.973,Sift5
+808,PCN,Puerto Cabezas,Breakpoint,n/a,Nicaragua,14.019,-83.374,Sift5
+830,PCP,Puerto Carreto,Breakpoint,n/a,Panama,8.783,-77.573,Sift5
+259,PCV,New Point Comfort,Breakpoint,VA,United States,37.3,-76.28,Sift5
+468,PDA,Puerto Deseado,ForecastPoint,n/a,Argentina,-47.75,-65.917,Sift5
+10,PDO,Prudhoe Bay,ForecastPoint,AK,United States,70.33,-148.51,Sift5
+340,PEN,Pensacola,ForecastPoint,FL,United States,30.4,-87.199997,Sift5
+927,PFB,Punto Fijo,Breakpoint,n/a,Venezuela,11.707,-70.232,Sift5
+811,PG3,Punta Gorda,Breakpoint,n/a,Nicaragua,11.437,-83.793,Sift5
+111,PGL,Port Angeles,ForecastPoint,WA,United States,48.125278,-123.441111,Sift5
+126,PGV,Point Grenville,ForecastPoint,WA,United States,47.31,-124.28,Sift5
+288,PHA,Platform Harvest,ForecastPoint,CA,United States,34.4683,-120.672997,Sift5
+299,PHM,Port Hueneme,ForecastPoint,CA,United States,34.14356,-119.213963,Sift5
+547,PHY,Port Hardy,ForecastPoint,BC,Canada,50.72000122,-127.4899979,Sift5
+119,PIE,Seattle Pier 4,ForecastPoint,WA,United States,47.585,-122.3643,Sift5
+188,PIS,Pistol River,ForecastPoint,OR,United States,42.29,-124.4,Sift5
+391,PIX,Port Isabel,ForecastPoint,TX,United States,26.06,-97.22,Sift5
+614,PLC,Puerto Limon,Breakpoint,n/a,Costa Rica,10.001,-83.013,Sift5
+52,PLN,Port Lions,ForecastPoint,AK,United States,57.88,-152.85,Sift5
+877,PLR,Pointe La Rue,ForecastPoint,n/a,Seychelles,-4.67,55.53,Sift5
+434,PLS,Penuelas,ForecastPoint,PR,United States,17.981,-66.749,Sift5
+467,PMA,Puerto Madryn,Breakpoint,n/a,Argentina,-42.7667,-65.0333,Sift5
+175,PME,Portland,ForecastPoint,ME,United States,43.659167,-70.244028,Sift5
+383,PMT,Port Manatee,ForecastPoint,FL,United States,27.64,-82.56,Sift5
+491,PND,Portland (Au),ForecastPoint,n/a,Australia,-38.3439,141.136,Sift5
+185,POF,Port Orford,ForecastPoint,OR,United States,42.738756,-124.497667,Sift5
+455,POL,Poloa,ForecastPoint,AS,United States,-14.316392,-170.833645,Sift5
+128,POT,Port Of Tacoma,ForecastPoint,WA,United States,47.276888,-122.420761,Sift5
+929,POV,Porlamar,Breakpoint,n/a,Venezuela,10.948,-63.842,Sift5
+376,POX,Port Oconnor,Breakpoint,TX,United States,28.4,-96.39,Sift5
+464,PPB,Palmetto Point,Breakpoint,n/a,Antigua And Barbuda,17.578,-61.863,Sift5
+640,PPD,Puerto Plata,Breakpoint,n/a,Dominican Republic,19.813,-70.692,Sift5
+673,PPH,Port-Au-Prince,Breakpoint,n/a,Haiti,18.544,-72.369,Sift5
+238,PRB,Point Reyes Beach,ForecastPoint,CA,United States,38.08,-122.98,Sift5
+191,PRI,Providence,ForecastPoint,RI,United States,41.81,-71.4,Sift5
+409,PRL,Pearl Harbor,ForecastPoint,HI,United States,21.309444,-157.998611,Sift5
+765,PRO,Progreso,ForecastPoint,n/a,Mexico,21.303301,-89.666702,Sift5
+537,PRP,Prince Rupert,ForecastPoint,BC,Canada,54.317,-130.317,Sift5
+536,PRU,Prince Rupert,ForecastPoint,BC,Canada,54.32,-130.320007,Sift5
+69,PRV,Perryville,ForecastPoint,AK,United States,55.9,-159.15,Sift5
+374,PSE,Pilots Station E ,ForecastPoint,LA,United States,28.8,-89.4,Sift5
+281,PSL,Port San Luis,ForecastPoint,CA,United States,35.168889,-120.753778,Sift5
+237,PSM,Port Sonoma Marina,ForecastPoint,CA,United States,38.104865,-122.476352,Sift5
+915,PST,Port-Of-Spain,Breakpoint,n/a,Trinidad And Tobago,10.641,-61.528,Sift5
+902,PSU,Paramaribo,Breakpoint,n/a,Suriname,5.934,-55.198,Sift5
+490,PSV,Port Stanavac,ForecastPoint,n/a,Australia,-35.1086,138.4672,Sift5
+381,PTA,Port Tampa,ForecastPoint,FL,United States,27.856701,-82.551697,Sift5
+861,PTI,Petra Island,ForecastPoint,n/a,Russia,76.15,118.3,Sift5
+67,PTM,Port Moller,ForecastPoint,AK,United States,55.99,-160.58,Sift5
+3,PTO,Point Loma,ForecastPoint,CA,United States,32.66,-117.24,Sift5
+925,PTV,Port Vila,ForecastPoint,n/a,Vanuatu,-17.75,168.3,Sift5
+112,PTW,Port Townsend,ForecastPoint,WA,United States,48.101,-122.758,Sift5
+141,PUG,Puget Island,ForecastPoint,WA,United States,46.217737,-123.424102,Sift5
+864,PVK,Pevek,ForecastPoint,n/a,Russia,69.701,170.313,Sift5
+61,PVT,Povorotni Point,ForecastPoint,AK,United States,56.95,-135.4,Sift5
+826,PYR,Palmyra Island,ForecastPoint,n/a,Palmyra Is.,6.34,-162.45,Sift5
+540,QCH,Queen Charlotte,ForecastPoint,BC,Canada,53.25,-132.0700073,Sift5
+121,QEE,Queets,ForecastPoint,WA,United States,47.534307,-124.360267,Sift5
+195,QRI,Quonset Point,ForecastPoint,RI,United States,41.59,-71.41,Sift5
+932,QUI,Qui Nhon,Breakpoint,n/a,Viet Nam,13.7751,109.2543,Sift5
+441,R2P,Road To Piti,ForecastPoint,GM,United States,13.434082,144.675194,Sift5
+510,RBB,Ruth'S Bay,Breakpoint,n/a,Bermuda,32.356,-64.637,Sift5
+303,RBE,Redondo Beach,ForecastPoint,CA,United States,33.85,-118.4,Sift5
+256,RCI,Redwood City,ForecastPoint,CA,United States,37.506599,-122.209999,Sift5
+758,RDG,Rodrigues,ForecastPoint,n/a,Mauritius,-19.68,63.42,Sift5
+263,RDM,Rio Del Mar,ForecastPoint,CA,United States,36.97,-121.92,Sift5
+523,RES,Resolute,ForecastPoint,n/a,Canada,74.68,-94.88,Sift5
+242,REY,Point Reyes,ForecastPoint,CA,United States,37.996667,-122.976667,Sift5
+276,RGP,Ragged Point,Breakpoint,CA,United States,35.79774873,-121.3498018,Sift5
+600,RIC,Riohacha,Breakpoint,n/a,Colombia,11.554,-72.92,Sift5
+243,RID,Richmond,ForecastPoint,CA,United States,37.928299,-122.400002,Sift5
+267,RIN,Rudee Inlet,ForecastPoint,VA,United States,36.8316,-75.973297,Sift5
+295,RIP,Rincon Point,Breakpoint,CA,United States,34.371761,-119.478317,Sift5
+516,RJB,Rio De Janeiro,ForecastPoint,n/a,Brazil,-22.9,-43.1667,Sift5
+379,RPX,Rock Port,ForecastPoint,TX,United States,28.02,-97.05,Sift5
+233,RRM,Russian River Mouth,ForecastPoint,CA,United States,38.449188,-123.131681,Sift5
+860,RSK,Russkaya Gavan,ForecastPoint,n/a,Russia,76.2333,62.5833,Sift5
+819,RVK,Rorvik,Breakpoint,n/a,Norway,64.867,11.25,Sift5
+153,RWY,Rockaway Beach,ForecastPoint,OR,United States,45.62,-123.95,Sift5
+680,RYK,Reykjavik,Breakpoint,n/a,Iceland,64.15,-21.933,Sift5
+86,SAM,Samalga Island,ForecastPoint,AK,United States,52.77,-169.22,Sift5
+513,SAO,Sao Luis,Breakpoint,n/a,Brazil,-2.47,-44.309,Sift5
+247,SAU,Saunited Stateslito,ForecastPoint,CA,United States,37.86,-122.48,Sift5
+515,SAV,Salvador,Breakpoint,n/a,Brazil,-12.9333,-38.45,Sift5
+293,SBB,Santa Barbara,ForecastPoint,CA,United States,34.405546,-119.692546,Sift5
+136,SBD,South Bend,ForecastPoint,WA,United States,46.667508,-123.810063,Sift5
+352,SBE,Shell Beach,ForecastPoint,LA,United States,29.868,-89.673302,Sift5
+692,SBG,Sabang,ForecastPoint,n/a,Indonesia,5.83,95.33,Sift5
+577,SBI,Sable Island,ForecastPoint,Nova Scotia,Canada,43.925,-59.914,Sift5
+162,SBY,Siletz Bay,ForecastPoint,OR,United States,44.9,-124,Sift5
+501,SCB,Samana Cay,ForecastPoint,n/a,Bahamas,23.068,-73.73,Sift5
+290,SCC,Surf City,Breakpoint,NC,United States,34.44,-77.5,Sift5
+552,SCE,Sandy Cove,ForecastPoint,BC,Canada,49.29000092,-123.1100006,Sift5
+525,SCH,Sachs Harbour,ForecastPoint,n/a,Canada,71.9836,-125.2433,Sift5
+302,SCI,Santa Cruz Island,ForecastPoint,CA,United States,33.95,-119.75,Sift5
+255,SCL,San Carlos,ForecastPoint,CA,United States,37.547826,-122.210954,Sift5
+662,SCR,Scorsby Sund,ForecastPoint,n/a,Greenland,70.45,-22.252,Sift5
+622,SCS,Santa Crz D Sur,Breakpoint,n/a,Cuba,20.682,-77.959,Sift5
+572,SCT,Scatarie Island,ForecastPoint,Nova Scotia,Canada,46.03,-59.66,Sift5
+624,SCU,Santiago D Cuba,Breakpoint,n/a,Cuba,19.947,-75.85,Sift5
+265,SCZ,Santa Cruz,ForecastPoint,CA,United States,36.95,-122.03,Sift5
+642,SDD,Santo Domingo,Breakpoint,n/a,Dominican Republic,18.455,-69.893,Sift5
+329,SDE,San Diego Harbor Ent.,ForecastPoint,CA,United States,32.68,-117.23,Sift5
+326,SDG,San Diego,ForecastPoint,CA,United States,32.7133296,-117.1747037,Sift5
+570,SDS,Shediac,ForecastPoint,New Brunswick,Canada,46.23,-64.55,Sift5
+37,SDV,Seldovia,ForecastPoint,AK,United States,59.43,-151.72,Sift5
+118,SEA,Seattle,ForecastPoint,WA,United States,47.602,-122.335,Sift5
+49,SEL,Selezen Point,ForecastPoint,AK,United States,58.12,-152.4,Sift5
+28,SEW,Seward,ForecastPoint,AK,United States,60.119444,-149.427223,Sift5
+250,SFC,San Francisco,ForecastPoint,CA,United States,37.806111,-122.465555,Sift5
+585,SFX,San Felix Island,ForecastPoint,n/a,Chile,-26.258,-80.124,Sift5
+894,SGA,South Georgia Island,Breakpoint,n/a,South Georgia,-54.25,-36.75,Sift5
+32,SHB,Schooner Beach,ForecastPoint,AK,United States,59.75,-140.1,Sift5
+150,SHE,Saint Helens,ForecastPoint,OR,United States,45.865002,-122.796997,Sift5
+216,SHJ,Sandy Hook,Breakpoint,NJ,United States,40.46,-74,Sift5
+549,SIQ,Sept-Iles,ForecastPoint,n/a,Canada,50.19,-66.38,Sift5
+60,SIT,Sitka,ForecastPoint,AK,United States,57.050833,-135.343741,Sift5
+172,SIU,Florence,ForecastPoint,OR,United States,43.966667,-124.101,Sift5
+812,SJ1,San Juan Dl Sur,ForecastPoint,n/a,Nicaragua,11.2,-85.9,Sift5
+465,SJA,Saint Johns,Breakpoint,n/a,Antigua And Barbuda,17.131,-61.874,Sift5
+574,SJB,Saint John,ForecastPoint,n/a,Canada,45.25,-66.06,Sift5
+422,SJC,San Juan Coast,ForecastPoint,PR,United States,18.47,-66.12,Sift5
+224,SJJ,Ship John Shoal,ForecastPoint,DE,United States,39.31,-75.38,Sift5
+563,SJL,Saint Johns,ForecastPoint,New Foundland and Labrador,Canada,47.57,-52.72,Sift5
+424,SJP,San Juan Tg,SAN_JUAN,PR,United States,18.458889,-66.116087,Sift5
+83,SKA,Sedanka Island,ForecastPoint,AK,United States,53.82,-166.13,Sift5
+36,SKY,Skagway,ForecastPoint,AK,United States,59.450001,-135.326996,Sift5
+306,SLB,Seal Beach,ForecastPoint,CA,United States,33.74,-118.1,Sift5
+87,SLG,Samalga Pass,Breakpoint,AK,United States,52.751,-169.465,Sift5
+871,SLS,Castries,Breakpoint,n/a,Saint Lucia,14.017,-61.031,Sift5
+130,SLT,Shelton,ForecastPoint,WA,United States,47.210129,-123.084977,Sift5
+171,SLW,Siuslaw River Mouth,ForecastPoint,OR,United States,44.02,-124.15,Sift5
+301,SMC,Santa Monica,ForecastPoint,CA,United States,34.007731,-118.500046,Sift5
+442,SMD,Sumay Drive,ForecastPoint,GM,United States,13.431781,144.661147,Sift5
+170,SME,Stonington,Breakpoint,ME,United States,44.16,-68.67,Sift5
+25,SMI,Saint Matthew Island,ForecastPoint,AK,United States,60.401119,-172.700097,Sift5
+90,SMY,Shemya,ForecastPoint,AK,United States,52.728333,174.067222,Sift5
+77,SNK,Sanak,ForecastPoint,AK,United States,54.48,-162.82,Sift5
+316,SON,Orange/San Deigo Line,Breakpoint,CA,United States,33.384951,-117.596397,Sift5
+895,SOR,Signy,Breakpoint,n/a,South Orkney Is,-60.7,-45.6,Sift5
+495,SPB,Settlement Point,ForecastPoint,n/a,Bahamas,26.71,-78.997,Sift5
+595,SPC,San Pedro,ForecastPoint,n/a,Chile,-47.717,-74.883,Sift5
+382,SPF,Saint Petersburg,ForecastPoint,FL,United States,27.76,-82.63,Sift5
+651,SPM,Saint Pierre-Miquelon,ForecastPoint,New Foundland and Labrador,France,46.4713,-56.1005,Sift5
+556,SPQ,Point Saint Pierre,ForecastPoint,Quebec,Canada,48.63,-64.17,Sift5
+309,SPR,Springmaid Pier,ForecastPoint,SC,United States,33.654954,-78.91809,Sift5
+72,SPT,Sand Point,ForecastPoint,AK,United States,55.331111,-160.504167,Sift5
+354,SPX,Sabine Pass,ForecastPoint,TX,United States,29.73,-93.87,Sift5
+367,SRF,Suwannee River,Breakpoint,FL,United States,29.3,-83.17,Sift5
+38,SRM,Situk River Mouth,ForecastPoint,AK,United States,59.43,-139.57,Sift5
+500,SSB,San Salvador,Breakpoint,n/a,Bahamas,24.066,-74.547,Sift5
+147,SSC,Seaside City,ForecastPoint,OR,United States,45.99314,-123.922694,Sift5
+148,SSD,Seaside,ForecastPoint,OR,United States,45.993093,-123.938816,Sift5
+336,SSG,Saint Simons Island,ForecastPoint,GA,United States,31.13,-81.4,Sift5
+873,SSM,Simpson Baai,Breakpoint,n/a,Saint Martin,18.034,-63.104,Sift5
+211,SSP,South Spit,ForecastPoint,CA,United States,40.73,-124.25,Sift5
+320,SSR,South Santee River,Breakpoint,SC,United States,33.118,-79.276,Sift5
+55,SSS,Salisbury Sound,Breakpoint,AK,United States,57.366854,-135.790713,Sift5
+110,STA,Stanwood,ForecastPoint,WA,United States,48.219007,-122.38128,Sift5
+246,STB,Stinson Beach,ForecastPoint,CA,United States,37.895164,-122.642679,Sift5
+543,STI,Strait Of Belle Isle,Breakpoint,New Foundland and Labrador,Canada,51.76,-55.94,Sift5
+568,STL,Saint Lawrence,ForecastPoint,New Foundland and Labrador,Canada,46.9,-55.92,Sift5
+58,STP,Saint Paul,ForecastPoint,AK,United States,57.1333,-170.3,Sift5
+901,STV,Kingstown,Breakpoint,n/a,St Vincent,13.136,-61.214,Sift5
+633,SUD,Sudero,ForecastPoint,n/a,Denmark,61.382,-6.693,Sift5
+286,SUF,Surf,ForecastPoint,CA,United States,34.68,-120.62,Sift5
+273,SUR,Point Sur,ForecastPoint,CA,United States,36.31,-121.9,Sift5
+816,SVB,Barentsburg,ForecastPoint,n/a,Norway,78.067,14.25,Sift5
+334,SVG,Savannah,ForecastPoint,GA,United States,32.033889,-80.901814,Sift5
+127,TAC,Tacoma,ForecastPoint,WA,United States,47.299999,-122.5,Sift5
+124,TAH,Taholah,ForecastPoint,WA,United States,47.346487,-124.304495,Sift5
+916,TDC,Tristan Da Cunha,ForecastPoint,n/a,Tristan Da Cunha,-37.05,-12.3,Sift5
+220,TEN,Ten Mile River Beach,ForecastPoint,CA,United States,39.53,-123.78,Sift5
+660,THU,Thule ,ForecastPoint,n/a,Greenland,76.543404,-68.862602,Sift5
+720,TKA,Tokai,ForecastPoint,n/a,Japan,33.77,137.59,Sift5
+21,TLK,Tatitlek,ForecastPoint,AK,United States,60.87,-146.7,Sift5
+154,TMB,Garibaldi,ForecastPoint,OR,United States,45.554398,-123.918935,Sift5
+764,TMX,Tampico,ForecastPoint,n/a,Mexico,22.26,-97.8,Sift5
+205,TND,Trinidad,ForecastPoint,CA,United States,41.05,-124.13,Sift5
+554,TOF,Tofino,ForecastPoint,BC,Canada,49.15,-125.9167,Sift5
+135,TOK,Toke Point,ForecastPoint,WA,United States,46.707685,-123.966667,Sift5
+519,TOR,Tortola,ForecastPoint,n/a,British Virgin Is.,18.424828,-64.608047,Sift5
+674,TRH,Trujillo,Breakpoint,n/a,Honduras,15.931,-85.958,Sift5
+631,TSV,Thorshavn,Breakpoint,n/a,Denmark,62.025,-6.733,Sift5
+528,TUK,Tuktoyaktuk,ForecastPoint,n/a,Canada,69.4382,-132.99,Sift5
+917,TUN,Tunis,ForecastPoint,n/a,Tunisia,36.5,10.11,Sift5
+460,TVA,The Valley,Breakpoint,n/a,Anguilla,18.252,-63.051,Sift5
+933,TVI,Tortola,Breakpoint,n/a,"Virgin Islands, U.S.",18.407,-64.601,Sift5
+486,TVN,Thevenard,ForecastPoint,n/a,Australia,-32.1489,133.6417,Sift5
+314,TWO,Two Harbors,ForecastPoint,CA,United States,33.442803,-118.496652,Sift5
+315,TWW,Two Harbors (West),ForecastPoint,CA,United States,33.431158,-118.506868,Sift5
+863,TXI,Tiksi,ForecastPoint,n/a,Russia,71.667,128.75,Sift5
+161,UCB,The Us/Canada Border,Breakpoint,ME,United States,44.92,-67,Sift5
+338,UCG,Us Coast Guard,ForecastPoint,AL,United States,30.6483,-88.058296,Sift5
+82,UNA,Unalaska,ForecastPoint,AK,United States,53.879444,-166.540833,Sift5
+16,UNL,Unalakleet,ForecastPoint,AK,United States,63.900086,-160.799763,Sift5
+79,UNP,Unimak Pass,Breakpoint,AK,United States,54.333611,-164.920556,Sift5
+174,URM,Umpqua River Mouth,ForecastPoint,OR,United States,43.67,-124.22,Sift5
+923,URU,Montevideo,ForecastPoint,n/a,Uruguay,-34.9,-56.25,Sift5
+469,USH,Ushuaia,Breakpoint,n/a,Argentina,-54.8083,-68.3,Sift5
+397,VAC,Vaca Key,ForecastPoint,FL,United States,24.71,-81.11,Sift5
+152,VAN,Vancouver,ForecastPoint,OR,United States,45.631599,-122.696999,Sift5
+266,VBH,Virginia Beach,ForecastPoint,VA,United States,36.853009,-75.971435,Sift5
+296,VEN,Ventura,ForecastPoint,CA,United States,34.2518,-119.267,Sift5
+432,VEZ,Vieques Is. South,ForecastPoint,PR,United States,18.0933,-65.4714,Sift5
+518,VGR,Virgin Gorda,ForecastPoint,n/a,British Virgin Is.,18.452828,-64.438088,Sift5
+558,VHA,Victoria Harbor,ForecastPoint,BC,Canada,48.41999817,-123.3700027,Sift5
+394,VKF,Virginia Key,ForecastPoint,FL,United States,25.73,-80.16,Sift5
+20,VDZ,Valdez,ForecastPoint,AK,United States,61.13333,-146.31667,Sift5
+770,VMX,Veracruz,Breakpoint,n/a,Mexico,19.201,-96.116,Sift5
+107,WAA,Waatch,ForecastPoint,WA,United States,48.336781,-124.676223,Sift5
+93,WAS,West Atka Island,ForecastPoint,AK,United States,52,-175.17,Sift5
+144,WAU,Wauna,ForecastPoint,OR,United States,46.16,-123.404999,Sift5
+789,WBN,Walvis Bay,ForecastPoint,n/a,Namibia,-22.93,14.5,Sift5
+918,WCT,West Caicos,Breakpoint,n/a,Turks And Caicos Islands,21.671,-72.487,Sift5
+545,WHB,Winter Harbour,ForecastPoint,BC,Canada,50.77,-128.42,Sift5
+197,WHM,Woods Hole,ForecastPoint,MA,United States,41.52,-70.67,Sift5
+109,WID,Whidbey Island,ForecastPoint,WA,United States,48.26,-122.76,Sift5
+573,WIS,Wood Islands,ForecastPoint,Prince Edward Island,Canada,45.95,-62.75,Sift5
+22,WIT,Whittier,ForecastPoint,AK,United States,60.78,-148.68,Sift5
+180,WLL,Wells,ForecastPoint,ME,United States,43.317,-70.546,Sift5
+297,WNC,Wrightsville Beach,ForecastPoint,NC,United States,34.21,-77.8,Sift5
+404,WPR,Waipio Pt. Access Rd.,ForecastPoint,HI,United States,21.377148,-157.989732,Sift5
+539,WPT,White Point,ForecastPoint,BC,Canada,54,-133.13,Sift5
+254,WPV,Windmill Point,ForecastPoint,VA,United States,37.62,-76.29,Sift5
+134,WPW,Westport,ForecastPoint,WA,United States,46.8986,-124.138035,Sift5
+201,WRI,Watch Hill,Breakpoint,CT,United States,41.31,-71.86,Sift5
+133,WSB,Westport South Bay,ForecastPoint,WA,United States,46.904768,-124.104769,Sift5
+566,WSS,Escuminac,ForecastPoint,New Brunswick,Canada,47.08,-64.88,Sift5
+347,WVM,Waveland,ForecastPoint,MS,United States,30.28,-89.37,Sift5
+433,YAB,Yabucoa,ForecastPoint,PR,United States,18.055,-65.826,Sift5
+35,YAK,Yakutat,ForecastPoint,AK,United States,59.548022,-139.732956,Sift5
+167,YAQ,Yaquina John Point,ForecastPoint,OR,United States,44.43,-124.08,Sift5
+169,YCH,Yachats,ForecastPoint,OR,United States,44.32,-124.12,Sift5
+260,YKV,Yorktown,ForecastPoint,VA,United States,37.23,-76.48,Sift5
+578,YRS,Yarmouth,ForecastPoint,Nova Scotia,Canada,43.83,-66.12,Sift5
+575,ZNS,Chezzetcook Inlet,Breakpoint,Nova Scotia,Canada,44.74,-63.25,Sift5
+904,ZZB,Zanzibar,ForecastPoint,n/a,"Tanzania, United Republic Of",-6.15,39.183,Sift5

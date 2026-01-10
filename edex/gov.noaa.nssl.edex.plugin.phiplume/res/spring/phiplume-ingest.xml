@@ -1,0 +1,39 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://camel.apache.org/schema/spring
+    http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <bean id="phiplumetoDataURI" class="com.raytheon.uf.edex.ingest.notification.ToDataURI"/>
+
+<!--	
+    <bean id="phiplumeLogger" class="com.raytheon.uf.common.logback.appender.ThreadBasedAppender"
+		factory-method="registerThreadPattern">
+		<constructor-arg value="phiplume" />
+		<constructor-arg value="Ingest.Phiplume.*" />
+	</bean>
+-->
+
+	<bean id="phiplumeDecoder" class="gov.noaa.nssl.edex.plugin.phiplume.PhiPlumeDecoder" />
+<!--	<bean id="phiplumeDistRegistry" factory-bean="distributionSrv"
+		factory-method="register">
+		<constructor-arg ref="phiplumePluginName" />
+		<constructor-arg value="jms-durable:queue:Ingest.Phiplume" />
+		<constructor-arg value="true" />
+	</bean>
+-->
+
+    <bean id="phiplumeDistRegistry" factory-bean="distributionSrv"
+        factory-method="register">
+        <constructor-arg value="phiplume" />
+        <constructor-arg value="jms-durable:queue:Ingest.Phiplume"/>
+    </bean>
+    
+    <bean id="phiplume-camel" factory-bean="routeContextFactory" factory-method="create">
+        <constructor-arg>
+            <bean class="gov.noaa.nssl.edex.plugin.phiplume.PhiPlumeCamelRoutes" />
+        </constructor-arg>
+    </bean>
+    
+</beans>

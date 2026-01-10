@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.raytheon.uf.common.logback.appender.ThreadBasedAppender" factory-method="registerThreadPattern">
+        <constructor-arg value="atoms" />
+        <constructor-arg value="Ingest.Atoms.*" />
+    </bean>
+
+    <bean id="atomsDecoder" class="gov.noaa.gsl.edex.atoms.TfsPhysicalEventDecoder"/>
+
+    <bean id="atomsDistRegistry" factory-bean="distributionSrv" factory-method="register">
+        <constructor-arg ref="atomsPluginName" />
+        <constructor-arg value="jms-durable:queue:Ingest.Atoms" />
+        <constructor-arg value="true" />
+    </bean>
+
+    <bean id="atoms-camel" factory-bean="routeContextFactory" factory-method="create">
+        <constructor-arg>
+            <bean class="gov.noaa.gsl.edex.atoms.plugin.AtomsCamelRoutes" />
+        </constructor-arg>
+    </bean>
+
+</beans>

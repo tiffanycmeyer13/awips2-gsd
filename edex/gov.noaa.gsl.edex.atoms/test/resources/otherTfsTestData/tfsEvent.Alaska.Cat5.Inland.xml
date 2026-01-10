@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Alaska.Cat5.Inland</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2021-05-09T00:16:06</CreationTime>
+  <OriginTime>2022-05-18T00:06:06</OriginTime>
+  <Latitude>65.14</Latitude>
+  <Longitude>-148.13</Longitude>
+  <DistanceToCoast>-407</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.5</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>132</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

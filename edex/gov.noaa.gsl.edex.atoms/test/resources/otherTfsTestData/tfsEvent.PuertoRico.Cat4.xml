@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>PuertoRico.Cat4</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>PTWC</Originator>
+  <CreationTime>2021-05-08T00:16:06</CreationTime>
+  <OriginTime>2024-04-16T02:00:00</OriginTime>
+  <Latitude>16.62</Latitude>
+  <Longitude>-87.63</Longitude>
+  <DistanceToCoast>22</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.9</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>55.5</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

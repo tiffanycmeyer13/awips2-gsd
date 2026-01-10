@@ -1,0 +1,14 @@
+<atomsEventData>
+  <EventID>Landslide_123</EventID>
+  <Name>Barry Arm</Name>
+  <EventType>LANDSLIDE</EventType>
+  <Source>NTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2023-09-07T19:29:29</CreationTime>
+  <OriginTime>2023-09-07T12:07:00</OriginTime>
+  <Latitude>61.10</Latitude>
+  <Longitude>-148.19</Longitude>
+  <DistanceToCoast>0</DistanceToCoast>
+  <atomsEventDataRecord>
+  </atomsEventDataRecord>
+</atomsEventData>

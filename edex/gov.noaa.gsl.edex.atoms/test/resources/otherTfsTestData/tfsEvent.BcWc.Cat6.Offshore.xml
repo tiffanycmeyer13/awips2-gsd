@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>BcWc.Cat6.Offshore</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2021-05-09T00:16:06</CreationTime>
+  <OriginTime>2022-05-18T00:06:06</OriginTime>
+  <Latitude>34.00</Latitude>
+  <Longitude>-126.33</Longitude>
+  <DistanceToCoast>477</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.0</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>8</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

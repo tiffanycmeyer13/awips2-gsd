@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>BcWc.Cat3</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2021-05-09T00:16:06</CreationTime>
+  <OriginTime>2022-05-18T00:06:06</OriginTime>
+  <Latitude>49.51</Latitude>
+  <Longitude>-131.64</Longitude>
+  <DistanceToCoast>236</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>7.0</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>8</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

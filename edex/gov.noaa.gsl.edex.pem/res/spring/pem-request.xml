@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="phyEventIDsRequestHandler" class="gov.noaa.gsl.edex.pem.handlers.PhysicalEventIDsRequestHandler" />
+    <bean id="phyEventsByIDsRequestHandler" class="gov.noaa.gsl.edex.pem.handlers.PhysicalEventsByIDsRequestHandler" />
+    <bean id="phyEventsRequestHandler" class="gov.noaa.gsl.edex.pem.handlers.PhysicalEventsRequestHandler" />
+    <bean id="savePhyEventRequestHandler" class="gov.noaa.gsl.edex.pem.handlers.SavePhysicalEventRequestHandler">
+        <property name="messageProducer">
+            <ref bean="messageProducer" />
+        </property>
+    </bean>
+<!--         <property name="pluginNotifier">
+            <ref bean="pluginNotifier" />
+        </property>
+ -->  
+    
+    <bean factory-bean="handlerRegistry" factory-method="register">
+         <constructor-arg value="gov.noaa.gsl.common.dataplugin.pem.request.PhysicalEventIDsRequest"/>
+         <constructor-arg ref="phyEventIDsRequestHandler"/>
+    </bean>
+   
+    <bean factory-bean="handlerRegistry" factory-method="register">
+         <constructor-arg value="gov.noaa.gsl.common.dataplugin.pem.request.PhysicalEventsByIDsRequest"/>
+         <constructor-arg ref="phyEventsByIDsRequestHandler"/>
+    </bean>
+ 
+    <bean factory-bean="handlerRegistry" factory-method="register">
+         <constructor-arg value="gov.noaa.gsl.common.dataplugin.pem.request.PhysicalEventsRequest"/>
+         <constructor-arg ref="phyEventsRequestHandler"/>
+    </bean>
+
+    <bean factory-bean="handlerRegistry" factory-method="register">
+         <constructor-arg value="gov.noaa.gsl.common.dataplugin.pem.request.SavePhysicalEventRequest"/>
+         <constructor-arg ref="savePhyEventRequestHandler"/>
+    </bean>
+   
+ 
+</beans>

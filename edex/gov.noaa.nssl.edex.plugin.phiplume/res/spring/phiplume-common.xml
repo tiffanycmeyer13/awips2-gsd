@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean id="phiplumePluginName" class="java.lang.String">
+                <constructor-arg type="java.lang.String" value="phiplume" />
+        </bean>
+
+        <bean id="phiplumeProperties" class="com.raytheon.uf.common.dataplugin.PluginProperties">
+                <property name="pluginName" ref="phiplumePluginName" />
+                <property name="pluginFQN" value="gov.noaa.nssl.common.dataplugin.phiplume" />
+                <!--property name="dao" value="gov.noaa.nssl.edex.plugin.phiplume.dao.PhiPlumeDao" /-->
+                <property name="dao" value="com.raytheon.edex.db.dao.DefaultPluginDao" />
+                <property name="record" value="gov.noaa.nssl.common.dataplugin.phiplume.PhiPlumeRecord" />
+        </bean>
+        <bean id="phiplumeRegistered" factory-bean="pluginRegistry" factory-method="register">
+                <constructor-arg ref="phiplumePluginName"/>
+                <constructor-arg ref="phiplumeProperties"/>
+        </bean>
+
+
+        <bean id="phiinterpolatedPluginName" class="java.lang.String">
+                <constructor-arg type="java.lang.String" value="phiinterpolated" />
+        </bean>
+
+        <bean id="phiinterpolatedProperties" class="com.raytheon.uf.common.dataplugin.PluginProperties">
+                <property name="pluginName" ref="phiinterpolatedPluginName" />
+                <property name="pluginFQN" value="gov.noaa.nssl.common.dataplugin.phiplume" />
+                <!--property name="dao" value="gov.noaa.nssl.edex.plugin.phiplume.dao.PhiPlumeDao" /-->
+                <property name="dao" value="com.raytheon.edex.db.dao.DefaultPluginDao" />
+                <property name="record" value="gov.noaa.nssl.common.dataplugin.phiplume.PhiInterpolatedRecord" />
+        </bean>
+        <bean id="phiinterpolatedRegistered" factory-bean="pluginRegistry" factory-method="register">
+                <constructor-arg ref="phiinterpolatedPluginName"/>
+                <constructor-arg ref="phiinterpolatedProperties"/>
+        </bean>
+
+	
+</beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="atomsFcstPluginName" class="java.lang.String">
+        <constructor-arg type="java.lang.String" value="atomsForecast" />
+    </bean>
+
+    <bean id="atomsFcstProperties" class="com.raytheon.uf.common.dataplugin.PluginProperties">
+        <property name="pluginName" ref="atomsFcstPluginName" />
+        <property name="pluginFQN" value="gov.noaa.gsl.common.dataplugin.atomsForecast" />
+        <property name="record" value="gov.noaa.gsl.common.dataplugin.atomsForecast.TsunamiForecast" />
+        <property name="dao" value="gov.noaa.gsl.edex.atomsForecast.TsunamiForecastEdexDao"/>
+        <property name="dependencyFQNs">
+            <list>
+               <value>gov.noaa.gsl.common.dataplugin.atoms</value>
+            </list>
+        </property>
+
+    </bean>
+
+    <bean id="atomsFcstRegistered" factory-bean="pluginRegistry" factory-method="register" depends-on="atomsRegistered">
+        <constructor-arg ref="atomsFcstPluginName"/>
+        <constructor-arg ref="atomsFcstProperties"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Drake.Aug22</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>NTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2025-07-23T21:16:06</CreationTime>
+  <OriginTime>2025-08-22T02:16:22</OriginTime>
+  <Latitude>-60.4</Latitude>
+  <Longitude>-62.0</Longitude>
+  <DistanceToCoast>235</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.0</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>10</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

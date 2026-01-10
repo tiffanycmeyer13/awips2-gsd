@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Pacific.PTWC.Cat3a.RIFT</EventID>
+  <EventType>Seismic</EventType>
+  <Source>PTWC</Source>
+  <OriginTime>2022-09-07T12:15:32</OriginTime>
+  <Latitude>-22.81</Latitude>
+  <Longitude>156.59</Longitude>
+  <Originator>PTWC</Originator>
+  <CreationTime>2022-09-07T12:16:38</CreationTime>
+  <DistanceToCoast>372</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>7.6</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>5.0</Depth>
+    <AzimuthalCoverage>244</AzimuthalCoverage>
+    <Stations>14</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

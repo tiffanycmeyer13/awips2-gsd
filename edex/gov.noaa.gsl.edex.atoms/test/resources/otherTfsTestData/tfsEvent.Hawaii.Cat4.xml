@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Hawaii.Cat4</EventID>
+  <EventType>Seismic</EventType>
+  <Source>PTWC</Source>
+  <OriginTime>2022-09-07T12:15:32</OriginTime>
+  <Latitude>19.65</Latitude>
+  <Longitude>-152.52</Longitude>
+  <Originator>PTWC</Originator>
+  <CreationTime>2022-09-07T12:16:38</CreationTime>
+  <DistanceToCoast>241</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.2</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>7</Depth>
+    <AzimuthalCoverage>244</AzimuthalCoverage>
+    <Stations>14</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

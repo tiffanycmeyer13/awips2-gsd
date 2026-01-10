@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Barry_Arm_Landslide_SP_NTWC_ThreatDB.2</EventID>
+  <EventType>Landslide</EventType>
+  <Source>NTWC</Source>
+  <OriginTime>2023-01-06T12:15:00</OriginTime>
+  <Latitude>61.14</Latitude>
+  <Longitude>-148.13</Longitude>
+  <Originator>NTWC</Originator>
+  <CreationTime>2023-01-06T12:17:00</CreationTime>
+  <DistanceToCoast>1</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>7.2</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>50</Depth>
+    <AzimuthalCoverage>260</AzimuthalCoverage>
+    <Stations>16</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

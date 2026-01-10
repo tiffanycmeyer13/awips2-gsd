@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>DrakeMay25</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>PTWC</Originator>
+  <CreationTime>2025-05-02T13:32:31</CreationTime>
+  <OriginTime>2025-05-02T12:58:33</OriginTime>
+  <Latitude>-56.8</Latitude>
+  <Longitude>-67.9</Longitude>
+  <DistanceToCoast>58</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>7.5</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>48.3</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

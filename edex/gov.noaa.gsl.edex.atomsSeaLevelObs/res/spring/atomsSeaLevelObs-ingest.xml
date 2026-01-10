@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.raytheon.uf.common.logback.appender.ThreadBasedAppender" factory-method="registerThreadPattern">
+        <constructor-arg value="atomsSeaLevelObs" />
+        <constructor-arg value="Ingest.AtomsSeaLevelObs.*" />
+    </bean>
+
+    <bean id="atomsSeaLevelObsDecoder" class="gov.noaa.gsl.edex.atomsSeaLevelObs.SeaLevelObsDecoder" />
+
+    <bean id="atomsSeaLevelObsDistRegistry" factory-bean="distributionSrv" factory-method="register">
+        <constructor-arg ref="atomsSeaLevelObsPluginName" />
+        <constructor-arg value="jms-durable:queue:Ingest.AtomsSeaLevelObs" />
+        <constructor-arg value="true" />
+    </bean>
+
+    <bean id="atomsSeaLevelObs-camel" factory-bean="routeContextFactory" factory-method="create">
+        <constructor-arg>
+            <bean class="gov.noaa.gsl.edex.atomsSeaLevelObs.plugin.AtomsSeaLevelObsCamelRoutes" />
+        </constructor-arg>
+    </bean>
+
+</beans>

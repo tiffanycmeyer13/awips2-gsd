@@ -1,0 +1,14 @@
+<atomsEventData>
+  <EventID>Unk_776</EventID>
+  <Name>Unknown Phenom</Name>
+  <EventType>UNKNOWN</EventType>
+  <Source>NTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2023-09-08T19:29:29</CreationTime>
+  <OriginTime>2023-09-08T12:07:00</OriginTime>
+  <Latitude>45.10</Latitude>
+  <Longitude>-168.19</Longitude>
+  <DistanceToCoast>848</DistanceToCoast>
+  <atomsEventDataRecord>
+  </atomsEventDataRecord>
+</atomsEventData>

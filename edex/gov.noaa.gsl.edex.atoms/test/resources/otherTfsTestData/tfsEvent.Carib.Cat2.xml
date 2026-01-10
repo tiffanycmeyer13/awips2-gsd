@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Carib.Cat2</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2021-05-09T00:16:06</CreationTime>
+  <OriginTime>2022-05-18T00:06:06</OriginTime>
+  <Latitude>19.87</Latitude>
+  <Longitude>-85.76</Longitude>
+  <DistanceToCoast>127</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.0</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>129</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

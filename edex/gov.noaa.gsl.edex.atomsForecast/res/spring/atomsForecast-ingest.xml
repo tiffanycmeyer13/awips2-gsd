@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.raytheon.uf.common.logback.appender.ThreadBasedAppender" factory-method="registerThreadPattern">
+        <constructor-arg value="atomsForecast" />
+        <constructor-arg value="Ingest.AtomsFcst.*" />
+    </bean>
+
+    <bean id="atomsFcstDecoder" class="gov.noaa.gsl.edex.atomsForecast.TsunamiForecastDecoder" />
+
+    <bean id="atomsFcstDistRegistry" factory-bean="distributionSrv" factory-method="register">
+        <constructor-arg ref="atomsFcstPluginName" />
+        <constructor-arg value="jms-durable:queue:Ingest.AtomsFcst" />
+        <constructor-arg value="true" />
+    </bean>
+
+    <bean id="atomsFcst-camel" factory-bean="routeContextFactory" factory-method="create">
+        <constructor-arg>
+            <bean class="gov.noaa.gsl.edex.atomsForecast.plugin.AtomsForecastCamelRoutes" />
+        </constructor-arg>
+    </bean>
+</beans>
