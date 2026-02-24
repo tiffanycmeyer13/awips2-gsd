@@ -1334,6 +1334,19 @@ class Format(NWS_Machine_Formatter.Format):
         '''
         return infoDict.get("productLookupKey") in self.weaProductLookupKeys()
 
+    def createGrodaUniqueID(self, productDict):
+        '''
+        @summary: Create the "uniqueID" fields for the GRODA
+        @param productDict: The product-level dictionary
+        @return: String
+        '''
+        bulletNum = str(productDict.get("messageNumber"))
+        customID = productDict.get("customId")
+        officeId = str(productDict.get("officeId"))
+        region = productDict.get("productRegion")
+        uniqueID = f"ATOMS_CAP_{officeId}_{bulletNum}_{customID}_{region}"
+        return uniqueID
+
     def storeCapIdToTable(self, productDict, segDict, sectionDict):
         '''
         @summary: Store elements of the CAP message as a GRODA in the registry to access
@@ -1347,7 +1360,7 @@ class Format(NWS_Machine_Formatter.Format):
         vtecRecord = sectionDict.get("vtecRecord", {})
         vtecUGCs = vtecRecord.get("id")
         capIdDict = {
-            "uniqueID": self.createIdentifierTag(productDict, segDict, sectionDict),
+            "uniqueID": self.createGrodaUniqueID(productDict),
             "objectType": "CapIdentifier",
             "eventID": vtecRecord.get("eventID"),
             "etn": str(vtecRecord.get("etn", "")),

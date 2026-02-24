@@ -20,7 +20,7 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
         super(Recommender, self).__init__()
         self.logger = logging.getLogger("TsunamiRecommender")
         self.logger.addHandler(UFStatusHandler.UFStatusHandler(
-            "gov.noaa.gsd.uf.common.recommenders.hydro", "TsunamiRecommender",
+            "gov.noaa.gsl.common.atoms.hazardservices", "TsunamiRecommender",
             level=logging.INFO))
         self.logger.setLevel(logging.INFO)
 

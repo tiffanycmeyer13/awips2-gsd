@@ -126,7 +126,8 @@ class ThreatDB(AbstractThreatDB.AbstractThreatDB):
                     {
                         "hazardType": "TS.Y",
                         "hazardAreas": [
-                            "Bristol Bay and the Pribilof Islands",
+                            "Bristol Bay",
+                            "Kuskokwim Delta Coast and Nunivak Island",
                         ]
                     }
                 ]
@@ -1752,6 +1753,7 @@ class ThreatDB(AbstractThreatDB.AbstractThreatDB):
                         "hazardType": "TS.Y",
                         "hazardAreas": [
                             "Norton Sound/Saint Lawrence Island/Western AK Coast",
+                            "Kuskokwim Delta Coast and Nunivak Island",
                         ]
                     },
                 ]
@@ -1765,6 +1767,7 @@ class ThreatDB(AbstractThreatDB.AbstractThreatDB):
                         "hazardType": "TS.Y",
                         "hazardAreas": [
                             "Norton Sound/Saint Lawrence Island/Western AK Coast",
+                            "Kuskokwim Delta Coast and Nunivak Island",
                         ]
                     },
                 ]
@@ -1804,6 +1807,7 @@ class ThreatDB(AbstractThreatDB.AbstractThreatDB):
                         "hazardType": "TS.W",
                         "hazardAreas": [
                             "Gulf of Saint Lawrence",
+                            "Meat Cove to Cape Ray",
                         ]
                     },
                 ]

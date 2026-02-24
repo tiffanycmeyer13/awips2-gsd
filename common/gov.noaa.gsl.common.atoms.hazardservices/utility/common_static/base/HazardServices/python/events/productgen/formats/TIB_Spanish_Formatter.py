@@ -516,17 +516,16 @@ class Format(NWS_Base_Formatter.Format):
         peType = self.eventDict.get("physicalEventType")
         if self.tisType == "tisFinal" or isSupplementalMsg:
             onlyOrFinal = "final"
-        phraseList += [(f"Esta será el {onlyOrFinal} {warningCenter} declaración emitida para "
-                        "este evento a menos que haya información adicional disponible.")]
+        if self.tisType != "tisHigh":
+            phraseList += [(f"Esta será el {onlyOrFinal} {warningCenter} declaración emitida para "
+                            "este evento a menos que haya información adicional disponible.")]
         if self.tisType == "tisHigh" or self.tisType == "tisFinal" or highMagnitude:
-            phraseList += [("Para acceder a informacion adicional consulte el sitio de "
-                            "internet tsunami.gov."),
-                           (f"{coastalDescription} deben referirse a los "
-                            "mensanjes del Centro de Alerta de Tsunami del Pacifico en "
-                            "tsunami.gov."), ]
             if self.tisType == "tisHigh" and not isSupplementalMsg:
-                phraseList += [("Se emitiran mensajes cada hora para informar sobre la evolucion "
-                                "del evento."), ]
+                phraseList += [self.amm.getNextMsgText(self.eventDict, "Spanish", self.fieldNameSuffix), ]
+            phraseList += ["Para acceder a informacion adicional consulte el sitio de internet tsunami.gov."]
+            if self.siteID == "NTWC":
+                phraseList += [(f"{coastalDescription} deben referirse a los mensanjes del Centro"
+                            " de Alerta de Tsunami del Pacifico en tsunami.gov."), ]
         if self.productRegion == "Pr":
             phraseList += [
                 ("Mas informacion acerca de este evento puede ser accesada en "

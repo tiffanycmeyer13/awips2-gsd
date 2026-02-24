@@ -24,7 +24,7 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
 
         self.logger = logging.getLogger("ObservatoryMessageTool")
         self.logger.addHandler(UFStatusHandler.UFStatusHandler(
-            "gov.noaa.gsd.uf.common.recommenders.hydro", "ObservatoryMessageTool",
+            "gov.noaa.gsl.common.atoms.hazardservices", "ObservatoryMessageTool",
             level=logging.INFO))
         self.logger.setLevel(logging.INFO)
 

@@ -13,8 +13,6 @@ import TsunamiRecommenderCommon
 from gov.noaa.gsl.viz.atoms.trecs import TrecsExecDialog
 from com.raytheon.viz.gfe.ui.runtimeui import DisplayMessageDialog
 
-# from com.raytheon.uf.common.python import PyJavaUtil
-
 
 class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
 
@@ -22,7 +20,7 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
         super(Recommender, self).__init__()
         self.logger = logging.getLogger("TsunamiRecommender")
         self.logger.addHandler(UFStatusHandler.UFStatusHandler(
-            "gov.noaa.gsd.uf.common.recommenders.hydro", "TsunamiRecommender", level=logging.INFO))
+            "gov.noaa.gsl.common.atoms.hazardservices", "TsunamiRecommender", level=logging.INFO))
         self.logger.setLevel(logging.INFO)
 
         self.PROC_611 = "Section 6.1.1 BcWc"
@@ -1283,7 +1281,7 @@ class Proc6122Categ7(TsunamiRecommenderCommon.TRECSPythonExecCateg):
     def applyActions(self, theTRECSTool):
         super().appendToTrace(theTRECSTool)
         wwaAreaDictList = []
-        specProcNames = ["Bristol Bay and the Pribilof Islands"]
+        specProcNames = ["Bristol Bay", "Kuskokwim Delta Coast and Nunivak Island"]
         segmentQueryResults = theTRECSTool.amu.getBreakPointSegmentsBySegmentNames(specProcNames)
         warningGeom = theTRECSTool.amu.getUnionedGeometryFromQueryResults(segmentQueryResults)
         attrDict = {
@@ -1811,12 +1809,12 @@ class Proc615Categ6(TsunamiRecommenderCommon.TRECSPythonExecCateg):
     def applyActions(self, theTRECSTool):
         super().appendToTrace(theTRECSTool)
         wwaAreaDictList = []
-        specProcNames = ["Gulf of Saint Lawrence"]
-        segmentQueryResults = theTRECSTool.amu.getBreakPointSegmentsBySegmentNames(specProcNames)
+        areaNames = ["Gulf of Saint Lawrence", "Meat Cove to Cape Ray"]
+        segmentQueryResults = theTRECSTool.amu.getBreakPointSegmentsBySegmentNames(areaNames)
         warningGeom = theTRECSTool.amu.getUnionedGeometryFromQueryResults(segmentQueryResults)
         attrDict = {
-            "wwaLocationCoverage": "specialAreas",
-            "hazardLocations": specProcNames,
+            "wwaLocationCoverage": "allAreas",
+            "hazardLocations": areaNames,
             }
         wwaAreaDictList.append(theTRECSTool.recommendEvent("EcGc", "TS.W", warningGeom, attrDict))
         return wwaAreaDictList

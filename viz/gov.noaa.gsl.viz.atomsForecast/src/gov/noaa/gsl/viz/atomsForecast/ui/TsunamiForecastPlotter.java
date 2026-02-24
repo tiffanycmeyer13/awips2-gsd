@@ -29,6 +29,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
 
+import com.raytheon.uf.common.time.SimulatedTime;
 import com.raytheon.uf.viz.core.DrawableString;
 import com.raytheon.uf.viz.core.IGraphicsTarget;
 import com.raytheon.uf.viz.core.IGraphicsTarget.HorizontalAlignment;
@@ -350,13 +351,13 @@ public class TsunamiForecastPlotter extends PEPlotter {
         } else {
             long arrivalTimeMillis = stnFcst.getArrivalTime().getTime();
             Date refTime = null;
-            int hrsDelta = 0;
+            int hrsWindowDelta = 0;
             if (getTsuFcstPlotConfig().isFilterByWithinHrsOfNow()) {
                 if (getTsuFcstPlotConfig().getWithinHrsOfNow() == null) {
                     return true;
                 } else {
-                    refTime = new Date();
-                    hrsDelta = getTsuFcstPlotConfig().getWithinHrsOfNow();
+                    refTime = SimulatedTime.getSystemTime().getTime();
+                    hrsWindowDelta = getTsuFcstPlotConfig().getWithinHrsOfNow();
                 }
             } else if (getTsuFcstPlotConfig().isFilterByWithinHrsOfOrigin()) {
                 if (getTsuFcstPlotConfig().getWithinHrsOfOrigin() == null) {
@@ -366,14 +367,16 @@ public class TsunamiForecastPlotter extends PEPlotter {
                         return false;
                     }
                     refTime = getPhysicalEvent().getRefTime();
-                    hrsDelta = getTsuFcstPlotConfig().getWithinHrsOfOrigin();
+                    hrsWindowDelta = getTsuFcstPlotConfig()
+                            .getWithinHrsOfOrigin();
                 }
             } else {
                 return false;
             }
 
-            if ((arrivalTimeMillis - refTime.getTime()) <= (hrsDelta * 60L * 60L
-                    * 1000L)) {
+            long travelTimeDelta = arrivalTimeMillis - refTime.getTime();
+            if (travelTimeDelta >= 0 && travelTimeDelta <= (hrsWindowDelta * 60L
+                    * 60L * 1000L)) {
                 return true;
             } else {
                 return false;

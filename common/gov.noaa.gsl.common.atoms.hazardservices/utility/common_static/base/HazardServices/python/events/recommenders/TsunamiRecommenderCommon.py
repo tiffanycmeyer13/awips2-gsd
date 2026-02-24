@@ -44,7 +44,7 @@ class TsunamiRecommenderCommon(RecommenderTemplate.Recommender):
     def __init__(self):
         self.logger = logging.getLogger("TsunamiRecommenderCommon")
         self.logger.addHandler(UFStatusHandler.UFStatusHandler(
-            "gov.noaa.gsd.common.recommenders.hydro", "TsunamiRecommenderCommon",
+            "gov.noaa.gsl.common.atoms.hazardservices", "TsunamiRecommenderCommon",
             level=logging.INFO))
         self.logger.setLevel(logging.INFO)
 
@@ -1075,11 +1075,14 @@ class TsunamiRecommenderCommon(RecommenderTemplate.Recommender):
 
     def getCurrentCAVETime(self):
         '''
-        @summary: Returns the CAVE system time that is shown in the clock on the bottom of CAVE
+        @summary: Returns the CAVE system time that is shown in the clock on the 
+        bottom of CAVE. If autotest mode, then returns the physical event origin time.
         @return: A Java Date object
         '''
-        return self.physicalEvent.getRefTime()
-        # return TimeUtil.simulatedTime() # TO USE THE CAVE CLOCK
+        if self.isAutoTest:
+            return self.physicalEvent.getRefTime()
+        else:
+            return TimeUtil.simulatedTime()  # TO USE THE CAVE CLOCK
 
     def createWarningToSomeRangeAndWatchForRemainingAOR(self, maxRangeKm, productRegion):
         '''

@@ -573,7 +573,7 @@ class CommonMetaData_Tsunami(object):
             amp = stnRow.getAmplitude()
             if arrivalTime is not None:
                 arrivalTime = arrivalTime.getTime()
-                currentTime = self.getCurrentCAVETime(hazardEvents[0])
+                currentTime = self.getCurrentCAVETime(hazardEvents[0]).getTime()
                 # Forecast ETAs are listed in products only if >= 1 hour stale (for PTWC) and >= NOW (for NTWC)
                 # Only skip stale ETAs if no amplitudes exist, otherwise you're skipping amplitudes accidentally
                 if amp is None and not self.afou.areETAsDisplayedInProduct(arrivalTime, currentTime, siteID):
@@ -653,7 +653,7 @@ class CommonMetaData_Tsunami(object):
                                                                              lonLatOrigin, distanceKm)
             else:
                 analysisType = "3hr"
-                tfTable = TsunamiForecastUtils.getStationFcstsWithinTravelTime(physicalEvent.getRefTime(),
+                tfTable = TsunamiForecastUtils.getStationFcstsWithinTravelTime(self.getCurrentCAVETime(hazardEvent),
                                                                                3 * GeneralConstants.MILLIS_PER_HOUR,
                                                                                arrivalTimeFcst, ampFcst,
                                                                                TsunamiForecastTable.ARRIVE_TIME_COMPARATOR)
@@ -918,6 +918,48 @@ class CommonMetaData_Tsunami(object):
                       ]
         return choices
 
+    def getNextMsgOptions(self, hazardEvent, fieldNameSuffix=""):
+        '''
+        @summary: Creates the ComboBox for the "Next Message" megawidget
+        @param hazardEvent: The hazard event being edited
+        @param fieldNameSuffix: An optional suffix to distinguish between
+        different TSU hazards in different product regions
+        @return: Dictionary of megawidget properties
+        '''
+        if hazardEvent and hazardEvent.get(f"nextMsg{fieldNameSuffix}"):
+            nextMsg = hazardEvent.get(f"nextMsg{fieldNameSuffix}")
+        else:
+            nextMsg = "nextMsg.60"
+        choices = [
+                        {"identifier": "nextMsg.30", "displayString": "30 minutes"},
+                        {"identifier": "nextMsg.60", "displayString": "60 minutes"},
+                        {"identifier": "nextMsg.Last", "displayString": "N/A (Final Message)"},
+                  ]
+        return {
+            "fieldName": f"addlInfoGroup{fieldNameSuffix}",
+            "fieldType": "Group",
+            "label": "Additional Information and Next Update",
+            "spacing": 5,
+            "leftMargin": 5,
+            "rightMargin": 5,
+            "topMargin": 5,
+            "bottomMargin": 5,
+            "numColumns": 3,
+            "expandHorizontally": True,
+            "expandVertically": False,
+            "fields": [
+                {
+                    "fieldType": "ComboBox",
+                    "fieldName": f"nextMsg{fieldNameSuffix}",
+                    "label": "Next Message within:",
+                    "choices": choices,
+                    "values": nextMsg,
+                    "refreshMetadata": True,
+                    "editable": True,
+                    },
+                ]
+            }
+
     def getPrevValueToUse(self, fieldName, hazardEvent, peEvent):
         peData = peEvent.getData()
         if "originLongitude" in fieldName:
@@ -974,13 +1016,13 @@ class CommonMetaData_Tsunami(object):
 
     def getCurrentCAVETime(self, hazardEvent):
         '''
-        @summary: Returns the CAVE system time that is shown in the clock on the bottom of CAVE
+        @summary: Returns the CAVE system time that is shown in the clock on the
+        bottom of CAVE.
         @param hazardEvent: Container holding all the space/time info and metadata needed to
         create watch/warning/advisory products
-        @return: milliseconds of current time
+        @return: Java Date of current time
         '''
-        physicalEvent = self.getPhysicalEventFromHazardEvent(hazardEvent)
-        currentTime = physicalEvent.getRefTime().getTime()
-        # TO USE THE CAVE CLOCK instead
-        # currentTime = TimeUtil.simulatedTimeInMilliseconds()
+        # physicalEvent = self.getPhysicalEventFromHazardEvent(hazardEvent)
+        # currentTime = physicalEvent.getRefTime()
+        currentTime = TimeUtil.simulatedTime()
         return currentTime

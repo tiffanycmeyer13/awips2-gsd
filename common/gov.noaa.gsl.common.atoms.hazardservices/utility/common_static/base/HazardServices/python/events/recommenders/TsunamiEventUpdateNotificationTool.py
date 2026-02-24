@@ -28,7 +28,7 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
 
         self.logger = logging.getLogger("TsunamiEventUpdateNotificationTool")
         self.logger.addHandler(UFStatusHandler.UFStatusHandler(
-            "gov.noaa.gsd.uf.common.recommenders.hydro",
+            "gov.noaa.gsl.common.atoms.hazardservices",
             "TsunamiEventUpdateNotificationTool",
             level=logging.INFO))
         self.logger.setLevel(logging.INFO)

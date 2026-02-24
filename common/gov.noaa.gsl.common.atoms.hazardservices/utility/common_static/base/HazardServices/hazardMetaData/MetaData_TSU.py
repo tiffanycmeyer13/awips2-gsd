@@ -63,6 +63,10 @@ class MetaData(CommonMetaData.MetaData):
                 peDetails.append(self.getStillEvaluatingSelector(hazardEvents[0], fieldNameSuffix))
             peDetails += self.cmdTsu.getPhysicalEventInfoAndForecastSeaLevelTables(hazardEvents, fieldNameSuffix)
             peDetails.append(self.cmdTsu.getEventForecastStations(hazardEvents, customId, fieldNameSuffix))
+
+        if not self.areAllHazardsAreEndingOrElapsing(hazardEvents):
+            peDetails.append(self.cmdTsu.getNextMsgOptions(hazardEvents[0], fieldNameSuffix))
+
         return peDetails
 
     def areAllHazardsAreEndingOrElapsing(self, hazardEvents):

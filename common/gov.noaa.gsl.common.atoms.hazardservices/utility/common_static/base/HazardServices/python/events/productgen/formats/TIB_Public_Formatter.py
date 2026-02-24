@@ -511,16 +511,16 @@ class Format(NWS_Base_Formatter.Format):
         peType = self.eventDict.get("physicalEventType")
         if self.tisType == "tisFinal" or isSupplementalMsg:
             onlyOrFinal = "final"
-        phraseList += [(f"This will be the {onlyOrFinal} {warningCenter} statement issued "
-                        "for this event unless additional information becomes available.")]
+        if self.tisType != "tisHigh":
+            phraseList += [(f"This will be the {onlyOrFinal} {warningCenter} statement issued "
+                            "for this event unless additional information becomes available.")]
         if self.tisType == "tisHigh" or self.tisType == "tisFinal" or highMagnitude:
+            if self.tisType == "tisHigh" and not isSupplementalMsg:
+                phraseList += [self.amm.getNextMsgText(self.eventDict, "", self.fieldNameSuffix), ]
             phraseList += ["Refer to the internet site tsunami.gov for more information."]
             if self.siteID == "NTWC":
                 phraseList += [(f"{coastalDescription} should refer to the Pacific "
                                 "Tsunami Warning Center messages at tsunami.gov."), ]
-            if self.tisType == "tisHigh" and not isSupplementalMsg:
-                phraseList += [("Messages will be issued hourly to keep you informed of the "
-                                "progress of this event."), ]
         if self.productRegion in self.amm.nonUsProductRegions():
             phraseList += self.amm.nonUsProductRegionsAdditionalInfo(self.productRegion)
         elif self.productRegion == "Pr":

@@ -17,9 +17,10 @@
 
 
 import argparse
+import datetime
+import glob
 import os
 import sys
-import glob
 import time
 import subprocess as sub
 
@@ -34,9 +35,15 @@ args = parser.parse_args()
 restoreFlag = args.restoreFlag
 
 if restoreFlag:
-    skipList = ["cwa", "zone"]
+    tableSkipList = ["cwa", "zone"]
 else:
-    skipList = ["NWS_Baseline_cwa", "NWS_Baseline_zone"]
+    tableSkipList = ["NWS_Baseline_cwa", "NWS_Baseline_zone"]
+
+if datetime.datetime.now() >= datetime.datetime(2026, 3, 3):
+    shapeSkipList = ["z_18mr25.shp", "w_18mr25.shp"]
+else:
+    shapeSkipList = ["z_03mr26.shp", "w_03mr26.shp"]
+
 
 # Verify the import script exists
 curDir = os.getcwd()
@@ -62,13 +69,15 @@ if not out:
 # Run script for each shapefile
 shapefileDirs = sorted(glob.glob("*"))
 for tableName in shapefileDirs:
-    if not os.path.isdir(tableName) or tableName in skipList:
+    if not os.path.isdir(tableName) or tableName in tableSkipList:
         continue
     os.chdir(tableName)
     shapefilePaths = sorted(glob.glob("*.shp"))
     firstRun = True
     for shapefilePath in shapefilePaths:
-        syscmd = "python {} -s $PWD/{} -t {}".format(importScript, shapefilePath, tableName)
+        if os.path.basename(shapefilePath) in shapeSkipList:
+            continue
+        syscmd = f"python {importScript} -s $PWD/{shapefilePath} -t {tableName}"
         if not firstRun:
             syscmd += " -a"
         else:

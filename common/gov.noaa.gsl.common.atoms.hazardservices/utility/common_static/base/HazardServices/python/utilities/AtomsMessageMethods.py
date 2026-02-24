@@ -1324,13 +1324,18 @@ class AtomsMessageMethods(object):
                             "includingAreas": [],
                             }
                     subRegionInfoDict[subRegionName]["segInfoDict"].append(segInfoDict)
-                    
                     for geoKey in ["inclusionReferencePoints", "inclusionSpecialProcedures"]:
                         geoNames = locInfoDict.get(geoKey, [])
                         for geoName in geoNames:
-                            if (geoName in hazardLocations and
-                                geoName not in subRegionInfoDict[subRegionName]["includingAreas"]):
-                                subRegionInfoDict[subRegionName]["includingAreas"].append(geoName)
+                            if geoName in hazardLocations:
+                                if geoName not in subRegionInfoDict[subRegionName]["includingAreas"]:
+                                    subRegionInfoDict[subRegionName]["includingAreas"].append(geoName)
+                                if geoKey == "inclusionSpecialProcedures":
+                                    referenceLocations = atomsProductInfoDict.get(geoName, {}).get("inclusionReferencePoints", {})
+                                    for refLocation in referenceLocations:
+                                        if (refLocation in hazardLocations and
+                                            refLocation not in subRegionInfoDict[subRegionName]["includingAreas"]):
+                                            subRegionInfoDict[subRegionName]["includingAreas"].append(refLocation)
 
                 for subRegionName in subRegionInfoDict:
                     segInfoDicts = subRegionInfoDict[subRegionName]["segInfoDict"]
@@ -2066,6 +2071,38 @@ class AtomsMessageMethods(object):
             originTime = eventDict.get(f"originTime{suffix}")
             arrivalTimeMs = originTime + (travelTimeHours * GeneralConstants.MILLIS_PER_HOUR)
         return arrivalTimeMs
+
+    def getNextMsgText(self, productDict, language="", fieldNameSuffix=""):
+        '''
+        @summary: Get the sentence for when the next msg will be sent
+        @param productDict: The product level dictionary
+        @param language: The language for the text, eg Spanish. Default is english.
+        @param fieldNameSuffix: An optional suffix to distinguish between
+        different TSU hazards in different product regions
+        @return: The sentence
+        '''
+        nextMsg = ""
+        minutes = None
+        fieldName = f"nextMsg{fieldNameSuffix}"
+        if productDict.get(fieldName) == "nextMsg.30":
+            minutes = 30
+        elif productDict.get(fieldName) == "nextMsg.60":
+            minutes = 60
+
+        if minutes is not None:
+            if self.isSpanish(language):
+                nextMsg = f"Este mensaje sera actualizado en {minutes} minutos o antes si la situación lo amerita."
+            else:
+                nextMsg = f"This message will be updated in {minutes} minutes or sooner if the situation warrants."
+        else:
+            if self.isSpanish(language):
+                nextMsg = (f"Este será el último mensaje emitido por el {self.getWarningCenterByEventDict(productDict)} "
+                           "en relación con este evento, a menos que se disponga de información adicional.")
+            else:
+                nextMsg = (f"This will be the final {self.getWarningCenterByEventDict(productDict)} "
+                           "message issued for this event unless additional information becomes available.")
+
+        return nextMsg
 
     def nonUsProductRegionsAudienceBullet_text(self, productRegion):
         '''

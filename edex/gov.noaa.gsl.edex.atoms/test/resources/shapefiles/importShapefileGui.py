@@ -1,6 +1,6 @@
 #!/awips2/python/bin/python
 import subprocess as sub
-import os, time, glob
+import datetime, glob, os, time
 import tkinter as tk
 from tkinter import font
 
@@ -17,6 +17,12 @@ def tablesToNotDrop():
 
 def shapefileScript():
     return os.path.join(curDir, "map_updater_atoms", "importSingleShapefile.py")
+
+def shapefilesToExlude():
+    if datetime.datetime.now() >= datetime.datetime(2026, 3, 3):
+        return ["z_18mr25.shp", "w_18mr25.shp"]
+    else:
+        return ["z_03mr26.shp", "w_03mr26.shp"]
 
 def callback(tableActivationDict):
 
@@ -49,12 +55,17 @@ def callback(tableActivationDict):
     # Import all tables selected
     for tableName in activationList:
         tableRootDir = tableName
-        if "cwa (Restore" in tableName:
-            tableRootDir = "NWS_Baseline_cwa"
-            tableName = "cwa"
-        elif "zone (Restore" in tableName:
-            tableRootDir = "NWS_Baseline_zone"
-            tableName = "zone"
+        filesToExclude = []
+        if tableName in ["cwa", "cwa (Restore to NWS Baseline)",
+                        "zone", "zone (Restore to NWS Baseline)"]:
+            if tableName == "cwa (Restore to NWS Baseline)":
+                tableRootDir = "NWS_Baseline_cwa"
+                tableName = "cwa"
+            elif tableName == "zone (Restore to NWS Baseline)":
+                tableRootDir = "NWS_Baseline_zone"
+                tableName = "zone"
+            filesToExclude = shapefilesToExlude()
+
         shapefileRootPath = os.path.join(curDir, "map_updater_atoms", tableRootDir)
         shapefilePaths = sorted(glob.glob(os.path.join(shapefileRootPath, "*.shp")))
 
@@ -68,6 +79,8 @@ def callback(tableActivationDict):
 
         firstRun = True
         for shapefilePath in shapefilePaths:
+            if filesToExclude and os.path.basename(shapefilePath) in filesToExclude:
+                continue
             syscmd = f"{shapefileScript()} -s {shapefilePath} -t {tableName}"
             if not firstRun:
                 syscmd += " -a"

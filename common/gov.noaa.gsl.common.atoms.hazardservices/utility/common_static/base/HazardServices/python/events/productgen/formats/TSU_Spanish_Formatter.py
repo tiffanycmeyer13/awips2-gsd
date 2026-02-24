@@ -511,8 +511,7 @@ class Format(NWS_Base_Formatter.Format):
                 ]
         else:
             phraseList += [
-                ("Este mensaje sera actualizado en 30 minutos...o antes si la situación "
-                "lo amerita."),
+                self.amm.getNextMsgText(productDict, "Spanish", self.fieldNameSuffix),
                 "Consulte el sitio web tsunami.gov para obtener más información.",
                 ("Se puede obtener información fidedigna sobre el terremoto de la "
                  "red sísmica regional correspondiente o del Servicio Geológico "

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <requestPatterns xmlns:ns2="group">
-    <regex>dortTORP*</regex>
+    <regex>unusedButRequired*</regex>
 </requestPatterns>

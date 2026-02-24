@@ -84,12 +84,12 @@ class MetaData(CommonMetaData.MetaData):
             details.append(self.getEndingOption(self.isStatusEndingOrElapsing(self.hazardStatus)))
         else:
             details += self.getInclusionReferenceAreas()
-            if self.hazardType in ["TS.Y", "TS.W"]:
-                details.append(self.getImpacts(self.getDefaultImpacts()))
             details += [
                     self.getCTAs(self.getDefaultCTAs()),
                     self.getCAP_Fields(),
                     ]
+            if self.hazardType in ["TS.Y", "TS.W"]:
+                details.append(self.getImpacts(self.getDefaultImpacts()))
 
         details += self.idsHidden
         return details
@@ -162,12 +162,10 @@ class MetaData(CommonMetaData.MetaData):
         inclusionReferenceDict = {
             "fieldType": "HiddenField",
             "fieldName": "inclusionReferences",
-            "values": [],
             }
         specialProcedureSelectionDict = {
             "fieldType": "HiddenField",
             "fieldName": "specialProcedureSelections",
-            "values": [],
             }
         specialProcedureChoicesDict = {
             "fieldType": "HiddenField",
@@ -191,7 +189,8 @@ class MetaData(CommonMetaData.MetaData):
                     for location in specDict:
                         if location not in specialChoices:
                             specialChoices.append(location)
-                        if specDict[location] and location not in specialValues:
+                        if ((specDict[location] or location in currentHazardLocations) and
+                            location not in specialValues):
                             specialValues.append(location)
             if inclusionChoices:
                 inclusionReferenceDict["fieldType"] = "CheckBoxes"

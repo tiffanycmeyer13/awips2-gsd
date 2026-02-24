@@ -124,8 +124,7 @@ class Format(NWS_Base_Formatter.Format):
             if generateTsunamiText:
                 phraseList += [generateTsunamiText]
             phraseList += [
-                ("This message will be updated in 30 minutes or sooner if the situation "
-                 "warrants. The tsunami message will remain in effect until further notice.")
+                f"{self.amm.getNextMsgText(eventDict, '', self.fieldNameSuffix)} The tsunami message will remain in effect until further notice."
                 ]
         for phrase in phraseList:
             wrappedPhrase = self.amm.wrapText(phrase, "", "")

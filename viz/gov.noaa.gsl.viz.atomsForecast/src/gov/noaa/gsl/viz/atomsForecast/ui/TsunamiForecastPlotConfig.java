@@ -140,7 +140,8 @@ public class TsunamiForecastPlotConfig extends PlotConfigBase {
 
     private FcstAmpLevel ZEROS = new FcstAmpLevel("Amp == 0.0", false);
 
-    private FcstAmpLevel LOW = new FcstAmpLevel("Amp < 0.3m", 0.0F, 0.3F);
+    private FcstAmpLevel LOW = new FcstAmpLevel("0.00001m <= Amp < 0.3m",
+            0.00001F, 0.3F);
 
     private FcstAmpLevel MED_LOW = new FcstAmpLevel("0.3m <= Amp < 1.0m", 0.3F,
             1.0F);
@@ -475,9 +476,6 @@ public class TsunamiForecastPlotConfig extends PlotConfigBase {
         // For times, default to Arrival time only (so don't overwrite ea other)
         showTravelTimeWrtNow = false;
         showTravelTimeWrtOrigin = false;
-        showPtwsDomain = true;
-        showCaribeDomain = true;
-        showOtherDomain = true;
 
         firePlotConfigChanged();
     }
@@ -490,9 +488,6 @@ public class TsunamiForecastPlotConfig extends PlotConfigBase {
         showStationId = false;
         showTravelTimeWrtNow = false;
         showTravelTimeWrtOrigin = false;
-        showPtwsDomain = false;
-        showCaribeDomain = false;
-        showOtherDomain = false;
 
         firePlotConfigChanged();
     }
@@ -500,7 +495,6 @@ public class TsunamiForecastPlotConfig extends PlotConfigBase {
     public boolean isShowNone() {
         return (!showArrivalTime && !showAmplitudeCircle && !showAmplitudeValue
                 && !showStationName && !showStationId && !showTravelTimeWrtNow
-                && !showTravelTimeWrtOrigin && !showPtwsDomain
-                && !showCaribeDomain && !showOtherDomain);
+                && !showTravelTimeWrtOrigin);
     }
 }

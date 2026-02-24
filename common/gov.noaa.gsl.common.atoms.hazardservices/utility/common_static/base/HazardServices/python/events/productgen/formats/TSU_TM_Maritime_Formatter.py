@@ -55,7 +55,7 @@ class Format(NWS_Base_Formatter.Format):
         self.finalThreatMessage = self.eventDict.get("isFinalThreatMessage")
         self.affectedNAVAREAs = self.checkIfNavigationalAreasAffected()
         self.isPractice = self.eventDict.get("practice")
-        self.registryObjectType = "ATOMSMaritimeMessageNumber"
+        self.registryObjectType = "ATOMS_MaritimeMessageNumber"
         self.uniqueObjectId = (f"{self.eventDict.get('customId')}_"
                                f"{self.eventDict.get('productRegion')}")
 

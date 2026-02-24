@@ -26,9 +26,11 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
 
         self.logger = logging.getLogger("ModifyTsunamiTool")
         self.logger.addHandler(UFStatusHandler.UFStatusHandler(
-            "gov.noaa.gsd.uf.common.recommenders.hydro",
+            "gov.noaa.gsl.common.atoms.hazardservices",
             "ModifyTsunamiTool", level=logging.INFO))
         self.logger.setLevel(logging.INFO)
+
+        self.geomUtils = GeometryUtilities.GeometryUtilities()
 
     def defineScriptMetadata(self):
         '''
@@ -67,6 +69,7 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
 
         # Current hazard info
         self.hazardType = self.hazardEvent.getHazardType()
+        self.hazardStatus = self.hazardEvent.getHazardStatus().upper()
         self.specialProcedureSelections = self.hazardEvent.get("specialProcedureSelections")
         self.specialProcedureOptions = self.hazardEvent.get("specialProcedureOptions")
         self.specialRemoved = False
@@ -109,6 +112,9 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
                     self.updateCoverageAttributeFromLocations()
                     # Update the hazard event geometry by the hazardLocations attribute
                     self.updateGeometryFromLocations()
+                if self.hazardStatus not in ["ENDING", "ELAPSING", "ENDED", "ELAPSED"]:
+                    # Clean up any artifacts introduced in the geometry
+                    self.cleanUpGeometryArtifacts()
                 # Refresh the metadata in the Hazard Information Dialog
                 self.incrementMetadataRefreshCounter()
             elif "type" in self.attributeIDs:
@@ -178,6 +184,33 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
         elif isSpecial:
             self.hazardEvent.set("wwaLocationCoverage", "specialAreas")
 
+    def minimumDecimalArea(self):
+        '''
+        @summary: The minimum area a polygon must be to continue to be
+        included in the hazard event geometry
+        @return: Integer or Float
+        '''
+        return 0.1
+
+    def cleanUpGeometryArtifacts(self):
+        '''
+        @summary: Read the geometry provided within the Hazard Event and remove
+        odd geometric artifacts
+        @return: NoneType; the hazard event geometry is updated in memory
+        '''
+        hazardEventGeometry = self.hazardEvent.getFlattenedGeometry()
+        geometryList = self.geomUtils.getValidGeometryList(hazardEventGeometry)
+        resultGeometryList = []
+        for geom in geometryList:
+            area = geom.area
+            if area > self.minimumDecimalArea():
+                resultGeometryList.append(geom)
+            else:
+                self.logger.info(f"BAD {type(geom)} GEOMETRY with an area of {area}\n")
+        cleanGeometry = self.geomUtils.getUnionFromListOfGeometries(resultGeometryList)
+        advancedGeom = self.geomUtils.convertFromShapelyToAdvancedGeometry(cleanGeometry)
+        self.hazardEvent.setGeometry(advancedGeom)
+
     def updateGeometryFromLocations(self):
         '''
         @summary: Access the 'hazardLocations' attribute and rebuild the geometry
@@ -187,8 +220,8 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
         currentLocations = self.getCurrentHazardLocationsAttribute()
         queryResults = self.amu.getBreakPointSegmentsBySegmentNames(currentLocations)
         unionedGeometry = self.amu.getUnionedGeometryFromQueryResults(queryResults)
-        cleanGeometry = GeometryUtilities.GeometryUtilities().cleanupPolygon(unionedGeometry, True)
-        advancedGeom = GeometryUtilities.GeometryUtilities().convertFromShapelyToAdvancedGeometry(cleanGeometry)
+        cleanGeometry = self.geomUtils.cleanupPolygon(unionedGeometry, True)
+        advancedGeom = self.geomUtils.convertFromShapelyToAdvancedGeometry(cleanGeometry)
         self.hazardEvent.setGeometry(advancedGeom)
 
     def updateHazardLocatonsAttributeByGeometry(self):

@@ -483,16 +483,15 @@ class Format(NWS_Base_Formatter.Format):
         @param productDict: The product-level dictionary
         @return: String
         '''
-        text = ("NEXT UPDATE AND ADDITIONAL INFORMATION\n"
+        text = ("ADDITIONAL INFORMATION AND NEXT UPDATE\n"
                 "--------------------------------------\n")
         phraseList = []
+        eventDict = self.agu.getAllEventDicts(productDict)[0]
         if not self.finalMessage:
             phraseList += [
-                ("This message will be updated in one hour or sooner if the "
-                 "situation warrants."),
+                self.amm.getNextMsgText(eventDict, "", self.fieldNameSuffix),
                 ]
         else:
-            eventDict = self.agu.getAllEventDicts(productDict)[0]
             phraseList += [
                 (f"This will be the final {self.amm.getWarningCenterByEventDict(eventDict)} statement issued for this event unless new "
                  "information is received or the situation changes."),

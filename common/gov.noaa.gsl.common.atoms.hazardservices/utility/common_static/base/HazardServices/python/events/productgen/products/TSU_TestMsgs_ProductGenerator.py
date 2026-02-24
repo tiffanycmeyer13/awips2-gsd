@@ -24,7 +24,7 @@ class Product(NWS_Base_Generator.Product):
 
     def initialize(self):
         super(Product, self).initialize()
-        self.productID = "TSU_TST"
+        self.productID = "TSU"
         self.productCategory = "TSU_TST"
         self.productName = "Tsunami Test Messages"
         self.productLabel = "Tsunami Test Messages"

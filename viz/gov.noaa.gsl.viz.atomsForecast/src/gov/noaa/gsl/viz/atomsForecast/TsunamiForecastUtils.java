@@ -38,15 +38,15 @@ public class TsunamiForecastUtils {
 
     /**
      * Returns a table with each row that looks something like this:
-     * 
+     *
      * ForecastStation ARRIVAL_TIME_DATE AMPLITUDE_FLOAT DURATION
-     * 
+     *
      * Arrival Times are taken from the arrivalTimesFcst, and
      * amplitudes/durations are taken from the amplitudeFcst.
-     * 
+     *
      * A union of stations is taken from each Forecast for the final table, such
      * that there is one row for each station.
-     * 
+     *
      * @param arrivalTimesFcst
      *            optional
      * @param amplitudeFcst
@@ -57,11 +57,11 @@ public class TsunamiForecastUtils {
             TsunamiForecast arrivalTimesFcst, TsunamiForecast amplitudeFcst) {
 
         return new TsunamiForecastTable(arrivalTimesFcst, amplitudeFcst);
-    };
+    }
 
     /**
      * See doc for the other createForecastTable(...) method
-     * 
+     *
      * @param arrivalTimesFcstInfo
      *            optional
      * @param amplitudeFcstInfo
@@ -85,7 +85,7 @@ public class TsunamiForecastUtils {
      * the given HazardEvent. The table will be sorted by Station name. Each row
      * will have an arrival time coming from the arrivalTimeFcst, and an
      * amplitude from the amplitudeFcst.
-     * 
+     *
      * @param evt
      * @param arrivalTimesFcst
      *            optional
@@ -102,13 +102,13 @@ public class TsunamiForecastUtils {
 
     /**
      * NOTE the "s" at the end of the method name.
-     * 
+     *
      * For all TsunamiStationForecasts within the given TsunamiForecasts, return
      * a Table of all of them that geographically fall within the hazard areas
      * of the given HazardEvents. The table will be sorted by the given
      * comparator. Each row will have an arrival time coming from the
      * arrivalTimeFcst, and an amplitude from the amplitudeFcst.
-     * 
+     *
      * @param evts
      * @param arrivalTimesFcst
      *            optional
@@ -141,7 +141,7 @@ public class TsunamiForecastUtils {
      * the given HazardEvent. The table will be sorted by the given comparator.
      * Each row will have an arrival time coming from the arrivalTimeFcst, and
      * an amplitude from the amplitudeFcst.
-     * 
+     *
      * @param evt
      * @param arrivalTimesFcst
      *            optional
@@ -182,7 +182,7 @@ public class TsunamiForecastUtils {
      * distance of the given lonLatOrigin. The table will be sorted by the given
      * comparator. Each row will have an arrival time coming from the
      * arrivalTimeFcst, and an amplitude from the amplitudeFcst.
-     * 
+     *
      * @param arrivalTimesFcst
      *            optional
      * @param amplitudeFcst
@@ -236,7 +236,7 @@ public class TsunamiForecastUtils {
      * + travelTimeMillis. The table will be sorted by station name. Each row
      * will have an arrival time coming from the arrivalTimeFcst, and an
      * amplitude from the amplitudeFcst.
-     * 
+     *
      * @param travelTimeMillis
      * @param arrivalTimesFcst
      * @param amplitudeFcst
@@ -256,7 +256,7 @@ public class TsunamiForecastUtils {
      * originTime + travelTimeMillis. The table will be sorted by station name.
      * Each row will have an arrival time coming from the arrivalTimeFcst, and
      * an amplitude from the amplitudeFcst.
-     * 
+     *
      * @param originTime
      * @param travelTimeMillis
      * @param arrivalTimesFcst
@@ -276,10 +276,10 @@ public class TsunamiForecastUtils {
     /**
      * For all TsunamiStationForecasts within the given TsunamiForecasts, return
      * a Table of all of them that have an arrivalTime that falls before the
-     * originTime + travelTimeMillis. The table will be sorted by the given
-     * comparator. Each row will have an arrival time coming from the
-     * arrivalTimeFcst, and an amplitude from the amplitudeFcst.
-     * 
+     * originTime + travelTimeMillis but >= the originTime. The table will be
+     * sorted by the given comparator. Each row will have an arrival time coming
+     * from the arrivalTimeFcst, and an amplitude from the amplitudeFcst.
+     *
      * @param originTime
      * @param travelTimeMillis
      * @param arrivalTimesFcst
@@ -310,7 +310,8 @@ public class TsunamiForecastUtils {
         for (TsuFcstTableRow row : table.getRows()) {
             ForecastStation station = row.getStation();
             Date arrivalTime = row.getArrivalTime();
-            if (arrivalTime == null || arrivalTime.getTime() > timeDeadline) {
+            if (arrivalTime == null || arrivalTime.getTime() > timeDeadline
+                    || arrivalTime.getTime() < originTime.getTime()) {
                 table.removeRow(station);
             }
         }

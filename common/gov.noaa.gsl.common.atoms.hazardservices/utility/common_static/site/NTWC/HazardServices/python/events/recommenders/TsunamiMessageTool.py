@@ -11,9 +11,9 @@ Tsunami conference call and other Tsunami messages.
 @since: April 2022
 @author: GSL Hazard Services Team
 """
-import TsunamiRecommenderCommon
-import EventSetFactory
 import logging, UFStatusHandler
+import EventSetFactory
+import TsunamiRecommenderCommon
 
 
 class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
@@ -22,7 +22,7 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
         super(Recommender, self).__init__()
         self.logger = logging.getLogger("TsunamiMessageTool")
         self.logger.addHandler(UFStatusHandler.UFStatusHandler(
-            "gov.noaa.gsd.uf.common.recommenders.hydro", "TsunamiMessageTool", level=logging.INFO))
+            "gov.noaa.gsl.common.atoms.hazardservices", "TsunamiMessageTool", level=logging.INFO))
         self.logger.setLevel(logging.INFO)
 
     def defineScriptMetadata(self):

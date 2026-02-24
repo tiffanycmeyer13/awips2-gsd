@@ -384,9 +384,6 @@ class Format(NWS_Base_Formatter.Format):
             self.amm.getEvaluationEarliestEstimatedArrivalTime_text(eventDict, self.fieldNameSuffix,
                                                                     self.productRegion, False)
             ]
-        if self.productRegion == "Hi":
-            phraseList += [("Further messages will be issued hourly or sooner as conditions "
-                            "warrant until the threat to Hawaii has passed.")]
         for phrase in phraseList:
             wrappedPhrase = self.amm.wrapText(phrase)
             text += f"{wrappedPhrase}\n\n"
@@ -497,8 +494,7 @@ class Format(NWS_Base_Formatter.Format):
                 ]
         else:
             phraseList += [
-                ("This message will be updated in 30 minutes or sooner if "
-                 "the situation warrants."),
+                self.amm.getNextMsgText(productDict, "", self.fieldNameSuffix),
                 "Refer to the internet site tsunami.gov for more information.",
                 ("Authoritative information about the earthquake can be obtained "
                  "from the corresponding regional seismic network or the U.S. "

@@ -78,6 +78,9 @@ class MetaData(CommonMetaData.MetaData):
         details += self.cmdTsu.getPhysicalEventInfoAndForecastSeaLevelTables([self.hazardEvent],
                                                                              fieldNameSuffix,
                                                                              True)
+        if not self.hazardEvent.get("isFinalThreatMessage"):
+            details.append(self.cmdTsu.getNextMsgOptions(self.hazardEvent))
+
         details += self.idsHidden
         return details
 
@@ -98,6 +101,7 @@ class MetaData(CommonMetaData.MetaData):
                     "fieldName": "isFinalThreatMessage",
                     "label": "Final Threat Message",
                     "values": False,
+                    "refreshMetadata": True,
                     },
                 ]
             }

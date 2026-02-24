@@ -76,6 +76,9 @@ class MetaData(CommonMetaData.MetaData):
             self.getCAP_Fields(),
             ]
         details += self.cmdTsu.getPhyEventInfo(self.hazardEvent, fieldNameSuffix)
+        if self.hazardEvent.get("tisType", "tisLow") == "tisHigh":
+            details.append(self.cmdTsu.getNextMsgOptions(self.hazardEvent))
+
         details += self.idsHidden
         return details
 
@@ -95,6 +98,7 @@ class MetaData(CommonMetaData.MetaData):
             "values": tisType,
             "choices": self.tisEvaluationChoices(),
             "useNewValueOnRefresh": True,
+            "refreshMetadata": True,
             }
 
     def tisEvaluationChoices(self):
@@ -118,6 +122,7 @@ class MetaData(CommonMetaData.MetaData):
         return {
             "identifier": "tisLow",
             "displayString": "TIS no danger",
+            "refreshMetadata": True,
             }
 
     def tisHigh(self):
@@ -130,6 +135,7 @@ class MetaData(CommonMetaData.MetaData):
         return {
             "identifier": "tisHigh",
             "displayString": "TIS potential danger",
+            "refreshMetadata": True,
             }
 
     def tisFinal(self):
@@ -142,6 +148,7 @@ class MetaData(CommonMetaData.MetaData):
         return {
             "identifier": "tisFinal",
             "displayString": "TIS final",
+            "refreshMetadata": True,
             }
 
     def validate(self, hazardEvent):

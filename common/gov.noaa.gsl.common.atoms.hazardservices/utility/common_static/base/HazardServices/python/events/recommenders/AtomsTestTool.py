@@ -13,6 +13,8 @@ import AtomsMapUtilities
 import EventSetFactory
 import TsunamiRecommenderCommon
 from TsunamiRecommender import Recommender as TRECS
+from com.raytheon.uf.common.time import SimulatedTime
+from com.raytheon.viz.core.mode import CAVEMode
 
 
 class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
@@ -22,7 +24,7 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
 
         self.logger = logging.getLogger("AtomsTestTool")
         self.logger.addHandler(UFStatusHandler.UFStatusHandler(
-            "gov.noaa.gsd.uf.common.recommenders.hydro", "AtomsTestTool",
+            "gov.noaa.gsl.common.atoms.hazardservices", "AtomsTestTool",
             level=logging.INFO))
         self.logger.setLevel(logging.INFO)
 
@@ -147,6 +149,9 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
             if testThisPhyEvent:
                 failAndWarnMessages = []
                 self.pem.setSelected(phyEvent)
+                if not (CAVEMode.OPERATIONAL == CAVEMode.getMode()):
+                    print("AtomsTestTool ===== Practice Mode, therefore setting cave clock to origin time of physical event =====")
+                    SimulatedTime.getSystemTime().setTime(phyEvent.getRefTime())
                 print(f"AtomsTestTool ===== Testing {phyEventId} =====")
                 '''
                 Dump Brkpt Segments - To dump brkpt segments, add an empty [] entry to the
@@ -416,7 +421,8 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
         # should determine if there should be a ThreatDB hit by Physical Event ID instead.
         # if phyEvent.getIsKnownEvent() == True:
         #     return ["Hi"]
-        if phyEvent.getCustomId().startswith("AmSam.15"):
+        if (phyEvent.getCustomId().startswith("AmSam.15.0S.172.0W") or
+            phyEvent.getCustomId().startswith("AmSam.15.5S.175.5W.Shallow")):
             return ["As"]
         else:
             return None
@@ -517,8 +523,8 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
             "Bering.Cat5.1000miDeep80km": [],
             "Bering.Cat5.Deep": [],
             "Bering.Cat6.1000miDeep": [{"TS.W": ["Chignik Bay to Unimak Pass", "Unimak Pass to Samalga Pass", "Samalga Pass to Amchitka Pass", "Amchitka Pass to Attu"]}],
-            "Bering.Cat7.1000miDeep": [{"TS.W": ["Bristol Bay and the Pribilof Islands"]}],
-            "Bering.Cat7.Shallow": [{"TS.W": ["Bristol Bay and the Pribilof Islands"]}],
+            "Bering.Cat7.1000miDeep": [{"TS.W": ["Bristol Bay", "Kuskokwim Delta Coast and Nunivak Island"]}],
+            "Bering.Cat7.Shallow": [{"TS.W": ["Bristol Bay", "Kuskokwim Delta Coast and Nunivak Island"]}],
             "Bering.Nothing": [],
             "Carib.Cat1": [],
             "Carib.Cat2": [],
@@ -528,8 +534,8 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
             "DBRegion007aW_NTWC_ThreatDB": [{"TS.W": ["Chignik Bay to Unimak Pass", "Unimak Pass to Samalga Pass", "Samalga Pass to Amchitka Pass", "Amchitka Pass to Attu"]}],
             "DBRegion007bE_NTWC_ThreatDB": [{"TS.W": ["Chignik Bay to Unimak Pass", "Unimak Pass to Samalga Pass", "Samalga Pass to Amchitka Pass", "Amchitka Pass to Attu"]}],
             "DBRegion007bW_NTWC_ThreatDB": [{"TS.W": ["Chignik Bay to Unimak Pass", "Unimak Pass to Samalga Pass", "Samalga Pass to Amchitka Pass", "Amchitka Pass to Attu"]}],
-            "DBRegion008_NTWC_ThreatDB": [{"TS.Y": ["Bristol Bay and the Pribilof Islands"]}],
-            "DBRegion008_NTWC_ThreatDB.2": [{"TS.Y": ["Bristol Bay and the Pribilof Islands"]}],
+            "DBRegion008_NTWC_ThreatDB": [{"TS.Y": ["Bristol Bay", "Kuskokwim Delta Coast and Nunivak Island"]}],
+            "DBRegion008_NTWC_ThreatDB.2": [{"TS.Y": ["Bristol Bay", "Kuskokwim Delta Coast and Nunivak Island"]}],
             "DBRegion009_NTWC_ThreatDB": [
                 {"TS.W": ["Point Conception to Ragged Point", "Ragged Point to Davenport", "Davenport to Gualala River", "Gualala River to Mendo/Hum County Line", "Mendo/Hum County Line to Cape Mendocino", "Cape Mendocino to Humboldt/Del Norte Line", "Humboldt/Del Norte Line to The Oregon/Cal. Border", "The Oregon/Cal. Border to Douglas/Lane Line", "Douglas/Lane Line to Cascade Head", "Cascade Head to The Oregon/Wash. Border", "The Oregon/Wash. Border to The Wash./BC Border", "Strait of Georgia", "The Wash./BC Border to North Vancouver Island", "North Vancouver Island to The BC/Alaska Border", "Puget Sound"]},
                 {"TS.Y": ["The BC/Alaska Border to Cape Decision", "Cape Decision to Salisbury Sound", "Salisbury Sound to Cape Fairweather", "Cape Fairweather to Cape Suckling", "Cape Suckling to Hinchinbrook Entrance", "Hinchinbrook Entrance to Kennedy Entrance", "Kennedy Entrance to Chignik Bay", "Chignik Bay to Unimak Pass"]},
@@ -715,11 +721,11 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
                 {"TS.Y": ["North Vancouver Island to The BC/Alaska Border", "The BC/Alaska Border to Cape Decision"]},
                 {"TS.Y": ["Chignik Bay to Unimak Pass"]},
                 ],
-            "DBRegion054E_NTWC_ThreatDB": [{"TS.Y": ["Norton Sound/Saint Lawrence Island/Western AK Coast"]}],
-            "DBRegion054W_NTWC_ThreatDB": [{"TS.Y": ["Norton Sound/Saint Lawrence Island/Western AK Coast"]}],
+            "DBRegion054E_NTWC_ThreatDB": [{"TS.Y": ["Norton Sound/Saint Lawrence Island/Western AK Coast", "Kuskokwim Delta Coast and Nunivak Island"]}],
+            "DBRegion054W_NTWC_ThreatDB": [{"TS.Y": ["Norton Sound/Saint Lawrence Island/Western AK Coast", "Kuskokwim Delta Coast and Nunivak Island"]}],
             "DBRegion055_NTWC_ThreatDB": [{"TS.Y": ["Western AK from Cape Prince of Wales to Wainwright"]}],
             "DBRegion056_NTWC_ThreatDB": [{"TS.Y": ["Northern AK Border from Wainwright to the Canadian Border"]}],
-            "DBRegion057_NTWC_ThreatDB": [{"TS.W": ["Gulf of Saint Lawrence"]}],
+            "DBRegion057_NTWC_ThreatDB": [{"TS.W": ["Gulf of Saint Lawrence", "Meat Cove to Cape Ray"]}],
             "DBRegion058_NTWC_ThreatDB": [{"TS.A": ["North Vancouver Island to The BC/Alaska Border", "The BC/Alaska Border to Cape Decision", "Cape Decision to Salisbury Sound", "Salisbury Sound to Cape Fairweather", "Cape Fairweather to Cape Suckling"]}],
             "DBRegion059_NTWC_ThreatDB": [{"TS.A": ["The BC/Alaska Border to Cape Decision", "Cape Decision to Salisbury Sound", "Salisbury Sound to Cape Fairweather", "Cape Fairweather to Cape Suckling", "Cape Suckling to Hinchinbrook Entrance", "Hinchinbrook Entrance to Kennedy Entrance"]}],
             "DBRegion060_NTWC_ThreatDB": [{"TS.A": ["Amchitka Pass to Attu"]}],
@@ -756,7 +762,7 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
             "EcGc.Cat5.50km": [{"TS.W": self.getGulfOfAmericaBreakPointSegmentNames()}],
             "EcGc.Cat5.80km": [{"TS.W": self.getGulfOfAmericaBreakPointSegmentNames()}],
             "EcGc.Cat5.Offshore": [{"TS.W": self.getGulfOfAmericaBreakPointSegmentNames()}],
-            "EcGc.Cat6.80km": [{"TS.W": ["Gulf of Saint Lawrence"]}],
+            "EcGc.Cat6.80km": [{"TS.W": ["Gulf of Saint Lawrence", "Meat Cove to Cape Ray"]}],
             "EcGc.Cat7.can": [{"TS.W": ["Charlesville to Chezzetcook Inlet", "Chezzetcook Inlet to Meat Cove"]}],
             "EcGc.Cat7.us": [{"TS.W": ["Altamaha Sound to South Santee River", "South Santee River to Surf City", "Surf City to Duck"]}],
             "EcGc.Cat8.us": [
@@ -821,7 +827,11 @@ class Recommender(TsunamiRecommenderCommon.TsunamiRecommenderCommon):
                 {"TS.W": ["American Samoa"]},
                 {"TS.A": ["Hawaii", "Maui", "Honolulu", "Kauai"]},
                 ],
-            "AmSam.15.5S.175.5W": [{"TS.W": ["American Samoa"]}],
+            "AmSam.15.5S.175.5W.Deep": [],
+            "AmSam.15.5S.175.5W.Shallow": [
+                {"TS.W": ["American Samoa"]},
+                {"TS.A": ["Hawaii", "Maui", "Honolulu", "Kauai"]},
+                ],
             "AmSam.Cat1a": [],
             "AmSam.Cat1b": [{"TS.Y": ["American Samoa"]}],
             "AmSam.Cat1c": [

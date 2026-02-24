@@ -112,8 +112,7 @@ class Format(NWS_Base_Formatter.Format):
                  "dangerous to coasts outside the source region."),
                 (f"The {warningCenter} is analyzing the event to determine the level of "
                  "danger. More information will be issued as it becomes available."),
-                ("Messages will be issued hourly to keep you informed of the progress "
-                 "of this event."),
+                self.amm.getNextMsgText(eventDict, "", self.fieldNameSuffix),
                 ]
         elif self.tisType == "tisFinal":
             phraseList += [(f"This will be the final {warningCenter} statement issued "

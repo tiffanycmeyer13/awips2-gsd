@@ -44,8 +44,11 @@ AtomsProductLocationInfo = {
     },
     "Davenport to Gualala River": {
         "breakPointNumber": 5,
-        "inclusionReferencePoints": {"San Francisco Bay": True},
-        "inclusionSpecialProcedures": {"San Francisco Bay": False, "Suisun Bay": False},
+        "inclusionReferencePoints": {},
+        "inclusionSpecialProcedures": {
+            "San Francisco Bay": False,
+            "Suisun Bay": False,
+            },
         "special": False,
         "states": ["California"],
         "subregion": "California",
@@ -108,14 +111,22 @@ AtomsProductLocationInfo = {
     },
     "The Oregon/Wash. Border to The Wash./BC Border": {
         "breakPointNumber": 13,
-        "inclusionReferencePoints": {"Columbia River Estuary": True, "Cape Flattery": True},
-        "inclusionSpecialProcedures": {"Grays Bay": False, "Puget Sound": False,
-                                       "Island County": True, "Possession Sound": True,
-                                       "Southern Strait of Juan de Fuca": True,
-                                       "Northern Strait of Juan de Fuca": False,
-                                       "Western Skagit and Northwestern Snohomish Counties": True,
-                                       "San Juan Islands": True, "Western Whatcom County": True,
-                                       "Strait of Georgia": False},
+        "inclusionReferencePoints": {
+            "Columbia River Estuary": True,
+            "Cape Flattery": True,
+            },
+        "inclusionSpecialProcedures": {
+            "Grays Bay": False,
+            "Puget Sound": False,
+            "Island County": True,
+            "Possession Sound": True,
+            "Southern Strait of Juan de Fuca": True,
+            "Northern Strait of Juan de Fuca": False,
+            "Western Skagit and Northwestern Snohomish Counties": True,
+            "San Juan Islands": True,
+            "Western Whatcom County": True,
+            "Strait of Georgia": False,
+            },
         "special": False,
         "states": ["Washington"],
         "subregion": "Washington",
@@ -178,16 +189,25 @@ AtomsProductLocationInfo = {
     },
     "Hinchinbrook Entrance to Kennedy Entrance": {
         "breakPointNumber": 21,
-        "inclusionReferencePoints": {"City of Kenai": False},
-        "inclusionSpecialProcedures": {},
+        "inclusionReferencePoints": {},
+        "inclusionSpecialProcedures": {
+            "Lower Cook Inlet Region south of Kalgin Island": True,
+            "Northwest Kenai Peninsula": True,
+            "Upper Cook Inlet": False,
+            },
+
         "special": False,
         "states": ["Alaska"],
         "subregion": "South Alaska and the Alaska Peninsula",
     },
     "Kennedy Entrance to Chignik Bay": {
         "breakPointNumber": 22,
-        "inclusionReferencePoints": {"City of Kenai": False},
-        "inclusionSpecialProcedures": {},
+        "inclusionReferencePoints": {},
+        "inclusionSpecialProcedures": {
+            "Lower Cook Inlet Region south of Kalgin Island": False,
+            "Northwest Kenai Peninsula": False,
+            "Upper Cook Inlet": False,
+            },
         "special": False,
         "states": ["Alaska"],
         "subregion": "South Alaska and the Alaska Peninsula",
@@ -210,8 +230,8 @@ AtomsProductLocationInfo = {
     },
     "Samalga Pass to Amchitka Pass": {
         "breakPointNumber": 25,
-        "inclusionReferencePoints": {"the Pribilof Islands": True},
-        "inclusionSpecialProcedures": {},
+        "inclusionReferencePoints": {},
+        "inclusionSpecialProcedures": {"Pribilof Islands": True},
         "special": False,
         "states": ["Alaska"],
         "subregion": "Aleutian Islands",
@@ -317,7 +337,7 @@ AtomsProductLocationInfo = {
     },
     "Northwest Kenai Peninsula": {
         "breakPointNumber": 88,
-        "inclusionReferencePoints": {},
+        "inclusionReferencePoints": {"City of Kenai": True},
         "inclusionSpecialProcedures": {},
         "special": True,
         "states": ["Alaska"],
@@ -329,29 +349,45 @@ AtomsProductLocationInfo = {
         "special": True,
         "states": ["Alaska"],
     },
-    "Bristol Bay and the Pribilof Islands": {
+    "Pribilof Islands": {
         "breakPointNumber": 90,
         "inclusionReferencePoints": {},
         "inclusionSpecialProcedures": {},
         "special": True,
         "states": ["Alaska"],
     },
-    "Norton Sound/Saint Lawrence Island/Western AK Coast": {
+    "Bristol Bay": {
         "breakPointNumber": 91,
         "inclusionReferencePoints": {},
-        "inclusionSpecialProcedures": {},
+        "inclusionSpecialProcedures": {
+            "Pribilof Islands": True,
+            },
         "special": True,
         "states": ["Alaska"],
     },
-    "Western AK from Cape Prince of Wales to Wainwright": {
+    "Kuskokwim Delta Coast and Nunivak Island": {
         "breakPointNumber": 92,
         "inclusionReferencePoints": {},
         "inclusionSpecialProcedures": {},
         "special": True,
         "states": ["Alaska"],
     },
-    "Northern AK Border from Wainwright to the Canadian Border": {
+    "Norton Sound/Saint Lawrence Island/Western AK Coast": {
         "breakPointNumber": 93,
+        "inclusionReferencePoints": {},
+        "inclusionSpecialProcedures": {},
+        "special": True,
+        "states": ["Alaska"],
+    },
+    "Western AK from Cape Prince of Wales to Wainwright": {
+        "breakPointNumber": 94,
+        "inclusionReferencePoints": {},
+        "inclusionSpecialProcedures": {},
+        "special": True,
+        "states": ["Alaska"],
+    },
+    "Northern AK Border from Wainwright to the Canadian Border": {
+        "breakPointNumber": 95,
         "inclusionReferencePoints": {},
         "inclusionSpecialProcedures": {},
         "special": True,
@@ -542,7 +578,7 @@ AtomsProductLocationInfo = {
     "Meat Cove to Cape Ray": {
         "breakPointNumber": 126,
         "inclusionReferencePoints": {},
-        "inclusionSpecialProcedures": {},
+        "inclusionSpecialProcedures": {"Gulf of Saint Lawrence": False},
         "special": False,
         "states": ["Nova Scotia", "Newfoundland and Labrador"],
     },
