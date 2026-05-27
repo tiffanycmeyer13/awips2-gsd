@@ -1,0 +1,45 @@
+package gov.noaa.gsl.common.dataplugin.atomsSeaLevelObs;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.raytheon.uf.common.serialization.annotations.DynamicSerialize;
+import com.raytheon.uf.common.serialization.annotations.DynamicSerializeElement;
+
+@DynamicSerialize
+public enum SLOObsType {
+    TROUGH2PEAK("Trough to Peak"),
+    TROUGH2ZERO("Trough to Zero"),
+    ZERO2PEAK("Zero to Peak"),
+    FIRSTARRIVAL("First Arrival"),
+    GAUGESTOPPED("Gauge Stopped Reporting");
+
+    private static final Map<String, SLOObsType> BY_LABEL = new HashMap<>();
+
+    @DynamicSerializeElement
+    public final String label;
+
+    /**
+     * I have no idea why Eclipse wont let me save this as PRIVATE
+     *
+     * @param label
+     */
+    SLOObsType(String label) {
+        this.label = label;
+    }
+
+    static {
+        for (SLOObsType e : values()) {
+            BY_LABEL.put(e.label, e);
+        }
+    }
+
+    public static SLOObsType valueOfLabel(String label) {
+        return BY_LABEL.get(label);
+    }
+
+    public String toLabel() {
+        return label;
+    }
+
+}

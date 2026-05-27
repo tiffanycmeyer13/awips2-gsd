@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Caribe.PTWC.Cat1c</EventID>
+  <EventType>Seismic</EventType>
+  <Source>PTWC</Source>
+  <OriginTime>2022-09-07T12:15:32</OriginTime>
+  <Latitude>26.0</Latitude>
+  <Longitude>-81.0</Longitude>
+  <Originator>PTWC</Originator>
+  <CreationTime>2022-09-07T12:16:38</CreationTime>
+  <DistanceToCoast>-38</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.9</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>10.0</Depth>
+    <AzimuthalCoverage>244</AzimuthalCoverage>
+    <Stations>14</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>DK_RW_20220901</EventID>
+  <EventType>Seismic</EventType>
+  <Source>NTWC</Source>
+  <OriginTime>2022-09-01T12:15:32</OriginTime>
+  <Latitude>45.15</Latitude>
+  <Longitude>-124.75</Longitude>
+  <Originator>NTWC</Originator>
+  <CreationTime>2022-09-01T12:16:38</CreationTime>
+  <DistanceToCoast>58</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.7</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>10.0</Depth>
+    <AzimuthalCoverage>244</AzimuthalCoverage>
+    <Stations>14</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

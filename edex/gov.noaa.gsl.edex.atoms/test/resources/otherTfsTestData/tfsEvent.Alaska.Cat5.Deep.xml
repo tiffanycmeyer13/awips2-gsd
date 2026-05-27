@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Alaska.Cat5.Deep</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2021-05-09T00:16:06</CreationTime>
+  <OriginTime>2022-05-18T00:06:06</OriginTime>
+  <Latitude>45.98</Latitude>
+  <Longitude>-168.43</Longitude>
+  <DistanceToCoast>748</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>7.8</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>132</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

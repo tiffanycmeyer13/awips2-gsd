@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="gov.noaa.gsl.viz.pem.pemDaos">
+      <pemDAO physicalEventType="SEISMIC" class="gov.noaa.gsl.viz.atoms.AtomsPhysicalEventDAO"/>
+      <pemDAO physicalEventType="VOLCANIC" class="gov.noaa.gsl.viz.atoms.AtomsPhysicalEventDAO"/>
+      <pemDAO physicalEventType="LANDSLIDE" class="gov.noaa.gsl.viz.atoms.AtomsPhysicalEventDAO"/>
+      <pemDAO physicalEventType="UNKNOWN" class="gov.noaa.gsl.viz.atoms.AtomsPhysicalEventDAO"/>
+   </extension>
+   <extension point="gov.noaa.gsl.viz.pem.pemDialogTabs">
+      <pemDialogTab physicalEventType="SEISMIC" orderIndex = "0" title = "Seismic Data" class="gov.noaa.gsl.viz.atoms.ui.SeismicDataTab"/>
+      <pemDialogTab physicalEventType="VOLCANIC" orderIndex = "0" title = "Volcanic Data" class="gov.noaa.gsl.viz.atoms.ui.VolcanicDataTab"/>
+      <pemDialogTab physicalEventType="LANDSLIDE" orderIndex = "0" title = "Landslide Data" class="gov.noaa.gsl.viz.atoms.ui.LandslideDataTab"/>
+      <pemDialogTab physicalEventType="UNKNOWN" orderIndex = "0" title = "Unknown Data" class="gov.noaa.gsl.viz.atoms.ui.UnknownDataTab"/>
+   </extension>
+   <extension point="gov.noaa.gsl.viz.pem.pemDialogColumns">
+      <pemDialogColumnBuilder physicalEventType="SEISMIC" class="gov.noaa.gsl.viz.atoms.ui.SeismicDataColumnSpecBuilder"/>
+      <pemDialogColumnBuilder physicalEventType="VOLCANIC" class="gov.noaa.gsl.viz.atoms.ui.VolcanicDataColumnSpecBuilder"/>
+      <pemDialogColumnBuilder physicalEventType="LANDSLIDE" class="gov.noaa.gsl.viz.atoms.ui.LandslideDataColumnSpecBuilder"/>
+      <pemDialogColumnBuilder physicalEventType="UNKNOWN" class="gov.noaa.gsl.viz.atoms.ui.UnknownDataColumnSpecBuilder"/>
+    </extension>
+   <extension point="gov.noaa.gsl.viz.pem.phyEvtPlotters">
+      <pePlotter physicalEventType="SEISMIC" class="gov.noaa.gsl.viz.atoms.plot.SeismicPlotter"/>
+      <pePlotter physicalEventType="VOLCANIC" class="gov.noaa.gsl.viz.atoms.plot.VolcanicPlotter"/>
+      <pePlotter physicalEventType="LANDSLIDE" class="gov.noaa.gsl.viz.atoms.plot.LandslidePlotter"/>
+      <pePlotter physicalEventType="UNKNOWN" class="gov.noaa.gsl.viz.atoms.plot.UnknownPlotter"/>
+   </extension>
+</plugin>

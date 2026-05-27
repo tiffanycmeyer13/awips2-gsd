@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="fcstsRequestHandler" class="gov.noaa.gsl.edex.atomsForecast.handlers.TsunamiForecastsRequestHandler" />
+    <bean id="fcstInfosRequestHandler" class="gov.noaa.gsl.edex.atomsForecast.handlers.TsunamiForecastInfosRequestHandler" />
+    <bean id="bestFcstRequestHandler" class="gov.noaa.gsl.edex.atomsForecast.handlers.MostRecentTsunamiForecastRequestHandler" />
+    <bean id="warningPointsRequestHandler" class="gov.noaa.gsl.edex.atomsForecast.handlers.WarningPointsRequestHandler" />
+
+    <bean factory-bean="handlerRegistry" factory-method="register">
+         <constructor-arg value="gov.noaa.gsl.common.dataplugin.atomsForecast.request.TsunamiForecastsRequest"/>
+         <constructor-arg ref="fcstsRequestHandler"/>
+    </bean>
+
+    <bean factory-bean="handlerRegistry" factory-method="register">
+         <constructor-arg value="gov.noaa.gsl.common.dataplugin.atomsForecast.request.TsunamiForecastInfosRequest"/>
+         <constructor-arg ref="fcstInfosRequestHandler"/>
+    </bean>
+
+    <bean factory-bean="handlerRegistry" factory-method="register">
+      <constructor-arg value="gov.noaa.gsl.common.dataplugin.atomsForecast.request.MostRecentTsunamiForecastRequest"/>
+      <constructor-arg ref="bestFcstRequestHandler"/>
+    </bean>
+
+    <bean factory-bean="handlerRegistry" factory-method="register">
+      <constructor-arg value="gov.noaa.gsl.common.dataplugin.atomsForecast.request.WarningPointsRequest"/>
+      <constructor-arg ref="warningPointsRequestHandler"/>
+    </bean>
+</beans>
+

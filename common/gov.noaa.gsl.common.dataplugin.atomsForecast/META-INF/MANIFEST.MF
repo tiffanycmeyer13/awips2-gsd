@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AtomsForecast
+Bundle-SymbolicName: gov.noaa.gsl.common.dataplugin.atomsForecast
+Bundle-Version: 1.0.0.qualifier
+Export-Package: gov.noaa.gsl.common.dataplugin.atomsForecast,
+ gov.noaa.gsl.common.dataplugin.atomsForecast.request,
+ gov.noaa.gsl.common.dataplugin.atomsForecast.response
+Require-Bundle: com.raytheon.uf.common.dataplugin;bundle-version="1.18.0",
+ com.raytheon.uf.common.serialization;bundle-version="1.18.0",
+ gov.noaa.gsl.common.dataplugin.atoms;bundle-version="1.0.0",
+ com.raytheon.uf.common.serialization.comm;bundle-version="1.14.0",
+ gov.noaa.gsl.common.dataplugin.pem;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: gov.noaa.gsl.common.dataplugin.atomsForecast

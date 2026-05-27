@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Bering.Cat4d_CPKH</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>PTWC</Originator>
+  <CreationTime>2021-05-11T22:00:00</CreationTime>
+  <OriginTime>2021-05-11T21:49:59</OriginTime>
+  <Latitude>62.8</Latitude>
+  <Longitude>178.3</Longitude>
+  <DistanceToCoast>-40</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>5.3</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>20</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

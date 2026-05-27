@@ -1,0 +1,19 @@
+<atomsEventData>
+  <EventID>Alaska.Cat8.Offshore.Test</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2021-05-09T00:16:06</CreationTime>
+  <OriginTime>2022-05-18T00:06:06</OriginTime>
+  <Latitude>49.1</Latitude>
+  <Longitude>-166.6</Longitude>
+  <DistanceToCoast>426</DistanceToCoast>
+  <IsTest>True</IsTest>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>7.9</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>8</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

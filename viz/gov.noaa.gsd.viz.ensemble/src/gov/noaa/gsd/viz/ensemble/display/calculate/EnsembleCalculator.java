@@ -9,10 +9,10 @@ import java.util.List;
 
 import javax.measure.Unit;
 
+import org.geotools.api.referencing.FactoryException;
+import org.geotools.api.referencing.operation.TransformException;
 import org.geotools.coverage.grid.GridEnvelope2D;
 import org.geotools.coverage.grid.GridGeometry2D;
-import org.opengis.referencing.FactoryException;
-import org.opengis.referencing.operation.TransformException;
 
 import com.raytheon.uf.common.geospatial.data.GeographicDataSource;
 import com.raytheon.uf.common.geospatial.interpolation.BilinearInterpolation;

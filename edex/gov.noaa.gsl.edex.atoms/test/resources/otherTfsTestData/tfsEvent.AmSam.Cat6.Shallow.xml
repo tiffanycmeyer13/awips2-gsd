@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>AmSam.Cat6.Shallow</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2024-02-21T00:00:00</CreationTime>
+  <OriginTime>2024-02-21T00:00:00</OriginTime>
+  <Latitude>-17.07</Latitude>
+  <Longitude>179.2</Longitude>
+  <DistanceToCoast>10</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>7.0</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>6</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>AmSam.15.5S.175.5W.Shallow</EventID>
+  <EventType>Seismic</EventType>
+  <Source>NTWC</Source>
+  <OriginTime>2023-01-06T12:15:00</OriginTime>
+  <Latitude>-15.72</Latitude>
+  <Longitude>-175.29</Longitude>
+  <Originator>NTWC</Originator>
+  <CreationTime>2023-01-06T12:17:00</CreationTime>
+  <DistanceToCoast>8</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.7</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>40.0</Depth>
+    <AzimuthalCoverage>260</AzimuthalCoverage>
+    <Stations>16</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

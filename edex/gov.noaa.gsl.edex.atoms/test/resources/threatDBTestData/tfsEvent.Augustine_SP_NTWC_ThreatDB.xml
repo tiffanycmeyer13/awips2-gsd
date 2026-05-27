@@ -1,0 +1,14 @@
+<atomsEventData>
+  <EventID>Augustine_SP_NTWC_ThreatDB</EventID>
+  <EventType>Volcanic</EventType>
+  <IsKnown>True</IsKnown>
+  <Source>NTWC</Source>
+  <OriginTime>2023-01-06T12:15:00</OriginTime>
+  <Latitude>59.39</Latitude>
+  <Longitude>-153.5</Longitude>
+  <Originator>NTWC</Originator>
+  <CreationTime>2023-01-06T12:17:00</CreationTime>
+  <DistanceToCoast>20</DistanceToCoast>
+  <atomsEventDataRecord>
+  </atomsEventDataRecord>
+</atomsEventData>

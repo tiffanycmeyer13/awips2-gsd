@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapStylePreferenceStore>
+    <preferences>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Zones - PR and VI</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" opacity="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Zones - Guam and CNMI</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" opacity="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Zones - Hawaii</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" opacity="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Zones - American Samoa</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" opacity="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+         <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>Procedural Regions</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="cyan1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+         <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>NTWC Analysis Regions</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" opacity="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+         <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Analysis Regions</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="cyan1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+         <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>NTWC Break Point Segments - EcGc</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="cyan1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>NTWC Break Point Segments - AkBcWc</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Break Point Segments - Guam</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Break Point Segments - Hawaii</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Break Point Segments - Puerto Rico</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Break Point Segments - American Samoa</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>All Tsunami Break Point Segments</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>Tsunami Seismic Stations</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="coral"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pointCapability" pointStyle="CROSS"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>Tsunami Sealevel Stations</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="violet"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pointCapability" pointStyle="CROSS"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>All Tsunami Break Points</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="cyan1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pointCapability" pointStyle="CROSS"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>NTWC Break Points</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="cyan1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pointCapability" pointStyle="CROSS"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Break Points</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="cyan1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pointCapability" pointStyle="CROSS"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Warning Points</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="cyan1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pointCapability" pointStyle="CROSS"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>NTWC Forecast Points - SIFT</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="burlywood"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pointCapability" pointStyle="CROSS"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Forecast Points - RIFT</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="orange red"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="fid" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pointCapability" pointStyle="CROSS"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+            </value>
+        </entry>
+         <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Alert Regions</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="cyan1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.34"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>Tsunami Forecast Points</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pointCapability" pointStyle="CROSS"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>NTWC Special Procedure Regions - AkBcWc</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="white"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>NTWC Special Procedure Regions - EcGc</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="white"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>NTWC Threat Database Source Regions</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="white"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Threat Database Source Regions</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="white"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>NTWC Threat Database Target Regions</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="white"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>PTWC Threat Database Target Regions</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="white"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>Tsunami AOR Regions</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="2.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="source" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="source" opacity="0.41"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>Flinn Engdahl</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.5"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="yellow1"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="shadeableCapability" shadingField="name" opacity="0.35"/>
+            </value>
+        </entry>
+        <entry>
+            <key>
+                <perspective>com.raytheon.uf.viz.d2d.ui.perspectives.D2D5Pane</perspective>
+                <mapName>NTWC Forecast Points - ATFM1</mapName>
+            </key>
+            <value>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="labelableCapability" labelField="name" xOffset="0" yOffset="0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="colorableCapability" colorAsString="violet"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="magnificationCapability" magnification="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="outlineCapability" outlineWidth="1" outlineOn="true" lineStyle="SOLID"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="densityCapability" density="1.0"/>
+                <capability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pointCapability" pointStyle="CROSS"/>
+            </value>
+        </entry>
+    </preferences>
+</mapStylePreferenceStore>
+

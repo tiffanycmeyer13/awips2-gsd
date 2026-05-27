@@ -1,0 +1,18 @@
+<atomsTsunamiForecastData>
+  <EventID>8</EventID>
+  <Source>NTWC</Source>
+  <ForecastType>SIFT</ForecastType>
+  <CreationTime>2021-06-29T02:32:23</CreationTime>
+  <ForecastRunTime>2021-06-29T03:33:33</ForecastRunTime>
+  <atomsForecastRecord>
+    <StationID>ESM</StationID>
+    <ArrivalTime>2021-08-08T17:17:42</ArrivalTime>
+    <Amplitude>00.256</Amplitude>
+  </atomsForecastRecord>
+  <atomsForecastRecord>
+    <StationID>BLT</StationID>
+    <ArrivalTime>2021-08-08T17:18:41</ArrivalTime>
+    <Amplitude>00.448</Amplitude>
+    <Duration>90</Duration>
+  </atomsForecastRecord>
+</atomsTsunamiForecastData>

@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Guam.Cat1c</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2024-02-21T00:00:00</CreationTime>
+  <OriginTime>2024-02-21T00:00:00</OriginTime>
+  <Latitude>15.36</Latitude>
+  <Longitude>145.15</Longitude>
+  <DistanceToCoast>58</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.3</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>6</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

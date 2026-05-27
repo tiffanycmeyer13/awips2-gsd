@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Hawaii.Cat2a</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2024-02-21T00:00:00</CreationTime>
+  <OriginTime>2024-02-21T00:00:00</OriginTime>
+  <Latitude>18.76</Latitude>
+  <Longitude>-156.05</Longitude>
+  <DistanceToCoast>36</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>7.0</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>8</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

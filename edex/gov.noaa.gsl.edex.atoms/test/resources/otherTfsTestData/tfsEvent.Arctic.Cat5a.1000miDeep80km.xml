@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>Arctic.Cat5a.1000miDeep80km</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>NTWC</Originator>
+  <CreationTime>2021-05-09T00:16:06</CreationTime>
+  <OriginTime>2022-05-18T00:06:06</OriginTime>
+  <Latitude>70.53</Latitude>
+  <Longitude>-146.03</Longitude>
+  <DistanceToCoast>36</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.2</PreferredMagnitude>
+    <PreferredMagType>UNKNOWN</PreferredMagType>
+    <Depth>1610</Depth>
+    <AzimuthalCoverage>60</AzimuthalCoverage>
+    <Stations>6</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

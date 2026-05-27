@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>7</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <Originator>PTWC</Originator>
+  <CreationTime>2021-07-07T07:17:17</CreationTime>
+  <OriginTime>2021-07-07T07:07:07</OriginTime>
+  <Latitude>11.1</Latitude>
+  <Longitude>111.1</Longitude>
+  <DistanceToCoast>215</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.7</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>27</Depth>
+    <AzimuthalCoverage>77</AzimuthalCoverage>
+    <Stations>77</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

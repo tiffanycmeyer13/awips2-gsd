@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>RW_20220909_PR</EventID>
+  <EventType>Seismic</EventType>
+  <Source>PTWC</Source>
+  <OriginTime>2022-09-09T21:15:32</OriginTime>
+  <Latitude>16.1455</Latitude>
+  <Longitude>-69.9291</Longitude>
+  <Originator>PTWC</Originator>
+  <CreationTime>2022-09-09T21:16:38</CreationTime>
+  <DistanceToCoast>227</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.6</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>10.0</Depth>
+    <AzimuthalCoverage>244</AzimuthalCoverage>
+    <Stations>14</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

@@ -1,0 +1,19 @@
+<atomsEventData>
+  <EventID>1</EventID>
+  <Name>A Big Earthquake</Name>
+  <EventType>SEISMIC</EventType>
+  <Source>NTWC</Source>
+  <Originator>PTWC</Originator>
+  <CreationTime>2021-01-11T11:11:11</CreationTime>
+  <OriginTime>2021-01-11T10:10:10</OriginTime>
+  <Latitude>38.0</Latitude>
+  <Longitude>160.0</Longitude>
+  <DistanceToCoast>1184</DistanceToCoast>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.8</PreferredMagnitude>
+    <PreferredMagType>MOMENT</PreferredMagType>
+    <Depth>11</Depth>
+    <AzimuthalCoverage>17</AzimuthalCoverage>
+    <Stations>11</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

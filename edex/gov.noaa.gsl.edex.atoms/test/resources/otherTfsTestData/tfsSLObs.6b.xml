@@ -1,0 +1,24 @@
+<atomsSeaLevelObservations>
+  <EventID>6</EventID>
+  <Source>PTWC</Source>
+  <CreationTime>2022-03-08T18:38:22</CreationTime>
+  <atomsSeaLevelRecord>
+    <StationID>DNWP</StationID>
+    <SensorType>PR</SensorType>
+    <ObservationType>ZERO_TO_PEAK</ObservationType>
+    <StartTime>2022-03-11T11:11:11</StartTime>
+    <EndTime>2021-03-11T22:22:22</EndTime>
+    <Period>12.2</Period>
+    <Amplitude>12.3</Amplitude>
+    <Measurement1Clipped>False</Measurement1Clipped>
+    <Measurement2Clipped>True</Measurement2Clipped>
+  </atomsSeaLevelRecord>
+  <atomsSeaLevelRecord>
+    <StationID>BMDA</StationID>
+    <SensorType>PRS</SensorType>
+    <ObservationType>FIRST_ARRIVAL</ObservationType>
+    <StartTime>2022-03-11T55:55:55</StartTime>
+    <TsunamiDetected>False</TsunamiDetected>
+  </atomsSeaLevelRecord>
+</atomsSeaLevelObservations>
+

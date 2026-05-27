@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AtomsSeaLevelObs
+Bundle-SymbolicName: gov.noaa.gsl.common.dataplugin.atomsSeaLevelObs
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: GSL
+Automatic-Module-Name: gov.noaa.gsl.common.dataplugin.atomsSeaLevelObs
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Require-Bundle: gov.noaa.gsl.common.dataplugin.atoms;bundle-version="1.0.0",
+ com.raytheon.uf.common.dataplugin;bundle-version="1.18.0",
+ com.raytheon.uf.common.serialization;bundle-version="1.18.0",
+ com.raytheon.uf.common.serialization.comm;bundle-version="1.14.0",
+ gov.noaa.gsl.common.dataplugin.pem;bundle-version="1.0.0"
+Export-Package: gov.noaa.gsl.common.dataplugin.atomsSeaLevelObs,
+ gov.noaa.gsl.common.dataplugin.atomsSeaLevelObs.request,
+ gov.noaa.gsl.common.dataplugin.atomsSeaLevelObs.response

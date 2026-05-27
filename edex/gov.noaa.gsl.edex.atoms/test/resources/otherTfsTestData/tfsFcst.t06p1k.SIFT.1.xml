@@ -1,0 +1,2881 @@
+<?xml version='1.0' encoding='utf-8'?>
+<atomsTsunamiForecastData>
+<EventID>t06p1k</EventID>
+<Source>NTWC</Source>
+<ForecastType>SIFT</ForecastType>
+<CreationTime>2025-08-14T17:32:07</CreationTime>
+<ForecastRunTime>2025-07-29T23:15:00</ForecastRunTime>
+<atomsForecastRecord>
+  <StationID>5ST</StationID>
+  <ArrivalTime>2025-07-30T05:43:00</ArrivalTime>
+  <Amplitude>0.24</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ABD</StationID>
+  <ArrivalTime>2025-07-30T08:06:00</ArrivalTime>
+  <Amplitude>0.132</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ABY</StationID>
+  <ArrivalTime>2025-07-30T06:26:00</ArrivalTime>
+  <Amplitude>0.042</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ACJ</StationID>
+  <ArrivalTime>2025-07-30T14:15:00</ArrivalTime>
+  <Amplitude>0.135</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ACP</StationID>
+  <ArrivalTime>2025-07-30T11:55:00</ArrivalTime>
+  <Amplitude>0.204</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ACT</StationID>
+  <ArrivalTime>2025-07-30T08:34:00</ArrivalTime>
+  <Amplitude>0.065</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ADK</StationID>
+  <ArrivalTime>2025-07-30T01:48:00</ArrivalTime>
+  <Amplitude>0.524</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AFO</StationID>
+  <ArrivalTime>2025-07-30T08:55:00</ArrivalTime>
+  <Amplitude>0.221</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AGN</StationID>
+  <ArrivalTime>2025-07-30T01:30:00</ArrivalTime>
+  <Amplitude>0.12</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AKE</StationID>
+  <ArrivalTime>2025-07-30T14:23:00</ArrivalTime>
+  <Amplitude>0.077</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AKT</StationID>
+  <ArrivalTime>2025-07-30T02:55:00</ArrivalTime>
+  <Amplitude>0.23</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AKW</StationID>
+  <ArrivalTime>2025-07-30T13:26:00</ArrivalTime>
+  <Amplitude>0.057999999999999996</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ALA</StationID>
+  <ArrivalTime>2025-07-30T08:13:00</ArrivalTime>
+  <Amplitude>0.132</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ALI</StationID>
+  <ArrivalTime>2025-07-30T00:38:00</ArrivalTime>
+  <Amplitude>0.99</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ALT</StationID>
+  <ArrivalTime>2025-07-30T04:08:00</ArrivalTime>
+  <Amplitude>0.028999999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AMA</StationID>
+  <ArrivalTime>2025-07-30T15:37:00</ArrivalTime>
+  <Amplitude>0.069</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AMK</StationID>
+  <ArrivalTime>2025-07-30T01:01:00</ArrivalTime>
+  <Amplitude>1.3230000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AMN</StationID>
+  <ArrivalTime>2025-07-30T07:37:00</ArrivalTime>
+  <Amplitude>0.303</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AMP</StationID>
+  <ArrivalTime>2025-07-30T01:02:00</ArrivalTime>
+  <Amplitude>0.755</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AMV</StationID>
+  <ArrivalTime>2025-07-30T08:57:00</ArrivalTime>
+  <Amplitude>0.11900000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ANA</StationID>
+  <ArrivalTime>2025-07-30T09:46:00</ArrivalTime>
+  <Amplitude>0.275</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ANC</StationID>
+  <ArrivalTime>2025-07-30T07:45:00</ArrivalTime>
+  <Amplitude>0.015</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ANT</StationID>
+  <ArrivalTime>2025-07-30T18:58:00</ArrivalTime>
+  <Amplitude>0.315</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>API</StationID>
+  <ArrivalTime>2025-07-30T08:53:00</ArrivalTime>
+  <Amplitude>0.835</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ARI</StationID>
+  <ArrivalTime>2025-07-30T18:53:00</ArrivalTime>
+  <Amplitude>0.38299999999999995</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ARN</StationID>
+  <ArrivalTime>2025-07-30T07:09:00</ArrivalTime>
+  <Amplitude>0.524</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ASS</StationID>
+  <ArrivalTime>2025-07-30T05:46:00</ArrivalTime>
+  <Amplitude>0.168</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AST</StationID>
+  <ArrivalTime>2025-07-30T07:37:00</ArrivalTime>
+  <Amplitude>0.099</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ATI</StationID>
+  <ArrivalTime>2025-07-30T18:27:00</ArrivalTime>
+  <Amplitude>0.526</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ATK</StationID>
+  <ArrivalTime>2025-07-30T02:07:00</ArrivalTime>
+  <Amplitude>0.294</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ATU</StationID>
+  <ArrivalTime>2025-07-30T00:45:00</ArrivalTime>
+  <Amplitude>1.7</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AUK</StationID>
+  <ArrivalTime>2025-07-30T08:11:00</ArrivalTime>
+  <Amplitude>0.391</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AVN</StationID>
+  <ArrivalTime>2025-07-30T08:19:00</ArrivalTime>
+  <Amplitude>0.047</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AVO</StationID>
+  <ArrivalTime>2025-07-30T09:44:00</ArrivalTime>
+  <Amplitude>0.11</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>AVT</StationID>
+  <ArrivalTime>2025-07-30T02:54:00</ArrivalTime>
+  <Amplitude>0.127</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BAH</StationID>
+  <ArrivalTime>2025-07-30T16:17:00</ArrivalTime>
+  <Amplitude>0.11599999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BAL</StationID>
+  <ArrivalTime>2025-07-30T15:18:00</ArrivalTime>
+  <Amplitude>0.36200000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BAM</StationID>
+  <ArrivalTime>2025-07-30T07:01:00</ArrivalTime>
+  <Amplitude>0.23600000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BBE</StationID>
+  <ArrivalTime>2025-07-30T06:58:00</ArrivalTime>
+  <Amplitude>0.302</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BBL</StationID>
+  <ArrivalTime>2025-07-30T06:57:00</ArrivalTime>
+  <Amplitude>0.059000000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BBY</StationID>
+  <ArrivalTime>2025-07-30T07:26:00</ArrivalTime>
+  <Amplitude>0.254</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BCA</StationID>
+  <ArrivalTime>2025-07-30T05:26:00</ArrivalTime>
+  <Amplitude>0.038</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BHP</StationID>
+  <ArrivalTime>2025-07-30T17:04:00</ArrivalTime>
+  <Amplitude>0.022000000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BIO</StationID>
+  <ArrivalTime>2025-07-30T05:18:00</ArrivalTime>
+  <Amplitude>0.096</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BKG</StationID>
+  <ArrivalTime>2025-07-30T07:05:00</ArrivalTime>
+  <Amplitude>0.368</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BLA</StationID>
+  <ArrivalTime>2025-07-30T08:48:00</ArrivalTime>
+  <Amplitude>0.039</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BLF</StationID>
+  <ArrivalTime>2025-07-30T16:31:00</ArrivalTime>
+  <Amplitude>0.096</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BLM</StationID>
+  <ArrivalTime>2025-07-30T09:00:00</ArrivalTime>
+  <Amplitude>0.07200000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BLN</StationID>
+  <ArrivalTime>2025-07-30T07:47:00</ArrivalTime>
+  <Amplitude>0.336</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BNG</StationID>
+  <ArrivalTime>2025-07-30T08:51:00</ArrivalTime>
+  <Amplitude>0.044000000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BNS</StationID>
+  <ArrivalTime>2025-07-30T07:43:00</ArrivalTime>
+  <Amplitude>0.41700000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BNV</StationID>
+  <ArrivalTime>2025-07-30T17:07:00</ArrivalTime>
+  <Amplitude>0.076</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BOP</StationID>
+  <ArrivalTime>2025-07-30T07:03:00</ArrivalTime>
+  <Amplitude>0.249</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BOS</StationID>
+  <ArrivalTime>2025-07-30T02:00:00</ArrivalTime>
+  <Amplitude>0.302</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BPT</StationID>
+  <ArrivalTime>2025-07-30T08:29:00</ArrivalTime>
+  <Amplitude>0.172</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BRB</StationID>
+  <ArrivalTime>2025-07-30T06:03:00</ArrivalTime>
+  <Amplitude>0.163</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BRE</StationID>
+  <ArrivalTime>2025-07-30T07:25:00</ArrivalTime>
+  <Amplitude>0.022000000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BRS</StationID>
+  <ArrivalTime>2025-07-30T12:23:00</ArrivalTime>
+  <Amplitude>0.054000000000000006</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>BSK</StationID>
+  <ArrivalTime>2025-07-30T03:54:00</ArrivalTime>
+  <Amplitude>0.102</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CAD</StationID>
+  <ArrivalTime>2025-07-30T17:30:00</ArrivalTime>
+  <Amplitude>0.10800000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CAR</StationID>
+  <ArrivalTime>2025-07-30T07:19:00</ArrivalTime>
+  <Amplitude>0.128</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CBE</StationID>
+  <ArrivalTime>2025-07-30T07:06:00</ArrivalTime>
+  <Amplitude>0.536</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CBL</StationID>
+  <ArrivalTime>2025-07-30T06:55:00</ArrivalTime>
+  <Amplitude>0.381</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CBM</StationID>
+  <ArrivalTime>2025-07-30T05:16:00</ArrivalTime>
+  <Amplitude>0.032</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CCH</StationID>
+  <ArrivalTime>2025-07-30T07:00:00</ArrivalTime>
+  <Amplitude>0.247</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CCP</StationID>
+  <ArrivalTime>2025-07-30T08:59:00</ArrivalTime>
+  <Amplitude>0.131</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CDB</StationID>
+  <ArrivalTime>2025-07-30T04:35:00</ArrivalTime>
+  <Amplitude>0.1</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CDC</StationID>
+  <ArrivalTime>2025-07-30T05:45:00</ArrivalTime>
+  <Amplitude>0.21600000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CDV</StationID>
+  <ArrivalTime>2025-07-30T06:04:00</ArrivalTime>
+  <Amplitude>0.046</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CFL</StationID>
+  <ArrivalTime>2025-07-30T06:55:00</ArrivalTime>
+  <Amplitude>0.077</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CFW</StationID>
+  <ArrivalTime>2025-07-30T05:35:00</ArrivalTime>
+  <Amplitude>0.105</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CHB</StationID>
+  <ArrivalTime>2025-07-30T04:52:00</ArrivalTime>
+  <Amplitude>0.109</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CHM</StationID>
+  <ArrivalTime>2025-07-30T17:41:00</ArrivalTime>
+  <Amplitude>0.15</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CHN</StationID>
+  <ArrivalTime>2025-07-30T04:22:00</ArrivalTime>
+  <Amplitude>0.027999999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CHR</StationID>
+  <ArrivalTime>2025-07-30T08:09:00</ArrivalTime>
+  <Amplitude>2.54</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CIH</StationID>
+  <ArrivalTime>2025-07-30T08:09:00</ArrivalTime>
+  <Amplitude>0.102</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CLD</StationID>
+  <ArrivalTime>2025-07-30T19:19:00</ArrivalTime>
+  <Amplitude>0.45299999999999996</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CMP</StationID>
+  <ArrivalTime>2025-07-30T15:08:00</ArrivalTime>
+  <Amplitude>0.26</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CMX</StationID>
+  <ArrivalTime>2025-07-30T08:36:00</ArrivalTime>
+  <Amplitude>0.209</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CNW</StationID>
+  <ArrivalTime>2025-07-30T07:55:00</ArrivalTime>
+  <Amplitude>0.285</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>COO</StationID>
+  <ArrivalTime>2025-07-30T06:57:00</ArrivalTime>
+  <Amplitude>0.226</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>COR</StationID>
+  <ArrivalTime>2025-07-30T14:58:00</ArrivalTime>
+  <Amplitude>0.065</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CPM</StationID>
+  <ArrivalTime>2025-07-30T07:02:00</ArrivalTime>
+  <Amplitude>0.294</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CPO</StationID>
+  <ArrivalTime>2025-07-30T08:37:00</ArrivalTime>
+  <Amplitude>0.032</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CPT</StationID>
+  <ArrivalTime>2025-07-30T06:58:00</ArrivalTime>
+  <Amplitude>0.325</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CQB</StationID>
+  <ArrivalTime>2025-07-30T19:33:00</ArrivalTime>
+  <Amplitude>0.599</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CRE</StationID>
+  <ArrivalTime>2025-07-30T07:14:00</ArrivalTime>
+  <Amplitude>0.816</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CRG</StationID>
+  <ArrivalTime>2025-07-30T06:07:00</ArrivalTime>
+  <Amplitude>0.09</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CRI</StationID>
+  <ArrivalTime>2025-07-30T07:38:00</ArrivalTime>
+  <Amplitude>0.017</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CRL</StationID>
+  <ArrivalTime>2025-07-30T20:24:00</ArrivalTime>
+  <Amplitude>0.5</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CRN</StationID>
+  <ArrivalTime>2025-07-30T10:37:00</ArrivalTime>
+  <Amplitude>0.055999999999999994</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CRP</StationID>
+  <ArrivalTime>2025-07-30T08:15:00</ArrivalTime>
+  <Amplitude>0.13699999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CRS</StationID>
+  <ArrivalTime>2025-07-30T06:59:00</ArrivalTime>
+  <Amplitude>0.34</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CSE</StationID>
+  <ArrivalTime>2025-07-30T14:32:00</ArrivalTime>
+  <Amplitude>0.166</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CSK</StationID>
+  <ArrivalTime>2025-07-30T05:02:00</ArrivalTime>
+  <Amplitude>0.207</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CSL</StationID>
+  <ArrivalTime>2025-07-30T09:57:00</ArrivalTime>
+  <Amplitude>0.133</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CSS</StationID>
+  <ArrivalTime>2025-07-30T07:07:00</ArrivalTime>
+  <Amplitude>0.353</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>CST</StationID>
+  <ArrivalTime>2025-07-30T06:09:00</ArrivalTime>
+  <Amplitude>0.085</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>DAV</StationID>
+  <ArrivalTime>2025-07-30T06:23:00</ArrivalTime>
+  <Amplitude>0.135</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>DIC</StationID>
+  <ArrivalTime>2025-07-30T07:42:00</ArrivalTime>
+  <Amplitude>0.19899999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>DLL</StationID>
+  <ArrivalTime>2025-07-30T07:03:00</ArrivalTime>
+  <Amplitude>0.20199999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>DPO</StationID>
+  <ArrivalTime>2025-07-30T07:00:00</ArrivalTime>
+  <Amplitude>0.195</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>DPT</StationID>
+  <ArrivalTime>2025-07-30T08:30:00</ArrivalTime>
+  <Amplitude>0.073</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>DUN</StationID>
+  <ArrivalTime>2025-07-30T16:13:00</ArrivalTime>
+  <Amplitude>0.07200000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>DVN</StationID>
+  <ArrivalTime>2025-07-30T07:22:00</ArrivalTime>
+  <Amplitude>0.131</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>EAS</StationID>
+  <ArrivalTime>2025-07-30T08:46:00</ArrivalTime>
+  <Amplitude>0.086</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ECP</StationID>
+  <ArrivalTime>2025-07-30T12:38:00</ArrivalTime>
+  <Amplitude>0.16</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>EFC</StationID>
+  <ArrivalTime>2025-07-30T05:23:00</ArrivalTime>
+  <Amplitude>0.036000000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>EIC</StationID>
+  <ArrivalTime>2025-07-30T15:19:00</ArrivalTime>
+  <Amplitude>0.565</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ELK</StationID>
+  <ArrivalTime>2025-07-30T07:09:00</ArrivalTime>
+  <Amplitude>0.33399999999999996</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>EMP</StationID>
+  <ArrivalTime>2025-07-30T06:57:00</ArrivalTime>
+  <Amplitude>0.26</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ENC</StationID>
+  <ArrivalTime>2025-07-30T08:30:00</ArrivalTime>
+  <Amplitude>0.08</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ENG</StationID>
+  <ArrivalTime>2025-07-30T03:31:00</ArrivalTime>
+  <Amplitude>0.013999999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ENI</StationID>
+  <ArrivalTime>2025-07-30T04:40:00</ArrivalTime>
+  <Amplitude>0.84</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ENS</StationID>
+  <ArrivalTime>2025-07-30T08:40:00</ArrivalTime>
+  <Amplitude>0.105</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>EOC</StationID>
+  <ArrivalTime>2025-07-30T08:59:00</ArrivalTime>
+  <Amplitude>0.107</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ESM</StationID>
+  <ArrivalTime>2025-07-30T16:45:00</ArrivalTime>
+  <Amplitude>0.243</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ESP</StationID>
+  <ArrivalTime>2025-07-30T09:05:00</ArrivalTime>
+  <Amplitude>0.53</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>EUR</StationID>
+  <ArrivalTime>2025-07-30T07:15:00</ArrivalTime>
+  <Amplitude>0.32</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>EVT</StationID>
+  <ArrivalTime>2025-07-30T08:44:00</ArrivalTime>
+  <Amplitude>0.036000000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FAA</StationID>
+  <ArrivalTime>2025-07-30T09:04:00</ArrivalTime>
+  <Amplitude>0.33399999999999996</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FAN</StationID>
+  <ArrivalTime>2025-07-30T09:00:00</ArrivalTime>
+  <Amplitude>0.138</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FBG</StationID>
+  <ArrivalTime>2025-07-30T07:05:00</ArrivalTime>
+  <Amplitude>0.28300000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FBY</StationID>
+  <ArrivalTime>2025-07-30T01:24:00</ArrivalTime>
+  <Amplitude>0.18600000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FFS</StationID>
+  <ArrivalTime>2025-07-30T04:41:00</ArrivalTime>
+  <Amplitude>0.9520000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FHA</StationID>
+  <ArrivalTime>2025-07-30T08:20:00</ArrivalTime>
+  <Amplitude>0.033</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FIT</StationID>
+  <ArrivalTime>2025-07-30T08:59:00</ArrivalTime>
+  <Amplitude>0.182</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FLM</StationID>
+  <ArrivalTime>2025-07-30T07:49:00</ArrivalTime>
+  <Amplitude>0.09699999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FLN</StationID>
+  <ArrivalTime>2025-07-30T09:55:00</ArrivalTime>
+  <Amplitude>0.511</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FLP</StationID>
+  <ArrivalTime>2025-07-30T09:40:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>FNA</StationID>
+  <ArrivalTime>2025-07-30T07:36:00</ArrivalTime>
+  <Amplitude>0.27</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GAV</StationID>
+  <ArrivalTime>2025-07-30T07:51:00</ArrivalTime>
+  <Amplitude>0.099</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GDP</StationID>
+  <ArrivalTime>2025-07-30T21:08:00</ArrivalTime>
+  <Amplitude>0.45799999999999996</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GHT</StationID>
+  <ArrivalTime>2025-07-30T07:58:00</ArrivalTime>
+  <Amplitude>0.888</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GIG</StationID>
+  <ArrivalTime>2025-07-30T08:12:00</ArrivalTime>
+  <Amplitude>0.037000000000000005</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GLD</StationID>
+  <ArrivalTime>2025-07-30T13:29:00</ArrivalTime>
+  <Amplitude>0.035</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GLT</StationID>
+  <ArrivalTime>2025-07-30T08:02:00</ArrivalTime>
+  <Amplitude>0.154</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GME</StationID>
+  <ArrivalTime>2025-07-30T06:24:00</ArrivalTime>
+  <Amplitude>0.18</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GOL</StationID>
+  <ArrivalTime>2025-07-30T06:59:00</ArrivalTime>
+  <Amplitude>0.569</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GPT</StationID>
+  <ArrivalTime>2025-07-30T04:32:00</ArrivalTime>
+  <Amplitude>0.061</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GSB</StationID>
+  <ArrivalTime>2025-07-30T13:10:00</ArrivalTime>
+  <Amplitude>0.106</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GUA</StationID>
+  <ArrivalTime>2025-07-30T04:43:00</ArrivalTime>
+  <Amplitude>0.128</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GUP</StationID>
+  <ArrivalTime>2025-07-30T07:10:00</ArrivalTime>
+  <Amplitude>0.33299999999999996</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>GUS</StationID>
+  <ArrivalTime>2025-07-30T05:25:00</ArrivalTime>
+  <Amplitude>0.031</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HAC</StationID>
+  <ArrivalTime>2025-07-30T02:02:00</ArrivalTime>
+  <Amplitude>0.39399999999999996</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HAD</StationID>
+  <ArrivalTime>2025-07-30T07:22:00</ArrivalTime>
+  <Amplitude>0.23399999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HAL</StationID>
+  <ArrivalTime>2025-07-30T05:25:00</ArrivalTime>
+  <Amplitude>2.524</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HAN</StationID>
+  <ArrivalTime>2025-07-30T05:13:00</ArrivalTime>
+  <Amplitude>2.838</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HBB</StationID>
+  <ArrivalTime>2025-07-30T07:11:00</ArrivalTime>
+  <Amplitude>0.289</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HBE</StationID>
+  <ArrivalTime>2025-07-30T03:56:00</ArrivalTime>
+  <Amplitude>0.023</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HBK</StationID>
+  <ArrivalTime>2025-07-30T06:42:00</ArrivalTime>
+  <Amplitude>0.809</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HBP</StationID>
+  <ArrivalTime>2025-07-30T05:40:00</ArrivalTime>
+  <Amplitude>0.462</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HCV</StationID>
+  <ArrivalTime>2025-07-30T04:22:00</ArrivalTime>
+  <Amplitude>0.024</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HDL</StationID>
+  <ArrivalTime>2025-07-30T07:13:00</ArrivalTime>
+  <Amplitude>0.382</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HIL</StationID>
+  <ArrivalTime>2025-07-30T06:00:00</ArrivalTime>
+  <Amplitude>2.682</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HMB</StationID>
+  <ArrivalTime>2025-07-30T07:36:00</ArrivalTime>
+  <Amplitude>0.332</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HMR</StationID>
+  <ArrivalTime>2025-07-30T04:16:00</ArrivalTime>
+  <Amplitude>0.021</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HNJ</StationID>
+  <ArrivalTime>2025-07-30T01:44:00</ArrivalTime>
+  <Amplitude>0.521</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HNR</StationID>
+  <ArrivalTime>2025-07-30T08:32:00</ArrivalTime>
+  <Amplitude>0.215</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HNU</StationID>
+  <ArrivalTime>2025-07-30T06:01:00</ArrivalTime>
+  <Amplitude>0.251</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HOB</StationID>
+  <ArrivalTime>2025-07-30T15:05:00</ArrivalTime>
+  <Amplitude>0.11</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HOD</StationID>
+  <ArrivalTime>2025-07-30T09:27:00</ArrivalTime>
+  <Amplitude>0.019</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HOH</StationID>
+  <ArrivalTime>2025-07-30T07:05:00</ArrivalTime>
+  <Amplitude>0.305</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HON</StationID>
+  <ArrivalTime>2025-07-30T05:37:00</ArrivalTime>
+  <Amplitude>0.647</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HOO</StationID>
+  <ArrivalTime>2025-07-30T05:07:00</ArrivalTime>
+  <Amplitude>0.032</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HPB</StationID>
+  <ArrivalTime>2025-07-30T09:42:00</ArrivalTime>
+  <Amplitude>0.228</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HTA</StationID>
+  <ArrivalTime>2025-07-30T05:00:00</ArrivalTime>
+  <Amplitude>0.08</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>HUN</StationID>
+  <ArrivalTime>2025-07-30T08:33:00</ArrivalTime>
+  <Amplitude>0.114</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>IBY</StationID>
+  <ArrivalTime>2025-07-30T13:26:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ICY</StationID>
+  <ArrivalTime>2025-07-30T05:24:00</ArrivalTime>
+  <Amplitude>0.125</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>IHE</StationID>
+  <ArrivalTime>2025-07-30T04:44:00</ArrivalTime>
+  <Amplitude>0.11</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>IIS</StationID>
+  <ArrivalTime>2025-07-30T08:28:00</ArrivalTime>
+  <Amplitude>0.06</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>IQU</StationID>
+  <ArrivalTime>2025-07-30T18:54:00</ArrivalTime>
+  <Amplitude>0.23800000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ISH</StationID>
+  <ArrivalTime>2025-07-30T04:53:00</ArrivalTime>
+  <Amplitude>0.10800000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>JFC</StationID>
+  <ArrivalTime>2025-07-30T19:01:00</ArrivalTime>
+  <Amplitude>0.623</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>JNZ</StationID>
+  <ArrivalTime>2025-07-30T14:38:00</ArrivalTime>
+  <Amplitude>0.10300000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>JON</StationID>
+  <ArrivalTime>2025-07-30T05:18:00</ArrivalTime>
+  <Amplitude>1.492</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>JRV</StationID>
+  <ArrivalTime>2025-07-30T07:59:00</ArrivalTime>
+  <Amplitude>0.8270000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>JUN</StationID>
+  <ArrivalTime>2025-07-30T07:05:00</ArrivalTime>
+  <Amplitude>0.09</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>JYP</StationID>
+  <ArrivalTime>2025-07-30T07:11:00</ArrivalTime>
+  <Amplitude>0.425</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KAH</StationID>
+  <ArrivalTime>2025-07-30T05:46:00</ArrivalTime>
+  <Amplitude>2.156</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KAL</StationID>
+  <ArrivalTime>2025-07-30T05:28:00</ArrivalTime>
+  <Amplitude>0.898</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KAP</StationID>
+  <ArrivalTime>2025-07-30T06:07:00</ArrivalTime>
+  <Amplitude>0.348</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KAT</StationID>
+  <ArrivalTime>2025-07-30T02:16:00</ArrivalTime>
+  <Amplitude>0.22699999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KAW</StationID>
+  <ArrivalTime>2025-07-30T05:56:00</ArrivalTime>
+  <Amplitude>1.287</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KBC</StationID>
+  <ArrivalTime>2025-07-30T00:34:00</ArrivalTime>
+  <Amplitude>0.499</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KCV</StationID>
+  <ArrivalTime>2025-07-30T03:59:00</ArrivalTime>
+  <Amplitude>0.14300000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KEA</StationID>
+  <ArrivalTime>2025-07-30T05:53:00</ArrivalTime>
+  <Amplitude>0.455</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KET</StationID>
+  <ArrivalTime>2025-07-30T06:56:00</ArrivalTime>
+  <Amplitude>0.11699999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KIE</StationID>
+  <ArrivalTime>2025-07-30T07:42:00</ArrivalTime>
+  <Amplitude>0.899</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KIH</StationID>
+  <ArrivalTime>2025-07-30T06:03:00</ArrivalTime>
+  <Amplitude>1.7080000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KKA</StationID>
+  <ArrivalTime>2025-07-30T05:52:00</ArrivalTime>
+  <Amplitude>0.373</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KNE</StationID>
+  <ArrivalTime>2025-07-30T04:15:00</ArrivalTime>
+  <Amplitude>0.027999999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KNT</StationID>
+  <ArrivalTime>2025-07-30T07:27:00</ArrivalTime>
+  <Amplitude>0.8540000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KOD</StationID>
+  <ArrivalTime>2025-07-30T05:05:00</ArrivalTime>
+  <Amplitude>0.165</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KOS</StationID>
+  <ArrivalTime>2025-07-30T05:29:00</ArrivalTime>
+  <Amplitude>0.922</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KPN</StationID>
+  <ArrivalTime>2025-07-30T08:53:00</ArrivalTime>
+  <Amplitude>0.27399999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KRA</StationID>
+  <ArrivalTime>2025-07-30T08:11:00</ArrivalTime>
+  <Amplitude>0.46399999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KRM</StationID>
+  <ArrivalTime>2025-07-30T07:14:00</ArrivalTime>
+  <Amplitude>0.395</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KSH</StationID>
+  <ArrivalTime>2025-07-30T01:18:00</ArrivalTime>
+  <Amplitude>0.278</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KSI</StationID>
+  <ArrivalTime>2025-07-30T05:38:00</ArrivalTime>
+  <Amplitude>0.099</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KVG</StationID>
+  <ArrivalTime>2025-07-30T06:44:00</ArrivalTime>
+  <Amplitude>0.381</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KWA</StationID>
+  <ArrivalTime>2025-07-30T05:06:00</ArrivalTime>
+  <Amplitude>0.43</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>KZI</StationID>
+  <ArrivalTime>2025-07-30T05:16:00</ArrivalTime>
+  <Amplitude>0.14800000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LAE</StationID>
+  <ArrivalTime>2025-07-30T08:34:00</ArrivalTime>
+  <Amplitude>0.17300000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LAF</StationID>
+  <ArrivalTime>2025-07-30T09:46:00</ArrivalTime>
+  <Amplitude>0.336</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LAJ</StationID>
+  <ArrivalTime>2025-07-30T08:30:00</ArrivalTime>
+  <Amplitude>0.10099999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LAN</StationID>
+  <ArrivalTime>2025-07-30T05:30:00</ArrivalTime>
+  <Amplitude>0.037000000000000005</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LAP</StationID>
+  <ArrivalTime>2025-07-30T17:46:00</ArrivalTime>
+  <Amplitude>0.307</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LAX</StationID>
+  <ArrivalTime>2025-07-30T08:30:00</ArrivalTime>
+  <Amplitude>0.121</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LBE</StationID>
+  <ArrivalTime>2025-07-30T07:01:00</ArrivalTime>
+  <Amplitude>0.23600000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LCN</StationID>
+  <ArrivalTime>2025-07-30T07:54:00</ArrivalTime>
+  <Amplitude>0.017</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LCS</StationID>
+  <ArrivalTime>2025-07-30T07:04:00</ArrivalTime>
+  <Amplitude>0.536</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LEG</StationID>
+  <ArrivalTime>2025-07-30T06:11:00</ArrivalTime>
+  <Amplitude>0.34600000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LEO</StationID>
+  <ArrivalTime>2025-07-30T08:59:00</ArrivalTime>
+  <Amplitude>0.171</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LGB</StationID>
+  <ArrivalTime>2025-07-30T08:41:00</ArrivalTime>
+  <Amplitude>0.162</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LGU</StationID>
+  <ArrivalTime>2025-07-30T08:27:00</ArrivalTime>
+  <Amplitude>0.06</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LHN</StationID>
+  <ArrivalTime>2025-07-30T05:52:00</ArrivalTime>
+  <Amplitude>1.454</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LIO</StationID>
+  <ArrivalTime>2025-07-30T07:52:00</ArrivalTime>
+  <Amplitude>0.28</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LLB</StationID>
+  <ArrivalTime>2025-07-30T16:30:00</ArrivalTime>
+  <Amplitude>0.35200000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LOB</StationID>
+  <ArrivalTime>2025-07-30T16:46:00</ArrivalTime>
+  <Amplitude>0.284</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LON</StationID>
+  <ArrivalTime>2025-07-30T17:13:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LPH</StationID>
+  <ArrivalTime>2025-07-30T06:56:00</ArrivalTime>
+  <Amplitude>0.18100000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LSD</StationID>
+  <ArrivalTime>2025-07-30T04:50:00</ArrivalTime>
+  <Amplitude>0.18</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LST</StationID>
+  <ArrivalTime>2025-07-30T05:46:00</ArrivalTime>
+  <Amplitude>0.271</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LYC</StationID>
+  <ArrivalTime>2025-07-30T16:18:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>LYT</StationID>
+  <ArrivalTime>2025-07-30T15:35:00</ArrivalTime>
+  <Amplitude>0.252</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MAJ</StationID>
+  <ArrivalTime>2025-07-30T05:23:00</ArrivalTime>
+  <Amplitude>0.341</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MAL</StationID>
+  <ArrivalTime>2025-07-30T05:28:00</ArrivalTime>
+  <Amplitude>0.171</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MAN</StationID>
+  <ArrivalTime>2025-07-30T08:00:00</ArrivalTime>
+  <Amplitude>0.07400000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MAS</StationID>
+  <ArrivalTime>2025-07-30T08:57:00</ArrivalTime>
+  <Amplitude>0.344</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MAZ</StationID>
+  <ArrivalTime>2025-07-30T11:00:00</ArrivalTime>
+  <Amplitude>0.131</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MCK</StationID>
+  <ArrivalTime>2025-07-30T17:40:00</ArrivalTime>
+  <Amplitude>0.042</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MCL</StationID>
+  <ArrivalTime>2025-07-30T07:09:00</ArrivalTime>
+  <Amplitude>0.307</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MDG</StationID>
+  <ArrivalTime>2025-07-30T07:46:00</ArrivalTime>
+  <Amplitude>0.287</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MED</StationID>
+  <ArrivalTime>2025-07-29T23:58:00</ArrivalTime>
+  <Amplitude>1.1179999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MEN</StationID>
+  <ArrivalTime>2025-07-30T07:04:00</ArrivalTime>
+  <Amplitude>0.264</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MFS</StationID>
+  <ArrivalTime>2025-07-30T14:35:00</ArrivalTime>
+  <Amplitude>0.10099999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MHL</StationID>
+  <ArrivalTime>2025-07-30T07:06:00</ArrivalTime>
+  <Amplitude>0.425</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MHR</StationID>
+  <ArrivalTime>2025-07-30T08:39:00</ArrivalTime>
+  <Amplitude>0.16</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MID</StationID>
+  <ArrivalTime>2025-07-30T03:31:00</ArrivalTime>
+  <Amplitude>1.4140000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MIN</StationID>
+  <ArrivalTime>2025-07-30T02:46:00</ArrivalTime>
+  <Amplitude>0.48200000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MLB</StationID>
+  <ArrivalTime>2025-07-30T08:17:00</ArrivalTime>
+  <Amplitude>0.128</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MLD</StationID>
+  <ArrivalTime>2025-07-30T08:51:00</ArrivalTime>
+  <Amplitude>0.7559999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MLN</StationID>
+  <ArrivalTime>2025-07-30T18:31:00</ArrivalTime>
+  <Amplitude>0.316</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MND</StationID>
+  <ArrivalTime>2025-07-30T08:12:00</ArrivalTime>
+  <Amplitude>0.13699999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MNJ</StationID>
+  <ArrivalTime>2025-07-30T02:45:00</ArrivalTime>
+  <Amplitude>0.485</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MNK</StationID>
+  <ArrivalTime>2025-07-30T07:11:00</ArrivalTime>
+  <Amplitude>0.313</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MNS</StationID>
+  <ArrivalTime>2025-07-30T06:55:00</ArrivalTime>
+  <Amplitude>0.31</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MNT</StationID>
+  <ArrivalTime>2025-07-30T07:28:00</ArrivalTime>
+  <Amplitude>0.16399999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MNZ</StationID>
+  <ArrivalTime>2025-07-30T11:18:00</ArrivalTime>
+  <Amplitude>0.209</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MOK</StationID>
+  <ArrivalTime>2025-07-30T05:35:00</ArrivalTime>
+  <Amplitude>0.319</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MOR</StationID>
+  <ArrivalTime>2025-07-30T07:45:00</ArrivalTime>
+  <Amplitude>0.28800000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MPT</StationID>
+  <ArrivalTime>2025-07-30T06:35:00</ArrivalTime>
+  <Amplitude>0.18100000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MRE</StationID>
+  <ArrivalTime>2025-07-30T08:56:00</ArrivalTime>
+  <Amplitude>0.162</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MSB</StationID>
+  <ArrivalTime>2025-07-30T08:33:00</ArrivalTime>
+  <Amplitude>0.223</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MSL</StationID>
+  <ArrivalTime>2025-07-30T07:25:00</ArrivalTime>
+  <Amplitude>0.13699999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MTG</StationID>
+  <ArrivalTime>2025-07-30T04:59:00</ArrivalTime>
+  <Amplitude>0.037000000000000005</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MTR</StationID>
+  <ArrivalTime>2025-07-30T07:00:00</ArrivalTime>
+  <Amplitude>0.5379999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>MZT</StationID>
+  <ArrivalTime>2025-07-30T07:05:00</ArrivalTime>
+  <Amplitude>0.34299999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NAH</StationID>
+  <ArrivalTime>2025-07-30T05:16:00</ArrivalTime>
+  <Amplitude>0.084</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NAR</StationID>
+  <ArrivalTime>2025-07-30T06:26:00</ArrivalTime>
+  <Amplitude>0.39</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NAW</StationID>
+  <ArrivalTime>2025-07-30T05:19:00</ArrivalTime>
+  <Amplitude>1.345</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NBE</StationID>
+  <ArrivalTime>2025-07-30T04:50:00</ArrivalTime>
+  <Amplitude>0.17800000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NBY</StationID>
+  <ArrivalTime>2025-07-30T07:01:00</ArrivalTime>
+  <Amplitude>0.237</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NCP</StationID>
+  <ArrivalTime>2025-07-30T12:09:00</ArrivalTime>
+  <Amplitude>0.28800000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NEA</StationID>
+  <ArrivalTime>2025-07-30T07:09:00</ArrivalTime>
+  <Amplitude>0.09</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NEW</StationID>
+  <ArrivalTime>2025-07-30T07:15:00</ArrivalTime>
+  <Amplitude>0.111</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NHV</StationID>
+  <ArrivalTime>2025-07-30T10:28:00</ArrivalTime>
+  <Amplitude>0.361</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NIB</StationID>
+  <ArrivalTime>2025-07-30T08:39:00</ArrivalTime>
+  <Amplitude>0.276</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NII</StationID>
+  <ArrivalTime>2025-07-30T05:59:00</ArrivalTime>
+  <Amplitude>0.11199999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NIK</StationID>
+  <ArrivalTime>2025-07-30T02:07:00</ArrivalTime>
+  <Amplitude>0.354</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NIS</StationID>
+  <ArrivalTime>2025-07-30T08:42:00</ArrivalTime>
+  <Amplitude>0.38299999999999995</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NIU</StationID>
+  <ArrivalTime>2025-07-30T09:39:00</ArrivalTime>
+  <Amplitude>0.6659999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NKA</StationID>
+  <ArrivalTime>2025-07-30T10:13:00</ArrivalTime>
+  <Amplitude>0.298</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NLS</StationID>
+  <ArrivalTime>2025-07-30T16:18:00</ArrivalTime>
+  <Amplitude>0.151</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NOU</StationID>
+  <ArrivalTime>2025-07-30T10:37:00</ArrivalTime>
+  <Amplitude>0.14800000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NPB</StationID>
+  <ArrivalTime>2025-07-30T08:29:00</ArrivalTime>
+  <Amplitude>0.071</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NPC</StationID>
+  <ArrivalTime>2025-07-30T07:07:00</ArrivalTime>
+  <Amplitude>0.252</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NPL</StationID>
+  <ArrivalTime>2025-07-30T07:57:00</ArrivalTime>
+  <Amplitude>0.125</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NPM</StationID>
+  <ArrivalTime>2025-07-30T14:19:00</ArrivalTime>
+  <Amplitude>0.096</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NPR</StationID>
+  <ArrivalTime>2025-07-30T13:55:00</ArrivalTime>
+  <Amplitude>0.136</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NRM</StationID>
+  <ArrivalTime>2025-07-30T07:11:00</ArrivalTime>
+  <Amplitude>0.48700000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NSC</StationID>
+  <ArrivalTime>2025-07-30T07:10:00</ArrivalTime>
+  <Amplitude>0.478</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NSI</StationID>
+  <ArrivalTime>2025-07-30T08:07:00</ArrivalTime>
+  <Amplitude>0.087</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NSK</StationID>
+  <ArrivalTime>2025-07-30T07:00:00</ArrivalTime>
+  <Amplitude>0.242</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NSN</StationID>
+  <ArrivalTime>2025-07-30T09:06:00</ArrivalTime>
+  <Amplitude>0.17800000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NSQ</StationID>
+  <ArrivalTime>2025-07-30T09:50:00</ArrivalTime>
+  <Amplitude>0.002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NUK</StationID>
+  <ArrivalTime>2025-07-30T08:12:00</ArrivalTime>
+  <Amplitude>0.728</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NVI</StationID>
+  <ArrivalTime>2025-07-30T06:10:00</ArrivalTime>
+  <Amplitude>0.149</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>NZI</StationID>
+  <ArrivalTime>2025-07-30T00:37:00</ArrivalTime>
+  <Amplitude>0.8</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OAK</StationID>
+  <ArrivalTime>2025-07-30T09:09:00</ArrivalTime>
+  <Amplitude>0.042</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OCB</StationID>
+  <ArrivalTime>2025-07-30T07:48:00</ArrivalTime>
+  <Amplitude>0.255</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OCL</StationID>
+  <ArrivalTime>2025-07-30T07:06:00</ArrivalTime>
+  <Amplitude>0.41100000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OCN</StationID>
+  <ArrivalTime>2025-07-30T07:09:00</ArrivalTime>
+  <Amplitude>0.069</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OFU</StationID>
+  <ArrivalTime>2025-07-30T01:47:00</ArrivalTime>
+  <Amplitude>0.386</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OHB</StationID>
+  <ArrivalTime>2025-07-30T04:25:00</ArrivalTime>
+  <Amplitude>0.141</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OKI</StationID>
+  <ArrivalTime>2025-07-30T04:31:00</ArrivalTime>
+  <Amplitude>0.14400000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OLY</StationID>
+  <ArrivalTime>2025-07-30T16:18:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OMA</StationID>
+  <ArrivalTime>2025-07-30T02:59:00</ArrivalTime>
+  <Amplitude>0.13</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ONS</StationID>
+  <ArrivalTime>2025-07-30T08:32:00</ArrivalTime>
+  <Amplitude>0.098</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OOH</StationID>
+  <ArrivalTime>2025-07-30T08:15:00</ArrivalTime>
+  <Amplitude>0.40299999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OSO</StationID>
+  <ArrivalTime>2025-07-30T07:01:00</ArrivalTime>
+  <Amplitude>0.20199999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OUZ</StationID>
+  <ArrivalTime>2025-07-30T05:09:00</ArrivalTime>
+  <Amplitude>0.062</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OWB</StationID>
+  <ArrivalTime>2025-07-30T07:02:00</ArrivalTime>
+  <Amplitude>0.154</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>OWG</StationID>
+  <ArrivalTime>2025-07-30T13:51:00</ArrivalTime>
+  <Amplitude>0.253</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PAB</StationID>
+  <ArrivalTime>2025-07-30T09:20:00</ArrivalTime>
+  <Amplitude>0.17800000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PAC</StationID>
+  <ArrivalTime>2025-07-30T07:40:00</ArrivalTime>
+  <Amplitude>0.358</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PAG</StationID>
+  <ArrivalTime>2025-07-30T09:05:00</ArrivalTime>
+  <Amplitude>0.597</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PAI</StationID>
+  <ArrivalTime>2025-07-30T07:39:00</ArrivalTime>
+  <Amplitude>0.015</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PAL</StationID>
+  <ArrivalTime>2025-07-30T04:48:00</ArrivalTime>
+  <Amplitude>0.136</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PAN</StationID>
+  <ArrivalTime>2025-07-30T07:56:00</ArrivalTime>
+  <Amplitude>1.035</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PAX</StationID>
+  <ArrivalTime>2025-07-30T04:31:00</ArrivalTime>
+  <Amplitude>0.062</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PBA</StationID>
+  <ArrivalTime>2025-07-30T07:48:00</ArrivalTime>
+  <Amplitude>0.045</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PBE</StationID>
+  <ArrivalTime>2025-07-30T07:57:00</ArrivalTime>
+  <Amplitude>0.486</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PBR</StationID>
+  <ArrivalTime>2025-07-30T15:09:00</ArrivalTime>
+  <Amplitude>0.146</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PCC</StationID>
+  <ArrivalTime>2025-07-30T07:41:00</ArrivalTime>
+  <Amplitude>0.064</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PCO</StationID>
+  <ArrivalTime>2025-07-30T14:52:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PGL</StationID>
+  <ArrivalTime>2025-07-30T07:52:00</ArrivalTime>
+  <Amplitude>0.18600000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PGV</StationID>
+  <ArrivalTime>2025-07-30T07:04:00</ArrivalTime>
+  <Amplitude>0.253</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PHA</StationID>
+  <ArrivalTime>2025-07-30T07:36:00</ArrivalTime>
+  <Amplitude>0.06</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PHM</StationID>
+  <ArrivalTime>2025-07-30T08:08:00</ArrivalTime>
+  <Amplitude>0.09300000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PHY</StationID>
+  <ArrivalTime>2025-07-30T07:03:00</ArrivalTime>
+  <Amplitude>0.054000000000000006</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PIE</StationID>
+  <ArrivalTime>2025-07-30T07:27:00</ArrivalTime>
+  <Amplitude>0.023</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PIM</StationID>
+  <ArrivalTime>2025-07-30T17:42:00</ArrivalTime>
+  <Amplitude>0.138</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PIS</StationID>
+  <ArrivalTime>2025-07-30T06:55:00</ArrivalTime>
+  <Amplitude>0.24</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PKA</StationID>
+  <ArrivalTime>2025-07-30T08:48:00</ArrivalTime>
+  <Amplitude>0.506</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PLN</StationID>
+  <ArrivalTime>2025-07-30T05:17:00</ArrivalTime>
+  <Amplitude>0.087</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PMB</StationID>
+  <ArrivalTime>2025-07-30T10:20:00</ArrivalTime>
+  <Amplitude>0.139</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PMD</StationID>
+  <ArrivalTime>2025-07-30T13:48:00</ArrivalTime>
+  <Amplitude>0.134</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PML</StationID>
+  <ArrivalTime>2025-07-30T16:15:00</ArrivalTime>
+  <Amplitude>0.195</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PNR</StationID>
+  <ArrivalTime>2025-07-30T09:01:00</ArrivalTime>
+  <Amplitude>0.419</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>POL</StationID>
+  <ArrivalTime>2025-07-30T08:55:00</ArrivalTime>
+  <Amplitude>0.282</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PON</StationID>
+  <ArrivalTime>2025-07-30T05:10:00</ArrivalTime>
+  <Amplitude>0.684</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>POR</StationID>
+  <ArrivalTime>2025-07-30T06:58:00</ArrivalTime>
+  <Amplitude>0.449</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>POT</StationID>
+  <ArrivalTime>2025-07-30T09:15:00</ArrivalTime>
+  <Amplitude>0.027000000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PPK</StationID>
+  <ArrivalTime>2025-07-29T23:37:00</ArrivalTime>
+  <Amplitude>5.526</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PPN</StationID>
+  <ArrivalTime>2025-07-30T16:17:00</ArrivalTime>
+  <Amplitude>0.11800000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PPT</StationID>
+  <ArrivalTime>2025-07-30T10:46:00</ArrivalTime>
+  <Amplitude>0.49700000000000005</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PQP</StationID>
+  <ArrivalTime>2025-07-30T15:00:00</ArrivalTime>
+  <Amplitude>0.13699999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PRB</StationID>
+  <ArrivalTime>2025-07-30T07:26:00</ArrivalTime>
+  <Amplitude>0.361</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PRL</StationID>
+  <ArrivalTime>2025-07-30T05:36:00</ArrivalTime>
+  <Amplitude>0.8420000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PRP</StationID>
+  <ArrivalTime>2025-07-30T07:23:00</ArrivalTime>
+  <Amplitude>0.136</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PRU</StationID>
+  <ArrivalTime>2025-07-30T07:24:00</ArrivalTime>
+  <Amplitude>0.136</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PRV</StationID>
+  <ArrivalTime>2025-07-30T04:21:00</ArrivalTime>
+  <Amplitude>0.132</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PSL</StationID>
+  <ArrivalTime>2025-07-30T07:54:00</ArrivalTime>
+  <Amplitude>0.579</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PSM</StationID>
+  <ArrivalTime>2025-07-30T14:48:00</ArrivalTime>
+  <Amplitude>-0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PTC</StationID>
+  <ArrivalTime>2025-07-30T13:13:00</ArrivalTime>
+  <Amplitude>0.344</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PTL</StationID>
+  <ArrivalTime>2025-07-30T08:33:00</ArrivalTime>
+  <Amplitude>0.203</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PTM</StationID>
+  <ArrivalTime>2025-07-30T07:17:00</ArrivalTime>
+  <Amplitude>0.22399999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PTN</StationID>
+  <ArrivalTime>2025-07-30T07:25:00</ArrivalTime>
+  <Amplitude>0.18899999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PTV</StationID>
+  <ArrivalTime>2025-07-30T09:42:00</ArrivalTime>
+  <Amplitude>0.271</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PTW</StationID>
+  <ArrivalTime>2025-07-30T08:24:00</ArrivalTime>
+  <Amplitude>0.05</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PUG</StationID>
+  <ArrivalTime>2025-07-30T12:53:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PUM</StationID>
+  <ArrivalTime>2025-07-30T19:45:00</ArrivalTime>
+  <Amplitude>0.002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PVT</StationID>
+  <ArrivalTime>2025-07-30T05:26:00</ArrivalTime>
+  <Amplitude>0.08199999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>PYR</StationID>
+  <ArrivalTime>2025-07-30T07:08:00</ArrivalTime>
+  <Amplitude>2.182</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>QCH</StationID>
+  <ArrivalTime>2025-07-30T06:01:00</ArrivalTime>
+  <Amplitude>0.055</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>QEE</StationID>
+  <ArrivalTime>2025-07-30T07:01:00</ArrivalTime>
+  <Amplitude>0.237</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>R2P</StationID>
+  <ArrivalTime>2025-07-30T04:49:00</ArrivalTime>
+  <Amplitude>0.174</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RAB</StationID>
+  <ArrivalTime>2025-07-30T07:34:00</ArrivalTime>
+  <Amplitude>0.185</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RAO</StationID>
+  <ArrivalTime>2025-07-30T11:14:00</ArrivalTime>
+  <Amplitude>0.17600000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RBE</StationID>
+  <ArrivalTime>2025-07-30T08:20:00</ArrivalTime>
+  <Amplitude>0.114</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RCI</StationID>
+  <ArrivalTime>2025-07-30T09:21:00</ArrivalTime>
+  <Amplitude>0.046</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RDM</StationID>
+  <ArrivalTime>2025-07-30T07:37:00</ArrivalTime>
+  <Amplitude>0.45</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>REY</StationID>
+  <ArrivalTime>2025-07-30T07:34:00</ArrivalTime>
+  <Amplitude>0.545</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RGP</StationID>
+  <ArrivalTime>2025-07-30T07:31:00</ArrivalTime>
+  <Amplitude>0.198</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RID</StationID>
+  <ArrivalTime>2025-07-30T08:12:00</ArrivalTime>
+  <Amplitude>0.196</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RIK</StationID>
+  <ArrivalTime>2025-07-30T12:47:00</ArrivalTime>
+  <Amplitude>0.392</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RIP</StationID>
+  <ArrivalTime>2025-07-30T08:17:00</ArrivalTime>
+  <Amplitude>0.114</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>ROR</StationID>
+  <ArrivalTime>2025-07-30T10:26:00</ArrivalTime>
+  <Amplitude>0.429</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RRM</StationID>
+  <ArrivalTime>2025-07-30T07:22:00</ArrivalTime>
+  <Amplitude>0.5329999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>RWY</StationID>
+  <ArrivalTime>2025-07-30T07:05:00</ArrivalTime>
+  <Amplitude>0.368</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SAI</StationID>
+  <ArrivalTime>2025-07-30T04:13:00</ArrivalTime>
+  <Amplitude>0.26</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SAM</StationID>
+  <ArrivalTime>2025-07-30T02:10:00</ArrivalTime>
+  <Amplitude>0.359</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SAN</StationID>
+  <ArrivalTime>2025-07-30T14:59:00</ArrivalTime>
+  <Amplitude>0.095</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SAU</StationID>
+  <ArrivalTime>2025-07-30T08:00:00</ArrivalTime>
+  <Amplitude>0.23600000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SBB</StationID>
+  <ArrivalTime>2025-07-30T08:11:00</ArrivalTime>
+  <Amplitude>0.259</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SBD</StationID>
+  <ArrivalTime>2025-07-30T12:53:00</ArrivalTime>
+  <Amplitude>-0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SBY</StationID>
+  <ArrivalTime>2025-07-30T07:02:00</ArrivalTime>
+  <Amplitude>0.212</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SCE</StationID>
+  <ArrivalTime>2025-07-30T11:39:00</ArrivalTime>
+  <Amplitude>-0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SCI</StationID>
+  <ArrivalTime>2025-07-30T07:54:00</ArrivalTime>
+  <Amplitude>0.040999999999999995</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SCL</StationID>
+  <ArrivalTime>2025-07-30T09:00:00</ArrivalTime>
+  <Amplitude>0.07400000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SCZ</StationID>
+  <ArrivalTime>2025-07-30T07:28:00</ArrivalTime>
+  <Amplitude>0.264</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SDE</StationID>
+  <ArrivalTime>2025-07-30T08:39:00</ArrivalTime>
+  <Amplitude>0.28300000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SDG</StationID>
+  <ArrivalTime>2025-07-30T08:53:00</ArrivalTime>
+  <Amplitude>0.272</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SDV</StationID>
+  <ArrivalTime>2025-07-30T04:23:00</ArrivalTime>
+  <Amplitude>0.034</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SEA</StationID>
+  <ArrivalTime>2025-07-30T07:36:00</ArrivalTime>
+  <Amplitude>0.023</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SEL</StationID>
+  <ArrivalTime>2025-07-30T05:02:00</ArrivalTime>
+  <Amplitude>0.052000000000000005</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SEW</StationID>
+  <ArrivalTime>2025-07-30T04:04:00</ArrivalTime>
+  <Amplitude>0.063</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SFC</StationID>
+  <ArrivalTime>2025-07-30T07:54:00</ArrivalTime>
+  <Amplitude>0.214</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SFX</StationID>
+  <ArrivalTime>2025-07-30T18:07:00</ArrivalTime>
+  <Amplitude>0.305</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SHB</StationID>
+  <ArrivalTime>2025-07-30T05:35:00</ArrivalTime>
+  <Amplitude>0.198</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SHE</StationID>
+  <ArrivalTime>2025-07-30T17:13:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SHI</StationID>
+  <ArrivalTime>2025-07-30T03:40:00</ArrivalTime>
+  <Amplitude>0.19</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SIP</StationID>
+  <ArrivalTime>2025-07-30T14:01:00</ArrivalTime>
+  <Amplitude>0.139</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SIT</StationID>
+  <ArrivalTime>2025-07-30T05:35:00</ArrivalTime>
+  <Amplitude>0.121</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SIU</StationID>
+  <ArrivalTime>2025-07-30T07:27:00</ArrivalTime>
+  <Amplitude>0.156</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SJN</StationID>
+  <ArrivalTime>2025-07-30T18:09:00</ArrivalTime>
+  <Amplitude>0.142</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SJS</StationID>
+  <ArrivalTime>2025-07-30T14:52:00</ArrivalTime>
+  <Amplitude>0.12300000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SKA</StationID>
+  <ArrivalTime>2025-07-30T02:48:00</ArrivalTime>
+  <Amplitude>0.17600000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SKW</StationID>
+  <ArrivalTime>2025-07-30T12:53:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SKY</StationID>
+  <ArrivalTime>2025-07-30T06:23:00</ArrivalTime>
+  <Amplitude>0.05</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SLB</StationID>
+  <ArrivalTime>2025-07-30T08:40:00</ArrivalTime>
+  <Amplitude>0.252</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SLG</StationID>
+  <ArrivalTime>2025-07-30T01:56:00</ArrivalTime>
+  <Amplitude>0.09699999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SLT</StationID>
+  <ArrivalTime>2025-07-30T17:13:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SLW</StationID>
+  <ArrivalTime>2025-07-30T07:08:00</ArrivalTime>
+  <Amplitude>0.23800000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SMC</StationID>
+  <ArrivalTime>2025-07-30T08:24:00</ArrivalTime>
+  <Amplitude>0.18600000000000003</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SMD</StationID>
+  <ArrivalTime>2025-07-30T04:49:00</ArrivalTime>
+  <Amplitude>0.16699999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SMI</StationID>
+  <ArrivalTime>2025-07-30T04:10:00</ArrivalTime>
+  <Amplitude>0.275</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SMY</StationID>
+  <ArrivalTime>2025-07-30T00:37:00</ArrivalTime>
+  <Amplitude>1.202</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SNK</StationID>
+  <ArrivalTime>2025-07-30T03:34:00</ArrivalTime>
+  <Amplitude>0.077</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SOC</StationID>
+  <ArrivalTime>2025-07-30T10:06:00</ArrivalTime>
+  <Amplitude>0.34</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SON</StationID>
+  <ArrivalTime>2025-07-30T08:31:00</ArrivalTime>
+  <Amplitude>0.11599999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SPC</StationID>
+  <ArrivalTime>2025-07-30T21:15:00</ArrivalTime>
+  <Amplitude>0.384</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SPT</StationID>
+  <ArrivalTime>2025-07-30T03:57:00</ArrivalTime>
+  <Amplitude>0.10099999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SRM</StationID>
+  <ArrivalTime>2025-07-30T05:28:00</ArrivalTime>
+  <Amplitude>0.188</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SRN</StationID>
+  <ArrivalTime>2025-07-30T07:42:00</ArrivalTime>
+  <Amplitude>0.435</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SSC</StationID>
+  <ArrivalTime>2025-07-30T07:08:00</ArrivalTime>
+  <Amplitude>0.35</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SSD</StationID>
+  <ArrivalTime>2025-07-30T07:10:00</ArrivalTime>
+  <Amplitude>0.434</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SSP</StationID>
+  <ArrivalTime>2025-07-30T07:23:00</ArrivalTime>
+  <Amplitude>0.223</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SSS</StationID>
+  <ArrivalTime>2025-07-30T05:26:00</ArrivalTime>
+  <Amplitude>0.21899999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>STA</StationID>
+  <ArrivalTime>2025-07-30T08:16:00</ArrivalTime>
+  <Amplitude>0.034</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>STB</StationID>
+  <ArrivalTime>2025-07-30T07:43:00</ArrivalTime>
+  <Amplitude>0.336</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>STP</StationID>
+  <ArrivalTime>2025-07-30T02:55:00</ArrivalTime>
+  <Amplitude>0.276</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SUF</StationID>
+  <ArrivalTime>2025-07-30T07:49:00</ArrivalTime>
+  <Amplitude>0.249</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SUR</StationID>
+  <ArrivalTime>2025-07-30T07:22:00</ArrivalTime>
+  <Amplitude>0.121</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SUV</StationID>
+  <ArrivalTime>2025-07-30T09:53:00</ArrivalTime>
+  <Amplitude>0.165</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SVK</StationID>
+  <ArrivalTime>2025-07-30T23:37:00</ArrivalTime>
+  <Amplitude>0.591</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>SYD</StationID>
+  <ArrivalTime>2025-07-30T12:50:00</ArrivalTime>
+  <Amplitude>0.068</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TAC</StationID>
+  <ArrivalTime>2025-07-30T09:15:00</ArrivalTime>
+  <Amplitude>0.026000000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TAH</StationID>
+  <ArrivalTime>2025-07-30T06:59:00</ArrivalTime>
+  <Amplitude>0.272</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TAL</StationID>
+  <ArrivalTime>2025-07-30T20:02:00</ArrivalTime>
+  <Amplitude>0.43700000000000006</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TAR</StationID>
+  <ArrivalTime>2025-07-30T06:13:00</ArrivalTime>
+  <Amplitude>0.373</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TEN</StationID>
+  <ArrivalTime>2025-07-30T07:09:00</ArrivalTime>
+  <Amplitude>0.502</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>THR</StationID>
+  <ArrivalTime>2025-07-30T19:49:00</ArrivalTime>
+  <Amplitude>0.282</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TIM</StationID>
+  <ArrivalTime>2025-07-30T08:10:00</ArrivalTime>
+  <Amplitude>0.18899999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TKA</StationID>
+  <ArrivalTime>2025-07-30T02:47:00</ArrivalTime>
+  <Amplitude>0.17600000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TLA</StationID>
+  <ArrivalTime>2025-07-30T08:55:00</ArrivalTime>
+  <Amplitude>0.11199999999999999</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TLK</StationID>
+  <ArrivalTime>2025-07-30T04:10:00</ArrivalTime>
+  <Amplitude>0.026000000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TLR</StationID>
+  <ArrivalTime>2025-07-30T16:31:00</ArrivalTime>
+  <Amplitude>0.33799999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TMB</StationID>
+  <ArrivalTime>2025-07-30T07:12:00</ArrivalTime>
+  <Amplitude>0.10300000000000001</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TND</StationID>
+  <ArrivalTime>2025-07-30T07:11:00</ArrivalTime>
+  <Amplitude>0.7</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TOF</StationID>
+  <ArrivalTime>2025-07-30T06:55:00</ArrivalTime>
+  <Amplitude>0.135</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TOK</StationID>
+  <ArrivalTime>2025-07-30T07:28:00</ArrivalTime>
+  <Amplitude>0.14300000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TRU</StationID>
+  <ArrivalTime>2025-07-30T05:09:00</ArrivalTime>
+  <Amplitude>0.382</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TUM</StationID>
+  <ArrivalTime>2025-07-30T16:26:00</ArrivalTime>
+  <Amplitude>0.27899999999999997</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TWO</StationID>
+  <ArrivalTime>2025-07-30T08:16:00</ArrivalTime>
+  <Amplitude>0.05</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>TWW</StationID>
+  <ArrivalTime>2025-07-30T08:11:00</ArrivalTime>
+  <Amplitude>0.111</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>UNA</StationID>
+  <ArrivalTime>2025-07-30T02:51:00</ArrivalTime>
+  <Amplitude>0.308</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>UNP</StationID>
+  <ArrivalTime>2025-07-30T03:14:00</ArrivalTime>
+  <Amplitude>0.142</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>URM</StationID>
+  <ArrivalTime>2025-07-30T07:00:00</ArrivalTime>
+  <Amplitude>0.223</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>URP</StationID>
+  <ArrivalTime>2025-07-30T00:25:00</ArrivalTime>
+  <Amplitude>0.821</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>UST</StationID>
+  <ArrivalTime>2025-07-29T23:51:00</ArrivalTime>
+  <Amplitude>1.11</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>UTU</StationID>
+  <ArrivalTime>2025-07-30T09:05:00</ArrivalTime>
+  <Amplitude>0.47700000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>VAL</StationID>
+  <ArrivalTime>2025-07-30T19:46:00</ArrivalTime>
+  <Amplitude>0.47</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>VAT</StationID>
+  <ArrivalTime>2025-07-30T08:55:00</ArrivalTime>
+  <Amplitude>0.22399999999999998</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>VEN</StationID>
+  <ArrivalTime>2025-07-30T08:23:00</ArrivalTime>
+  <Amplitude>0.187</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>VHA</StationID>
+  <ArrivalTime>2025-07-30T07:56:00</ArrivalTime>
+  <Amplitude>0.106</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>VLD</StationID>
+  <ArrivalTime>2025-07-30T04:14:00</ArrivalTime>
+  <Amplitude>0.017</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>VNM</StationID>
+  <ArrivalTime>2025-07-30T07:14:00</ArrivalTime>
+  <Amplitude>0.379</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WAA</StationID>
+  <ArrivalTime>2025-07-30T07:02:00</ArrivalTime>
+  <Amplitude>0.247</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WAI</StationID>
+  <ArrivalTime>2025-07-30T01:40:00</ArrivalTime>
+  <Amplitude>0.26899999999999996</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WAK</StationID>
+  <ArrivalTime>2025-07-30T03:31:00</ArrivalTime>
+  <Amplitude>0.133</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WAL</StationID>
+  <ArrivalTime>2025-07-30T08:31:00</ArrivalTime>
+  <Amplitude>0.434</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WAU</StationID>
+  <ArrivalTime>2025-07-30T12:53:00</ArrivalTime>
+  <Amplitude>0.0</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WEL</StationID>
+  <ArrivalTime>2025-07-30T14:15:00</ArrivalTime>
+  <Amplitude>0.059000000000000004</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WID</StationID>
+  <ArrivalTime>2025-07-30T08:11:00</ArrivalTime>
+  <Amplitude>0.05</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WPR</StationID>
+  <ArrivalTime>2025-07-30T05:49:00</ArrivalTime>
+  <Amplitude>0.185</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WPT</StationID>
+  <ArrivalTime>2025-07-30T05:39:00</ArrivalTime>
+  <Amplitude>0.345</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WPW</StationID>
+  <ArrivalTime>2025-07-30T07:09:00</ArrivalTime>
+  <Amplitude>0.278</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WRS</StationID>
+  <ArrivalTime>2025-07-30T06:49:00</ArrivalTime>
+  <Amplitude>0.26899999999999996</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WSB</StationID>
+  <ArrivalTime>2025-07-30T07:17:00</ArrivalTime>
+  <Amplitude>0.182</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WSP</StationID>
+  <ArrivalTime>2025-07-30T15:03:00</ArrivalTime>
+  <Amplitude>0.132</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>WWK</StationID>
+  <ArrivalTime>2025-07-30T07:25:00</ArrivalTime>
+  <Amplitude>0.251</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>YAK</StationID>
+  <ArrivalTime>2025-07-30T05:40:00</ArrivalTime>
+  <Amplitude>0.20600000000000002</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>YAP</StationID>
+  <ArrivalTime>2025-07-30T05:11:00</ArrivalTime>
+  <Amplitude>0.198</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>YAQ</StationID>
+  <ArrivalTime>2025-07-30T07:11:00</ArrivalTime>
+  <Amplitude>0.259</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord>
+<atomsForecastRecord>
+  <StationID>YCH</StationID>
+  <ArrivalTime>2025-07-30T07:11:00</ArrivalTime>
+  <Amplitude>0.258</Amplitude>
+  <Duration>1</Duration>
+</atomsForecastRecord></atomsTsunamiForecastData>

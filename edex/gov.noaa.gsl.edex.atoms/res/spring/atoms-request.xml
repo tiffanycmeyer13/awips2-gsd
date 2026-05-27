@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="distToCoastRequestHandler" class="gov.noaa.gsl.edex.atoms.handlers.DistToCoastlineRequestHandler" />
+    <bean id="reverseTTTRequestHandler" class="gov.noaa.gsl.edex.atoms.handlers.ReverseTTTRequestHandler" />
+
+    <bean factory-bean="handlerRegistry" factory-method="register">
+         <constructor-arg value="gov.noaa.gsl.common.dataplugin.atoms.request.DistToCoastlineRequest"/>
+         <constructor-arg ref="distToCoastRequestHandler"/>
+    </bean>
+
+    <bean factory-bean="handlerRegistry" factory-method="register">
+         <constructor-arg value="gov.noaa.gsl.common.dataplugin.atoms.request.ReverseTTTRequest"/>
+         <constructor-arg ref="reverseTTTRequestHandler"/>
+    </bean>
+</beans>

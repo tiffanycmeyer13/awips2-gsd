@@ -1,0 +1,28 @@
+<atomsSeaLevelObservations>
+  <EventID>HumboldtDec2024</EventID>
+  <Source>PTWC</Source>
+  <CreationTime>2022-03-06T03:33:22</CreationTime>
+  <atomsSeaLevelRecord>
+    <StationID>LAJO</StationID>
+    <SensorType>PR</SensorType>
+    <ObservationType>ZERO_TO_PEAK</ObservationType>
+    <StartTime>2022-03-11T02:37:02</StartTime>
+    <EndTime>2021-03-10T02:04:04</EndTime>
+    <Period>00.03</Period>
+    <Amplitude>0.56</Amplitude>
+    <Measurement1Clipped>False</Measurement1Clipped>
+    <Measurement2Clipped>True</Measurement2Clipped>
+  </atomsSeaLevelRecord>
+  <atomsSeaLevelRecord>
+    <StationID>LAJO</StationID>
+    <SensorType>PR</SensorType>
+    <ObservationType>ZERO_TO_PEAK</ObservationType>
+    <StartTime>2022-03-10T09:28:02</StartTime>
+    <EndTime>2021-03-10T02:04:04</EndTime>
+    <Period>00.03</Period>
+    <Amplitude>00.26</Amplitude>
+    <Measurement1Clipped>False</Measurement1Clipped>
+    <Measurement2Clipped>True</Measurement2Clipped>
+  </atomsSeaLevelRecord>
+</atomsSeaLevelObservations>
+

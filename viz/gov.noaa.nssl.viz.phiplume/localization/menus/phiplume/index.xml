@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<menuContributionFile>
+    <include installTo="menu:obs?after=SURFACE" fileName="menus/phiplume/basePhiPlume.xml"/>
+</menuContributionFile>

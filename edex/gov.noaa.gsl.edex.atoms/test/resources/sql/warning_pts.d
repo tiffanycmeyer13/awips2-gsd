@@ -1,0 +1,565 @@
+warning_pts.d
+Regions: O = other; A = Alaska; W = West coast + Canada; H = Hawaii; M=Samoa
+lon lat code region reg. warning code name
+-176.600  51.900 ADK A ALASKA               ADAK                     
+ 173.100  52.900 ATU A ALASKA               ATTU                     
+ 174.100  52.700 SMY A ALASKA               SHEMYA                   
+-166.537  53.880 UNA A ALASKA               DUTCH_HARBOR             
+-160.502  55.337 SPT A ALASKA               SANDPOINT                
+-152.512  57.732 KOD A ALASKA               KODIAK                   
+-149.427  60.119 SEW A ALASKA               SEWARD                   
+-139.735  59.548 YAK A ALASKA               YAKUTAT                  
+-135.342  57.052 SIT A ALASKA               SITKA                    
+-132.100  54.000 LAN W CANADA               LANGARA                  
+-125.900  49.200 TOF W CANADA               TOFINO                   
+-124.617  48.360 NEA W WASHINGTON           NEAH_BAY                 
+-124.100  44.600 NEW W OREGON               NEWPORT                  
+-124.183  41.745 CRE W CALIFORNIA           CRESCENT_CITY            
+-122.500  37.800 SAC W CALIFORNIA           SAN_FRANCISCO            
+-118.300  33.700 SPD W CALIFORNIA           SAN_PEDRO                
+-117.300  32.900 LAJ W CALIFORNIA           LA_JOLLA                 
+-117.200  32.700 SDG W CALIFORNIA           SAN_DIEGO                
+-116.780  31.830 ENS O MEXICO               ENSENADA                 
+-109.980  22.840 CSL O MEXICO               CABO_SAN_LUCAS           
+-113.620  26.680 PAB O MEXICO               PUNTA_ABREOJOS           
+-106.440  23.170 MAZ O MEXICO               MAZATLAN                 
+ -92.530  14.790 PMD O MEXICO               PUERTO_MADERO            
+-104.300  19.100 MNZ O MEXICO               MANZANILLO               
+-111.000  18.800 SOC O MEXICO               SOCORRO                  
+ -99.900  16.900 ACP O MEXICO               ACAPULCO                 
+ -95.200  16.500 SLC O MEXICO               SALINA_CRUZ                 
+-102.200  17.900 LZC O MEXICO               LAZARO_CARDENAS                 
+-105.250  20.650 PVA O MEXICO               PUERTO_VALLARTA                 
+-105.300  21.500 SBL O MEXICO               SAN_BLAS                 
+-110.850  27.850 GYM O MEXICO               GUAYMAS                 
+-114.800  31.000 SFL O MEXICO               SAN_FELIPE                 
+ -89.800  13.600 ACJ O EL_SALVADOR          ACAJUTLA                 
+ -91.230  13.900 SIP O GUATEMALA            SIPACATE                 
+ -90.819  13.909 PSJ O GUATEMALA            PUERTO_DE_SAN_JOSE          
+ -92.197  14.507 OCO O GUATEMALA            OCOS_SAN_MARCOS
+ -91.913  14.289 CRT O GUATEMALA            CHAMPERICO_RETALHULEU    
+ -91.529  14.041 TIQ O GUATEMALA            TIQUISATE_ESCUINTLA      
+ -90.483  13.889 MSR O GUATEMALA            MONTERRICO_SANTA_ROSA
+ -87.640  13.230 AMA O HONDURAS             AMAPALA                  
+ -86.040  10.850 CSE O COSTA_RICA           CABO_SAN_ELENA           
+ -84.200   9.400 PQP O COSTA_RICA           PUERTO_QUEPOS            
+ -83.290   8.350 CMP O COSTA_RICA           CABO_MATAPALO            
+ -87.081   5.536 IDC O COSTA_RICA           ISLA_DEL_COCO      
+ -87.200  12.500 COR O NICARAGUA            CORINTO                  
+ -86.800  12.200 SAN O NICARAGUA            PUERTO_SANDINO           
+ -85.900  11.200 SJS O NICARAGUA            SAN_JUAN_DL_SUR          
+ -79.600   9.000 BHP O PANAMA               BALBOA_HEIGHTS              
+ -82.850   8.020 PBR O PANAMA               PUNTA_BURICA             
+ -79.950   7.480 PML O PANAMA               PUNTA_MALA               
+ -78.050   7.390 PPN O PANAMA               PUERTO_PINA              
+ -77.400   6.300 BAH O COLOMBIA             BAHIA_SOLANO             
+ -77.200   3.800 BNV O COLOMBIA             BUENAVENTURA             
+ -78.860   1.820 TUM O COLOMBIA             TUMACO                   
+ -90.300  -0.500 BAL O ECUADOR              BALTRA_ISLAND               
+ -79.790   1.170 ESM O ECUADOR              ESMERELDAS               
+ -81.230  -2.190 LLB O ECUADOR              LA_LIBERTAD              
+ -77.200 -12.100 LAP O PERU                 LA_PUNTA                 
+ -81.470  -4.630 TLR O PERU                 TALARA                   
+ -80.020  -6.900 PIM O PERU                 PIMENTAL                 
+ -78.830  -9.000 CHM O PERU                 CHIMBOTE                 
+ -72.000 -17.080 MLN O PERU                 MOLLENDO                 
+ -75.240 -15.330 SJN O PERU                 SAN_JUAN                 
+ -70.300 -18.500 ARI O CHILE                ARICA                    
+ -70.100 -20.200 IQU O CHILE                IQUIQUE                  
+ -70.430 -23.320 ANT O CHILE                ANTOFAGASTA              
+ -70.800 -27.100 CLD O CHILE                CALDERA                  
+ -71.350 -29.930 CQB O CHILE                COQUIMBO                 
+ -71.600 -33.000 VAL O CHILE                VALPARAISO               
+ -73.100 -36.700 TAL O CHILE                TALCAHUANO               
+ -73.000 -41.500 PUM O CHILE                PUERTO_MONTT             
+ -70.900 -53.200 PUN O CHILE                PUNTA_ARENAS             
+ -67.600 -54.900 PUW O CHILE                PUERTO_WILLIAMS          
+-109.450 -27.150 EIC O CHILE                EASTER_ISLAND               
+ -73.540 -39.770 CRL O CHILE                CORRAL                   
+ -74.890 -47.100 GDP O CHILE                GOLFO_DE_PENAS           
+-100.000 -72.000 THR O ANTARCTICA           THURSTON_ISLAND             
+ 170.000 -71.000 CAD O ANTARCTICA           CAPE_ADARE               
+ 147.650 -43.270 HOB O AUSTRALIA            HOBART                   
+ 151.450 -33.860 SYD O AUSTRALIA            SYDNEY                   
+ 153.300 -27.220 BRS O AUSTRALIA            BRISBANE                 
+ 151.440 -23.820 GLD O AUSTRALIA            GLADSTONE                
+ 149.270 -21.060 MCK O AUSTRALIA            MACKAY                   
+ 145.790 -16.740 CRN O AUSTRALIA            CAIRNS                   
+ 141.500  40.500 HAC O JAPAN                HACHINOHE                
+ 127.800  26.200 OKI O JAPAN                OKINAWA                  
+ 133.000  32.800 SHI O JAPAN                SHIMIZU                  
+ 140.330  35.110 KAT O JAPAN                KATSUURA                 
+ 144.330  42.900 KSH O JAPAN                KUSHIRO                  
+ 129.700  32.700 NGS O JAPAN                NAGASAKI                  
+ 131.800  32.500 NOB O JAPAN                NOBEOKA                  
+ 133.000  35.750 SHM O JAPAN                SHIMANE                  
+ 139.000  38.000 NII O JAPAN                NIIGATA                  
+ 141.000  43.500 SPR O JAPAN                SAPPORO                  
+ 139.820  33.130 HCH O JAPAN                HACHIJO_JIMA                  
+ 142.250  27.050 CHC O JAPAN                CHICHI_JIMA                  
+ 154.000  24.300 MIN O MINAMITORISHIMA      MINAMITORISHIMA            
+ 123.800  13.200 LEG O PHILIPPINES          LEGASPI                  
+ 122.610  17.150 PAL O PHILIPPINES          PALANAN                  
+ 125.650   6.850 DAV O PHILIPPINES          DAVAO                    
+ 166.500 -22.300 NOU O NEW_CALEDONIA        NOUMEA                   
+ 164.967 -20.633 HIE O NEW_CALEDONIA        HIENGHENE                   
+ 166.767 -21.967 OUI O NEW_CALEDONIA        OUINNE                   
+ 167.833 -21.567 MAR O NEW_CALEDONIA        MARE_ISL                   
+ 167.300 -20.900 LIF O NEW_CALEDONIA        LIFOU_ISL                   
+ 174.069 -39.053 NPL O NEW_ZEALAND          NEW_PLYMOUTH             
+ 173.300 -34.400 NCP O NEW_ZEALAND          NORTH_CAPE               
+ 175.000 -36.700 AKE O NEW_ZEALAND          AUCKLAND_EAST              
+ 174.200 -37.100 AKW O NEW_ZEALAND          AUCKLAND_WEST              
+ 178.500 -37.667 ECP O NEW_ZEALAND          EAST_CAPE                
+ 178.017 -38.667 GSB O NEW_ZEALAND          GISBORNE                 
+ 176.910 -39.474 NPR O NEW_ZEALAND          NAPIER                   
+ 174.837 -41.270 WEL O NEW_ZEALAND          WELLINGTON               
+ 172.717 -43.617 LYT O NEW_ZEALAND          LYTTELTON                
+ 170.514 -45.883 DUN O NEW_ZEALAND          DUNEDIN                  
+ 168.333 -46.566 BLF O NEW_ZEALAND          BLUFF                    
+ 167.877 -44.626 MFS O NEW_ZEALAND          MILFORD_SOUND            
+ 171.583 -41.752 WSP O NEW_ZEALAND          WESTPORT                 
+ 173.266 -41.260 NLS O NEW_ZEALAND          NELSON                   
+-176.271 -43.725 KNG O NEW_ZEALAND          KAINGAROA_CHATHAM
+-176.571 -43.941 WTG O NEW_ZEALAND          WAITANGI_CHATHAM
+ 174.514 -35.805 WHG O NEW_ZEALAND          WHANGAREI
+ 176.173 -37.624 MGN O NEW_ZEALAND          MOUNT_MAUNGANUI
+ 174.980 -39.946 WGN O NEW_ZEALAND          WANGANUI
+ 174.387 -41.091 MLB O NEW_ZEALAND          MARLBOROUGH_SOUNDS
+ 171.269 -44.387 TMR O NEW_ZEALAND          TIMARU
+ 167.505 -47.293 STW O NEW_ZEALAND          STEWART_ISLAND
+ 168.588 -43.962 JKB O NEW_ZEALAND          JACKSON_BAY
+ 157.414 -37.018 GBI O NEW_ZEALAND          GREAT_BARRIER_IS
+ 176.174 -37.651 PTR O NEW_ZEALAND          PORT_TAURANGA
+ 178.190 -37.534 LTP O NEW_ZEALAND          LOTTIN_POINT
+ 174.000 -41.280 PIC O NEW_ZEALAND          PICTON
+ 171.210 -42.450 GRM O NEW_ZEALAND          GREYMOUTH
+ 121.800  25.200 CHL O TAIWAN               CHILUNG                  
+ 121.700  24.000 HUA O TAIWAN               HUALIEN                  
+ 121.200  22.700 TTG O TAIWAN               TAITUNG                  
+ 120.400  36.000 QND O CHINA                QINGDAO                  
+ 122.300  31.200 SGH O CHINA                SHANGHAI                  
+ 121.200  27.800 WNZ O CHINA                WENZHOU                  
+ 118.800  24.800 QNZ O CHINA                QUANZHOU                  
+ 127.000  33.500 CHJ O REPUBLIC_OF_KOREA    CHEJU_ISLAND                  
+ 129.100  35.050 BUS O REPUBLIC_OF_KOREA    BUSAN                      
+ 126.400  37.300 ICH O REPUBLIC_OF_KOREA    INCHON                      
+ 128.470  40.130 SNC O DPR_OF_KOREA         SINCHANG
+ 125.000  38.750 NMP O DPR_OF_KOREA         NAMPHO
+ 145.800  15.300 SAI O NORTHERN_MARIANAS    SAIPAN                     
+ 144.652  13.436 GUA O GUAM                 GUAM                     
+ 134.500   7.300 MAL O PALAU                MALAKAL                  
+ 138.100   9.500 YAP O YAP                  YAP_ISLAND                  
+ 158.218   7.000 PON O POHNPEI              POHNPEI_ISLAND              
+ 151.845   7.445 TRU O CHUUK                CHUUK_ISLAND                
+ 163.000   5.500 KOS O KOSRAE               KOSRAE_ISLAND               
+ 162.300  11.400 ENI O MARSHALL_ISLANDS     ENIWETOK                 
+ 167.700   8.700 KWA O MARSHALL_ISLANDS     KWAJALEIN                
+ 171.370   7.117 MAJ O MARSHALL_ISLANDS     MAJURO                   
+ 178.425 -18.137 SUV O FIJI                 SUVA                     
+-171.800 -13.800 API O SAMOA                APIA                     
+-170.700 -14.300 PAG O AMERICAN_SAMOA       PAGO_PAGO                
+-159.800 -21.200 ROR O COOK_ISLANDS         RAROTONGA                
+-157.840  -8.880 PNR O COOK_ISLANDS         PENRYN_ISLAND               
+-165.860 -10.800 PKA O COOK_ISLANDS         PUKAPUKA_ISLAND             
+-171.830  -9.160 NUK O TOKELAU              NUKUNONU_ISLAND             
+ 167.290 -15.110 ESP O VANUATU              ESPERITU_SANTO           
+ 169.850 -20.160 ANA O VANUATU              ANATOM_ISLAND               
+-157.480   1.980 CHR O KIRIBATI             CHRISTMAS_ISLAND            
+-154.900  -3.940 MLD O KIRIBATI             MALDEN_ISLAND               
+-151.820 -11.400 FLN O KIRIBATI             FLINT_ISLAND                
+-171.670  -2.820 KNT O KIRIBATI             KANTON_ISLAND               
+ 173.000   1.500 TAR O KIRIBATI             TARAWA_ISLAND               
+-149.567 -17.533 PPT O FRENCH_POLYNESIA     PAPEETE                  
+-135.000 -23.100 RIK O FRENCH_POLYNESIA     RIKITEA                  
+-139.000 -10.000 HVA O FRENCH_POLYNESIA     HIVA_OA                  
+-144.300 -27.600 RPI O FRENCH_POLYNESIA     RAPA_ITI
+-149.510 -23.340 TUB O FRENCH_POLYNESIA     TUBUAI
+ 166.900  -0.518 NAR O NAURU                NAURU                    
+ 166.600  19.300 WAK O WAKE_ISLAND          WAKE_ISLAND                 
+-177.400  28.200 MID O MIDWAY_ISLAND        MIDWAY_ISLAND               
+-169.525  16.738 JON O JOHNSTON_ISLAND      JOHNSTON_ISLAND             
+-160.050  -0.370 JRV O JARVIS_ISLAND        JARVIS_ISLAND               
+-162.100   5.900 PLM O PALMYRA_ISLAND       PALMYRA_ISLAND              
+-176.620   0.550 HBK O HOWLAND_AND_BAKER    HOWLAND_ISLAND              
+-173.767 -15.942 NPU O TONGA                NIUATOPUTAPU
+-173.912 -18.643 HLA O TONGA                HOLEVA
+-175.230 -21.020 NKA O TONGA                NUKUALOFA                
+-177.940 -29.210 RAO O KERMADEC_ISLANDS     RAOUL_ISLAND                
+ 178.500  -7.880 FNA O TUVALU               FUNAFUTI_ISLAND             
+-176.250 -13.250 WAL O WALLIS_AND_FUTUNA    WALLIS_ISLAND 
+-178.160 -14.296 FUT O WALLIS_AND_FUTUNA    FUTUNA_ISLAND              
+-130.080 -25.080 PTC O PITCAIRN             PITCAIRN_ISLAND             
+-170.000 -19.000 NIU O NIUE                 NIUE_ISLAND                 
+-155.056  19.730 HLO G BIG_ISLAND           HILO                     
+-156.029  19.671 HNK G BIG_ISLAND           HONOKOHAU                
+-155.910  19.188 MIL G BIG_ISLAND           MILOLII                  
+-154.817  19.500 KAP G BIG_ISLAND           KAPOHO                   
+-155.243  19.995 LPH G BIG_ISLAND           LAUPAHOEHOE              
+-155.906  20.186 MAH G BIG_ISLAND           MAHUKONA                 
+-155.553  19.087 HNP G BIG_ISLAND           HONUAPU                  
+-155.832  20.036 KAW G BIG_ISLAND           KAWAIHAE                 
+-155.995  19.638 KKN G BIG_ISLAND           KAILUA_KONA              
+-155.964  19.561 KEH G BIG_ISLAND           KEAHOU                   
+-156.690  20.886 LAH G MAUI                 LAHAINA                  
+-155.982  20.756 HNA G MAUI                 HANA                     
+-156.472  20.898 KHL G MAUI                 KAHULUI                  
+-156.461  20.759 KIH G MAUI                 KIHEI                    
+-156.991  20.787 KML G LANAI                KAUMALAPAU               
+-156.980  21.210 KLP G MOLOKAI              KALAUPAPA                
+-157.029  21.082 KNK G MOLOKAI              KAUNAKAKAI               
+-158.110  21.600 HLW G OAHU                 HALEIWA                  
+-157.672  21.323 MKP G OAHU                 MAKAPUU                  
+-158.170  21.440 WAI G OAHU                 WAIANAE                  
+-158.119  21.322 BPT G OAHU                 BARBERS_PT               
+-157.900  21.300 HNL G OAHU                 HONOLULU                 
+-157.793  21.437 MKL G OAHU                 MOKUOLOE                  
+-159.354  21.951 NWL G KAUAI                NAWILIWILI               
+-159.501  22.216 HAN G KAUAI                HANALEI                  
+-159.717  21.965 KEK G KAUAI                KEKAHA                   
+-160.207  21.906 PUU G NIIHAU               PUUWAI
+-161.922  23.060 NIH N NORTHWEST_HAWAII     NIHOA                    
+-164.700  23.575 NCK N NORTHWEST_HAWAII     NECKER                   
+-166.299  23.868 FFR N NORTHWEST_HAWAII     FRENCH_FRIGATE               
+-171.744  25.776 LAY N NORTHWEST_HAWAII     LAYSAN                   
+-173.960  26.063 LIS N NORTHWEST_HAWAII     LISIANSKI                
+-159.354  21.951 NAW H HAWAII               NAWILIWILI               
+-157.900  21.300 HON H HAWAII               HONOLULU                 
+-155.100  19.700 HIL H HAWAII               HILO                     
+-156.472  20.898 KAH H HAWAII               KAHULUI                  
+ 155.560  -7.360 FLM O SOLOMON_ISLANDS      FALAMAE                  
+ 157.210  -8.380 MND O SOLOMON_ISLANDS      MUNDA                    
+ 159.960  -9.290 HON O SOLOMON_ISLANDS      HONIARA                  
+ 161.940 -10.360 KRA O SOLOMON_ISLANDS      KIRAKIRA                 
+ 157.160  -6.870 PAN O SOLOMON_ISLANDS      PANGGOE                  
+ 159.170  -7.770 GHT O SOLOMON_ISLANDS      GHATERE                  
+ 160.620  -8.750 AUK O SOLOMON_ISLANDS      AUKI                     
+ 165.950 -10.850 SCI O SOLOMON_ISLANDS      SANTA_CRUZ_ISLAND                     
+ 141.340  -2.580 VNM O PAPUA_NEW_GUINEA     VANIMO                   
+ 143.650  -3.520 WWK O PAPUA_NEW_GUINEA     WEWAK                    
+ 145.840  -5.170 MDG O PAPUA_NEW_GUINEA     MADANG                   
+ 147.030  -6.760 LAE O PAPUA_NEW_GUINEA     LAE                      
+ 152.270  -4.180 RAB O PAPUA_NEW_GUINEA     RABAUL                   
+ 146.940  -9.340 PMB O PAPUA_NEW_GUINEA     PORT_MORESBY             
+ 150.690  -2.530 KVG O PAPUA_NEW_GUINEA     KAVIENG                  
+ 147.490  -2.030 MNS O PAPUA_NEW_GUINEA     MANUS_ISLAND                
+ 155.630  -6.070 KIE O PAPUA_NEW_GUINEA     KIETA                    
+ 154.690  -5.960 AMN O PAPUA_NEW_GUINEA     AMUN                     
+ 152.900  -9.000 WDL O PAPUA_NEW_GUINEA     WOODLARK_ISLAND                     
+ 151.250  -5.000 ULM O PAPUA_NEW_GUINEA     ULAMONA                     
+ 140.760  -2.410 JYP O INDONESIA            JAYAPURA                 
+ 135.790  -0.620 WRS O INDONESIA            WARSA                    
+ 134.210  -0.810 MNK O INDONESIA            MANOKWARI                
+ 131.130  -0.810 SRN O INDONESIA            SORONG                   
+ 128.760   0.430 PTN O INDONESIA            PATANI                   
+ 128.690   2.460 BRB O INDONESIA            BEREBERE                 
+ 126.800   4.590 GME O INDONESIA            GEME                     
+ 125.600   3.600 TBT O INDONESIA            TABUKAN_TENGAH                     
+ 167.430  54.720 MED O RUSSIA               MEDNNY_ISLAND                
+ 162.580  56.120 UST O RUSSIA               UST_KAMCHATSK            
+ 159.580  53.230 PPK O RUSSIA               PETROPAVLOVSK          
+ 156.070  50.830 SVK O RUSSIA               SEVERO_KURILSK           
+ 150.540  46.120 URP O RUSSIA               URUP_ISLAND                  
+ 132.000  42.750 VLD O RUSSIA               VLADIVOSTOK                  
+ 140.350  49.050 VNN O RUSSIA               VANINO                  
+ 142.100  50.900 ALX O RUSSIA               ALEXANDROVSK_SAK                  
+ 143.000  49.100 GST O RUSSIA               GASTELLO                  
+ 143.250  59.300 OKH O RUSSIA               OKHOTSK                  
+ 156.700  57.100 UKH O RUSSIA               UST_KAHYRYUZOVO                  
+ 164.500  58.800 OKR O RUSSIA               OSTROV_KARAGINSKIY                  
+ 147.650 -43.270 HOB I AUSTRALIA            HOBART                   
+ 139.400 -37.000 KSE I AUSTRALIA            KINGSTON_SOUTHEAST      
+ 128.900 -31.800 EMO I AUSTRALIA            EUCLA_MOTEL              
+ 121.800 -34.000 ESP I AUSTRALIA            ESPERANCE                
+ 114.700 -34.300 AUG I AUSTRALIA            AUGUSTA                  
+ 115.300 -32.000 PER I AUSTRALIA            PERTH                    
+ 114.300 -28.600 GER I AUSTRALIA            GERALDTOWN               
+ 113.000 -25.900 CPI I AUSTRALIA            CAPE_INSPIRATION         
+ 113.900 -21.500 NWC I AUSTRALIA            NORTH_WEST_CAPE          
+ 122.600 -16.100 CPL I AUSTRALIA            CAPE_LEVEQUE             
+ 130.700 -12.100 DRW I AUSTRALIA            DARWIN                   
+ 105.400 -10.400 CHI I AUSTRALIA            CHRISTMAS_ISLAND             
+  96.700 -12.100 COI I AUSTRALIA            COCOS_ISLAND             
+  73.500 -54.000 HEI I AUSTRALIA            HEARD_ISLAND             
+  91.200  22.700 CHT I BANGLADESH           CHITTAGONG               
+  43.300 -11.600 MOR I COMORES              MORONI                   
+  55.200 -20.800 STD I REUNION              ST_DENIS                 
+  69.100 -49.000 PAF I KERGUELEN_ISLANDS    PORT_AUX_FRANCAIS        
+  51.800 -46.400 CRZ I CROZET_ISLANDS       CROZET_ISLANDS           
+  87.300  21.600 BAL I INDIA                BALESHWAR                
+  82.700  17.200 KAK I INDIA                KAKINADA                 
+  80.400  13.400 CHE I INDIA                CHENNAI                  
+  76.900   8.300 TRV I INDIA                TRIVANDRUM               
+  74.400  13.300 MNG I INDIA                MANGALORE                
+  72.600  18.800 BMB I INDIA                BOMBAY                   
+  68.900  22.700 GOK I INDIA                GULF_OF_KUTCH            
+  92.600  13.300 NAN I INDIA                NORTH_ANDAMAN            
+  92.700  11.900 PBL I INDIA                PORT_BLAIR               
+  93.600   7.100 GNI I INDIA                GREAT_NICOBAR            
+  92.300  10.700 LAN I INDIA                LITTLE_ANDAMAN           
+ 123.400 -10.000 KUP I INDONESIA            KUPANG                   
+ 115.300  -8.700 BAL I INDONESIA            BALI                     
+ 108.900  -7.800 CIL I INDONESIA            CILACAP                  
+ 105.300  -5.700 BLA I INDONESIA            BANDAR_LAMPUNG           
+ 102.000  -3.900 BNK I INDONESIA            BENGKULU                 
+  98.700  -1.500 SIB I INDONESIA            SIBERUT                  
+ 100.100  -0.900 PDG I INDONESIA            PADANG                   
+  96.000   2.500 SIM I INDONESIA            SIMEULUE                 
+  95.100   5.500 BAC I INDONESIA            BANDA_ACEH               
+  98.800   3.800 BEL I INDONESIA            BELAWAN                  
+  61.300  25.000 GAV I IRAN                 GAVATER                  
+  39.700  -4.000 MOM I KENYA                MOMBASA                  
+  49.500 -12.100 ANT I MADAGASCAR           ANTSIRANANA              
+  49.600 -17.800 TMS I MADAGASCAR           TOAMASINA                
+  48.200 -22.200 MNK I MADAGASCAR           MANAKARA                 
+  45.200 -25.800 CSM I MADAGASCAR           CAP_STE_MARIE            
+  43.600 -23.400 TOL I MADAGASCAR           TOLIARA                  
+  46.200 -15.400 MAH I MADAGASCAR           MAHAJANGA                
+ 100.100   5.400 GRG I MALAYSIA             GEORGETOWN               
+ 101.700   2.500 PDK I MALAYSIA             PORT_DICKSON             
+  73.600   4.200 MLE I MALDIVES             MALE                     
+  73.200  -0.600 GAN I MALDIVES             GAN                      
+  73.000   8.300 MNC I MALDIVES             MINICOV                  
+  57.300 -20.000 PTL I MAURITIUS            PORT_LOUIS               
+  40.700 -10.700 CDL I MOZAMBIQUE           CABO_DELGADO             
+  40.600 -15.500 ANG I MOZAMBIQUE           ANGOCHE                  
+  37.100 -18.000 QLM I MOZAMBIQUE           QUELIMANE                
+  35.100 -19.900 BRA I MOZAMBIQUE           BEIRA                    
+  32.800 -25.900 MAP I MOZAMBIQUE           MAPUTO                   
+  92.900  20.000 STT I MYANMAR              SITTWE                   
+  93.400  18.900 CHI I MYANMAR              CHEDUBA_ISLAND           
+  96.400  16.500 YAN I MYANMAR              YANGON                   
+  98.400  12.800 MRG I MYANMAR              MERGUI                   
+  94.300  15.900 PYI I MYANMAR              PYINKAYAING              
+  58.600  23.900 MUS I OMAN                 MUSCAT                   
+  57.800  19.700 DQM I OMAN                 DUQM                     
+  54.100  16.900 SAL I OMAN                 SALALAH                  
+  66.900  24.700 KAR I PAKISTAN             KARACHI                  
+  62.400  25.100 GWA I PAKISTAN             GWADAR                   
+  55.600  -4.500 VCT I SEYCHELLES           VICTORIA                 
+ 103.800   1.200 SNG I SINGAPORE            SINGAPORE                
+  51.400  11.900 CGU I SOMALIA              CAPE_GUARO               
+  49.100   6.400 HIL I SOMALIA              HILALAYA                 
+  45.500   2.000 MOG I SOMALIA              MOGADISHU                
+  41.900  -1.500 KAA I SOMALIA              KAAMBOONI                
+  31.200 -29.800 DRB I SOUTH_AFRICA         DURBAN                   
+  25.800 -33.900 PEL I SOUTH_AFRICA         PORT_ELIZABETH           
+  18.000 -34.100 CTN I SOUTH_AFRICA         CAPE_TOWN                
+  37.600 -46.600 PEI I SOUTH_AFRICA         PRINCE_EDWARD_IS         
+  80.000   9.900 JAF I SRI_LANKA            JAFFNA                   
+  81.300   8.700 TRN I SRI_LANKA            TRINCOMALEE              
+  80.600   5.900 DHD I SRI_LANKA            DONDRA_HEAD              
+  79.800   6.900 COL I SRI_LANKA            COLOMBO                  
+  39.400  -6.700 DES I TANZANIA             DAR_ES_SALAAM            
+  39.900  -9.800 LIN I TANZANIA             LINDI                    
+  98.200   8.000 PHU I THAILAND             PHUKET                   
+  99.600   6.600 KTA I THAILAND             KO_TARUTAO               
+  98.200   9.100 KPT I THAILAND             KO_PHRA_THONG            
+  49.200  14.500 ALM I YEMEN                AL_MUKALLA               
+  45.200  13.000 ADN I YEMEN                ADEN                     
+  56.400  25.100 FUJ I UAE                  FUJAIRAH                 
+  72.400  -7.300 DGG I UNITED_KINGDOM       DIEGO_GARCIA             
+ -77.079  26.556 ABA C BAHAMAS              ABACO_ISLAND                 
+ -78.782  26.514 FRE C BAHAMAS              FREEPORT                 
+ -77.351  25.094 NAS C BAHAMAS              NASSAU                   
+ -76.124  25.157 ELE C BAHAMAS              ELEUTHERA_ISLAND             
+ -74.547  24.066 SSL C BAHAMAS              SAN_SALVADOR             
+ -74.141  22.747 CRI C BAHAMAS              CROOKED_ISLAND 
+ -75.082  23.272 LIS C BAHAMAS              LONG_ISLAND              
+ -72.999  22.330 MAY C BAHAMAS              MAYAGUANA
+ -75.851  23.570 EXU C BAHAMAS              EXUMA
+ -75.532  24.401 CAT C BAHAMAS              CAT_ISLAND 
+ -77.901  25.030 AND C BAHAMAS              ANDROS_ISLAND 
+ -79.287  25.761 BIM C BAHAMAS              BIMINI                
+ -73.684  20.948 GRI C BAHAMAS              GREAT_INAGUA             
+ -72.487  21.671 WCA C TURKS_N_CAICOS       WEST_CAICOS              
+ -71.107  21.468 GTU C TURKS_N_CAICOS       GRAND_TURK               
+ -64.703  32.373 ESO C BERMUDA              ESSO_PIER                
+ -79.883  19.681 CAB C CAYMAN_ISLANDS       CAYMAN_BRAC
+ -81.342  19.297 CAY C CAYMAN_ISLANDS       GRAND_CAYMAN
+ -82.797  21.922 NGR C CUBA                 NUEVA_GERONA             
+ -80.465  22.007 CNF C CUBA                 CIENFUEGOS               
+ -77.959  20.682 SCS C CUBA                 SANTA_CRZ_D_SUR          
+ -82.364  23.151 LHB C CUBA                 LA_HABANA                
+ -76.122  21.119 GIB C CUBA                 GIBARA                   
+ -74.498  20.356 BAR C CUBA                 BARACOA                  
+ -75.850  19.947 SDC C CUBA                 SANTIAGO_D_CUBA          
+ -77.933  18.471 MNT C JAMAICA              MONTEGO_BAY              
+ -76.854  17.913 KNG C JAMAICA              KINGSTON                 
+ -74.107  18.641 JRM C HAITI                JEREMIE                  
+ -72.188  19.792 CHT C HAITI                CAP_HAITEN               
+ -72.369  18.544 PAP C HAITI                PORT_AU_PRINCE           
+ -72.500  18.100 JAC C HAITI                JACAMEL           
+ -68.290  18.612 CEN C DOMINICAN_REP        CABO_ENGANO              
+ -70.692  19.813 PPL C DOMINICAN_REP        PUERTO_PLATA             
+ -69.893  18.455 SDM C DOMINICAN_REP        SANTO_DOMINGO            
+ -66.116  18.459 SJU P PUERTO_RICO          SAN_JUAN                 
+ -67.160  18.220 MYG P PUERTO_RICO          MAYAGUEZ                 
+ -66.621  17.968 PNC Q PUERTO_RICO          PONCE                    
+ -65.631  18.335 FAJ Q PUERTO_RICO          FAJARDO                  
+ -67.939  18.090 MNA Q PUERTO_RICO          MONA_ISLAND              
+ -67.165  18.457 AGD Q PUERTO_RICO          AGUADILLA                
+ -66.702  18.481 ARC Q PUERTO_RICO          ARECIBO                  
+ -65.833  18.055 YBC Q PUERTO_RICO          YABUCOA                  
+ -66.531  17.888 CDM Q PUERTO_RICO          CAJA_DE_MUERTOS             
+ -66.762  17.973 PNL Q PUERTO_RICO          PENUELAS                 
+ -67.046  17.970 MGY Q PUERTO_RICO          MAGUEYES_IS              
+ -65.303  18.301 CLB Q PUERTO_RICO          CULEBRA_IS               
+ -65.444  18.153 VIQ Q PUERTO_RICO          VIEQUES_IS               
+ -64.920  18.336 CHL P US_VIRGIN_IS         CHARLOTTE_AMALIE            
+ -64.724  18.318 LMS Q US_VIRGIN_IS         LAMESHUR_BAY            
+ -64.698  17.748 CHR P US_VIRGIN_IS         CHRISTIANSTED           
+ -64.754  17.695 LMT Q US_VIRGIN_IS         LIMETREE                
+ -64.608  18.425 RDT P BR_VIRGIN_IS         ROADTOWN           
+ -64.380  18.480 VGD Q BR_VIRGIN_IS         VIRGIN_GORDA             
+ -64.300  18.750 ANG P BR_VIRGIN_IS         ANEGADA                  
+ -63.051  18.252 TVL C ANGUILLA             THE_VALLEY               
+ -62.992  18.115 BBL C SAINT_MARTIN         BAIE_BLANCHE             
+ -63.060  18.110 BGC C SAINT_MARTIN         BAIE_GRAND_CASE             
+ -63.008  18.060 BLU C SAINT_MARTIN         BAIE_LUCAS             
+ -62.825  17.910 SBT C SAINT_BARTHELEMY     SAINT_BARTHELEMY
+ -63.104  18.034 SMB C SINT_MAARTEN         SIMPSON_BAAI             
+ -63.220  17.640 SAB C SABA                 SABA                  
+ -62.975  17.500 SEU C SINT_EUSTATIUS       SINT_EUSTATIUS
+ -62.718  17.290 BSS C SAINT_KITTS          BASSETERRE               
+ -61.863  17.578 PLP C BARBUDA              PALMETTO_POINT           
+ -61.874  17.131 STJ C ANTIGUA              SAINT_JOHNS              
+ -62.234  16.706 PLY C MONTSERRAT           PLYMOUTH                 
+ -61.737  15.982 BST C GUADELOUPE           BASSE_TERRE              
+ -61.396  15.297 ROS C DOMINICA             ROSEAU                   
+ -61.082  14.598 FDF C MARTINIQUE           FORT_DE_FRANCE           
+ -61.031  14.017 CST C SAINT_LUCIA          CASTRIES                 
+ -59.622  13.091 BRD C BARBADOS             BRIDGETOWN               
+ -61.214  13.136 KGS C SAINT_VINCENT        KINGSTOWN                
+ -61.754  12.046 STG C GRENADA              SAINT_GEORGES            
+ -60.559  11.327 PRT C TRINIDAD_TOBAGO      PIRATES_BAY              
+ -61.528  10.641 POS C TRINIDAD_TOBAGO      PORT_OF_SPAIN            
+ -63.842  10.948 POR C VENEZUELA            PORLAMAR                 
+ -68.309  12.256 ONM C BONAIRE              ONIMA                    
+ -68.934  12.094 WIL C CURACAO              WILLEMSTAD               
+ -70.042  12.506 ORA C ARUBA                ORANJESTAD               
+ -38.480  -3.707 FTZ C BRAZIL               FORTALEZA                
+ -44.309  -2.470 SLU C BRAZIL               SAO_LUIS                 
+ -50.488   2.208 ILM C BRAZIL               ILHA_DE_MARACA           
+ -52.350   4.931 CYN C FRENCH_GUYANE        CAYENNE                  
+ -55.198   5.934 PRM C SURINAME             PARAMARIBO               
+ -58.196   6.840 GGT C GUYANA               GEORGETOWN               
+ -64.197  10.469 CMN C VENEZUELA            CUMANA                   
+ -66.966  10.608 MQT C VENEZUELA            MAIQUETIA                
+ -70.232  11.707 PFJ C VENEZUELA            PUNTO_FIJO               
+ -71.245  11.399 GVN C VENEZUELA            GOLFO_VENEZUELA          
+ -72.920  11.554 RHC C COLOMBIA             RIOHACHA                 
+ -74.225  11.247 SMT C COLOMBIA             SANTA_MARTA              
+ -74.866  11.070 BRN C COLOMBIA             BARRANQUILLA             
+ -75.563  10.412 CTG C COLOMBIA             CARTAGENA                
+ -76.898   8.624 PCR C COLOMBIA             PUNTA_CARIBANA 
+ -81.390  13.380 PRV C SAN_ANDRES_PROVID    SAN_ANDRES
+ -81.680  12.590 SND C SAN_ANDRES_PROVID    PROVIDENCIA
+ -77.417   8.667 POB C PANAMA               PUERTO_OBALDIA        
+ -77.573   8.783 PUC C PANAMA               PUERTO_CARRETO
+ -78.017   9.233 ALI C PANAMA               ALIGANDI           
+ -79.914   9.372 COL C PANAMA               COLON                    
+ -82.242   9.351 BDT C PANAMA               BOCAS_DEL_TORO           
+ -83.013  10.001 PLM C COSTA_RICA           PUERTO_LIMON             
+ -83.793  11.437 PGO C NICARAGUA            PUNTA_GORDA              
+ -83.374  14.019 PCB C NICARAGUA            PUERTO_CABEZAS           
+ -85.958  15.931 TRJ C HONDURAS             TRUJILLO                 
+ -87.973  15.850 PCO C HONDURAS             PUERTO_CORTES            
+ -88.597  15.745 PBR C GUATEMALA            PUERTO_BARRIOS           
+ -88.178  17.503 BEL C BELIZE               BELIZE_CITY              
+ -86.955  20.516 COZ C MEXICO               COZUMEL                  
+ -90.539  19.867 CMP C MEXICO               CAMPECHE                 
+ -96.116  19.201 VCR C MEXICO               VERACRUZ                 
+ -97.785  22.291 MDR C MEXICO               MADERO                   
+ -97.141  25.972 TXB C MEXICO               TEXAS_BORDER             
+ -89.660  21.300 PGS C MEXICO               PROGRESO             
+ 114.200  22.300 HKC S CHINA                HONG_KONG                
+ 110.500  18.750 HNN S CHINA                HAINAN_ISLAND               
+ 120.300  22.500 KAO S TAIWAN               KAOHSIUNG                
+ 120.400  24.200 HML S TAIWAN               HOMEL                    
+ 105.700  18.600 VNH S VIETNAM              VINH                     
+ 109.200  13.700 QNH S VIETNAM              QUI_NHON                 
+ 105.800   9.300 BCL S VIETNAM              BAC_LIEU                 
+  99.800  11.800 PKK S THAILAND             PRA_KHIRI_KHAN           
+ 100.850  12.800 PTY S THAILAND             PATTAYA           
+ 103.600  10.600 SHN S CAMBODIA             SIHANOUKVILLE            
+ 100.000   8.400 NST S THAILAND             NK_SI_THAMMARAT          
+ 103.200   5.300 KTR S MALAYSIA             K_TERENGGANU             
+ 103.800   1.200 SNG S SINGAPORE            SINGAPORE                
+ 106.100  -2.100 PKP S INDONESIA            PANGKALPINANG            
+ 108.500   4.000 KPR S INDONESIA            KEPULAUAN_RIAU            
+ 103.750  -0.500 KID S INDONESIA            KUALA_INDRAGIRI            
+ 115.100   5.000 MRA S BRUNEI               MUARA                    
+ 113.000   3.200 BNT S MALAYSIA             BINTULU                  
+ 116.000   6.000 KTK S MALAYSIA             KOTA_KINABALU                  
+ 109.000   1.000 SKW S INDONESIA            SINGKAWANG               
+ 120.600  18.200 LAG S PHILIPPINES          LAOAG                    
+ 120.300  16.600 SFR S PHILIPPINES          SAN_FERNANDO             
+ 121.000  14.600 MNL S PHILIPPINES          MANILA                   
+ 122.500  10.700 ILL T PHILIPPINES          ILOILO                   
+ 118.800   9.800 PPR T PHILIPPINES          PUERTO_PRINCESA          
+ 122.300   7.000 ZAM V PHILIPPINES          ZAMBOANGA                
+ 121.000   5.900 MAB V PHILIPPINES          MAIMBUNG                
+ 124.170   7.250 CTB V PHILIPPINES          COTABUTO_CITY                
+ 118.400   4.900 LHD V MALAYSIA             LAHAD_DATU                 
+ 118.100   5.900 SDK T MALAYSIA             SANDAKAN                 
+ 117.600   3.300 TRK V INDONESIA            TARAKAN                  
+ 124.900   1.600 MND V INDONESIA            MANADO                   
+-172.766 -13.487 FGL M SAMOA                FAGALELE_SAVAII
+-172.647 -13.499 UTU M SAMOA                UTULOA_SAVAII
+-172.449 -13.464 SAS M SAMOA                SASINA_SAVAII
+-172.357 -13.433 FGM M SAMOA                FAGAMALO_SAVAII
+-172.205 -13.584 PUA M SAMOA                PUAPUA_SAVAII
+-172.168 -13.666 TUA M SAMOA                TUASIVI_SAVAII
+-172.380 -13.786 PUL M SAMOA                PULEIA_SAVAII
+-172.511 -13.801 TAG M SAMOA                TAGA_SAVAII
+-172.604 -13.716 SAL M SAMOA                SALAILOA_SAVAII
+-172.727 -13.598 FLL M SAMOA                FALELIMA_SAVAII
+-172.016 -13.804 FLE M SAMOA                FALEOLO_UPOLU
+-171.894 -13.782 SLE M SAMOA                SALEIMOA_UPOLU
+-171.765 -13.826 API M SAMOA                APIA_UPOLU
+-171.580 -13.888 FLF M SAMOA                FALEFA_UPOLU
+-171.443 -13.974 OLI M SAMOA                OLIONONO_UPOLU
+-171.698 -14.040 ILI M SAMOA                ILIILI_UPOLU
+-171.856 -14.012 SFT M SAMOA                SAFATA_UPOLU
+-171.695 -13.969 SVA M SAMOA                SAVAIA_UPOLU
+-170.689 -14.276 PGO B TUTUILA              PAGO_PAGO
+-170.715 -14.342 TFN B TUTUILA              TAFUNA
+-170.793 -14.343 LNE B TUTUILA              LEONE
+-170.834 -14.329 AMN B TUTUILA              AMANAVE
+-170.814 -14.297 FML B TUTUILA              FAGAMALO
+-170.727 -14.281 FGS B TUTUILA              FAGASA
+-170.672 -14.248 VAT B TUTUILA              VATIA
+-170.624 -14.254 MSF B TUTUILA              MASEFAU
+-170.562 -14.252 TLA B TUTUILA              TULA
+-170.610 -14.273 PGA B TUTUILA              PAGAI
+-170.653 -14.291 AUM B TUTUILA              AUMI
+-170.563 -14.283 AUN B AUNUU                AUNUU_ISLAND
+-169.456 -14.260 TAU B MANUA                TAU_ISLAND
+-169.679 -14.185 OFU B MANUA                OFU_ISLAND
+-169.625 -14.185 OLS B MANUA                OLESEGA_ISLAND
+-171.080 -11.070 SWN B SWAINS               SWAINS_ISLAND
+ 144.753  13.274 INJ D GUAM                 INARAJAN
+ 144.620  13.454 APR D GUAM                 APRA_HARBOR
+ 144.962  13.603 PTI D GUAM                 PATI_POINT
+ 144.791  13.417 PGO D GUAM                 PAGO_BAY
+ 145.118  14.115 SSG E ROTA                 SONGSONG
+ 145.243  14.144 ATS E ROTA                 ARATSU_BAY
+ 145.257  14.202 MCH E ROTA                 MOCHON_BEACH
+ 145.623  14.960 SJS E TINIAN               SAN_JOSE
+ 145.657  15.034 LGB E TINIAN               LONG_BEACH
+ 145.614  15.073 CHB E TINIAN               CHULU_BEACH
+ 145.699  15.214 GRP E SAIPAN               GARAPAN
+ 145.756  15.145 MGC E SAIPAN               MAGICIENNE_BAY
+ 145.791  15.273 WGB E SAIPAN               WING_BEACH
+ 145.727  15.103 OBY E SAIPAN               OBYAN
+ 146.058  16.017 MDN X CNMI                 MEDINILLA
+ 145.678  16.351 ANT X CNMI                 ANATAHAN
+ 145.779  16.705 SRG X CNMI                 SARIGAN
+ 145.841  17.308 GUG X CNMI                 GUGUAN
+ 145.833  17.599 ALA X CNMI                 ALAMAGAN
+ 145.775  18.124 PGN X CNMI                 PAGAN
+ 145.667  18.765 AGR X CNMI                 AGRIHAN
+ 145.402  19.688 ASC X CNMI                 ASUNCION
+ 145.221  20.022 MUG X CNMI                 MAUG
+ 144.892  20.544 PJR X CNMI                 PAJAROS

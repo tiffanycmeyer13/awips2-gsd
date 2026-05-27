@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+    <extension-point id="pemDaos" name="Physical Event Manager DAOs" schema="schema/pemDaos.exsd"/>
+    <extension-point id="pemDialogTabs" name="PEM Dialog Tabs" schema="schema/pemDialogTabs.exsd"/>
+    <extension-point id="pemDialogColumns" name="PEM Dialog Columns" schema="schema/pemDialogColumns.exsd"/>
+    <extension-point id="phyEvtPlotters" name="Physical Event Plotters" schema="schema/phyEvtPlotters.exsd"/>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="gov.noaa.gsl.viz.pem.command"
+            name="PEM Display">
+      </command>
+   </extension >
+   
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="gov.noaa.gsl.viz.pem.action.PemDisplayAction"
+            commandId="gov.noaa.gsl.viz.pem.command">
+      </handler>
+   </extension > 
+   
+   <!--
+   Define the "Physical Event Manager" item to launch the PEM Display
+   -->
+    <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=plugins">
+            <toolbar
+               id="PemDisplay">
+            <command
+                  commandId="gov.noaa.gsl.viz.pem.command"
+                  icon="icons/pem.png"
+                  label="Physical Events"
+                  style="push">
+               <visibleWhen>
+                   <and>
+                      <reference
+                            definitionId="com.raytheon.uf.viz.d2d.ui.inD2DActionSet">
+                      </reference> 
+                   </and>
+               </visibleWhen>
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension> 
+   
+</plugin>

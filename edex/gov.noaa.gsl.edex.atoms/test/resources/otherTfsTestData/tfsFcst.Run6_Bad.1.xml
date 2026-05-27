@@ -1,0 +1,33 @@
+<atomsTsunamiForecastData>
+  <EventID>6</EventID>
+  <Source>NTWC</Source>
+  <ForecastType>TTT</ForecastType>
+  <CreationTime>2021-06-29T02:38:23</CreationTime>
+  <ForecastRunTime>2024-04-09T00:00:00</ForecastRunTime>
+  <atomsForecastRecord>
+    <StationID>RBE</StationID>
+    <Duration>60</Duration>
+  </atomsForecastRecord>
+  <atomsForecastRecord>
+    <StationID>MNT</StationID>
+    <ArrivalTime>08T02:04:54</ArrivalTime>
+  </atomsForecastRecord>
+  <atomsForecastRecord>
+    <StationID>PCC</StationID>
+    <ArrivalTime>2021-05-08T02:04:54</ArrivalTime>
+    <Amplitude>1.28</Amplitude>
+    <Duration>60</Duration>
+  </atomsForecastRecord>
+  <atomsForecastRecord>
+    <StationID>SDG</StationID>
+    <ArrivalTime>2021-05-08T02:04:54</ArrivalTime>
+    <Amplitude>1.8</Amplitude>
+    <Duration>60</Duration>
+  </atomsForecastRecord>
+  <atomsForecastRecord>
+    <StationID>VEN</StationID>
+    <ArrivalTime>2021-05-08T06:06:56</ArrivalTime>
+    <Amplitude>1.9</Amplitude>
+    <Duration>60</Duration>
+  </atomsForecastRecord>
+</atomsTsunamiForecastData>

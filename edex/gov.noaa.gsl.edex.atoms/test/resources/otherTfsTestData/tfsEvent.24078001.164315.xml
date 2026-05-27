@@ -1,0 +1,18 @@
+<atomsEventData>
+  <EventID>24078001</EventID>
+  <EventType>SEISMIC</EventType>
+  <Source>PTWC</Source>
+  <OriginTime>2023-02-23T17:25:00</OriginTime>
+  <Latitude>-80.300</Latitude>
+  <Longitude>-9.060</Longitude>
+  <DistanceToCoast>555.0</DistanceToCoast>
+  <Originator>PTWC</Originator>
+  <CreationTime>2024-04-01T16:43:15</CreationTime>
+  <atomsEventDataRecord>
+    <PreferredMagnitude>8.6</PreferredMagnitude>
+    <PreferredMagType>MOMENT_P</PreferredMagType>
+    <Depth>15.0</Depth>
+    <AzimuthalCoverage>103</AzimuthalCoverage>
+    <Stations>7</Stations>
+  </atomsEventDataRecord>
+</atomsEventData>

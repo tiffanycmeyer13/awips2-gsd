@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menuTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<contribute xsi:type="bundleItem" file="bundles/phiplume/phiplume.xml" menuText="PHI Plumes" id="phiplumeWindow"/>
+	<contribute xsi:type="bundleItem" file="bundles/phiplume/phiinterpolated.xml" menuText="PHI Interpolated Objects" id="phiinterpolatedWindow"/>
+
+</menuTemplate>

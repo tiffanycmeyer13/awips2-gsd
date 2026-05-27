@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AtomsImagery
+Bundle-SymbolicName: gov.noaa.gsl.common.dataplugin.atomsImagery
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: GSL
+Automatic-Module-Name: gov.noaa.gsl.common.dataplugin.atomsImagery
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Require-Bundle: com.raytheon.uf.common.dataplugin;bundle-version="1.18.0",
+ com.raytheon.uf.common.serialization;bundle-version="1.18.0",
+ gov.noaa.gsl.common.dataplugin.atoms,
+ com.raytheon.uf.common.serialization.comm;bundle-version="1.14.0"
+Export-Package: gov.noaa.gsl.common.dataplugin.atomsImagery,
+ gov.noaa.gsl.common.dataplugin.atomsImagery.request,
+ gov.noaa.gsl.common.dataplugin.atomsImagery.response
