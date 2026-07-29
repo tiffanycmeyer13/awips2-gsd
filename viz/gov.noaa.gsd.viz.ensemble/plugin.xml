@@ -45,7 +45,7 @@
 
       <menuContribution
             allPopups="false"
-            locationURI="menu:tools?after=distanceScaleTool">
+            locationURI="menu:tools?after=tools.D">
          <command
                commandId="gov.noaa.gsd.viz.ensemble.start.tool"
                style="push">
